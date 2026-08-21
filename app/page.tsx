@@ -4,6 +4,7 @@ import { type CSSProperties, useState } from "react";
 
 const GITHUB = "https://github.com/edu-ai-builders";
 const GALLERY = `${GITHUB}/eduos-teaching-design-gallery`;
+const PEDAGOGY_LENS = "https://pedagogy-lens-audit.applicationconsultan.chatgpt.site";
 
 type ComponentKey = "CALLERS" | "LOOM" | "SKILLS" | "GALLERY" | "LENS";
 
@@ -16,6 +17,7 @@ const components: Record<ComponentKey, {
   items: string[];
   color: string;
   glyph: string;
+  href?: string;
 }> = {
   CALLERS: {
     verb: "CALL",
@@ -66,6 +68,7 @@ const components: Record<ComponentKey, {
     items: ["Pedagogy Lens", "Edu Evaluator", "Rubrics", "Learner simulation"],
     color: "rose",
     glyph: "◎",
+    href: PEDAGOGY_LENS,
   },
 };
 
@@ -210,6 +213,7 @@ export default function Home() {
             <div className="inspector-role"><span>{active.verb}</span><strong>{active.name}</strong><small>{active.kind}</small></div>
             <p>{active.relation}</p>
             <div className="inspector-items">{active.items.map((item) => <span key={item}>{item}</span>)}</div>
+            {active.href ? <a className="inspector-link" href={active.href} target="_blank" rel="noreferrer">OPEN PEDAGOGYLENS <span>↗</span></a> : null}
           </div>
         </section>
 
@@ -263,7 +267,7 @@ export default function Home() {
 
             <div className="lens-rail">
               <span>SEPARATE OBSERVATION SYSTEM</span>
-              <strong>Edu Evaluator + Pedagogy Lens</strong>
+              <a href={PEDAGOGY_LENS} target="_blank" rel="noreferrer"><strong>Edu Evaluator + Pedagogy Lens</strong><b>OPEN PRODUCT ↗</b></a>
               <i />
               <p>evaluates the product, workflow, and learning experience built around EduOS</p>
             </div>
