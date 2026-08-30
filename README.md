@@ -25,15 +25,15 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Directory integration
 
-`/directory` embeds the independently deployed
-[EduOS Radar](https://eduos-github-radar.vercel.app). The canonical registry,
-collectors, generated snapshots, and Radar frontend remain in the
-[Radar source repository](https://github.com/ywEdAi/eduos-github-radar); this
-website does not maintain a second data copy.
+`/directory` is the canonical public entry point for
+[EduOS Radar](https://github.com/ywEdAi/eduos-github-radar). It uses a Next.js
+multi-zone rewrite so the Radar page, assets, support route, and suggestion API
+all remain under the Edu AI Builders domain. There is no cross-domain iframe and
+this website does not maintain a second registry copy.
 
-The embed defaults to the production Radar URL. Set `NEXT_PUBLIC_RADAR_URL` at
-build time to point a preview deployment or local development session at a
-different Radar instance.
+The rewrite defaults to the production Radar service. Set the server-only
+`RADAR_ORIGIN` at build time to connect a preview deployment or local Radar
+server without changing the visitor-facing `/directory` URL.
 
 ## Production
 
