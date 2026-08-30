@@ -23,6 +23,18 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Directory integration
+
+`/directory` embeds the independently deployed
+[EduOS Radar](https://eduos-github-radar.vercel.app). The canonical registry,
+collectors, generated snapshots, and Radar frontend remain in the
+[Radar source repository](https://github.com/ywEdAi/eduos-github-radar); this
+website does not maintain a second data copy.
+
+The embed defaults to the production Radar URL. Set `NEXT_PUBLIC_RADAR_URL` at
+build time to point a preview deployment or local development session at a
+different Radar instance.
+
 ## Production
 
 ```bash

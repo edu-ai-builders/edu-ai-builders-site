@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+const radarUrl =
+  process.env.NEXT_PUBLIC_RADAR_URL?.trim() ||
+  "https://eduos-github-radar.vercel.app/";
+const radarSourceUrl = "https://github.com/ywEdAi/eduos-github-radar";
+
 export default function DirectoryPage() {
   return (
     <main className="directory-page">
@@ -11,12 +16,13 @@ export default function DirectoryPage() {
         <p>Open-source education infrastructure, mapped and searchable.</p>
         <nav aria-label="Directory navigation">
           <Link href="/">← Main site</Link>
-          <a href="https://eduos-github-radar.vercel.app/" target="_blank" rel="noreferrer">Open standalone ↗</a>
+          <a href={radarSourceUrl} target="_blank" rel="noreferrer">Source ↗</a>
+          <a href={radarUrl} target="_blank" rel="noreferrer">Open standalone ↗</a>
         </nav>
       </header>
       <iframe
         className="directory-frame"
-        src="https://eduos-github-radar.vercel.app/"
+        src={radarUrl}
         title="EduOS GitHub Radar — open-source education directory"
       />
     </main>
