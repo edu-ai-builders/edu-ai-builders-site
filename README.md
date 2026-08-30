@@ -23,6 +23,18 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Directory integration
+
+`/directory` is the canonical public entry point for
+[EduOS Radar](https://github.com/ywEdAi/eduos-github-radar). It uses a Next.js
+multi-zone rewrite so the Radar page, assets, support route, and suggestion API
+all remain under the Edu AI Builders domain. There is no cross-domain iframe and
+this website does not maintain a second registry copy.
+
+The rewrite defaults to the production Radar service. Set the server-only
+`RADAR_ORIGIN` at build time to connect a preview deployment or local Radar
+server without changing the visitor-facing `/directory` URL.
+
 ## Production
 
 ```bash
