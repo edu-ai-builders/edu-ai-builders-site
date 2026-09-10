@@ -33,3 +33,29 @@ npm run start
 ## License
 
 Website source is published for transparency. Individual Edu AI Builders repositories specify their own licenses.
+
+## Learning Sciences
+
+`/learning-sciences` is the first-party learning sciences knowledge library. It is
+independent of `/directory`, which indexes open-source repositories, skills and
+datasets through EduOS Radar.
+
+The page includes all 180 entries from draft version 0.2.0, seven classification
+facets, evidence filtering, complete conditions and risks, observations, source
+records, and 217 navigable relationships. Entry and filter URLs can be shared.
+
+The versioned public snapshot in `public/learning-sciences/0.2.0` is copied
+without content changes from `ywEdAi/learning-sciences` at commit
+`0829bb04b7507ac779e8478bbf1d724f0963c408`. It is bundled with the site;
+page requests do not call GitHub or execute research code. Refreshing it is an
+explicit reviewed change. Sources were checked in the original August 30
+snapshot, not reverified at website publication.
+
+```bash
+node --test tests/learning-sciences.test.mjs
+npm run build
+```
+
+The existing public site at the start of this change was based on
+`2d6c6d5`, with an iframe for `/directory`. This change preserves that integration;
+the later `codex/eduos-system-refresh` rewrite is a separate unpublished change.

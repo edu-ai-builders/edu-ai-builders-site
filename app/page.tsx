@@ -110,11 +110,12 @@ export default function Home() {
 
       <header className="nav-shell">
         <a className="brand" href="#top" aria-label="Edu AI Builders home"><Brand /><span>Edu AI Builders</span></a>
-        <nav aria-label="Main navigation">
+        <nav className="site-navigation" aria-label="Main navigation">
           <a href="#system">System</a>
           <a href="#runtime">EduOS</a>
           <a href="#gallery">Assets</a>
-          <a href="/directory">Directory</a>
+          <a href="/learning-sciences">Learning Sciences</a>
+          <a href="/directory">Open-source Directory</a>
           <a href="#build">Build</a>
         </nav>
         <a className="nav-github" href={GITHUB} target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
@@ -364,7 +365,8 @@ export default function Home() {
         <footer>
           <a className="brand footer-brand" href="#top"><Brand /><span>Edu AI Builders</span></a>
           <p>Open infrastructure for anything you want to build regarding education.</p>
-          <div className="footer-links"><a href="#system">System</a><a href="#runtime">EduOS</a><a href="#gallery">Assets</a><a href="/directory">Directory</a><a href={GITHUB} target="_blank" rel="noreferrer">GitHub ↗</a></div>
+          <div className="footer-links"><a href="#system">System</a><a href="#runtime">EduOS</a><a href="#gallery">Assets</a><a href="/learning-sciences">Learning Sciences</a>
+          <a href="/directory">Open-source Directory</a><a href={GITHUB} target="_blank" rel="noreferrer">GitHub ↗</a></div>
           <div className="footer-meta"><span>OPEN SOURCE / BUILT IN PUBLIC</span><span>FOUNDED BY <a href="https://github.com/ywEdAi" target="_blank" rel="noreferrer">YI WANG ↗</a></span></div>
         </footer>
       </div>
