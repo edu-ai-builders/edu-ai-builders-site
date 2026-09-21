@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script data-edu-tool-language>
+/* Standalone tool localization. Embedded in each HTML so downloaded copies work offline.
+   Source originals, stable IDs, math state, and editable values are never rewritten. */
+(function () {
+  'use strict';
+  if (typeof window === 'undefined' || typeof document === 'undefined' || typeof document.createTreeWalker !== 'function') return;
+  let lang = 'zh';
+  try { lang = new URLSearchParams(window.location.search).get('lang') || ''; } catch {}
+  if (!lang) { try { lang = document.cookie.match(/(?:^|;\s*)edu-language=(en|zh)(?:;|$)/)?.[1] || 'zh'; } catch { lang = 'zh'; } }
+  if (lang !== 'en') return;
+  document.documentElement.lang = 'en';
+  const dictionary = {"角度测量器 · 数学可视化":"Angle Explorer · Mathematics Visualization","小学 · 几何 · 认知动作：变换":"Primary · Geometry · Explore change","角度测量器":"Angle Explorer","拖动角的一条边，量角器实时显示角度大小":"Drag one side of the angle and watch the protractor update","度°":"Degrees °","锐角":"Acute angle","角度（0 到 180 度）":"Angle (0 to 180 degrees)","30° 锐角":"30° acute angle","90° 直角":"90° right angle","120° 钝角":"120° obtuse angle","180° 平角":"180° straight angle","小学":"Primary","图形与几何":"Shapes and geometry","低":"Introductory","变换":"Transformation","拖动角的一条边，用量角器联动展示角的大小变化":"Drag one ray to explore how an angle changes on a protractor","角度及量角器，数值在上方同步显示":"Angle and protractor; the numerical value updates above","零角":"Zero angle","直角":"Right angle","钝角":"Obtuse angle","平角":"Straight angle","优角":"Reflex angle","顶点":"Vertex","← 拖动绿点调整角度 →":"← Drag the green point to adjust →","角度 =":"Angle =","，这是一个":", an","零角：0°，两条边重合。":"Zero angle: 0°. The two rays overlap.","锐角：0° < 角度 < 90°，开口比直角小。":"Acute angle: 0° < angle < 90°. Smaller than a right angle.","直角：恰好是 90°，两条边垂直，用小方块标记。":"Right angle: exactly 90°. The rays are perpendicular, marked with a square.","钝角：90° < 角度 < 180°，开口比直角大。":"Obtuse angle: 90° < angle < 180°. Larger than a right angle.","平角：180°，两条边在一条直线上。":"Straight angle: 180°. The rays form a straight line.","角的大小 = 一条边从另一条边旋转过的":"An angle measures the","旋转量":"amount of rotation","，与边的长度无关。":"from one ray to the other, regardless of ray length.","面积铺砖模型 · 数学可视化":"Area Tiling Model · Mathematics Visualization","小学 · 面积 · 认知动作：累积":"Primary · Area · Build a total","面积铺砖模型":"Area Tiling Model","用单位方格一格一格铺满矩形，理解面积的真正含义":"Fill a rectangle one unit square at a time to see what area means","长度（列数）":"Length (columns)","宽度（行数）":"Width (rows)","已铺方格":"Squares placed","总格数":"Total squares","5 × 4 = 20 个方格":"5 × 4 = 20 squares","▶ 开始铺砖":"▶ Start tiling","重置":"Reset","面积":"Area","累积":"Accumulation","用单位方格铺满矩形，理解面积=长×宽的几何本质":"Fill a rectangle with unit squares to explore why area = length × width","单位方格铺满矩形；行、列和总数见页面文字":"Unit squares fill a rectangle; rows, columns, and total are shown in the page text","← 长 {0} →":"← Length {0} →","↑ 宽 {0} ↓":"↑ Width {0} ↓","{0}行 × {1}列 = {2}格":"{0} rows × {1} columns = {2} squares","正在铺第 {0} 格……":"Placing square {0}…","铺砖中…":"Tiling…","{0} × {1} = {2} 个方格":"{0} × {1} = {2} squares","重新铺砖":"Tile again","你刚刚铺了":"You placed","{0} 行，每行 {1} 格":"{0} rows with {1} squares in each","，共":", making","{2} 格":"{2} squares","这就是面积的本质：":"Area means:","能容纳多少个单位正方形":"how many unit squares fit inside","所以这个矩形的面积 = 长 {3} × 宽 {4} =":"So this rectangle's area = length {3} × width {4} =","{5} 平方单位":"{5} square units","分数条比较器 · 数学可视化":"Fraction Bar Comparison · Mathematics Visualization","小学 · 分数 · 认知动作：比较":"Primary · Fractions · Compare","分数条比较器":"Fraction Bar Comparison","用等长的条子比较分数，大小一眼看清":"Use equal-length wholes to see which fraction is larger","分数 A（蓝色）":"Fraction A (blue)","分子":"Numerator","分母":"Denominator","分数 B（橙色）":"Fraction B (orange)","分数":"Fractions","比较":"Comparison","用等长分数条直观比较分数大小，理解分子分母对大小的影响":"Compare equal-length fraction bars to explore how numerators and denominators affect size","等长分数条；相应数值及比较结果显示在下方":"Equal-length fraction bars; values and comparison appear below","分数 A 分子":"Fraction A numerator","分数 A 分母":"Fraction A denominator","分数 B 分子":"Fraction B numerator","分数 B 分母":"Fraction B denominator","整体（1）":"Whole (1)","← 整体长度相同 →":"← Same length for both wholes →","分数 A：分成 {0} 等份，取 {1} 份":"A: {0} equal pieces; take {1}","分数 B：分成 {0} 等份，取 {1} 份":"B: {0} equal pieces; take {1}","每格宽: A={0}px B={1}px (分母越大每格越窄)":"Piece width: A={0}px B={1}px (larger denominator → narrower pieces)","两个分数分母相同（都是 {0}），每格一样大。":"Both denominators are {0}, so each piece is the same size.","分子{1}":"Numerator {1}","，所以 {2}/{3} {4} {5}/{6}。":", so {2}/{3} {4} {5}/{6}.","A更大":"A is larger","B更大":"B is larger","两个分数分子相同（都是 {0}），取的份数一样多。":"Both numerators are {0}, so the same number of pieces is taken.","分母 {1}":"Denominator {1}","，所以分母小的分数更大。":", so the fraction with the smaller denominator is larger.","A({0})更大，每格更小":"A ({0}) is larger; each piece is smaller","B({0})更大，每格更小":"B ({0}) is larger; each piece is smaller","{0}/{1} 约等于":"{0}/{1} is approximately","，{3}/{4} 约等于":", and {3}/{4} is approximately","注意：分母 {0} 把整体分成 {1} 份，分母 {2} 把整体分成 {3} 份，":"Denominator {0} divides the whole into {1} pieces; denominator {2} divides it into {3} pieces.","每份的大小不同":"The pieces have different sizes","🎉 两个分数":"🎉 The two fractions are","相等":"equal","！它们在整体中占同样长度。":"! They occupy the same length of the whole.","一次函数滑杆实验室 · 初中数学可视化":"Linear Function Lab · Mathematics Visualization","一次函数滑杆实验室":"Linear Function Lab","参数调节":"Adjust parameters","斜率":"Slope","纵截距":"Vertical intercept","关键点":"Key points","纵截距（x=0）":"Vertical intercept (x = 0)","零点（y=0）":"Zero (y = 0)","单调性":"Increasing or decreasing","k>0，递增":"k &gt; 0, increasing","模式":"Mode","自由探索":"Free exploration","挑战模式":"Challenge mode","挑战：匹配目标直线":"Challenge: match the target line","调整 k 和 b，让你的橙色直线与灰色目标线完全重合！":"Adjust k and b until your orange line matches the gray target line!","验证匹配":"Check match","新题目":"New challenge","↺ 重置为默认值":"↺ Reset defaults","拖动左侧的":"Drag the","k 滑杆":"k slider","，观察直线如何旋转；拖动":"to observe rotation; drag the","b 滑杆":"b slider","，观察直线如何平移。":"to observe translation.","数值表":"Value table","斜率含义":"What the slope means","斜率 k":"Slope k","纵截距 b":"Vertical intercept b","一次函数坐标图，数值表和关键点同步显示参数变化":"Linear function graph; the value table and key points update with the parameters","所有实数（y 恒为 0）":"All real numbers (y is always 0)","无零点（非零常数）":"No zero (nonzero constant)","k > 0，单调递增":"k > 0, increasing","k < 0，单调递减":"k < 0, decreasing","k = 0，水平线（常数函数）":"k = 0, horizontal line (constant function)","k = 0：直线水平，y 值恒为":"k = 0: the line is horizontal, and y stays at","，x 怎么变 y 都不变。":"regardless of x.","增大":"increases by","减小":"decreases by","向右上":"up and right","向右下":"down and right","k = {0}：x 每增加 1，y 就":"k = {0}: for every increase of 1 in x, y","直线走向：{3}方向。{4}":"Direction: {3}. {4}","斜率绝对值较大，直线较陡。":"A larger absolute slope makes the line steeper.","斜率绝对值较小，直线较平。":"A smaller absolute slope makes the line flatter.","：直线从左下延伸到右上，x 越大，y 越大。":": the line rises from left to right. As x increases, y increases.","：直线从左上延伸到右下，x 越大，y 越小。":": the line falls from left to right. As x increases, y decreases.","：斜率为零，直线变成水平线——y 值不再随 x 变化。":": the slope is zero and the line is horizontal. y no longer changes with x.","上移":"up by","下移":"down by","纵截距在 y 轴正半轴。":"The vertical intercept is on the positive y-axis.","纵截距在 y 轴负半轴。":"The vertical intercept is on the negative y-axis.","直线经过原点。":"The line passes through the origin.","b 从 {0} 变为 {1}":"b changes from {0} to {1}","：直线整体":": the whole line moves","找到一条直线，使它与目标线重合。":"Find a line that matches the target.","提示：目标线过 (0, {0}) 点。":"Hint: the target passes through (0, {0}).","🎉 完全匹配！目标直线是 y = {0}x {1}。":"🎉 Exact match! The target is y = {0}x {1}.","你调对了斜率 k = {0}，截距 b = {1}。":"You matched the slope k = {0} and intercept b = {1}.","斜率和截距都需要调整。":"Both the slope and intercept need adjusting.","斜率 k 还需要调整，注意直线的倾斜方向。":"Adjust slope k. Look at the direction of the line.","截距 b 还需要调整，注意直线与 y 轴的交点。":"Adjust intercept b. Look where the line crosses the y-axis.","数轴跳跃加减法 · 小学数学可视化":"Number Line Hops · Primary Mathematics Visualization","数轴跳跃加减法":"Number Line Hops","小学 · 数与运算":"Primary · Numbers and operations","数轴":"Number line","设置计算":"Set up the calculation","起始数字":"Starting number","跳跃步数":"Number of hops","运算符":"Operation","＋ 加法":"＋ Addition","－ 减法":"− Subtraction","🐸 出发跳跃！":"🐸 Start hopping!","↺ 重置":"↺ Reset","你发现了什么？":"What did you notice?","计算记录":"Calculation history","数轴跳跃示意，完整等式与方向会在动画后显示":"Number-line hops; the complete equation and direction appear after the animation","起点须为 -10 到 20 的整数；步数须为 1 到 10 的整数。":"The start must be an integer from -10 to 20; the number of hops must be an integer from 1 to 10.","结果超出数轴范围，请调整数字再试！":"The result is outside the number line. Adjust the numbers and try again.","向右":"right","向左":"left","你{0}跳了 {1} 格，从 {2} 到达了 {3}。":"You hopped {0} by {1} spaces, from {2} to {3}.","所以 {0} {1} {2} = {3}。":"So {0} {1} {2} = {3}.","可修改示例 · 说出这条关系 · Say the Relation":"Editable Example · Say the Relation","跳到练习区":"Skip to the practice area","说出这条关系":"Say the Relation","导出记录":"Export records","重来":"Start over","第 1 步":"Step 1","连两张卡，然后用英语把这条关系说出来":"Connect two cards, then express the relationship in English","这条关系该用哪一族标记":"Which family of markers fits this relationship?","换一段材料，自己造三条":"Use a new passage to create three relationships","造三条关系，每条用英语写成一句":"Create three relationships, each as a complete English sentence","对一下":"Check it","连不起来":"I cannot connect them","英语里，关系必须说出来":"Make the relationship explicit in English","我的情况":"My progress","说出这条关系 · Say the Relation  ·  EDU AI Builders":"Say the Relation · EDU AI Builders","步骤":"Steps","这几张卡来自":"These cards come from","（仓库自带的那篇阅读）。它们都是原文里的短句，":"(the reading supplied with the repository). They are short sentences from the source,","顺序打乱了":"in a different order","中文可以把两句话并排一放，关系自己就出来了。英语不行。":"Chinese can leave a relationship implicit between adjacent clauses; English often calls for an explicit link.","「树遮阴，蓄的热就少」—— 中文里那个「就」几乎不占分量；英语必须摆出一个":"“Trees provide shade, so less heat is stored”: an English version can make the link explicit with","，而且摆出来之后，这条因果就":". Once you add it, you have","被你宣布了":"asserted that causal relationship","，收不回去。":"and must be able to justify it.","所以英语里造一条关系有两个动作：":"Expressing a relationship involves two decisions:","选对是哪一族，再选对是哪一个词。":"choose its family, then choose the particular marker.","三条关系，三个标记，全都是":"Three relationships, three markers—all","你自己摆上去的":"chosen by you","注意最后那一对：它们各自都成立，可你不能把它们连起来 ——":"Notice the last pair: both statements are true, but you cannot connect them here—","中文里两句一并排就算说完了，英语里一挂标记就等于宣布了一条因果。":"placing a causal marker between them asserts a relationship that the passage does not establish.","这就是「意合」和「形合」的差别落在手上的样子。":"This activity makes implicit and explicit connections something you can work with.","树枝给硬地面遮阴":"Branches shade hard surfaces","蓄的热就少了":"Less heat is stored","有成年树的那条路，行人多了 18%":"The route with mature trees had 18% more pedestrians","这个对比并不能证明差别全是树造成的":"The comparison cannot prove that trees caused the entire difference","小树需要定期浇水和修剪":"Young trees need regular watering and pruning","它们才遮得出大片阴凉":"Only then can they provide substantial shade","遮阴":"Shade","导致":"leads to","蓄热变少 —— 前一件事是后一件事的原因，而且中间没有任何时间差或者条件。":"less stored heat: this pair presents a direct physical relationship.","中文说「树枝遮阴，蓄的热就少了」，那个「就」轻得几乎不算一个词；":"In Chinese, the short link can carry this relationship lightly;","英语必须摆出一个 so，摆出来这条因果才成立。":"in this exercise, so makes the causal connection explicit in English.","太正式，而且它通常带一点「推论」的味道 —— 适合从证据推出结论，不适合描述一个物理过程。":"This is more formal and often signals an inference from evidence rather than a direct physical process.","物理上的直接因果用 so 就够，用 therefore 反而像在做论证。":"For this sentence, so expresses the direct link more simply than therefore.","强调「这是那件事造成的后果」，分量比 so 重，而且它常常另起一句。这一句两半贴得很紧，用它会把句子撑开。":"This emphasizes a consequence more strongly than so and often begins a separate sentence. Here the two clauses fit closely together.","是回头解释 —— 「这就是为什么…」，它要求后半是一个":"This looks back to explain something already mentioned: “that is why…” It expects the second part to be","已经被提到过":"previously introduced","的事实。这里蓄热少是第一次出现。":"information. Reduced heat storage is introduced here for the first time.","这两张连得上，而且是这一页里最直接的一条：":"These cards do connect, through the most direct link in this exercise:","遮阴 → 蓄的热就少。":"shade → less stored heat.","再看一眼这两句里的动词。":"Look again at the verbs in the two statements.","让步—反驳要有一个「虽然…但是」的转折。这两句":"A concession needs a change of direction, like “although… still…” These statements","方向完全一致":"point in the same direction","：遮阴是好事，蓄热少也是好事，一个转折都没有。":": shade is beneficial and reduced heat storage is beneficial. There is no turn.","「谁以为什么」需要有一个人在心里做判断。这两句里没有人 —— 全是物理过程：枝叶、地面、热。":"A belief relationship needs someone making a judgment. These statements describe branches, surfaces, and heat.","没有主体，就没有心里的判断。":"There is no person whose belief is being described.","这是最容易混的一条，而且中文帮了倒忙 —— 「遮阴，然后蓄热就少」听起来也通。":"This is easy to confuse because the wording can sound like a sequence.","但这里不是先后，是导致。":"Here, however, the intended relationship is causal.","分辨的办法：把后一件拿掉，前一件还成不成立？遮阴照样发生，可蓄热少":"Ask what the explanation claims connects the events: shading occurs, and lower heat storage is presented as its","只能":"result","由遮阴带来 —— 那就是因果。":"in this example.","前一句给了一个漂亮的数据，后一句":"The first statement presents an attractive statistic; the second","把它的分量往回收":"limits what it establishes","—— 这是论证里最关键的一个动作：先摆证据，再承认它证明不了什么。":"—a key argumentative move: present evidence, then acknowledge what it cannot prove.","中国学生写议论文最缺的就是这一步：数据摆完就结束，于是整段读起来像广告。":"Stopping at a favorable statistic can make a paragraph sound promotional.","英语里一句 that said，可信度就上来了。":"Here, that said introduces the qualification and makes the claim more measured.","放在":"It normally appears","被让的那一句前面":"before the point being conceded","：「诚然，这个对比证明不了什么，但是…」。这里顺序是反的 —— 先给数据再收回来，所以要用一个":": “Admittedly, this comparison does not prove everything, but…” Here the order is reversed: first the statistic, then its limitation. Choose a marker that","接在后面":"follows the first claim","的词。":"instead.","是「即便如此，我还是要说 X」—— 它后面跟的是":"This means “despite that, I still maintain X.” It introduces","坚持":"continued insistence","，不是":"rather than","退让":"a qualification","。这一句后半是在退让，方向反了。":". The second clause here qualifies the first, so the direction does not fit.","和 admittedly 一样，通常引出":"Like admittedly, it usually introduces","你愿意认下来的那一条":"a point you are willing to accept","，然后跟一个 but。这里后半没有 but，它就是那个退让本身。":"before a later but. Here there is no later but: the second clause itself is the qualification.","这两张连得上。一句给数据，一句说这数据证明不了什么 ——":"These cards connect: one reports a result, while the other limits what the result proves.","它们之间那层「先摆再收」的关系，正是这一段最要紧的东西。":"Presenting evidence and then qualifying it is the key relationship in this passage.","因果是「A 导致 B」。这里 18% 这个数据":"Causation means A brings about B. The figure of 18%","没有导致":"does not cause","「对比证明不了什么」——后一句是在":"the comparison's limited explanatory power. The second statement","评价":"assesses","前一句的分量，不是在承接它的后果。":"the strength of the evidence rather than reporting its consequence.","这一句里确实有一个判断，但它是":"There is a judgment here, but it is","写文章的人对证据的判断":"the writer's assessment of evidence","，不是文章里某个人物心里的想法。「谁以为什么」要有一个具体的人：规划者以为、居民以为。":", not a character's belief within the account. A belief relationship would identify someone, such as the planners or residents.","这两句之间没有时间关系 —— 它们说的是同一次对比，一个是结果，一个是对这个结果的限制。":"These statements concern the same comparison: one reports the result, and the other qualifies it.","同一时刻的两个角度，不是先后。":"They are two perspectives on one event, not successive events.","浇水修剪不会「导致」遮阴 —— 树长大才会。":"Watering and pruning do not directly produce shade; the tree must grow.","浇水修剪只是":"Maintenance is","排在前面的那一件":"a preceding requirement","，是个前提，不是原因。":"rather than the immediate mechanism.","这是反过来的那一半：":"This is the other side of the distinction:","该标先后的地方，最容易被标成因果。":"a prerequisite can be mistaken for a direct cause.","中文里「浇水修剪了，才能遮阴」和「因为浇水修剪，所以能遮阴」听起来差不多，英语里前者是":"“Only after watering and pruning can they provide shade” differs from “watering and pruning therefore produce shade.” In the first, the marker is","，后者是":"; in the second it is","，而后者是错的 —— 它把养护说成了遮阴的成因。":", which makes a stronger causal claim than intended here.","顺带记一个句法：":"Also notice the grammar:","放句首，主句要":"at the beginning of the sentence requires","倒装":"inversion","（can they），这是英语里少数几个强制倒装的场合之一。":"in the main clause (can they).","说的是「到了某个时间点，某事已经完成」——它强调":"This means that something has already happened by a certain time. It emphasizes","时间点":"a point in time","。这里强调的是":". Here, the emphasis is on","条件":"a condition","：不浇不修，就不会有阴凉。":": without the required care, the promised shade may not develop.","只说先后，不带任何「非这样不可」的分量。而原文的意思是":"This marks sequence without emphasizing necessity. The passage emphasizes that maintenance","必须先做到":"must happen first","才行 ——":"—","才带得出这层。":"brings out that requirement.","是「一旦…就…」，语气上偏轻松、偏必然。这里要说的是养护很费事、不做就没有阴凉，":"This means “as soon as / when…” and can sound more automatic. Here the passage emphasizes that care takes work and is necessary;","once 把这个成本抹掉了":"once does not emphasize that cost as strongly","这两张连得上 —— 只是它们之间":"These cards connect, but the intended link is","不是因果":"not a direct causal claim","。再想一想：浇水修剪和遮出阴凉，哪个排在前面？":". Which must come first: caring for the tree or obtaining substantial shade?","这是这一页最想让你撞一次的地方。":"This is a key distinction the exercise asks you to notice.","浇水修剪不会「产生」阴凉 —— 树长大才会。养护只是排在前面、而且不能少的一步。":"Watering and pruning do not immediately create shade; growth takes time. Care is presented here as a necessary prior step.","分辨的办法：问一句":"A useful question is:","「是它造成的，还是它只是先发生？」":"“Does this describe the mechanism, or a preceding condition?”","浇一桶水不会直接变出一片阴凉，中间还隔着好几年的生长。":"A bucket of water does not directly become a patch of shade; years of growth may lie between.","让步要有转折 —— 后半得把前半的分量往回收一点。这两句方向完全一致：都在说「要遮阴，得先付出养护」。":"A concession changes direction by qualifying the first claim. Both statements here explain the care needed before shade develops.","没有任何一句在推翻另一句":"Neither statement pushes back against the other","，硬加一个 that said，读者会去找那个被反驳的观点然后找不到。":", so adding that said would suggest a contrast the reader cannot find.","这里没有人在心里做判断，只有树、水和剪子。「谁以为什么」需要两样东西：":"There is no person making a judgment here, only trees and their care. A belief relationship needs","一个主体，和一个可能出错的信念":"a person and a belief that could be mistaken","。这两句说的是养护和生长的客观次序，谁信不信都一样。":". These statements describe a sequence that does not depend on someone's belief.","18% 更多的行人":"18% more pedestrians","和":"and","小树要浇水修剪":"young trees need watering and pruning","—— 两件事都是真的，一个是效果，一个是成本，可它们之间":"are both claims in the passage. One is a result, the other a maintenance requirement, but this pair has","没有任何一条关系":"no established direct relationship","：行人多不是因为要浇水，浇水也不是因为行人多。":": more pedestrians are not caused by a need for watering, nor is watering needed because more people walk there.","它们在原文里甚至隔着一整段。":"The statements even occur in separate paragraphs.","把它们连起来，你就凭空造了一条文章里没有的因果。":"Connecting them causally would invent a relationship the passage does not establish.","这两张各自都成立，可它们之间":"Both statements may hold, but this pair has","什么关系都没有":"no justified direct link","—— 一个是「树带来了什么」，一个是「树要花多少钱养」。中文里把它们并排一放还挺自然（「路上人多了，不过小树得浇水」），":"—one concerns a result associated with trees, the other their maintenance. Juxtaposing them may sound natural,","但那个「不过」是你加上去的，原文里没有。":"but the connecting relationship would be yours, not one established by the source.","规划者是":"The planners","认为":"believed","阴凉会改变人走哪条路，才去做这个对比的":"shade would change route choices, and therefore made the comparison","整句的重心不在「比较」这个动作上，在于":"The focus is not just on the act of comparing, but on","他们心里先有了一个判断":"the judgment they formed beforehand","——而这个判断本身是可以错的。":"—a judgment that might be wrong.","中文学生表达这一层几乎只会一个":"Learners may rely on a single expression such as","。而英语这一族分得很细：":". English offers more specific alternatives:","（没验证就当成真）、":"(treated as true without verification),","（默认如此）、":"(taken as the default),","（以为是这样，而且暗示可能错了）、":"(believed, with a suggestion it may be wrong),","（本来不知道，现在知道了）。":"(previously unknown, now recognized).","选哪一个，等于表明你觉得这个判断有多靠得住。":"The choice communicates how secure you consider that judgment.","会往因果上想，是因为「因为他们这么认为，所以他们去比较」确实成立。但那样一来，句子的重心就落在了「比较」这个动作上；":"A causal interpretation is tempting: their belief did motivate the comparison. But that shifts the sentence's emphasis to the action;","而这一层真正要说的是那个判断本身 —— 它是一个假设，不是一个原因。":"here, the focus is on the belief itself as a hypothesis to examine.","用 so 会让读者以为那个判断已经被证实了。":"Using so here would not foreground the uncertainty of that hypothesis.","让步要有转折。这两句方向完全一致：因为觉得阴凉重要，所以去比较有树和没树的路。":"There is no concession: the belief that shade matters leads to comparing routes with and without trees.","一步都没有往回收。":"Neither statement qualifies the other.","这两句之间确实有先后（先有判断，再有比较），但":"There is a sequence—the belief comes before the comparison—but","先后不是这一句的重点":"the sequence is not the main point","。标成先后，你就把「这是一个可能出错的假设」这层完全丢掉了。":". A sequence marker alone would lose the emphasis on a potentially mistaken hypothesis.","它们之间关系很紧 ——":"The connection is close:","没有那个判断，这个比较根本不会发生。":"the judgment motivates the comparison.","判成并排，整段的动机就没了：读者会不知道规划者为什么偏偏去比这两条路。「并排」是指两件事互不相干，而这两件事一件是另一件的理由。":"Treating these statements as unrelated would remove that motivation. One explains why the planners chose those routes.","深色路面吸热，":"Dark pavement absorbs heat,","所以":"so","太阳下山了街上还是热":"the street remains hot after sunset","一个物理过程直接带来另一个 —— 吸热、慢慢放热、街还是热的。":"The passage describes a physical process: surfaces absorb heat and release it slowly, leaving the street hot.","中间没有条件，没有时间差，也没有人的判断。":"The focus is on the mechanism, rather than a person's belief or a prerequisite.","这一族里选":"For this sentence, choose","而不是":"rather than","：therefore 带推论味（我从证据推出这个结论），so 是直接的物理后果。":": therefore often foregrounds an inference, while so fits the intended direct consequence here.","描述世界怎么运作用 so，从证据推结论用 therefore。":"Here, so describes the physical result; therefore would sound more like a conclusion drawn from evidence.","两句方向一致 —— 都在说热是怎么留下来的。":"Both statements explain how heat remains.","没有任何一句在推翻另一句。":"Neither statement contradicts the other.","让步—反驳的标志是后半会削弱前半的分量，这里后半是在":"A concession would qualify the first claim. Here the second","加强":"reinforces it","这两句里没有人 —— 全是路面、屋顶、阳光。":"The statements describe surfaces, roofs, and sunlight, not a person's judgment.","「谁以为什么」要有一个主体，而且那个主体的判断可能是错的。":"A belief relationship needs a person whose belief could be mistaken.","物理过程没有主体，也谈不上对错：路面吸热不需要谁相信它。":"The physical process does not depend on someone believing it happens.","「太阳下山之后」确实是个时间词，容易让人往先后上想。但那是":"“After sunset” expresses time, which can tempt you toward sequence. But it is time","句子内部":"within a clause","的时间，不是":"rather than the relationship","两句之间":"between the two clauses","的关系。两句之间是：吸热":". Between the clauses, absorbed heat","了持续的热。":"contributes to the continued warmth.","把它标成先后，因果就没了。":"A sequence marker would leave that causal explanation unstated.","这两句关系极紧 —— 后一句是前一句的直接后果。判成并排，读者就不知道街为什么太阳下山了还是热的，":"The second statement describes a consequence of the first. Treating them as unrelated would not explain why the street stays hot,","而这正是整篇文章要解释的那个现象":"which is the phenomenon the passage sets out to explain","。「并排」留给真的互不相干的两件事。":". Reserve the unrelated option for claims with no established connection.","中文里你可能会顺口说「树选错了会拱坏路面，":"You might place these statements beside each other: “The wrong trees can damage sidewalks,","而且":"and","学校附近又特别热」":"it is very hot near schools.”","Poorly chosen species may damage sidewalks. Heat exposure is high near schools and bus stops. {（两句之间不加任何标记）}":"Poorly chosen species may damage sidewalks. Heat exposure is high near schools and bus stops. (No relationship marker between these sentences.)","两件事都是真的，可它们之间":"Both statements can be true, but this pair has","：选错树种不会让学校变热，学校热也不会让树种选错。":": choosing the wrong species does not make schools hotter, and heat near schools does not determine a mistaken species choice.","中文里把它们并排一放，加个「而且」「另外」就过去了 ——":"An additive phrase can simply place two points side by side—","那个「而且」只是在数数，不带任何逻辑分量。":"it need not establish a causal relationship.","可英语里一旦加上":"But adding a marker such as","、甚至":"or even","，你就":"would","宣布了一条并不存在的关系":"assert a relationship that has not been established","，而且收不回去。":"and that claim would need support.","教「英语必须显性标记」，一定有人什么都标。":"Learning to make connections explicit does not mean every pair needs a marker.","真的没关系的时候，正确的做法是":"When no relationship is established, the right choice is to","什么都不加，让它们各自站着":"leave the statements separate","这是最贵的一种误标。加上 so 或 as a result，你就在说「因为树会拱坏路面，所以学校附近热」——":"A causal marker such as so or as a result would claim that damage to sidewalks makes the area near schools hot—","一句原文里根本没有、而且明显荒谬的话。":"a claim absent from the source and unsupported here.","读的人会觉得是你没读懂。":"A reader could take this as a misunderstanding of the passage.","让步要有两边在较劲。这两句":"Concession requires two claims that pull in different directions. These two","连交锋的点都没有":"have no point of opposition","：一个说树的风险，一个说地点的热度。硬加一个 that said，读者会去找那个被反驳的观点，然后找不到。":": one concerns a risk from trees, the other a location's heat exposure. That said would suggest a contrast the passage has not established.","两句里都没有人在做判断 —— 一句说树种，一句说地点的热度，全是客观陈述。":"Neither statement reports someone's belief: one concerns tree species, the other heat exposure.","没有主体，就没有心里的想法。":"No person or belief is identified.","硬标成「谁以为什么」，读者会问：谁以为？而句子里答不出来。":"A belief marker would leave the reader asking: who thinks this?","它们之间没有先后 —— 不是「先选错树，然后学校变热」。两件事在时间上互不相干。":"There is no established sequence: it is not that someone first chooses the wrong trees and schools then become hot.","硬标 before / after，同样是在造一条不存在的关系。":"Adding before or after would also invent a relationship.","阴凉是能让人走得舒服，":"Shade can make walking more comfortable,","不过":"but","树可不是马上见效、也不是免费的":"trees take time and money","前一句是这篇文章一直在论证的好处，后一句":"The first statement presents a benefit the passage has been explaining; the second","主动把它的代价摆出来":"acknowledges its cost","这一步在英语议论里是":"This can","加分":"strengthen","，不是减分：主动说出自己这一方的弱点，读者会觉得你更可信。中国学生的作文里几乎没有这一步 —— 好处说完就结束。":"an argument: acknowledging limitations can make the claim more credible than reporting benefits alone.","这里用":"Here the selected marker is","：它的意思是「就算前面那条成立，下面这条还是要说」——既没有推翻好处，也没有被好处压住。":": the first point can still hold while the second remains important. The cost neither cancels nor disappears behind the benefit.","因果是「A 导致 B」。阴凉让人舒服，":"Causation means A brings about B. Comfortable shade","并没有导致":"does not make","树变得昂贵或者慢。这两句是":"trees costly or slow to mature. These statements present","并列的两面":"two sides of a trade-off","，不是一条链。":"rather than a causal chain.","这两句都是文章在陈述事实，不是某个人物心里的判断。":"Both are claims made by the author, rather than a reported belief held by a character.","「谁以为什么」要有一个具体的人":"A belief relationship needs an identified thinker","，而且那个人的判断可以被后文推翻。这里「阴凉让人舒服」和「树不便宜」都是作者摆出来的，不是谁的看法。":"whose belief could be challenged. Here the author presents a benefit and a cost.","它们之间没有先后 —— 不是「先舒服，然后才变贵」。":"There is no sequence in which comfort appears first and trees then become expensive.","好处和代价是同时成立的两件事":"The benefit and cost can hold simultaneously","，说的是同一批树的两个面。标成先后，读者会以为文章在讲一个过程，而它在讲一次权衡。":"for the same trees. A sequence marker would make this sound like a process rather than a trade-off.","它们关系很紧，只是关系的方向是":"The claims are connected, but they pull in","相反":"contrasting directions","的。判成并排，你会失去这段最有价值的那一下：":". Treating them as unrelated would miss the key argumentative move:","作者主动承认了自己这一方的短板。":"the author acknowledges a limitation of the proposal.","得先出钱做养护，树":"The city must fund maintenance before the trees","才":"can","活得下来":"survive","出钱本身不会让树活 ——":"Funding alone does not keep a tree alive—","浇水、修剪、防护才会":"watering, pruning, and protection support survival","，而出钱只是排在这些动作前面的、不能少的一步。":". Funding is presented here as a necessary step before those actions.","这是另一个「先后被当成因果」的地方。":"Again, distinguish a prerequisite from a direct mechanism.","中文的「才」把条件和原因糅在一起（「出了钱才活得下来」），英语必须分开：":"In this example, the intended English wording separates a necessary condition from an immediate causal claim:","是条件，":"marks the condition, while","是原因。":"makes a causal claim.","写成":"Writing","，读起来像钱能直接变成树的存活率 —— 而这正是这篇文章想避免的那种说法。":"would imply a more direct connection between money and survival than the passage intends.","这是这一页最想让你撞第二次的地方。":"This is another chance to check that distinction.","出钱是必要条件，不是充分原因 —— 钱到位了树也可能死（选错了树种、天气不好）。":"Funding is necessary in this account but not sufficient: trees could still die because of poor species choice or weather.","一个可以带走的判据：":"A useful caution:","如果 A 发生了 B 仍然可能不发生，那 A 就不是原因，是条件。":"A necessary condition is not automatically a sufficient cause. If A occurs without B, it does not by itself establish what caused B.","让步要有转折 —— 后半要把前半往回收一点。这两句方向完全一致：都在说养护要花钱、而且非花不可。":"Both statements point in the same direction: maintenance needs funding. Neither qualifies the other.","一步都没有往回收":"There is no contrast","，所以 that said 之类的词放进去会显得莫名其妙。":", so a marker such as that said does not fit.","这里没有人在心里做判断，只有一笔钱和一批树。":"No person's belief is reported here; the statements concern funding and trees.","「谁以为什么」要有一个主体和一个可能出错的信念":"A belief relationship needs an identified thinker and a potentially mistaken belief","—— 「出了钱树才活得下来」是个客观条件，不是谁的看法，谁信不信它都成立。":". Here the funding requirement is presented as a condition, not someone's opinion.","不出钱，树就活不下来。":"Without the necessary funding, the proposed maintenance cannot be sustained.","判成并排，这篇文章最后那句话（要给养护出钱）就没了着落。":"Treating the claims as unrelated would disconnect the passage's final recommendation to fund maintenance.","第 3 步 · 换一段，自己造三条":"Step 3 · Use a new passage to create three relationships","这五张来自原文":"These five cards come from the source's","最后一段":"final paragraph","：城市的提议不是「多种树」，而是「把合适的树种在关系最强的地方，并且为养护出钱」。":". The proposal is to plant suitable trees where they matter most and fund their maintenance, rather than simply plant more trees.","把合适的树种在最需要阴凉的地方":"Place suitable trees where shade is needed most","选错的树种熬不过本地的天气":"Poorly chosen species struggle in local weather","城市为养护出钱":"The city funds maintenance","树活得够久，久到能遮出阴凉":"The trees survive long enough to provide shade","学校和公交站附近能受益的人更多":"More people can benefit near schools and bus stops","选错树种熬不过天气 / 学校附近受益的人多":"Unsuitable species struggle in the weather / more people benefit near schools","造三条关系，每条用一族不同的标记，写成英语。":"Create three English sentences, each using a different marker family.","五张卡里有":"Among the five cards,","两张之间根本没有关系":"two have no established connection","（选错树种熬不过天气 / 学校附近受益的人多）——别把它们连起来。":"(the unsuitable species and the greater number of beneficiaries near schools). Do not connect that pair.","三条关系，":"Three relationships,","三族不同的标记":"three different marker families","：因果 / 让一步 / 先后 —— 别三条都用":": cause / concession / sequence. Do not use the same marker for all three.","每条写成":"Write each relationship as","一句完整的英语":"a complete English sentence","，标记要在句子里，不能只列在旁边":"with the marker inside the sentence, not listed beside it.","那两张没关系的卡，不要塞进同一句":"Do not combine the unrelated cards in a single linked claim","。中文里并排一放没事，英语一挂标记就是宣布了一条因果":". Adding a causal marker would assert a connection the source does not establish.","一行一句。三句，三族不同的标记。":"One sentence per line. Three sentences, three different marker families.","三族都用上了 —— 你在分辨关系的种类，不是在套一个 so。":"You used all three families, distinguishing relationships rather than relying on so for everything.","用上的标记族不到三个。":"Fewer than three marker families were used.","三条关系全用 so，等于说这段里只有因果":"Using so for all three would make every link sound causal","——而它其实有因果、有让步、有先后。在上面右栏里挑三族不一样的，每族一个词。":". The passage also contains concession and sequence. Choose one marker from each of three families in the reference panel.","因果":"Cause","让一步":"Concession","先后":"Sequence","谁以为什么":"Someone's belief","没把没关系的两张硬连起来":"The unrelated cards remain separate","那两张各自站着 —— 你没有凭空造一条文章里没有的关系。":"You kept that pair separate rather than inventing a link the passage does not establish.","你把":"You combined","选错树种熬不过天气":"unsuitable species struggle in local weather","学校附近受益的人多":"more people benefit near schools","塞进了同一句，还挂上了一个标记。":"in one sentence with a linking marker.","这两件事之间没有任何关系：选错树不会让学校变热，学校热也不会让树选错。":"The passage does not establish a connection between that species choice and the number of people near schools who benefit.","中文里并排一放还挺自然，英语里一挂标记就等于宣布了一条因果，而且收不回去。":"A causal marker would assert a relationship the passage does not establish.","把它们拆成两句，中间什么都不加。":"Separate them into two statements without adding a relationship marker.","三句都写完整了":"All three sentences are complete","够长，三条关系都说清楚了。":"The draft is long enough for this exercise's check.","太短了 —— 三十五个词以下装不下三条完整的关系。每一条都要是一句能读的英语：两端各是什么、中间那个标记摆在哪儿。":"This draft is below the exercise's 35-word threshold. Check that each relationship is a complete sentence naming both sides and its linking marker.","不是照抄":"Not copied verbatim","没有整句照搬。":"No entire sentence was copied verbatim.","有一整句和卡片上的文字一模一样。":"An entire sentence matches the text on a card.","这一步要的是把两张卡接成一句":"The task is to connect two cards in a sentence","——接的过程里你得改动词形、加连接词、调语序，那才是真的在造关系。":", which may require changing verb forms, adding a connector, and adjusting the word order.","先只造最容易的一条：":"Start with one simple pair:","选错树种 → 熬不过天气":"unsuitable species → struggle in local weather","是因果吗？不是 —— 是「如果选错，就会熬不过」。想想哪一族。":". Consider whether you want to state a cause or emphasize a condition, and choose a marker that matches that claim.","第二条用让步：":"For a second sentence, use concession:","第三条用先后：":"For a third, use a prerequisite or sequence:","三条关系，三族标记，每一族都在说一件不同的事 —— 而这三族在中文里可以糊成一个「就」、一个「而且」、一个「才」。":"Three relationships and three marker families, each making a different kind of connection explicit.","英语逼你在动笔之前先想清楚：这到底是导致、是退让，还是只是先后。":"Before choosing a marker, decide whether you mean cause, concession, or sequence.","想清楚了再挂标记，那一刻你已经在用英语的方式组织想法了。":"Then the marker expresses a relationship you have deliberately chosen.","中文靠并置就能表达关系，英语必须把它说出来。":"Connections can sometimes remain implicit, but this exercise asks you to make them explicit in English.","说出来的代价是你得先想清楚它是哪一种":"To express a link, first decide what kind it is","—— 而这正是这一页的全部内容。":"—that is the purpose of this page.","前一件事导致后一件事":"One event brings about another","让一步再反驳":"Concede, then qualify","先把对方那条认下来，再把它翻过去":"Acknowledge a point, then introduce a counterpoint","行为背后是某人心里的一个判断":"An action is linked to someone's judgment","只是先后":"Sequence only","一件在另一件之前 —— 但不是它导致的":"One event precedes another without claiming that it causes it","两句就是并排":"No established connection","它们之间没有关系，硬加一个标记反而是错的":"No relationship is established here; adding a marker would mislead","不加标记":"No marker","连起来，说出来":"Connect and express","第 1 步 · 连两张卡，然后用英语把这条关系说出来":"Step 1 · Connect two cards and express the relationship in English","点两张卡连一条线，":"Click two cards to connect them,","再给这条线挑一个英语标记":"then choose an English marker for the link","—— 页面会把它拼成一句话。":". The page will combine them into a sentence.","有两张卡连不上":"One pair should remain unconnected","—— 它们之间根本没有关系。那一对你要按「这两张连不上」。":". Select “These cards do not connect” for that pair.","哪一族标记":"Choose the marker family","第 2 步 · 这条关系该用哪一族标记":"Step 2 · Which marker family fits this relationship?","五道题共用同一组五个选项。":"Five questions share the same five options.","其中两个是反过来的那一半":"Two options check the other side of the distinction","一个是「只是先后，不是因果」，另一个是「两句就是并排，不用标」。":": “sequence, not cause” and “no established relationship, no marker.”","换一段自己造":"Create with a new passage","第 3 步 · 换一段材料，自己造三条关系":"Step 3 · Create three relationships from a new passage","新的五张卡。":"Five new cards.","两头同时卡":"Check both directions","：该标不标不行；":": make needed connections explicit;","把本来没关系的两张硬连起来，更不行":"avoid inventing connections between unrelated claims","材料":"Material","造了 {0} / {1} 条{2}":"Created {0} / {1} relationships{2}","· 认出了连不上的那一对":"· Identified the unrelated pair","这两张之间是什么关系":"What connects these cards?","这两张连不上":"These cards do not connect","✗ 这两张之间没有可说的关系":"✗ No target relationship connects these cards","这一对不在今天要找的三条里面。换两张试试。":"This is not one of the three target pairs. Try two different cards.","现在挑一个词":"Now choose a word","这一族有 {2} 个，":"This family has {2} options.","它们意思相近但":"Their meanings are related, but their","分量和位置不一样":"emphasis and position differ","✗ 不是这一族":"✗ Not this family","拼出来了":"Sentence created","✗ 同一族，可这一个不合适":"✗ Right family, but this marker does not fit","再看一眼它在句子里该放哪儿、分量有多重。":"Check its position in the sentence and the strength of its claim.","对了，这两张连不上":"Correct—these cards do not connect","✗ 这两张连得上":"✗ These cards do connect","再想一想：前一张和后一张之间，是不是有一件事导致了另一件？":"Think again: does one statement describe a consequence of the other?","这一对确实连不上":"This pair does remain unconnected","但今天要认出的是":"But the target for this exercise is","另外一对":"a different pair","—— 那一对里的两张，看起来像有关系。":"whose claims may appear connected at first.","这两句":"The two statements","中文里你会怎么说这层关系：":"An explanation of the intended relationship:","英语里得这么说":"An English version","下一对":"Next pair","去第 3 步":"Go to step 3","第 {0} 对 / 共 {1} 对":"Pair {0} of {1}","对了":"Correct","✗ 再想一下":"✗ Think again","用上的标记族：{0}":"Marker families used: {0}","—— 你把它们塞进同一句还挂了标记。":"—you placed them in one sentence with a relationship marker.","中文可以并排一放就算说完，英语一挂标记就等于宣布了一条因果。":"A causal marker asserts a link; it is not merely a way of placing statements beside each other.","那两张本来没关系":"The unrelated pair","没有把本来没关系的两张硬连起来。":"You did not force the unrelated claims into a relationship.","新材料":"New material","碰到 {0} / 5 族":"Encountered {0} / 5 families","第 1 步造了":"Step 1: created","条关系{2}。":"relationships{2}.","，认出了连不上的那一对":", and identified the unrelated pair","第 2 步认出":"Step 2: identified","族{2}。":"families{2}.","，认错 {0} 次":", with {0} incorrect attempts","第 3 步写了":"Step 3: wrote","词。":"words.","还没开始。":"Not started yet.","点两张卡连一条线 ——":"Click two cards to connect them,","然后必须给它挑一个英语标记。":"then choose an English marker for the relationship.","三步都走完了":"All three steps complete","走完三步一共":"Across the three steps:","项":"items","没认出来":"Not identified","没做":"Not attempted","第 {0} 步 / 共 3 步":"Step {0} of 3","接着写":"Keep writing","提示":"Hint","{0} 词":"{0} words","建议至少 {0} 词":"Aim for at least {0} words","用上了":"Used","说了太多遍":"Repeated too often","✓ 完成":"✓ Complete","一个写法":"One possible version","完成":"Complete","说出这条关系-{0}.json":"say-the-relation-{0}.json","说出这条关系 · Say the Relation":"Say the Relation"};
+  const normalize = text => String(text).replace(/\s+/g, ' ').trim();
+  const escape = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const entries = Object.entries(dictionary).sort((a, b) => b[0].length - a[0].length);
+  const patterns = entries.filter(([key]) => /\{\d+\}/.test(key)).map(([key, value]) => {
+    const slots = [];
+    const parts = key.split(/(\{\d+\})/g).map(part => {
+      if (/^\{\d+\}$/.test(part)) { slots.push(part); return '(.*?)'; }
+      return escape(part);
+    });
+    return { expression: new RegExp('^' + parts.join('') + '$'), value, slots };
+  });
+  const plain = entries.filter(([key]) => !/\{\d+\}/.test(key));
+  function translate(value, depth = 0) {
+    const text = normalize(value);
+    if (!/[\u3400-\u9fff]/.test(text) || depth > 5) return String(value);
+    if (dictionary[text] !== undefined) return dictionary[text];
+    // Dynamic feedback sometimes concatenates complete sentences into one text node.
+    const sentences = text.match(/[^。！？]+[。！？]|[^。！？]+$/g);
+    if (sentences && sentences.length > 1) {
+      const joined = sentences.map(sentence => translate(sentence, depth + 1)).join(' ');
+      if (joined !== text && !/[\u3400-\u9fff]/.test(joined)) return joined;
+    }
+    for (const pattern of patterns) {
+      const match = pattern.expression.exec(text);
+      if (match) {
+        const values = Object.fromEntries(pattern.slots.map((slot, index) => [slot, translate(match[index + 1], depth + 1)]));
+        return pattern.value.replace(/\{\d+\}/g, slot => values[slot] ?? slot);
+      }
+    }
+    let result = text;
+    for (const [source, english] of plain) {
+      if (result.includes(source)) result = result.split(source).join(' ' + english + ' ');
+    }
+    return result.replace(/\s+/g, ' ').trim();
+  }
+  window.eduToolTranslate = translate;
+  // Canvas has no text nodes: translate authored labels at the drawing boundary.
+  if (typeof CanvasRenderingContext2D !== 'undefined') {
+    for (const method of ['fillText', 'strokeText']) {
+      const original = CanvasRenderingContext2D.prototype[method];
+      CanvasRenderingContext2D.prototype[method] = function (text, ...args) { return original.call(this, translate(text), ...args); };
+    }
+  }
+  const excluded = 'script,style,textarea,input,[contenteditable="true"],[data-user-content]';
+  function localizeText(node) {
+    if (!node.parentElement || node.parentElement.closest(excluded)) return;
+    const original = node.nodeValue;
+    if (!/[\u3400-\u9fff]/.test(original || '')) return;
+    const translated = translate(original);
+    if (normalize(translated) !== normalize(original)) node.nodeValue = ' ' + translated + ' ';
+  }
+  function localizeElement(element) {
+    if (element.matches('script,style,[data-user-content]')) return;
+    for (const attr of ['aria-label', 'title', 'placeholder', 'alt', 'content']) {
+      const source = element.getAttribute(attr);
+      if (source && /[\u3400-\u9fff]/.test(source)) {
+        const translated = translate(source);
+        if (translated !== source) element.setAttribute(attr, translated);
+      }
+    }
+  }
+  function walk(root) {
+    if (root.nodeType === 3) return localizeText(root);
+    if (root.nodeType !== 1 && root.nodeType !== 9) return;
+    if (root.nodeType === 1) localizeElement(root);
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      if (node.nodeType === 3) localizeText(node); else localizeElement(node);
+    }
+  }
+  function start() {
+    walk(document);
+    const observer = new MutationObserver(records => {
+      for (const record of records) {
+        if (record.type === 'characterData') localizeText(record.target);
+        else if (record.type === 'attributes') localizeElement(record.target);
+        else for (const node of record.addedNodes) walk(node);
+      }
+    });
+    observer.observe(document.documentElement, {subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:['aria-label','title','placeholder','alt','content']});
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, {once:true}); else start();
+})();
+
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数轴跳跃加减法 · 小学数学可视化</title>
+
+
+  <style>
+    /* ── 1. CSS 变量 ─────────────────────────────── */
+    :root {
+      --bg: #f0f7ff;
+      --surface: #ffffff;
+      --surface2: #e8f3fd;
+      --ink: #1a2b3c;
+      --ink2: #4a6a8a;
+      --ink3: #8aaccc;
+      --border: #ccdff0;
+
+      --blue: #2a7bc8;
+      --blue-light: #dceeff;
+      --blue-dark: #1a5a9c;
+
+      --green: #1a8c5a;
+      --green-light: #d4f5e3;
+      --green-dark: #0d6040;
+
+      --amber: #c87820;
+      --amber-light: #fef0d4;
+      --amber-dark: #9a5810;
+
+      --red: #c83020;
+      --red-light: #fde8e4;
+
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow: 0 2px 12px rgba(42, 123, 200, 0.10);
+    }
+
+    /* ── 2. 全局重置 ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── 3. 头部 ─────────────────────────────────── */
+    header {
+      background: var(--surface);
+      border-bottom: 2px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow);
+    }
+    header .icon { font-size: 28px; }
+    header h1 { font-size: 18px; font-weight: 700; color: var(--blue-dark); }
+    header .tag {
+      font-size: 11px; font-weight: 600;
+      background: var(--blue-light); color: var(--blue-dark);
+      padding: 3px 10px; border-radius: 20px;
+    }
+
+    /* ── 4. 主体布局 ─────────────────────────────── */
+    main {
+      flex: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+
+    /* ── 5. 卡片 ─────────────────────────────────── */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      border: 1.5px solid var(--border);
+    }
+    .card-title {
+      font-size: 13px; font-weight: 600;
+      color: var(--ink2);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── 6. 数轴画布区 ───────────────────────────── */
+    #canvasWrap {
+      width: 100%;
+      position: relative;
+    }
+    #numberlineCanvas {
+      width: 100%;
+      height: 160px;
+      display: block;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ── 7. 控制区 ───────────────────────────────── */
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .ctrl-group label {
+      display: block;
+      font-size: 12px; font-weight: 600;
+      color: var(--ink2);
+      margin-bottom: 6px;
+    }
+    .number-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .number-input-wrap button {
+      width: 40px; height: 44px;
+      border: none; background: var(--surface2);
+      font-size: 20px; cursor: pointer;
+      color: var(--blue-dark);
+      transition: background 0.15s;
+      flex-shrink: 0;
+    }
+    .number-input-wrap button:hover { background: var(--blue-light); }
+    .number-input-wrap input {
+      flex: 1; height: 44px;
+      border: none; outline: none;
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 20px; font-weight: 600;
+      color: var(--ink);
+      background: transparent;
+      -moz-appearance: textfield;
+    }
+    .number-input-wrap input::-webkit-outer-spin-button,
+    .number-input-wrap input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+    /* 运算符切换 */
+    .op-toggle {
+      display: flex;
+      gap: 8px;
+    }
+    .op-btn {
+      flex: 1; height: 44px;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      font-size: 22px; font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+      color: var(--ink2);
+    }
+    .op-btn.active-add { border-color: var(--green); background: var(--green-light); color: var(--green-dark); }
+    .op-btn.active-sub { border-color: var(--red); background: var(--red-light); color: var(--red); }
+
+    /* 执行按钮 */
+    .run-btn {
+      width: 100%; height: 52px;
+      border: none; border-radius: var(--radius);
+      background: var(--blue);
+      color: #fff;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 16px; font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      transition: background 0.15s, transform 0.1s;
+      box-shadow: 0 3px 10px rgba(42, 123, 200, 0.3);
+    }
+    .run-btn:hover { background: var(--blue-dark); }
+    .run-btn:active { transform: scale(0.98); }
+    .run-btn:disabled { background: var(--ink3); cursor: not-allowed; box-shadow: none; }
+
+    /* 重置按钮 */
+    .reset-btn {
+      width: 100%; height: 40px;
+      border: 2px solid var(--border); border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--ink2);
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 13px; font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .reset-btn:hover { border-color: var(--ink3); color: var(--ink); }
+
+    /* ── 8. 等式显示区（PEDAGOGY V3：默认隐藏） ───── */
+    #equationArea {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    #equationArea.visible { opacity: 1; }
+    .equation-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 28px; font-weight: 600;
+      color: var(--blue-dark);
+      text-align: center;
+    }
+    .equation-text .op-plus { color: var(--green-dark); }
+    .equation-text .op-minus { color: var(--red); }
+    .equation-text .result { color: var(--amber-dark); font-size: 32px; }
+    .equation-text .question-mark { color: var(--ink3); }
+
+    /* ── 9. 概念反馈区（PEDAGOGY V8） ────────────── */
+    #feedbackArea {
+      min-height: 52px;
+      background: var(--blue-light);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 14px;
+      color: var(--blue-dark);
+      line-height: 1.6;
+      opacity: 0;
+      transition: opacity 0.4s ease 0.2s;
+      border-left: 4px solid var(--blue);
+    }
+    #feedbackArea.visible { opacity: 1; }
+    #feedbackArea.feedback-add { border-color: var(--green); background: var(--green-light); color: var(--green-dark); }
+    #feedbackArea.feedback-sub { border-color: var(--red); background: var(--red-light); color: var(--red); }
+
+    /* ── 10. 历史记录 ────────────────────────────── */
+    #historyList {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+    #historyList li {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      padding: 6px 12px;
+      background: var(--surface2);
+      border-radius: var(--radius-sm);
+      color: var(--ink2);
+      display: flex;
+      justify-content: space-between;
+    }
+    #historyList li .hist-result { font-weight: 600; color: var(--blue-dark); }
+
+    /* ── 11. 响应式 ──────────────────────────────── */
+    @media (max-width: 480px) {
+      main { padding: 16px 12px; gap: 14px; }
+      .controls { grid-template-columns: 1fr; }
+      .equation-text { font-size: 22px; }
+    }
+  </style>
+<style>button:focus-visible,input:focus-visible{outline:3px solid #7463ba;outline-offset:3px}canvas{touch-action:none}button{font:inherit}</style></head>
+<body>
+
+<header>
+  <span class="icon">🐸</span>
+  <h1>数轴跳跃加减法</h1>
+  <span class="tag">小学 · 数与运算</span>
+</header>
+
+<main>
+
+  <!-- 数轴画布 -->
+  <div class="card">
+    <div class="card-title">数轴</div>
+    <div id="canvasWrap">
+      <canvas id="numberlineCanvas" role="img" aria-label="数轴跳跃示意，完整等式与方向会在动画后显示"></canvas>
+    </div>
+  </div>
+
+  <!-- 等式显示（PEDAGOGY V3：动画前隐藏） -->
+  <div class="card">
+    <div id="equationArea">
+      <div class="equation-text" id="equationText"></div>
+    </div>
+  </div>
+
+  <!-- 控制区 -->
+  <div class="card">
+    <div class="card-title">设置计算</div>
+    <div class="controls">
+      <div class="ctrl-group">
+        <label for="startVal">起始数字</label>
+        <div class="number-input-wrap">
+          <button onclick="changeVal('start', -1)">−</button>
+          <input type="number" id="startVal" value="5" min="-10" max="20">
+          <button onclick="changeVal('start', 1)">+</button>
+        </div>
+      </div>
+      <div class="ctrl-group">
+        <label for="stepsVal">跳跃步数</label>
+        <div class="number-input-wrap">
+          <button onclick="changeVal('steps', -1)">−</button>
+          <input type="number" id="stepsVal" value="3" min="1" max="10">
+          <button onclick="changeVal('steps', 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ctrl-group" style="margin-top:14px">
+      <label>运算符</label>
+      <div class="op-toggle">
+        <button class="op-btn active-add" id="btnAdd" onclick="setOp('add')">＋ 加法</button>
+        <button class="op-btn" id="btnSub" onclick="setOp('sub')">－ 减法</button>
+      </div>
+    </div>
+
+    <div style="margin-top:16px; display:flex; flex-direction:column; gap:8px;">
+      <button class="run-btn" id="runBtn" onclick="runAnimation()">🐸 出发跳跃！</button>
+      <button class="reset-btn" onclick="resetAll()">↺ 重置</button>
+    </div>
+  </div>
+
+  <!-- 概念反馈（PEDAGOGY V8） -->
+  <div class="card">
+    <div class="card-title">你发现了什么？</div>
+    <div id="feedbackArea"></div>
+  </div>
+
+  <!-- 历史记录 -->
+  <div class="card" id="historyCard" style="display:none">
+    <div class="card-title">计算记录</div>
+    <ul id="historyList"></ul>
+  </div>
+
+</main>
+
+<script>
+// ══════════════════════════════════════════════════════
+// 0. 教学法标注
+// ══════════════════════════════════════════════════════
+// 学段：小学（2–4年级）
+// 认知动作：变换（用位置移动表示加减运算）
+// 核心动态关系：起始位置 + 跳跃步数 = 终止位置（位置变化直观反映运算结果）
+//
+// PEDAGOGY V1：加减法是"位置的变化"，静态写算式无法传递"移动"的直觉
+// PEDAGOGY V3：等式和答案在动画完成后才出现，学生先看到"跳"的过程
+// PEDAGOGY V6：加法向右跳，减法向左跳（与数轴正方向一致）
+// PEDAGOGY V7：只做一件事：用数轴表示加减法，不讲乘除或小数
+// PEDAGOGY V8：反馈说"你向右跳了3格"，而不是只显示"✓"
+// ══════════════════════════════════════════════════════
+
+// ── 1. 常量与配置 ──────────────────────────────────
+const MIN_VAL = -10;
+const MAX_VAL = 20;
+const FROG_EMOJI = '🐸';
+const HOP_DURATION = 160;   // 每步动画时长（毫秒）
+const HOP_HEIGHT = 28;       // 每步跳跃弧高（像素）
+
+// ── 2. 状态变量 ────────────────────────────────────
+let currentPos = 5;          // 当前青蛙位置
+let animating = false;
+let op = 'add';              // 'add' | 'sub'
+let history = [];
+
+// Canvas 相关
+const canvas = document.getElementById('numberlineCanvas');
+const ctx = canvas.getContext('2d');
+let DPR = window.devicePixelRatio || 1;
+
+// ── 3. 核心数学函数 ─────────────────────────────────
+function calcResult(start, steps, operation) {
+  return operation === 'add' ? start + steps : start - steps;
+}
+
+// 数值 → Canvas X 坐标
+function valToX(val) {
+  const W = canvas.width / DPR;
+  const PAD = 32;
+  const range = MAX_VAL - MIN_VAL;
+  return PAD + ((val - MIN_VAL) / range) * (W - PAD * 2);
+}
+
+// ── 4. 渲染函数 ────────────────────────────────────
+function initCanvas() {
+  const wrap = document.getElementById('canvasWrap');
+  const W = wrap.clientWidth;
+  const H = 160;
+  canvas.width = W * DPR;
+  canvas.height = H * DPR;
+  canvas.style.width = W + 'px';
+  canvas.style.height = H + 'px';
+  ctx.scale(DPR, DPR);
+}
+
+function drawNumberline(frogX, frogY, hopPath, highlightRange) {
+  const W = canvas.width / DPR;
+  const H = canvas.height / DPR;
+  const AXIS_Y = H * 0.62;
+  ctx.clearRect(0, 0, W, H);
+
+  // 背景渐变
+  const bg = ctx.createLinearGradient(0, 0, 0, H);
+  bg.addColorStop(0, '#f0f7ff');
+  bg.addColorStop(1, '#e0edfa');
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // 高亮跳跃区间（PEDAGOGY V4：只高亮核心关系）
+  if (highlightRange) {
+    const x1 = valToX(highlightRange.from);
+    const x2 = valToX(highlightRange.to);
+    const xL = Math.min(x1, x2);
+    const xR = Math.max(x1, x2);
+    ctx.fillStyle = op === 'add' ? 'rgba(26,140,90,0.12)' : 'rgba(200,48,32,0.10)';
+    ctx.fillRect(xL, AXIS_Y - 22, xR - xL, 44);
+  }
+
+  // 数轴主线
+  ctx.strokeStyle = '#2a7bc8';
+  ctx.lineWidth = 2.5;
+  ctx.lineCap = 'round';
+  ctx.beginPath();
+  ctx.moveTo(valToX(MIN_VAL) - 6, AXIS_Y);
+  ctx.lineTo(valToX(MAX_VAL) + 6, AXIS_Y);
+  ctx.stroke();
+
+  // 箭头
+  ctx.fillStyle = '#2a7bc8';
+  const arrowX = valToX(MAX_VAL) + 6;
+  ctx.beginPath();
+  ctx.moveTo(arrowX + 8, AXIS_Y);
+  ctx.lineTo(arrowX - 2, AXIS_Y - 5);
+  ctx.lineTo(arrowX - 2, AXIS_Y + 5);
+  ctx.closePath();
+  ctx.fill();
+
+  // 刻度和数字
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'top';
+  for (let v = MIN_VAL; v <= MAX_VAL; v++) {
+    const x = valToX(v);
+    const isMajor = v % 5 === 0;
+    const tickH = isMajor ? 10 : 5;
+
+    ctx.strokeStyle = isMajor ? '#2a7bc8' : '#8aaccc';
+    ctx.lineWidth = isMajor ? 1.5 : 1;
+    ctx.beginPath();
+    ctx.moveTo(x, AXIS_Y - tickH);
+    ctx.lineTo(x, AXIS_Y + tickH);
+    ctx.stroke();
+
+    if (isMajor || (W > 600 && v % 2 === 0)) {
+      ctx.fillStyle = v === 0 ? '#1a5a9c' : '#4a6a8a';
+      ctx.font = `${isMajor ? 600 : 400} ${isMajor ? 12 : 10}px 'Noto Sans SC', sans-serif`;
+      ctx.fillText(v, x, AXIS_Y + tickH + 3);
+    }
+  }
+
+  // 跳跃弧线
+  if (hopPath && hopPath.length > 1) {
+    ctx.strokeStyle = op === 'add' ? 'rgba(26,140,90,0.5)' : 'rgba(200,48,32,0.5)';
+    ctx.lineWidth = 2;
+    ctx.setLineDash([5, 4]);
+    ctx.beginPath();
+    for (let i = 0; i < hopPath.length - 1; i++) {
+      const x1 = valToX(hopPath[i]);
+      const x2 = valToX(hopPath[i + 1]);
+      const midX = (x1 + x2) / 2;
+      const midY = AXIS_Y - HOP_HEIGHT;
+      ctx.moveTo(x1, AXIS_Y);
+      ctx.quadraticCurveTo(midX, midY, x2, AXIS_Y);
+    }
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // 起始位置标记
+  const startVal = Number(document.getElementById('startVal').value);
+  if (document.getElementById('startVal').value.trim() && Number.isInteger(startVal) && startVal >= MIN_VAL && startVal <= MAX_VAL) {
+    const sx = valToX(startVal);
+    ctx.fillStyle = '#8aaccc';
+    ctx.beginPath();
+    ctx.arc(sx, AXIS_Y, 5, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // 青蛙
+  ctx.font = `${Math.round(26 * DPR) / DPR}px serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'bottom';
+  const fx = frogX !== undefined ? valToX(frogX) : valToX(currentPos);
+  const fy = frogY !== undefined ? frogY : AXIS_Y - 4;
+  ctx.fillText(FROG_EMOJI, fx, fy);
+
+  // 当前位置数字标注
+  ctx.font = `600 13px 'JetBrains Mono', monospace`;
+  ctx.fillStyle = '#1a5a9c';
+  ctx.textBaseline = 'bottom';
+  ctx.fillText(frogX !== undefined ? Math.round(frogX) : currentPos, fx, fy - 24);
+}
+
+// ── 5. 交互事件处理 ─────────────────────────────────
+function changeVal(field, delta) {
+  if (animating) return;
+  const id = field === 'start' ? 'startVal' : 'stepsVal';
+  const input = document.getElementById(id);
+  let val = (Number(input.value) || 0) + delta;
+  if (field === 'start') val = Math.max(MIN_VAL, Math.min(MAX_VAL, val));
+  if (field === 'steps') val = Math.max(1, Math.min(10, val));
+  input.value = val;
+
+  if (!animating) {
+    const start = Number(document.getElementById('startVal').value);
+    if (document.getElementById('startVal').value.trim() && Number.isInteger(start) && start >= MIN_VAL && start <= MAX_VAL) currentPos = start;
+    drawNumberline();
+    hideResultAreas();
+  }
+}
+
+function setOp(newOp) {
+  if (animating) return;
+  op = newOp;
+  document.getElementById('btnAdd').className = 'op-btn' + (op === 'add' ? ' active-add' : '');
+  document.getElementById('btnSub').className = 'op-btn' + (op === 'sub' ? ' active-sub' : '');
+  if (!animating) {
+    const start = Number(document.getElementById('startVal').value);
+    if (document.getElementById('startVal').value.trim() && Number.isInteger(start) && start >= MIN_VAL && start <= MAX_VAL) currentPos = start;
+    drawNumberline();
+    hideResultAreas();
+  }
+}
+
+function hideResultAreas() {
+  document.getElementById('equationArea').classList.remove('visible');
+  document.getElementById('feedbackArea').classList.remove('visible');
+  document.getElementById('feedbackArea').className = '';
+}
+
+// PEDAGOGY V3：分步揭示——动画完成后再显示等式和反馈
+function runAnimation() {
+  if (animating) return;
+
+  const startVal = Number(document.getElementById('startVal').value);
+  const stepsVal = Number(document.getElementById('stepsVal').value);
+
+  if (!document.getElementById('startVal').value.trim() || !document.getElementById('stepsVal').value.trim() || !Number.isInteger(Number(document.getElementById('startVal').value)) || !Number.isInteger(Number(document.getElementById('stepsVal').value)) || !Number.isFinite(startVal) || !Number.isFinite(stepsVal) || startVal < MIN_VAL || startVal > MAX_VAL || stepsVal < 1 || stepsVal > 10) { showFeedback('起点须为 -10 到 20 的整数；步数须为 1 到 10 的整数。', 'neutral'); return; }
+
+  const result = calcResult(startVal, stepsVal, op);
+  if (result < MIN_VAL || result > MAX_VAL) {
+    showFeedback(`结果超出数轴范围，请调整数字再试！`, 'neutral');
+    return;
+  }
+
+  animating = true;
+  document.querySelectorAll('button,input').forEach(el => el.disabled = true);
+  hideResultAreas();
+
+  // 显示等式（带问号，等待动画揭示答案）
+  showEquation(startVal, stepsVal, op, null);
+
+  // 构建跳跃路径
+  const hopPath = [startVal];
+  for (let i = 1; i <= stepsVal; i++) {
+    hopPath.push(op === 'add' ? startVal + i : startVal - i);
+  }
+
+  const AXIS_Y = (canvas.height / DPR) * 0.62;
+  let step = 0;
+  let frameStart = null;
+
+  function animateHop(ts) {
+    if (!frameStart) frameStart = ts;
+    const elapsed = ts - frameStart;
+    const progress = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 1 : Math.min(elapsed / HOP_DURATION, 1);
+
+    const fromX = hopPath[step];
+    const toX   = hopPath[step + 1];
+    // 抛物线插值
+    const t = progress;
+    const interpX = fromX + (toX - fromX) * t;
+    const interpY = AXIS_Y - HOP_HEIGHT * 4 * t * (1 - t) - 4;
+
+    drawNumberline(interpX, interpY, hopPath.slice(0, step + 1), { from: startVal, to: toX });
+
+    if (progress < 1) {
+      requestAnimationFrame(animateHop);
+    } else {
+      step++;
+      currentPos = hopPath[step];
+      if (step < stepsVal) {
+        frameStart = null;
+        requestAnimationFrame(animateHop);
+      } else {
+        // 动画结束
+        drawNumberline(currentPos, undefined, hopPath, { from: startVal, to: result });
+        animating = false;
+        document.querySelectorAll('button,input').forEach(el => el.disabled = false);
+
+        // PEDAGOGY V3：动画完成后才显示完整等式
+        showEquation(startVal, stepsVal, op, result);
+
+        // PEDAGOGY V8：概念反馈
+        const dir = op === 'add' ? '向右' : '向左';
+        const feedbackClass = op === 'add' ? 'feedback-add' : 'feedback-sub';
+        showFeedback(
+          `你${dir}跳了 ${stepsVal} 格，从 ${startVal} 到达了 ${result}。` +
+          `所以 ${startVal} ${op === 'add' ? '+' : '−'} ${stepsVal} = ${result}。`,
+          feedbackClass
+        );
+
+        // 加入历史
+        addHistory(startVal, stepsVal, op, result);
+      }
+    }
+  }
+
+  requestAnimationFrame(animateHop);
+}
+
+function showEquation(a, b, operation, result) {
+  const eq = document.getElementById('equationText');
+  const opSymbol = operation === 'add' ? '<span class="op-plus">＋</span>' : '<span class="op-minus">－</span>';
+  const resultPart = result !== null
+    ? `<span class="result">${result}</span>`
+    : `<span class="question-mark">？</span>`;
+  eq.innerHTML = `${a} ${opSymbol} ${b} ＝ ${resultPart}`;
+  document.getElementById('equationArea').classList.add('visible');
+}
+
+function showFeedback(text, cls) {
+  const fb = document.getElementById('feedbackArea');
+  fb.textContent = text;
+  fb.className = cls || '';
+  fb.classList.add('visible');
+}
+
+function addHistory(a, b, op, result) {
+  history.unshift({ a, b, op, result });
+  if (history.length > 8) history.pop();
+  renderHistory();
+}
+
+function renderHistory() {
+  const card = document.getElementById('historyCard');
+  const list = document.getElementById('historyList');
+  if (history.length === 0) { card.style.display = 'none'; return; }
+  card.style.display = 'block';
+  list.innerHTML = history.map(h =>
+    `<li>
+      <span>${h.a} ${h.op === 'add' ? '＋' : '－'} ${h.b} ＝</span>
+      <span class="hist-result">${h.result}</span>
+    </li>`
+  ).join('');
+}
+
+function resetAll() {
+  if (animating) return;
+  document.getElementById('startVal').value = 5;
+  document.getElementById('stepsVal').value = 3;
+  op = 'add';
+  document.getElementById('btnAdd').className = 'op-btn active-add';
+  document.getElementById('btnSub').className = 'op-btn';
+  currentPos = 5;
+  history = [];
+  renderHistory();
+  hideResultAreas();
+  drawNumberline();
+}
+
+// ── 6. 初始化 ───────────────────────────────────────
+window.addEventListener('load', () => {
+  initCanvas();
+  drawNumberline();
+});
+
+window.addEventListener('resize', () => {
+  initCanvas();
+  drawNumberline();
+});
+
+// 输入框直接修改也更新数轴
+['startVal', 'stepsVal'].forEach(id => {
+  document.getElementById(id).addEventListener('change', () => {
+    if (!animating) {
+      const start = Number(document.getElementById('startVal').value);
+      if (document.getElementById('startVal').value.trim() && Number.isInteger(start) && start >= MIN_VAL && start <= MAX_VAL) currentPos = start;
+      drawNumberline();
+      hideResultAreas();
+    }
+  });
+});
+</script>
+
+</body>
+</html>

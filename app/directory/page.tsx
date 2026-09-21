@@ -1,25 +1,18 @@
-import Link from "next/link";
+import { getI18n } from "@/app/i18n/server";
+import { translateData } from "@/app/i18n/core";
+import Localize from "@/app/i18n/server-localize";
+import type { Metadata } from "next";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+import DirectoryClient from "./directory-client";
+import type { RadarCatalog } from "./model";
+import "./directory.css";
 
-export default function DirectoryPage() {
-  return (
-    <main className="directory-page">
-      <header className="directory-header">
-        <Link className="brand" href="/" aria-label="Back to Edu AI Builders">
-          <span className="brand-mark" aria-hidden="true"><i /><i /><i /><b>e</b></span>
-          <span>Edu AI Builders / Open-source Directory</span>
-        </Link>
-        <p>Open-source education infrastructure, mapped and searchable.</p>
-        <nav aria-label="Directory navigation">
-          <Link href="/">← Main site</Link>
-          <Link href="/learning-sciences">Learning Sciences</Link>
-          <a href="https://eduos-github-radar.vercel.app/" target="_blank" rel="noreferrer">Open standalone ↗</a>
-        </nav>
-      </header>
-      <iframe
-        className="directory-frame"
-        src="https://eduos-github-radar.vercel.app/"
-        title="EduOS GitHub Radar — open-source education directory"
-      />
-    </main>
-  );
+const metadata: Metadata = { title: "开源资源", description: "找到可以试用、学习和改造的教育开源项目。按任务浏览工具、Skills、数据与基准，并查看来源和核验时间。" };
+
+export default async function DirectoryPage() {
+  const catalog: RadarCatalog = JSON.parse(await readFile(path.join(process.cwd(), "public/data/radar/catalog.json"), "utf8"));
+  return <Localize>{<DirectoryClient summary={catalog.summary} />}</Localize>;
 }
+
+export async function generateMetadata() { const {t}=await getI18n(); return translateData(metadata,t); }

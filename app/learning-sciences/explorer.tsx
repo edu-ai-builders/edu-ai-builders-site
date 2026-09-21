@@ -1,5 +1,6 @@
 "use client";
 
+import Localize from "@/app/i18n/localize";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { filters, humanize, layerNames, matches, slug, sourceUrl, type Entry, type Rack, type Source, type Value } from "./knowledge";
@@ -9,19 +10,19 @@ const repo = "https://github.com/ywEdAi/learning-sciences";
 
 function Fields({ value }: { value: Value }) {
   if (value === null) return null;
-  if (typeof value !== "object") return <span>{String(value)}</span>;
-  if (Array.isArray(value)) return <ul className="ls-bullets">{value.map((item, i) => <li key={i}><Fields value={item} /></li>)}</ul>;
-  return <dl className="ls-fields">{Object.entries(value).map(([key, item]) => <div key={key}><dt>{humanize(key)}</dt><dd><Fields value={item} /></dd></div>)}</dl>;
+  if (typeof value !== "object") return <Localize>{<span>{String(value)}</span>}</Localize>;
+  if (Array.isArray(value)) return <Localize>{<ul className="ls-bullets">{value.map((item, i) => <li key={i}><Fields value={item} /></li>)}</ul>}</Localize>;
+  return <Localize>{<dl className="ls-fields">{Object.entries(value).map(([key, item]) => <div key={key}><dt>{humanize(key)}</dt><dd><Fields value={item} /></dd></div>)}</dl>}</Localize>;
 }
 
 function SourceCard({ source }: { source: Source }) {
   const checked = source.provenanceCheck.status === "verified";
-  return <li className="ls-source" id={source.id}>
+  return <Localize>{<li className="ls-source" id={source.id}>
     <a href={sourceUrl(source.url)} target="_blank" rel="noreferrer">{source.title} <span aria-hidden="true">↗</span></a>
     <p>{source.authorsOrInstitution} · {source.year} · {humanize(source.type)}</p>
     <small className={checked ? "" : "ls-unverified"}>{checked ? (source.provenanceCheck.method === "crossref-metadata" ? "DOI metadata checked" : "URL resolved") : "Unverified — host blocks automated requests"} · {source.provenanceCheck.checkedAt}</small>
     <details><summary>Source record</summary><Fields value={source} /></details>
-  </li>;
+  </li>}</Localize>;
 }
 
 export default function Explorer({ rack, initial }: { rack: Rack; initial: Record<string, string> }) {
@@ -53,14 +54,11 @@ export default function Explorer({ rack, initial }: { rack: Rack; initial: Recor
     setEntryId(slug(entry));
     requestAnimationFrame(() => { detailRef.current?.focus({ preventScroll: true }); if (window.matchMedia("(max-width: 900px)").matches) detailRef.current?.scrollIntoView({ behavior: "instant", block: "start" }); });
   };
-  const renderSources = (ids: string[]) => <ul className="ls-source-list">{ids.map((id) => { const source = sources.get(id); return source ? <SourceCard source={source} key={id} /> : null; })}</ul>;
+  const renderSources = (ids: string[]) => <Localize>{<ul className="ls-source-list">{ids.map((id) => { const source = sources.get(id); return source ? <SourceCard source={source} key={id} /> : null; })}</ul>}</Localize>;
 
-  return <main className="ls-page">
+  return <Localize>{<main className="ls-page" lang="en">
     <a className="skip-link" href="#ls-explore">Skip to knowledge explorer</a>
-    <header className="ls-header">
-      <Link className="brand" href="/" aria-label="Edu AI Builders home"><span className="brand-mark" aria-hidden="true"><i /><i /><i /><b>e</b></span><span>Edu AI Builders</span></Link>
-      <nav aria-label="Main navigation"><Link href="/">Home</Link><a href="/learning-sciences" aria-current="page">Learning Sciences</a><a href="/directory">Open-source Directory ↗</a></nav>
-    </header>
+    <div className="ls-atlas-return" lang="zh-CN"><Link href="/atlas">← 返回学习 Atlas</Link><span>完整研究资料 · 保留原始英文内容</span></div>
 
     <section className="ls-intro" aria-labelledby="ls-title">
       <div><p className="ls-eyebrow">EDU AI BUILDERS / KNOWLEDGE LIBRARY</p><h1 id="ls-title">Learning Sciences<span>.</span></h1><p className="ls-deck">Understand how people learn. Explore the evidence behind what you build.</p></div>
@@ -110,5 +108,5 @@ export default function Explorer({ rack, initial }: { rack: Rack; initial: Recor
       </div>
     </section>
     <div className="ls-footer"><span>Edu AI Builders · Learning Sciences</span><span>Versioned knowledge. Sources and limitations kept together.</span><a href="/directory">Explore open-source resources ↗</a></div>
-  </main>;
+  </main>}</Localize>;
 }

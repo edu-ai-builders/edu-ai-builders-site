@@ -1,38 +1,48 @@
 # Edu AI Builders
 
-The public website for [Edu AI Builders](https://github.com/edu-ai-builders): open infrastructure for anything you want to build regarding education.
+A place to learn, use existing educational tools, build with reusable materials, and understand the design considerations behind them.
 
-At the center of the system is **EduOS**, a pedagogical runtime that connects agents and models with external knowledge, reusable teaching capabilities, interface assets, and evaluation.
+## Active implementation
 
-## System map
+This is the original-site worktree (`codex/original-site`). The GPT-hosted preview remains separate and unchanged. The September 20 revamp is a local implementation; it has not replaced the public site.
 
-- **Agents & Models** — pluggable intelligence providers, including local models and harness adapters.
-- **Loom** — external knowledge from papers, repositories, datasets, and open skills.
-- **EduOS** — the shared pedagogical runtime.
-- **Skills + Gallery** — reusable skills, UI patterns, workflows, and worked examples.
-- **Evaluator + Lens** — pedagogical evaluation and feedback.
+- `/learn`: seven courses / 74 lessons, with illustrated lessons, explicit practice records and concept links.
+- `/use`: selected existing tools, available to open and download.
+- `/build`: components and Skills, with editorial explanations of their knowledge connections.
+- `/atlas`: Learning Sciences map, typed relations, courses, resources, and browser-local learning records.
+- `/learning-sciences`: the original full research library and deep links.
+- `/directory`: the native searchable Radar catalog, with a dated GitHub metadata snapshot.
+- `/changelog`: dated local-preview changes, plus clearly separated future exploration. `/updates` redirects here.
+- `/updates/research`: preserved EduOS, Loom and system research direction, not a callable-service claim.
 
-Components that are not yet public are labeled as in development on the site.
+The header supports Chinese and English, including all course lessons and interactive tools. Language choice persists in a preference cookie; saved learning records share stable identifiers across languages. Original external descriptions and research documents retain their source language. See [bilingual implementation](docs/bilingual-site-2026-09-21.md).
 
-## Development
+## Development and validation
 
 ```bash
-npm install
+npm ci
 npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-## Production
-
-```bash
+node scripts/check-translations.mjs
+node --experimental-strip-types --test tests/*.test.mjs app/atlas/atlas.test.mjs
+npm run lint
 npm run build
-npm run start
 ```
+
+## Data ownership
+
+Research stays in `public/learning-sciences/0.2.0/rack.json`, with stable IDs and original sources/conditions/risks. Course sequencing, Chinese editorial labels, resource associations, and personal records are separate layers. A research relation such as `requires` is not automatically a prerequisite lesson. A resource association is not evidence of pedagogical effectiveness.
+
+Selected tool copies are recorded in `docs/tool-source-manifest.json`; do not copy the entire local research library into public assets. The language asset license accompanies its redistributed templates. Update public copies through an explicit source review.
+
+Learning/practice records stay in this browser. Opening a node is not evidence of mastery. EduOS and Working Graph remain exploratory; no backend, accounts, or model service has been added.
+
+## Hosting boundary
+
+Existing Vercel configuration is preserved. Do not add a Sites project or replace the saved GPT preview as part of this work. Run production deployment only as a separately authorized action after reviewing this version.
 
 ## License
 
-Website source is published for transparency. Individual Edu AI Builders repositories specify their own licenses.
+Individual source repositories retain their license terms. Public source availability does not grant a new license on behalf of those repositories.
 
 ## Learning Sciences
 
@@ -57,5 +67,5 @@ npm run build
 ```
 
 The existing public site at the start of this change was based on
-`2d6c6d5`, with an iframe for `/directory`. This change preserves that integration;
-the later `codex/eduos-system-refresh` rewrite is a separate unpublished change.
+`2d6c6d5`, with an iframe for `/directory`. The current revamp replaces that iframe with a first-party directory and reviewed data snapshot;
+the later `codex/eduos-system-refresh` rewrite remains separate.

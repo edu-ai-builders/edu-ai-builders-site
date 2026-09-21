@@ -1,0 +1,68 @@
+{
+  "date": "2026-09-20",
+  "files": [
+    {
+      "source": "library/math-viz-kit/小学/分数条比较器.html",
+      "output": "public/tools/fraction-bars.html",
+      "sourceSha256": "4b2b8cafd49d003b487b29b8736648ef3f18ae35228ee45985f6e09ef705ac60",
+      "outputSha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+      "adjustments": "Standalone copy; remote font calls removed; input labels added to math demos; license retained. Embedded offline-capable English/Chinese display localization; URL language with safe cookie fallback; mathematical logic and original source unchanged."
+    },
+    {
+      "source": "library/language-learning-asset-library/assets/representation/c59-say-the-relation/c59-say-the-relation-say-the-relation-city-trees.html",
+      "output": "public/tools/say-the-relation.html",
+      "sourceSha256": "a8a3189100d1b7a011471d8a51652a765b8ec5e508c5173005d89b4c03c2a610",
+      "outputSha256": "83412cdd730953bc0f145909f18146b4ccbd469fff7350519cc716879758df09",
+      "adjustments": "Standalone copy; remote font calls removed; input labels added to math demos; license retained. Embedded offline-capable English/Chinese display localization; URL language with safe cookie fallback; mathematical logic and original source unchanged."
+    },
+    {
+      "source": "library/language-learning-asset-library/assets/representation/c59-say-the-relation/c59-say-the-relation-say-the-relation-city-trees.html",
+      "output": "public/tools/relation-template.html",
+      "sourceSha256": "a8a3189100d1b7a011471d8a51652a765b8ec5e508c5173005d89b4c03c2a610",
+      "outputSha256": "839ddc52fa2f0a5b8dadaf9cd3689ba387d716198435de5f15cecb80c69e8f38",
+      "adjustments": "Use complete example with D populated; remote fonts removed; license retained; title clarified. Embedded offline-capable English/Chinese display localization; URL language with safe cookie fallback; mathematical logic and original source unchanged."
+    },
+    {
+      "source": "library/language-learning-asset-library/assets/representation/c59-say-the-relation/SKILL.md",
+      "output": "public/tools/relation-component-guide.md",
+      "sourceSha256": "0a19bcb70a012c016218fed095ab9a5b9053c004804bc5875ee22d1f8fb929a0",
+      "outputSha256": "9a95c1fca053c0e445f50d2a83303a5be3f5a43838ec2d156c5a0f95e2f0d36b",
+      "adjustments": "Rewritten public adaptation guide; removed unsupported generalizations and internal-only links. Original source left unchanged."
+    },
+    {
+      "source": "library/language-learning-asset-library/LICENSE",
+      "output": "public/tools/language-assets-LICENSE.txt",
+      "sourceSha256": "249c78136e0297f31f394da7c7b44f3a585dbbb87519e9b34b75a6b30f1fd10e",
+      "outputSha256": "249c78136e0297f31f394da7c7b44f3a585dbbb87519e9b34b75a6b30f1fd10e",
+      "adjustments": "Unchanged source copy"
+    },
+    {
+      "source": "library/math-viz-kit/小学/面积铺砖模型.html",
+      "output": "public/tools/area-tiles.html",
+      "sourceSha256": "e24c64a627896116343ca3f99efcc925fc9594e12768afddc775a3fff9a6f7e3",
+      "outputSha256": "f63868bd0ad86aacfcda0b8685875e02d922e56b056b3b4a31aecc09a3fc2f59",
+      "adjustments": "Remote font calls removed; accessible input and canvas names added. Embedded offline-capable English/Chinese display localization; URL language with safe cookie fallback; mathematical logic and original source unchanged."
+    },
+    {
+      "source": "library/math-viz-kit/小学/角度测量器.html",
+      "output": "public/tools/angle-measure.html",
+      "sourceSha256": "b1b0ffb532f1f0a0672508b45a98bcb48925994ae1138621612e304a10b5bef4",
+      "outputSha256": "d396fd790e6be3178bb8df0bebf30819fcf9d8bcd02e83aaf087330335e20451",
+      "adjustments": "Corrected protractor ticks to match upper counterclockwise angle; added zero-angle classification and exact right-angle mark. Remote font calls removed; accessible control labels and keyboard controls added. Original left unchanged. Embedded offline-capable English/Chinese display localization; URL language with safe cookie fallback; mathematical logic and original source unchanged."
+    },
+    {
+      "source": "library/math-viz-kit/小学/数轴跳跃加减法.html",
+      "output": "public/tools/number-line.html",
+      "sourceSha256": "9df75cf8afd643cbf482615eee314dd34e2dda1aa7ca8fb5f95f2cb2da6a62f9",
+      "outputSha256": "2eab5e410891be9e06869103d06dc1da3543e7257f237e000eb35f989c63ea52",
+      "adjustments": "Validated integer/range input; froze controls during animation; reduced-motion completion; reduced mobile tick label density. Remote font calls removed; accessible control labels and keyboard controls added. Original left unchanged. Independent review: exponent-form numeric input uses Number rather than parseInt; empty/fractional inputs rejected without truncating the drawing. Embedded offline-capable English/Chinese display localization; URL language with safe cookie fallback; mathematical logic and original source unchanged."
+    },
+    {
+      "source": "library/math-viz-kit/初中/一次函数滑杆实验室.html",
+      "output": "public/tools/linear-function.html",
+      "sourceSha256": "eb41cfb521466c9a02e47ab039455269237364c34590a1b0eb20b363e98e8282",
+      "outputSha256": "d89a727201b22dae0b793fcd2e8e3a93160bebde12dce3f066e12d8c25a36860",
+      "adjustments": "Fixed repeated parameter updates after equation DOM replacement; corrected y=0 zero-set; required exact challenge parameters; mobile layout adapted. Remote font calls removed; accessible control labels and keyboard controls added. Original left unchanged. Independent review: intercept feedback describes actual movement from previous b; changed sliders clear challenge success; square canvas dimensions preserved without flex distortion on desktop and mobile. Embedded offline-capable English/Chinese display localization; URL language with safe cookie fallback; mathematical logic and original source unchanged."
+    }
+  ]
+}
