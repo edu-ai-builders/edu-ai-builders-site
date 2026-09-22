@@ -4,7 +4,7 @@ export type RadarRecord = {
   homepage: string | null; topics: string[]; language: string | null; license: string | null;
   stars: number | null; archived: boolean; pushedAt: string | null; checkedAt: string | null;
   refreshStatus: "refreshed" | "failed" | "not-refreshed"; refreshError?: string | null;
-  repositoryCheckedAt?: string; repositoryRefreshStatus?: string; source: string; sourceUrl: string | null; importedFrom: string;
+  manifestSha?: string; repositoryCheckedAt?: string; repositoryRefreshStatus?: string; source: string; sourceUrl: string | null; importedFrom: string;
 };
 export type RadarSummary = { schemaVersion: number; generatedAt: string; total: number; repositories: number; skills: number; refreshed: number; notRefreshed: number; failed: number; excludedUnverified: number; repositoryRequests: number; repositoryRefreshSuccess: number; repositoryRefreshErrors: number };
 export type RadarCatalog = { summary: RadarSummary; records: RadarRecord[] };

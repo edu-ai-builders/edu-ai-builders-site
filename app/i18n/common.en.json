@@ -616,5 +616,18 @@
   "可修改组件、可复用技能（Skill）与入门课程都在这两页。": "Find editable components, reusable Skills, and introductory courses on these two pages.",
   "用于构建 →": "Build with it →",
   "去学习 →": "Learn it →",
-  "{0} / {1}：{2}": "{0} / {1}: {2}"
+  "{0} / {1}：{2}": "{0} / {1}: {2}",
+  "已发布": "Published",
+  "改版开发记录": "Revamp development notes",
+  "于 9 月 22 日上线": "Published on September 22",
+  "目录更新与双语网站上线": "Directory refresh and bilingual site launch",
+  "仓库、Skills 与数据集线索，重新核对了一遍。": "A fresh check of repositories, Skills and dataset sources.",
+  "3,405 条仓库记录和 123 个 Skill 声明已刷新，涵盖数据集与评测基准的来源信息。更新项目地址、简介、活跃时间与公开指标；数据集内容本身未下载或重新评测。": "Refreshed 3,405 repository records and 123 Skill declarations, including dataset and benchmark source information. Updated project links, descriptions, activity dates and public metrics; dataset contents were not downloaded or re-evaluated.",
+  "116 个条目未能完成本次核对，保留上次信息与检查日期，并标明状态。Skill 声明核对只确认名称和简介，不代表执行测试或质量认证。": "Checks could not be completed for 116 entries. Their previous information and check dates are preserved with an explicit status. Skill declaration checks confirm names and descriptions only, not execution tests or quality certification.",
+  "浏览开源目录 ↗": "Browse the open-source directory ↗",
+  "上线": "Launch",
+  "中文与英文，可以随时切换。": "Switch between Chinese and English at any time.",
+  "新版首页、课程、工具、学习科学地图和站内开源目录一同上线。语言切换保留相同的学习记录；外部项目简介继续保留作者原文。": "The new homepage, courses, tools, learning-sciences Atlas and native open-source directory are now live. Switching languages preserves your learning records; external project descriptions remain in their original language.",
+  "浏览课程 ↗": "Browse courses ↗",
+  "打开学习科学地图 ↗": "Open the learning-sciences Atlas ↗"
 }

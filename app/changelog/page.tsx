@@ -78,7 +78,7 @@ export default function ChangelogPage() {
             按时间倒序写在这里。没有发布的就标成没有发布。
           </p>
           <nav aria-label="更新日志分类">
-            <a href="#r-2026-09-20">本轮改动</a>
+            <a href="#r-2026-09-22">本轮改动</a>
             <a href="#r-earlier">原站积累</a>
             <a href="#future">未来探索</a>
           </nav>
@@ -86,11 +86,11 @@ export default function ChangelogPage() {
         <dl className="changelog-hero-stats">
           <div>
             <dt>最近一次</dt>
-            <dd>2026 / 09 / 20</dd>
+            <dd>2026 / 09 / 22</dd>
           </div>
           <div>
             <dt>当前状态</dt>
-            <dd>本地预览 · 尚未发布</dd>
+            <dd>已发布</dd>
           </div>
           <div>
             <dt>知识库版本</dt>
@@ -100,14 +100,44 @@ export default function ChangelogPage() {
       </header>
 
       <ol className="changelog-releases">
+        <li className="changelog-release" id="r-2026-09-22">
+          <aside className="changelog-rail">
+            <time dateTime="2026-09-22">2026 / 09 / 22</time>
+            <span className="changelog-status is-kept">已发布</span>
+            <small>目录更新与双语网站上线</small>
+          </aside>
+          <div className="changelog-release-body">
+            <ul className="changelog-entries">
+              <li className="changelog-entry lift is-wide">
+                <div className="changelog-entry-copy">
+                  <span className="changelog-tag">资源</span>
+                  <h2>仓库、Skills 与数据集线索，重新核对了一遍。</h2>
+                  <p>3,405 条仓库记录和 123 个 Skill 声明已刷新，涵盖数据集与评测基准的来源信息。更新项目地址、简介、活跃时间与公开指标；数据集内容本身未下载或重新评测。</p>
+                  <p>116 个条目未能完成本次核对，保留上次信息与检查日期，并标明状态。Skill 声明核对只确认名称和简介，不代表执行测试或质量认证。</p>
+                  <div className="changelog-entry-links"><Link href="/directory">浏览开源目录 ↗</Link></div>
+                </div>
+              </li>
+              <li className="changelog-entry lift is-wide">
+                <div className="changelog-entry-copy">
+                  <span className="changelog-tag">上线</span>
+                  <h3>中文与英文，可以随时切换。</h3>
+                  <p>新版首页、课程、工具、学习科学地图和站内开源目录一同上线。语言切换保留相同的学习记录；外部项目简介继续保留作者原文。</p>
+                  <div className="changelog-entry-links"><Link href="/learn">浏览课程 ↗</Link><Link href="/atlas">打开学习科学地图 ↗</Link></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+
         <li className="changelog-release" id="r-2026-09-20">
           <aside className="changelog-rail">
             <time dateTime="2026-09-20">2026 / 09 / 20</time>
             <span className="changelog-status is-preview">本地预览</span>
             <small>
-              当前工作版本
+              改版开发记录
               <br />
-              尚未发布到线上
+              于 9 月 22 日上线
             </small>
           </aside>
           <div className="changelog-release-body">

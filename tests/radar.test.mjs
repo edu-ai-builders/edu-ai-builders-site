@@ -22,10 +22,15 @@ test('public Radar snapshot is internally consistent, unique and uses safe sourc
   }
 });
 
-test('Skill content checks retain their original date independently from repository refreshes', () => {
+test('Skill declaration checks are independent of repository checks and preserve failure dates', () => {
   for (const record of catalog.records.filter(r => r.kind === 'skill')) {
-    assert.equal(record.refreshStatus, 'not-refreshed');
-    assert.ok(record.checkedAt < catalog.summary.refreshStartedAt);
+    if (record.refreshStatus === 'refreshed') {
+      assert.ok(record.checkedAt >= catalog.summary.refreshStartedAt);
+      assert.match(record.manifestSha, /^[a-f0-9]{40}$/);
+      assert.match(record.source, /declarations/);
+    } else {
+      assert.ok(record.checkedAt < catalog.summary.refreshStartedAt);
+    }
     assert.ok(record.repositoryCheckedAt);
     if (record.repositoryRefreshStatus === 'refreshed') assert.ok(record.repositoryCheckedAt >= catalog.summary.refreshStartedAt);
   }

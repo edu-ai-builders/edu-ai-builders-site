@@ -4,7 +4,7 @@ A place to learn, use existing educational tools, build with reusable materials,
 
 ## Active implementation
 
-This is the original-site worktree (`codex/original-site`). The GPT-hosted preview remains separate and unchanged. The September 20 revamp is a local implementation; it has not replaced the public site.
+The original website is published from `main`; development was integrated from `codex/original-site`. The GPT-hosted preview remains separate and unchanged. The September 22 release publishes the bilingual revamp and refreshed directory to the existing Vercel project.
 
 - `/learn`: seven courses / 74 lessons, with illustrated lessons, explicit practice records and concept links.
 - `/use`: selected existing tools, available to open and download.
@@ -12,7 +12,7 @@ This is the original-site worktree (`codex/original-site`). The GPT-hosted previ
 - `/atlas`: Learning Sciences map, typed relations, courses, resources, and browser-local learning records.
 - `/learning-sciences`: the original full research library and deep links.
 - `/directory`: the native searchable Radar catalog, with a dated GitHub metadata snapshot.
-- `/changelog`: dated local-preview changes, plus clearly separated future exploration. `/updates` redirects here.
+- `/changelog`: dated releases and development changes, plus clearly separated future exploration. `/updates` redirects here.
 - `/updates/research`: preserved EduOS, Loom and system research direction, not a callable-service claim.
 
 The header supports Chinese and English, including all course lessons and interactive tools. Language choice persists in a preference cookie; saved learning records share stable identifiers across languages. Original external descriptions and research documents retain their source language. See [bilingual implementation](docs/bilingual-site-2026-09-21.md).
@@ -28,6 +28,15 @@ npm run lint
 npm run build
 ```
 
+## Directory refresh
+
+```bash
+python3 scripts/radar-refresh.py --limit 4000 --workers 6 --skills
+python3 -m unittest discover -s tests -p 'test_*.py'
+```
+
+The refresh reads the sibling Radar registries, checks public GitHub metadata and Skill name/description declarations, and atomically replaces the website snapshot. Failed checks preserve the last successful observation. Review the diff and run validation before publishing; this command does not commit or deploy. See [September 22 refresh](docs/radar-refresh-2026-09-22.md).
+
 ## Data ownership
 
 Research stays in `public/learning-sciences/0.2.0/rack.json`, with stable IDs and original sources/conditions/risks. Course sequencing, Chinese editorial labels, resource associations, and personal records are separate layers. A research relation such as `requires` is not automatically a prerequisite lesson. A resource association is not evidence of pedagogical effectiveness.
@@ -38,7 +47,7 @@ Learning/practice records stay in this browser. Opening a node is not evidence o
 
 ## Hosting boundary
 
-Existing Vercel configuration is preserved. Do not add a Sites project or replace the saved GPT preview as part of this work. Run production deployment only as a separately authorized action after reviewing this version.
+Existing Vercel configuration is preserved. Do not add a Sites project or replace the saved GPT preview as part of this work. Production publication requires explicit user authorization. The existing Vercel project currently has no Git integration, so pushing `main` alone does not deploy; publish through that existing project after validation.
 
 ## License
 

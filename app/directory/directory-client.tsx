@@ -30,7 +30,7 @@ function ResourceCard({ record }: { record: RadarRecord }) {
   return <Localize>{<article className="radar-card">
     <ResourceGraphic record={record} />
     <div className="radar-card-body">
-      <div className="radar-card-labels"><span>{collection?.label}</span>{record.refreshError === "http-404" && <span className="radar-archived">暂不可访问</span>}{record.archived && <span className="radar-archived">已归档</span>}{curated && <span className="radar-editorial">编辑起点</span>}</div>
+      <div className="radar-card-labels"><span>{collection?.label}</span>{record.refreshError === "http-404" && <span className="radar-archived">暂不可访问</span>}{record.refreshError === "invalid-frontmatter" && <span className="radar-archived">声明格式待确认</span>}{record.archived && <span className="radar-archived">已归档</span>}{curated && <span className="radar-editorial">编辑起点</span>}</div>
       <h3>{curated?.title || record.title}</h3>
       <p className="radar-repository">{record.name}</p>
       <p className="radar-description" lang={curated ? (locale === "en" ? "en" : "zh-CN") : /[\u4e00-\u9fff]/.test(record.description) ? "zh-CN" : "en"}>{curated?.description || record.description || "仓库尚未提供简介。打开来源查看项目说明。"}</p>
@@ -38,9 +38,9 @@ function ResourceCard({ record }: { record: RadarRecord }) {
       <div className="radar-card-meta"><span title="GitHub stars 为关注度，不是质量或教学效果评分">☆ {new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(record.stars || 0)}</span><span>{licenseLabel(record.license)}</span></div>
       <div className="radar-card-actions">{record.url && <a href={record.url} target="_blank" rel="noreferrer">{record.refreshError === "http-404" ? "历史来源地址" : record.kind === "skill" ? "查看 Skill 说明" : "打开项目"}<span>↗</span></a>}{record.homepage && <a className="radar-homepage" href={record.homepage} target="_blank" rel="noreferrer">项目网站 ↗</a>}</div>
       <details className="radar-provenance"><summary>来源与更新时间 <span>{record.refreshStatus === "refreshed" ? "本次已核验" : "历史快照"}</span></summary><div>
-        <dl><div><dt>{record.kind === "skill" ? "Skill 内容核验" : "仓库元数据核验"}</dt><dd>{dateLabel(record.checkedAt)}</dd></div><div><dt>仓库最后推送</dt><dd>{dateLabel(record.pushedAt)}</dd></div>{record.repositoryCheckedAt && <div><dt>仓库元数据核验</dt><dd>{dateLabel(record.repositoryCheckedAt)}</dd></div>}<div><dt>收录方式</dt><dd>{record.kind === "skill" ? "公开 SKILL.md 的声明信息" : "GitHub 公开仓库元数据"}</dd></div></dl>
+        <dl><div><dt>{record.kind === "skill" ? "Skill 声明核验" : "仓库元数据核验"}</dt><dd>{dateLabel(record.checkedAt)}</dd></div><div><dt>仓库最后推送</dt><dd>{dateLabel(record.pushedAt)}</dd></div>{record.repositoryCheckedAt && <div><dt>仓库元数据核验</dt><dd>{dateLabel(record.repositoryCheckedAt)}</dd></div>}<div><dt>收录方式</dt><dd>{record.kind === "skill" ? "公开 SKILL.md 的声明信息" : "GitHub 公开仓库元数据"}</dd></div></dl>
         {record.refreshStatus === "failed" && <p>本次请求未成功，保留上次核验的信息（{record.refreshError}）。</p>}
-        {record.kind === "skill" && <p>本次仓库检查不代表重新审核了 Skill 内容。使用前请打开说明查看具体步骤。</p>}
+        {record.kind === "skill" && <p>{record.refreshStatus === "refreshed" ? "本次已核对 SKILL.md 声明的名称和简介；没有执行技能，也不代表安全性或教学效果认证。" : "未能在本次核对 Skill 声明，保留上次成功检查的信息。使用前请打开来源确认当前说明。"}</p>}
         {curated && <p>中文介绍为编辑导读；用途配图为概念示意。实际界面以项目网站为准。</p>}
         {record.sourceUrl && <a href={record.sourceUrl} target="_blank" rel="noreferrer">查看元数据来源 ↗</a>}
       </div></details>
@@ -86,13 +86,13 @@ export default function DirectoryClient({ summary }: { summary: RadarSummary }) 
           <div className="radar-results-bar"><p role="status">{loadState === "loading" ? "正在读取资源快照…" : `${results.length.toLocaleString()} 个结果`}{loadState === "ready" && results.length > 0 && <span> · 第 {currentPage} / {pageCount} 页</span>}</p><button onClick={reset}>重置筛选</button></div>
           {loadState === "loading" && <div className="radar-loading-grid" aria-hidden="true">{Array.from({ length: 6 }, (_, i) => <div key={i}><i /><b /><span /></div>)}</div>}
           {loadState === "error" && <div className="radar-empty"><h3>资源快照暂时没有加载出来</h3><p>请刷新页面重试，也可以直接查看原始快照。</p><a href="/data/radar/catalog.json">打开数据快照 ↗</a></div>}
-          {loadState === "ready" && results.length === 0 && <div className="radar-empty"><span aria-hidden="true">⌕</span><h3>换一种说法，试试另一个入口。</h3><p>{filters.collection === "skill" && filters.currentOnly ? "本次更新了 Skill 所在仓库的元数据，尚未重新核验 Skill 说明。取消「只看本次核验」即可浏览带原始日期的说明。" : "可以减少关键词、取消用途或语言筛选。项目简介保留原文，也可以尝试英文关键词。"}</p><button onClick={reset}>浏览全部资源</button></div>}
+          {loadState === "ready" && results.length === 0 && <div className="radar-empty"><span aria-hidden="true">⌕</span><h3>换一种说法，试试另一个入口。</h3><p>{filters.collection === "skill" && filters.currentOnly ? "没有符合当前筛选且在本次成功核验的 Skill。可取消筛选，查看保留原始检查日期的条目。" : "可以减少关键词、取消用途或语言筛选。项目简介保留原文，也可以尝试英文关键词。"}</p><button onClick={reset}>浏览全部资源</button></div>}
           {loadState === "ready" && <div className="radar-grid">{results.slice((currentPage - 1) * pageSize, currentPage * pageSize).map((record) => <ResourceCard key={record.id} record={record} />)}</div>}
           {loadState === "ready" && pageCount > 1 && <nav className="radar-pagination" aria-label="资源分页"><button disabled={currentPage === 1} onClick={() => showPage(currentPage - 1)}>← 上一页</button><span>{currentPage} / {pageCount}</span><button disabled={currentPage === pageCount} onClick={() => showPage(currentPage + 1)}>下一页 →</button></nav>}
         </div>
       </div>
     </section>
     <section className="radar-next-step"><div><p className="ea-eyebrow">FROM A REPOSITORY TO A LEARNING EXPERIENCE</p><h2>找到工具之后，下一步是设计学习。</h2><p>想一想：学习者会做什么？怎样得到反馈？如何判断真的理解了？把这些问题带到你的下一个版本。</p></div><div><Link href="/atlas?concept=pedagogy%3Aactionable-feedback">看看反馈如何影响设计 ↗</Link><Link href="/learn/github-starter">还不熟悉 GitHub？从这里开始 →</Link></div></section>
-    <footer className="radar-data-note" id="radar-data-note"><h2>关于这份目录</h2><p>这里整合了 Radar 的公开元数据：{summary.repositories.toLocaleString()} 个仓库和 {summary.skills} 个 Skill 条目。部分项目是通用开发基础设施，收录是发现线索，不代表教学效果或质量认证。{summary.excludedUnverified} 条未核实的线索未进入公开结果。</p><p>本次更新了 {summary.refreshed.toLocaleString()} 个条目的仓库元数据；另有 {summary.notRefreshed} 个条目保留历史核验日期{summary.failed > 0 ? `，其中 ${summary.failed} 个仓库本次请求未成功` : ""}。Skill 的说明核验日期与仓库更新时间分别显示。快照生成时间、数据核验时间和代码最后推送时间不是同一件事。</p><p>项目简介保留作者原文；编辑导读与用途标签用于浏览。复用代码和内容前，请查看各项目自己的许可证。</p><a href="/data/radar/catalog.json" download>下载公开元数据快照 ↓</a></footer>
+    <footer className="radar-data-note" id="radar-data-note"><h2>关于这份目录</h2><p>这里整合了 Radar 的公开元数据：{summary.repositories.toLocaleString()} 个仓库和 {summary.skills} 个 Skill 条目。部分项目是通用开发基础设施，收录是发现线索，不代表教学效果或质量认证。{summary.excludedUnverified} 条未核实的线索未进入公开结果。</p><p>本次更新了 {summary.refreshed.toLocaleString()} 个条目的仓库元数据或 Skill 声明；另有 {summary.notRefreshed} 个条目保留历史核验日期{summary.failed > 0 ? `，其中 ${summary.failed} 个条目本次请求未成功` : ""}。Skill 的说明核验日期与仓库更新时间分别显示。快照生成时间、数据核验时间和代码最后推送时间不是同一件事。</p><p>项目简介保留作者原文；编辑导读与用途标签用于浏览。复用代码和内容前，请查看各项目自己的许可证。</p><a href="/data/radar/catalog.json" download>下载公开元数据快照 ↓</a></footer>
   </main>}</Localize>;
 }

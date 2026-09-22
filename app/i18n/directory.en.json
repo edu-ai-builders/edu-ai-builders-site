@@ -142,5 +142,12 @@
   "暂无记录": "No record yet",
   "许可证待确认": "License not yet confirmed",
   "开源资源": "Open-source resources",
-  "找到可以试用、学习和改造的教育开源项目。按任务浏览工具、Skills、数据与基准，并查看来源和核验时间。": "Find education projects to try, learn from, and adapt. Browse tools, Skills, data, and benchmarks by task, with sources and verification dates."
+  "找到可以试用、学习和改造的教育开源项目。按任务浏览工具、Skills、数据与基准，并查看来源和核验时间。": "Find education projects to try, learn from, and adapt. Browse tools, Skills, data, and benchmarks by task, with sources and verification dates.",
+  "Skill 声明核验": "Skill declaration checked",
+  "本次已核对 SKILL.md 声明的名称和简介；没有执行技能，也不代表安全性或教学效果认证。": "The declared name and description in SKILL.md were checked this run. The Skill was not executed; this is not a safety or learning-effectiveness assessment.",
+  "未能在本次核对 Skill 声明，保留上次成功检查的信息。使用前请打开来源确认当前说明。": "The Skill declaration could not be checked this run. The last successful observation is retained. Open the source to confirm the current instructions before use.",
+  "没有符合当前筛选且在本次成功核验的 Skill。可取消筛选，查看保留原始检查日期的条目。": "No Skills match these filters and a successful check this run. Clear filters to see records with their original check dates.",
+  "个条目的仓库元数据或 Skill 声明；另有": " repository metadata records or Skill declarations this run; another ",
+  "，其中 {0} 个条目本次请求未成功": ", including {0} records whose requests failed this run",
+  "声明格式待确认": "Declaration format unconfirmed"
 }
