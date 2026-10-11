@@ -79,7 +79,7 @@ export default function ChangelogPage() {
             按时间倒序写在这里。没有发布的就标成没有发布。
           </p>
           <nav aria-label="更新日志分类">
-            <a href="#r-2026-09-22">本轮改动</a>
+            <a href="#r-2026-10-10">本轮改动</a>
             <a href="#r-earlier">原站积累</a>
             <a href="#future">未来探索</a>
           </nav>
@@ -87,7 +87,7 @@ export default function ChangelogPage() {
         <dl className="changelog-hero-stats">
           <div>
             <dt>最近一次</dt>
-            <dd>2026 / 09 / 22</dd>
+            <dd>2026 / 10 / 10</dd>
           </div>
           <div>
             <dt>当前状态</dt>
@@ -101,6 +101,16 @@ export default function ChangelogPage() {
       </header>
 
       <ol className="changelog-releases">
+        <li className="changelog-release" id="r-2026-10-10">
+          <aside className="changelog-rail"><time dateTime="2026-10-10">2026 / 10 / 10</time><span className="changelog-status is-kept">已发布</span><small>首页、搜索与开源构建入口</small></aside>
+          <div className="changelog-release-body"><ul className="changelog-entries">
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">首页</span><h2>更少文字，更多留白与开源作品。</h2><p>首页加入柔和纹理、手绘线条与轻量动画；突出开源目录，并提供 SymPy、Kolibri 和 Easy Vibe 的官方体验或教程入口。</p><div className="changelog-entry-links"><Link href="/">看新版首页 ↗</Link></div></div></li>
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">搜索</span><h2>让搜索引擎更容易找到各个页面。</h2><p>补齐页面 canonical、分享信息、robots、动态 sitemap 与站点结构化数据。Google Search Console 验证与 sitemap 提交尚未完成。</p><div className="changelog-entry-links"><Link href="/sitemap.xml">查看 sitemap ↗</Link></div></div></li>
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">资源</span><h2>目录更新与论文推荐原型分别记录。</h2><p>Radar 独立仓库更新了精选资源、试用条件、上手步骤与发现索引。arXiv 原型复用开源评分工具，按教育 AI 兴趣筛选论文；注册与每日推送尚未接通。</p><div className="changelog-entry-links"><Link href="https://github.com/ywEdAi/eduos-github-radar">查看目录源码与原型 ↗</Link></div></div></li>
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">课程</span><h2>五份课程包，从体验成品开始。</h2><p>新增资源判断、学习交互、Skill 工作流、数据评测与产品验证课程包，附练习、starter 和评价标准。当前作为仓库内可审阅材料提供，尚未加入课程页面。</p><div className="changelog-entry-links"><Link href="https://github.com/edu-ai-builders/edu-ai-builders-site/tree/main/docs/website-refresh-2026-10-10/courses">查看课程包 ↗</Link></div></div></li>
+          </ul></div>
+        </li>
+
         <li className="changelog-release" id="r-2026-09-22">
           <aside className="changelog-rail">
             <time dateTime="2026-09-22">2026 / 09 / 22</time>

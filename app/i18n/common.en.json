@@ -659,5 +659,20 @@
   "发现": "Wonder",
   "逛开源目录": "Explore open source",
   "看看别人已经做好了什么。": "See what others have already built.",
-  "先试一个现成的": "Try a ready-made project"
+  "先试一个现成的": "Try a ready-made project",
+  "首页": "Home",
+  "更少文字，更多留白与开源作品。": "Less text, more space and open-source work.",
+  "首页加入柔和纹理、手绘线条与轻量动画；突出开源目录，并提供 SymPy、Kolibri 和 Easy Vibe 的官方体验或教程入口。": "The homepage combines soft textures, hand-drawn lines and light motion, highlights the directory, and links to official demos or tutorials for SymPy, Kolibri and Easy Vibe.",
+  "看新版首页": "See the new homepage",
+  "搜索": "Search",
+  "让搜索引擎更容易找到各个页面。": "Make individual pages easier to discover.",
+  "补齐页面 canonical、分享信息、robots、动态 sitemap 与站点结构化数据。Google Search Console 验证与 sitemap 提交尚未完成。": "Added page canonicals, social metadata, robots, a dynamic sitemap and site structured data. Google Search Console verification and sitemap submission remain incomplete.",
+  "查看 sitemap": "View sitemap",
+  "目录更新与论文推荐原型分别记录。": "Directory updates and the paper prototype have distinct status.",
+  "Radar 独立仓库更新了精选资源、试用条件、上手步骤与发现索引。arXiv 原型复用开源评分工具，按教育 AI 兴趣筛选论文；注册与每日推送尚未接通。": "The independent Radar repository adds curated resources, trial conditions, setup steps and a discovery index. The arXiv prototype reuses open-source scoring to filter education AI papers by interests; signup and daily delivery are not connected.",
+  "查看目录源码与原型": "View directory source and prototype",
+  "五份课程包，从体验成品开始。": "Five course packages begin with trying existing work.",
+  "新增资源判断、学习交互、Skill 工作流、数据评测与产品验证课程包，附练习、starter 和评价标准。当前作为仓库内可审阅材料提供，尚未加入课程页面。": "Added resource decisions, learning interaction, Skill workflows, data evaluation and product validation packages with exercises, starters and rubrics. These are reviewable repository materials and have not been added to course pages.",
+  "查看课程包": "View course packages",
+  "首页、搜索与开源构建入口": "Homepage, search and open-source building"
 }
