@@ -1,3 +1,4 @@
+import { withSeo } from "@/app/seo/metadata";
 import { getI18n } from "@/app/i18n/server";
 import { translateData } from "@/app/i18n/core";
 import Localize from "@/app/i18n/server-localize";
@@ -11,7 +12,7 @@ import "./resources.css";
 const metadata = {
   title: "直接使用",
   description:
-    "六个可以在浏览器里直接打开的教学工具：点开就能跑，不用安装，也不用注册。",
+    "可以在浏览器里直接打开的互动教学工具：练习分数、面积、数轴与关系表达，不用安装，也不用注册。",
 };
 
 /** Three audiences, three first-person sentences, three concrete destinations. */
@@ -105,4 +106,4 @@ export default function UsePage() {
   )}</Localize>;
 }
 
-export async function generateMetadata() { const {t}=await getI18n(); return translateData(metadata,t); }
+export async function generateMetadata() { const {t,locale}=await getI18n(); return withSeo(translateData(metadata,t), "/use", locale); }

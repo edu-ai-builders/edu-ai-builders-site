@@ -1,3 +1,4 @@
+import { withSeo } from "@/app/seo/metadata";
 import {getI18n} from "@/app/i18n/server";
 import Localize from "@/app/i18n/server-localize";
 import Link from 'next/link';
@@ -9,8 +10,8 @@ export function generateStaticParams() { return resources.filter(r => r.artifact
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const resource = resources.find(r => r.id === slug);
-  const {t}=await getI18n();
-  return { title: t(resource?.title || '工具') };
+  const {t,locale}=await getI18n();
+  return withSeo({ title: t(resource?.title || '工具'), description: resource ? t(resource.description) : undefined }, `/use/${slug}`, locale);
 }
 export default async function ToolPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

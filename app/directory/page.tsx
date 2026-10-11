@@ -1,3 +1,4 @@
+import { withSeo } from "@/app/seo/metadata";
 import { getI18n } from "@/app/i18n/server";
 import { translateData } from "@/app/i18n/core";
 import Localize from "@/app/i18n/server-localize";
@@ -15,4 +16,4 @@ export default async function DirectoryPage() {
   return <Localize>{<DirectoryClient summary={catalog.summary} />}</Localize>;
 }
 
-export async function generateMetadata() { const {t}=await getI18n(); return translateData(metadata,t); }
+export async function generateMetadata() { const {t,locale}=await getI18n(); return withSeo(translateData(metadata,t), "/directory", locale); }

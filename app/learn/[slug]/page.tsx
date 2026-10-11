@@ -1,3 +1,5 @@
+import { withSeo } from "@/app/seo/metadata";
+import { getLocale } from "@/app/i18n/server";
 import { localizeCourse } from "@/app/i18n/server";
 import Localize from "@/app/i18n/server-localize";
 import type { Metadata } from "next";
@@ -19,10 +21,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const source = courses.find((item) => item.slug === slug);
   const course = source ? await localizeCourse(source) : undefined;
-  return {
+  return withSeo({
     title: course ? course.title : "课程未找到",
     description: course?.summary,
-  };
+  }, `/learn/${slug}`, await getLocale());
 }
 
 export default async function CoursePage({

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>同一个整体，比较分数</title>
+<style>body{font:18px/1.65 system-ui,sans-serif;max-width:42rem;margin:auto;padding:1.2rem;color:#172b3a;background:#f8fafb}button,select,textarea{font:inherit;padding:.5rem;max-width:100%}button{margin:.5rem 0}label{display:block;margin:.7rem 0}textarea{box-sizing:border-box;width:100%}.bar{height:2rem;border:2px solid #172b3a;background:#fff;margin:.4rem 0 1rem}.fill{height:100%;background:#247585}h1{font-size:1.8rem}:focus-visible{outline:3px solid #ba4b14;outline-offset:3px}[hidden]{display:none}</style></head>
+<body><main><h1>同一个整体，比较分数</h1><p>先预测，再看图核对。最后离开工具，用一道新题解释你的判断。</p>
+<label for="problem">选择任务</label><select id="problem"><option value="0">1/3 与 1/4</option><option value="1">1/2 与 2/4</option><option value="2">2/3 与 3/5</option></select>
+<p id="question"></p><label for="prediction">你预测左边分数……</label><select id="prediction"><option value="">请选择</option><option value="greater">更大</option><option value="equal">相等</option><option value="less">更小</option></select><button id="check" type="button">提交预测并看图</button><p id="message" role="status"></p>
+<section id="result" hidden aria-label="比较结果"><p id="left-label"></p><div class="bar" role="img" aria-labelledby="left-label"><div id="left" class="fill"></div></div><p id="right-label"></p><div class="bar" role="img" aria-labelledby="right-label"><div id="right" class="fill"></div></div><p id="comparison"></p></section>
+<button id="hint-toggle" type="button" aria-controls="hint" aria-expanded="false">打开提示</button><p id="hint" hidden>两个整体一样长。想一想：每份有多大？选了几份？</p>
+<label for="explanation">写出依据（不会自动评分，也不会上传或保存）</label><textarea id="explanation" rows="3"></textarea><h2>离开工具的新题</h2><p>不用图比较 3/4 与 5/8。说明你的依据，再检查相同整体是否必要。</p><p>这是课程原创起点；图形呈现和点击成功不能替代解释检查。</p></main>
+<script>
+const problems=[[1,3,1,4],[1,2,2,4],[2,3,3,5]];
+const el=id=>document.getElementById(id);
+function reset(){const [a,b,c,d]=problems[Number(el('problem').value)];el('question').textContent=`同一个整体：${a}/${b} 与 ${c}/${d}`;el('prediction').value='';el('result').hidden=true;el('message').textContent='';el('explanation').value='';el('hint').hidden=true;el('hint-toggle').setAttribute('aria-expanded','false');el('hint-toggle').textContent='打开提示';}
+el('problem').addEventListener('change',reset);
+el('check').addEventListener('click',()=>{const prediction=el('prediction').value;if(!prediction){el('message').textContent='请先选择预测，再看结果。';el('prediction').focus();return;}const[a,b,c,d]=problems[Number(el('problem').value)];const relation=a*d===c*b?'equal':a*d>c*b?'greater':'less';el('left-label').textContent=`左边：${a}/${b}`;el('right-label').textContent=`右边：${c}/${d}`;el('left').style.width=`${100*a/b}%`;el('right').style.width=`${100*c/d}%`;el('comparison').textContent=`交叉乘法核对：${a}×${d} ${relation==='equal'?'=':relation==='greater'?'>':'<'} ${c}×${b}。请解释这个比较为什么成立。`;el('result').hidden=false;el('message').textContent=prediction===relation?'预测与结果一致。接着说明依据。':'预测与结果不同。检查相同整体与每份大小。';});
+el('hint-toggle').addEventListener('click',()=>{el('hint').hidden=!el('hint').hidden;el('hint-toggle').setAttribute('aria-expanded',String(!el('hint').hidden));el('hint-toggle').textContent=el('hint').hidden?'打开提示':'收起提示';});reset();
+</script></body></html>

@@ -263,13 +263,13 @@ export default function HomeExperience({ map }: { map: ReactNode }) {
       <div className="home-stage-copy">
         <p className="ea-eyebrow">不用想象，直接看</p>
         <h2 id="home-title">
-          这四件事，
+          一个例子，
           <br />
-          <span>在这一屏里就能看到结果。</span>
+          <span>打开一个可能。</span>
         </h2>
         <p className="home-promise">
-          图形会自动演示工具怎样工作。
-          <strong>也可以随时停下来，改一改，看看变化。</strong>
+          先看看，再动手。
+          <strong>随时暂停，试试自己的想法。</strong>
         </p>
       </div>
       <div
@@ -397,13 +397,12 @@ export function FeedbackDesign() {
           你可以改变学习者的下一步。
         </h2>
         <p>
-          一份 PDF
-          报告里的图表，能变成一段数据判断练习。学习科学帮助你决定：哪里需要提示，怎样让学习者重新判断。
+          图表读错了？给一个线索，再留一次修改机会。
         </p>
         <p>
-          例如「可行动的反馈」：学习者误读图表后，需要知道可以改哪里。
+          试试「可行动的反馈」。
           <strong>
-            看右侧演示：一句具体提示，再加一次修改机会，练习会怎样改变。
+            打开下面两个选项，观察练习怎样改变。
           </strong>
         </p>
         <div className="home-lab-playback">

@@ -1,3 +1,5 @@
+import SiteStructuredData from "./seo/structured-data";
+import { withSeo } from "@/app/seo/metadata";
 import { LocaleProvider } from "./i18n/localize";
 import { getI18n } from "./i18n/server";
 import { translateData } from "./i18n/core";
@@ -14,7 +16,7 @@ const metadata: Metadata = {
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const {locale,messages}=await getI18n();
-  return <html data-scroll-behavior="smooth" lang={locale === "en" ? "en" : "zh-CN"}><body><LocaleProvider locale={locale} messages={messages}><SiteHeader /><div id="site-content" tabIndex={-1}>{children}</div><SiteFooter /></LocaleProvider></body></html>;
+  return <html data-scroll-behavior="smooth" lang={locale === "en" ? "en" : "zh-CN"}><body><SiteStructuredData /><LocaleProvider locale={locale} messages={messages}><SiteHeader /><div id="site-content" tabIndex={-1}>{children}</div><SiteFooter /></LocaleProvider></body></html>;
 }
 
-export async function generateMetadata():Promise<Metadata> { const {t}=await getI18n(); return translateData(metadata,t); }
+export async function generateMetadata():Promise<Metadata> { const {t,locale}=await getI18n(); return withSeo(translateData(metadata,t), "/", locale); }

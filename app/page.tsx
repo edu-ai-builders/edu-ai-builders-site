@@ -2,12 +2,14 @@ import Localize from "@/app/i18n/server-localize";
 import Link from "next/link";
 import HomeExperience, { FeedbackDesign } from "./components/home-experience";
 import HomeOpening from "./components/home-opening";
+import HomeOpenSource from "./components/home-open-source";
 import HomeReveal from "./components/home-reveal";
 import AtlasMini from "./components/atlas-mini";
 import ResourcePreview from "./components/resource-preview";
 import { courses } from "./content/courses";
 import "./home.css";
 import "./use/resources.css";
+import "./home-refresh.css";
 
 const shelf = [
   {
@@ -35,6 +37,7 @@ export default function Home() {
   return <Localize>{(
     <main className="home-v2">
       <HomeOpening courseCount={courses.length} />
+      <HomeOpenSource />
       <HomeReveal>
         <HomeExperience map={<AtlasMini />} />
       </HomeReveal>
@@ -44,11 +47,11 @@ export default function Home() {
       <section className="home-shelf">
         <div className="home-section-heading">
           <div>
-            <p className="ea-eyebrow">已经做好的，先打开看看</p>
+            <p className="ea-eyebrow">工具 · 组件 · Skill</p>
             <h2>
-              你的下一个学习产品，
+              挑一块材料，
               <br />
-              可以从这里开始。
+              做成你的作品。
             </h2>
           </div>
           <Link href="/use">浏览工具、组件与 Skill ↗</Link>
@@ -71,9 +74,9 @@ export default function Home() {
         <div className="home-close-main">
           <p className="ea-eyebrow">没写过一行代码？也有起点。</p>
           <h2>
-            从“我不会”到
+            从第一件
             <br />
-            “我做出了第一个版本”。
+            小作品开始。
           </h2>
           <p>
             {courses.length} 门课、{lessons}{" "}

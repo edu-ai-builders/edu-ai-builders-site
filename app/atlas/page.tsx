@@ -1,3 +1,4 @@
+import { withSeo } from "@/app/seo/metadata";
 import { getI18n } from "@/app/i18n/server";
 import { translateData } from "@/app/i18n/core";
 import Localize from "@/app/i18n/server-localize";
@@ -22,4 +23,4 @@ export default async function AtlasPage({ searchParams }: { searchParams: Promis
   return <Localize>{<AtlasClient key={`${concept || topic || "default"}:${tab || "understand"}`} rack={knowledge as unknown as Rack} courses={courses.map(({slug,title,summary,conceptIds,lessons}) => ({slug,title,summary,conceptIds,lessonCount:lessons.length}))} initialConcept={concept} initialTopic={topic} initialTab={tab} />}</Localize>;
 }
 
-export async function generateMetadata() { const {t}=await getI18n(); return translateData(metadata,t); }
+export async function generateMetadata() { const {t,locale}=await getI18n(); return withSeo(translateData(metadata,t), "/atlas", locale); }

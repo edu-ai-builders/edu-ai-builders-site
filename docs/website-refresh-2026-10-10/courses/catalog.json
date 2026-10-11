@@ -1,0 +1,101 @@
+{
+  "version": 2,
+  "date": "2026-10-10",
+  "website_imported": false,
+  "courses": [
+    {
+      "id": "reuse-01",
+      "title": "资源侦察与复用决策",
+      "minutes": 180,
+      "package": "01-resource-decisions.md",
+      "status": "draft-not-taught",
+      "outcome": "三张证据卡和一份选型决策",
+      "first_five_minutes": "QUICKSTART.md",
+      "entry": {
+        "label": "先试已有作品",
+        "local_demo": "../../../apps/site-original/public/tools/fraction-bars.html",
+        "site_demo": "/tools/fraction-bars.html",
+        "online_verified": false,
+        "adaptation_starter": "starters/fraction-lab.html"
+      }
+    },
+    {
+      "id": "reuse-02",
+      "title": "改出一个学习交互",
+      "minutes": 300,
+      "package": "02-learning-interaction.md",
+      "status": "draft-not-taught",
+      "outcome": "离线学习交互和检查记录",
+      "first_five_minutes": "QUICKSTART.md",
+      "entry": {
+        "label": "先试已有作品",
+        "local_demo": "../../../apps/site-original/public/tools/fraction-bars.html",
+        "site_demo": "/tools/fraction-bars.html",
+        "online_verified": false,
+        "adaptation_starter": "starters/fraction-lab.html"
+      }
+    },
+    {
+      "id": "reuse-03",
+      "title": "可审阅的备课工作流",
+      "minutes": 240,
+      "package": "03-skill-workflow.md",
+      "status": "draft-not-taught",
+      "outcome": "工作流契约、A/B课件与审阅记录",
+      "first_five_minutes": "QUICKSTART.md",
+      "entry": {
+        "label": "先试已有作品",
+        "local_demo": "../../../library/visual-cognition-slides/examples/01_math_v2.html",
+        "site_demo": null,
+        "online_verified": false,
+        "adaptation_starter": "starters/fraction-lab.html",
+        "publish_local_demo": false
+      }
+    },
+    {
+      "id": "reuse-04",
+      "title": "数据与反馈评测",
+      "minutes": 300,
+      "package": "04-data-evaluation.md",
+      "status": "draft-not-taught",
+      "outcome": "留出题组、原始输出与逐题报告",
+      "first_five_minutes": "QUICKSTART.md",
+      "entry": {
+        "label": "先试已有作品",
+        "local_demo": "../../../apps/site-original/public/tools/fraction-bars.html",
+        "site_demo": "/tools/fraction-bars.html",
+        "online_verified": false,
+        "adaptation_starter": "starters/fraction-lab.html",
+        "shortest_run": "cd starters && python3 evaluate.py cases.json outputs-a.json"
+      }
+    },
+    {
+      "id": "reuse-05",
+      "title": "本地产品与试用决策",
+      "minutes": 240,
+      "package": "05-product-validation.md",
+      "status": "draft-not-taught",
+      "outcome": "产品包、观察协议与下一步决策",
+      "first_five_minutes": "QUICKSTART.md",
+      "entry": {
+        "label": "先试已有作品",
+        "local_demo": "../../../apps/site-original/public/tools/fraction-bars.html",
+        "site_demo": "/tools/fraction-bars.html",
+        "online_verified": false,
+        "adaptation_starter": "starters/fraction-lab.html"
+      }
+    }
+  ],
+  "entry_sequence": [
+    "try-existing",
+    "inspect-reusable-parts",
+    "adapt",
+    "validate"
+  ],
+  "directory_handoff": {
+    "primary_action": "try-demo",
+    "secondary_action": "make-your-version",
+    "no_demo_action": "show-shortest-run-steps",
+    "online_demo_verified": false
+  }
+}
