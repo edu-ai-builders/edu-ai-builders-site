@@ -1,0 +1,151 @@
+{
+  "checked_at": "2026-11-07T18:28:17.679524+00:00",
+  "production": "https://edu-ai-builders.dev",
+  "release_commit": "4e6c059824c544f5d27d0ae4428d48a7b7ce6d29",
+  "result": "passed",
+  "checks": [
+    {
+      "check": "route",
+      "path": "/",
+      "status": 200
+    },
+    {
+      "check": "route",
+      "path": "/directory",
+      "status": 200
+    },
+    {
+      "check": "route",
+      "path": "/changelog",
+      "status": 200
+    },
+    {
+      "check": "route",
+      "path": "/learn",
+      "status": 200
+    },
+    {
+      "check": "route",
+      "path": "/atlas",
+      "status": 200
+    },
+    {
+      "check": "route",
+      "path": "/learning-sciences",
+      "status": 200
+    },
+    {
+      "check": "route",
+      "path": "/build",
+      "status": 200
+    },
+    {
+      "check": "route",
+      "path": "/skills/projects",
+      "status": 200
+    },
+    {
+      "check": "route",
+      "path": "/skills/scenarios/research-workflow",
+      "status": 200
+    },
+    {
+      "check": "route",
+      "path": "/skills/workflows/edu-repo-adapter",
+      "status": 200
+    },
+    {
+      "check": "route",
+      "path": "/robots.txt",
+      "status": 200
+    },
+    {
+      "check": "route",
+      "path": "/sitemap.xml",
+      "status": 200
+    },
+    {
+      "check": "exact-catalog-sha256",
+      "sha256": "11976344a8543dbf7b945b1911eb0a95d1d48d1908d592ffa206878fe831c182",
+      "total": 3838
+    },
+    {
+      "check": "search-api",
+      "query": "我想整理文献并管理引用",
+      "total": 182,
+      "status": "related-only"
+    },
+    {
+      "check": "search-api",
+      "query": "DeepTutor offline commercial",
+      "total": 2,
+      "status": "candidates"
+    },
+    {
+      "check": "search-api",
+      "query": "zzzzunlisted",
+      "total": 0,
+      "status": "no-match"
+    },
+    {
+      "check": "skills-redirect",
+      "url": "https://edu-ai-builders.dev/directory?q=DeepTutor&kind=skill"
+    },
+    {
+      "check": "english-directory",
+      "status": 200
+    },
+    {
+      "check": "package-sha256",
+      "archive": "edu-resource-search.zip",
+      "verified": true
+    },
+    {
+      "check": "package-sha256",
+      "archive": "edu-design-plan.zip",
+      "verified": true
+    },
+    {
+      "check": "package-sha256",
+      "archive": "edu-repo-adapter.zip",
+      "verified": true
+    },
+    {
+      "check": "package-sha256",
+      "archive": "edu-skill-fusion.zip",
+      "verified": true
+    },
+    {
+      "check": "package-sha256",
+      "archive": "family-math-workflow-example.zip",
+      "verified": true
+    }
+  ],
+  "deployment_id": "dpl_65jAzgzkU9GYKTs1o8JdnNyrq4J5",
+  "deployment_url": "https://edu-ai-builders-site-7zafff7pp-yipossibles-projects.vercel.app",
+  "rollback_deployment_id": "dpl_FkutRAjZKh3pPtzQzu1PW7kD7CZD",
+  "browser_verified": [
+    "Official domain shows3838 resources and DeepTutor repo/Skill",
+    "Expanded match shows offline unknown and license metadata requiring review"
+  ],
+  "checks_before_publication": {
+    "node": 73,
+    "radar_python": 57,
+    "website_python": 41,
+    "build": "passed exact isolated release",
+    "lint": "passed",
+    "translations_missing": 0,
+    "independent_review": "PASS+NOTES"
+  },
+  "workflow_status": "Not published. GitHub OAuth workflow scope missing; integration403. Local scheduled tasks retained.",
+  "screenshot": "production-2026-11-07.png",
+  "excluded_cleanup": [
+    "app/home.css",
+    "app/site-shell.css",
+    "package.json",
+    "package-lock.json",
+    "app/components/course-route.tsx",
+    "app/components/fraction-sculpture.tsx",
+    "app/components/learning-scene.tsx"
+  ]
+}
