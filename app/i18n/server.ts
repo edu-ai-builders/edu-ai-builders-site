@@ -10,6 +10,7 @@ import {
 } from "./core";
 import common from "./common.en.json";
 import learning from "./learning.en.json";
+import builder from "./builder.en.json";
 
 // Catalogs are loaded server-side; course body translations are sent only with
 // the selected course, rather than shipping every lesson to every visitor.
@@ -26,6 +27,7 @@ export const getMessages = cache(async () => {
     ...directory.default,
     ...common,
     ...learning,
+    ...builder,
   } as Messages;
 });
 export const getI18n = cache(async () => {

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo Capability Adapter"
+  short_description: "Locate source capabilities and plan bounded adaptation"
+  default_prompt: "Use $edu-repo-adapter to locate this feature in the selected repositories and produce an evidence-backed adaptation plan."

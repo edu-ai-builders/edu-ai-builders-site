@@ -1,0 +1,12 @@
+{
+  "prompt": "帮我规划一个中英双语、适合手机的家庭乘法练习小工具。第一版不要付费模型，最多比较三个方案，先尝试再给提示。我们自己写的题：有6袋苹果，每袋7个，共多少个？不要指定年级。",
+  "raw_material": {
+    "ownership": "user states owned example",
+    "task_zh": "有6袋苹果，每袋7个，共多少个？",
+    "task_en": "There are 6 bags of apples with 7 apples in each bag. How many apples are there in total?",
+    "factors": [
+      6,
+      7
+    ]
+  }
+}

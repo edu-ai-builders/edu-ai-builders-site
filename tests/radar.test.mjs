@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { collectionFor, dateLabel, featured, filterRecords, licenseLabel, normalizeQuery, tasksFor } from '../app/directory/model.ts';
 const catalog = JSON.parse(await readFile(new URL('../public/data/radar/catalog.json', import.meta.url), 'utf8'));
-const filters = { query:'', collection:'all', task:'all', language:'', currentOnly:false, hideArchived:true, hideUnavailable:true, sort:'relevance' };
+const filters = { query:'', collection:'all', task:'all', language:'',  hideArchived:true, hideUnavailable:true, sort:'relevance' };
 
 test('public Radar snapshot is internally consistent, unique and uses safe source URLs', () => {
   const { records, summary } = catalog;
@@ -36,12 +36,12 @@ test('Skill declaration checks are independent of repository checks and preserve
   }
 });
 
-test('Chinese editorial descriptions, normalized Latin search and AND terms find meaningful results', () => {
+test('Chinese editorial descriptions and normalized Latin search find meaningful results', () => {
   assert.equal(normalizeQuery('  ＧｉＴＨｕｂ  '),'github');
   const chinese = filterRecords(catalog.records, {...filters, query:'离线课堂'});
   assert.ok(chinese.some(r => r.name === 'learningequality/kolibri'));
   assert.equal(filterRecords(catalog.records, {...filters, query:'DATAWHALECHINA easy-vibe'})[0].name, 'datawhalechina/easy-vibe');
-  assert.equal(filterRecords(catalog.records, {...filters, query:'not-a-real-project-9fa9f'}).length, 0);
+  assert.equal(filterRecords(catalog.records, {...filters, query:'zzzzunlistedproject9fa9f'}).length, 0);
 });
 
 test('type, task, freshness, archive, unavailable and language filters combine without leaking records', () => {
@@ -51,11 +51,8 @@ test('type, task, freshness, archive, unavailable and language filters combine w
   const data = filterRecords(catalog.records, {...filters, collection:'data'});
   assert.ok(data.length > 0);
   assert.ok(data.every(r => collectionFor(r) === 'data'));
-  const freshPython = filterRecords(catalog.records, {...filters, currentOnly:true, language:'Python', task:'make'});
-  assert.ok(freshPython.length > 0);
-  assert.ok(freshPython.every(r => r.refreshStatus === 'refreshed' && r.language === 'Python' && tasksFor(r).includes('make') && !r.archived));
   assert.ok(filterRecords(catalog.records, filters).every(r => !r.archived && r.refreshError !== 'http-404'));
-  const all = filterRecords(catalog.records, {...filters, hideArchived:false, hideUnavailable:false});
+  const all = filterRecords(catalog.records, {...filters, hideArchived:false, hideUnavailable:false, showReview:true});
   assert.equal(all.length, catalog.records.length);
 });
 
@@ -70,4 +67,37 @@ test('sorting is deterministic and never mutates the catalog; editorial starting
   assert.equal(licenseLabel('NOASSERTION'), '许可证待确认');
   assert.equal(licenseLabel(null), '许可证待确认');
   assert.equal(dateLabel(null), '暂无记录');
+});
+
+test('review decisions and resource types stay independent of popularity and archive date', () => {
+  const defaults = {...filters, hideArchived:false};
+  const base = catalog.records.find(r=>r.name==='openai/grade-school-math'&&r.kind==='dataset');
+  assert.ok(base);
+  assert.ok(filterRecords([base],defaults).length===1,'Archived stable datasets remain eligible');
+  const uncertain={...base,id:'review:1',review:{...base.review,status:'review'}};
+  const excluded={...base,id:'excluded:1',review:{...base.review,status:'exclude'}};
+  assert.deepEqual(filterRecords([uncertain,excluded],defaults),[]);
+  assert.deepEqual(filterRecords([uncertain,excluded],{...defaults,showReview:true}).map(r=>r.id),['review:1']);
+  for (const name of ['HKUDS/DeepTutor','openai/plugins','d2l-ai/d2l-en','THU-KEG/EDUKG']) {
+    assert.ok(filterRecords(catalog.records,{...defaults,query:name}).some(r=>r.name===name),name);
+  }
+  const react=catalog.records.find(r=>r.kind==='skill'&&r.title==='vercel-react-best-practices');
+  assert.ok(react);
+  assert.ok(!tasksFor(react).includes('teach'));
+});
+
+test('confirmed task routes and bilingual queries reach the current pilot resources', () => {
+  const defaults={...filters,hideArchived:false};
+  for (const [task,name] of [['learn','HKUDS/DeepTutor'],['operate','jupyterhub/jupyterhub'],['learn','THU-KEG/EDUKG']]) {
+    assert.ok(filterRecords(catalog.records,{...defaults,task}).some(r=>r.name===name),task+':'+name);
+  }
+  assert.equal(collectionFor(catalog.records.find(r=>r.name==='THU-KEG/EDUKG')),'knowledge');
+  assert.equal(collectionFor(catalog.records.find(r=>r.name==='d2l-ai/d2l-en')),'knowledge');
+  for (const [zh,en] of [['科学','science'],['数学','math']]) {
+    const chinese=filterRecords(catalog.records,{...defaults,query:zh});
+    const english=filterRecords(catalog.records,{...defaults,query:en});
+    assert.ok(chinese.length&&english.length);
+    assert.ok(chinese.some(r=>english.some(e=>e.id===r.id)));
+    assert.ok(chinese.some(r=>r.search_match.matched.some(m=>m.concept===en)));
+  }
 });

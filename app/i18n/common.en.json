@@ -1,4 +1,7 @@
 {
+  "项目清理": "Project cleanup",
+  "清理未使用的旧组件与依赖。": "Removed unused components and dependencies.",
+  "课程、工具、地图与 Skills 入口保持原有功能。本轮清理只在本地完成，尚未发布。": "Courses, tools, the atlas and Skills keep their existing behavior. This cleanup is local and has not been published.",
   "用于构建": "Build with it",
   "可修改组件、可复用技能（Skill）与教学设计依据：把已有积累带进你自己的学习体验。": "Editable components, reusable Skills and pedagogical reasoning: bring existing work into your own learning experience.",
   "课堂老师": "Classroom teachers",
@@ -674,5 +677,16 @@
   "五份课程包，从体验成品开始。": "Five course packages begin with trying existing work.",
   "新增资源判断、学习交互、Skill 工作流、数据评测与产品验证课程包，附练习、starter 和评价标准。当前作为仓库内可审阅材料提供，尚未加入课程页面。": "Added resource decisions, learning interaction, Skill workflows, data evaluation and product validation packages with exercises, starters and rubrics. These are reviewable repository materials and have not been added to course pages.",
   "查看课程包": "View course packages",
-  "首页、搜索与开源构建入口": "Homepage, search and open-source building"
+  "首页、搜索与开源构建入口": "Homepage, search and open-source building",
+  "统一资源目录": "Unified resource directory",
+  "查看统一目录 →": "Open the unified directory →",
+  "学习、教学、研究与运维资源，集中在一个目录。": "Learning, teaching, research and operations resources in one directory.",
+  "采集与审核纳入 Edu AI Builders。补充精确来源，扩展任务关键词，纠正资源类型与标签；待复查线索单独显示，旧教材与数据按实际用途保留。原 Skills 搜索入口转到目录，场景与工作流仍可访问。本轮尚未推送或部署。": "Collection and review now belong to Edu AI Builders. Exact sources and task queries are expanded, types and tags are corrected, and uncertain candidates are shown separately. Older texts and data remain eligible by use. Skills search redirects to the directory; scenarios and workflows remain accessible. This change is local and has not been pushed or deployed.",
+  "目录": "Directory",
+  "用自己的话找资源，并查看匹配依据。": "Find resources in your own words and inspect the matching evidence.",
+  "目录和资源 API 共用任务词与双语概念检索，显示部分匹配、缺失条件和未知约束。新增公开 X 帖子线索队列；云端每日采集配置待发布和验证。本地预览尚未部署。": "The directory and resource API share task-based bilingual search, with partial matches, missing requirements and unknown constraints. A public X post lead queue is added. Daily cloud collection awaits publication and verification. This local preview is not deployed.",
+  "统一目录与搜索上线": "Unified directory and search released",
+  "用学习和研究任务，找到可复用的开源资源。": "Find reusable open-source resources for learning and research tasks.",
+  "统一资源目录与共享搜索正式发布。支持较长的中英文需求，显示匹配依据、部分相关线索和未知使用条件；Skills 搜索入口转到目录，场景方案与工作流可继续访问。每日采集工作流纳入仓库，云端运行状态单独记录；X 使用覆盖有限的公开网页线索，未接入付费 API。": "The unified directory and shared search are released. Longer Chinese and English requests show matching evidence, partially related leads and unknown usage conditions. Skills search redirects to the directory; scenario plans and workflows remain available. The daily collection workflow is included in the repository; cloud execution is tracked separately. X uses public web leads with limited coverage and no paid API.",
+  "统一资源目录与共享搜索正式发布。支持较长的中英文需求，显示匹配依据、部分相关线索和未知使用条件；Skills 搜索入口转到目录，场景方案与工作流可继续访问。云端每日采集配置已准备，启用仍待 GitHub 工作流授权；X 使用覆盖有限的公开网页线索，未接入付费 API。": "The unified directory and shared search are released. Longer Chinese and English requests show matching evidence, partially related leads and unknown usage conditions. Skills search redirects to the directory; scenario plans and workflows remain available. Daily cloud collection is prepared but awaits GitHub workflow authorization. X uses public web leads with limited coverage and no paid API."
 }

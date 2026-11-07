@@ -1,0 +1,43 @@
+{
+  "schema_version": "edu.skill-packages.v1",
+  "version": "0.2.1",
+  "packages": [
+    {
+      "version": "0.1.0",
+      "name": "edu-resource-search",
+      "archive": "edu-resource-search.zip",
+      "sha256": "d77350120dc3238715852fb7fb1b8b62c9bd3cd0d194d7ae1c277447b254fb95",
+      "files": 3
+    },
+    {
+      "version": "0.1.0",
+      "name": "edu-design-plan",
+      "archive": "edu-design-plan.zip",
+      "sha256": "3c12cf3e1707e861afd23ba9cb9bbc33d3ba5f4fda16e6270c2de185c881ec2d",
+      "files": 3
+    },
+    {
+      "version": "0.2.1",
+      "name": "edu-repo-adapter",
+      "archive": "edu-repo-adapter.zip",
+      "sha256": "ff3203e01b4b3259cc2562bd2eccf9e1bb6aa4230eacaa7774a402a1694e6657",
+      "files": 8
+    },
+    {
+      "version": "0.2.1",
+      "name": "edu-skill-fusion",
+      "archive": "edu-skill-fusion.zip",
+      "sha256": "80f8ef2a33f4e79a61642cbf519a91a217127f60062c0204452fa963dcd4bfe5",
+      "files": 9
+    }
+  ],
+  "examples": [
+    {
+      "version": "0.2.1",
+      "name": "family-math-workflow",
+      "archive": "family-math-workflow-example.zip",
+      "sha256": "28ba4353ed6646c9ae86030b04760b7596e90c82daf92df3823bdf80f551018b",
+      "files": 9
+    }
+  ]
+}

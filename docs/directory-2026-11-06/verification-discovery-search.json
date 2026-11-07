@@ -1,0 +1,87 @@
+{
+  "verified_at": "2026-11-07T03:31:28.243927+00:00",
+  "status": "local-verified-not-published",
+  "catalog_summary": {
+    "schemaVersion": 2,
+    "generatedAt": "2026-11-07T03:30:17Z",
+    "refreshStartedAt": "2026-11-07T03:30:17Z",
+    "sourceSnapshotAt": "2026-11-07T03:30:17Z",
+    "total": 3838,
+    "repositories": 3644,
+    "skills": 194,
+    "included": 2743,
+    "needsReview": 1095,
+    "excluded": 4,
+    "refreshed": 0,
+    "notRefreshed": 3838,
+    "failed": 0,
+    "excludedUnverified": 27,
+    "repositoryRequests": 0,
+    "repositoryRefreshSuccess": 0,
+    "repositoryRefreshErrors": 0,
+    "sourcePolicy": "Metadata export only. Generation does not reverify a source or establish runtime behavior."
+  },
+  "run": {
+    "run_id": "2026-11-07T032826Z-a5a8acee",
+    "authenticated": true,
+    "total_api_requests": 217,
+    "observed_successes": 89,
+    "new_observations": 41,
+    "exportable": true,
+    "fatal": false,
+    "status": "partial",
+    "changed_resources": 9
+  },
+  "source_errors": [
+    {
+      "error": "License evidence changed or is unrecognized; curator review required.",
+      "id": "anthropic-pdf-reference"
+    },
+    {
+      "error": [
+        {
+          "error": "truncated tree requires review: alice51849/ios-app-guide",
+          "http_status": null,
+          "stage": "rejected-item:alice51849/ios-app-guide"
+        }
+      ],
+      "step": "builder-discovery"
+    },
+    {
+      "error": "{\n  \"command\": \"refresh\",\n  \"selected\": 30,\n  \"updated\": 29,\n  \"not_modified\": 0,\n  \"errors\": [\n    {\n      \"full_name\": \"Mental-Wealth-Academy/platform\",\n      \"error\": \"GitHub API 404 for https://api.github.com/repos/Mental-Wealth-Academy/platform: {\\\"message\\\":\\\"Not Found\\\",\\\"documentation_url\\\":\\\"https://docs.github.com/rest/repos/repos#get-a-repository\\\",\\\"status\\\":\\\"404\\\"}\"\n    }\n  ],\n  \"started_at\": \"2026-11-07T03:29:38Z\",\n  \"finished_at\": \"2026-11-07T03:30:11Z\",\n  \"registry_records\": 3655,\n  \"api_requests\": 88,\n  \"not_modified_responses\": 0,\n  \"authenticated\": true,\n  \"api_version\": \"2026-03-10\",\n  \"snapshot\": \"data/snapshots/run-2026-11-07T033011Z\"\n}\n",
+      "step": "crawl.py"
+    }
+  ],
+  "checks": {
+    "radar_python": 57,
+    "website_python": 41,
+    "node": 73,
+    "build": "passed with TypeScript",
+    "lint": "passed",
+    "translation_missing": 0,
+    "independent_review": "data/cursor rollback and partial CJK matching fixed; X verifier covered by behavior checks"
+  },
+  "live_browser": [
+    "long Chinese literature request returns candidates with incomplete-evidence warning",
+    "DeepTutor offline commercial returns two results",
+    "expanded match shows offline unknown and license terms need checking"
+  ],
+  "catalog_sha256": "11976344a8543dbf7b945b1911eb0a95d1d48d1908d592ffa206878fe831c182",
+  "automation": {
+    "github_weekly_local": "weekly-github-radar-refresh",
+    "x_daily_local": "daily-x-education-resource-leads",
+    "github_cloud": "staged, not published or runner-tested"
+  },
+  "preview_screenshot": "search-evidence-preview.png",
+  "limits": [
+    "No push/deployment or real GitHub Actions runner test",
+    "No human relevance gold or current nDCG score",
+    "No third-party Skill execution or dependency compatibility tests",
+    "Public X access partial, no qualifying posts verified in pilot"
+  ],
+  "live_api_checks": [
+    "Chinese natural-language request returns related-only candidates",
+    "DeepTutor offline commercial returns two candidates; offline unknown",
+    "zzzzunlisted returns no-match and total0"
+  ]
+}

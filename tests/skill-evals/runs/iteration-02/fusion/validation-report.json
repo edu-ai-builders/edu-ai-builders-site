@@ -1,0 +1,43 @@
+[
+  {
+    "category": "structural/provenance helper",
+    "package": "case-e/teacher-science-activity",
+    "exit_code": 0,
+    "result": {
+      "valid": true,
+      "errors": [],
+      "source_drift": [],
+      "claim": "provenance and record consistency only; manual/agent task quality is evaluated separately"
+    },
+    "artifact": "E-provenance-output.json"
+  },
+  {
+    "category": "structural package check",
+    "package": "case-e/teacher-science-activity",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "category": "structural/provenance helper",
+    "package": "case-f/teacher-science-activity-conflict",
+    "exit_code": 0,
+    "result": {
+      "valid": true,
+      "errors": [],
+      "source_drift": [],
+      "claim": "provenance and record consistency only; manual/agent task quality is evaluated separately"
+    },
+    "artifact": "F-provenance-output.json"
+  },
+  {
+    "category": "structural package check",
+    "package": "case-f/teacher-science-activity-conflict",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "category": "input immutability SHA-256 comparison",
+    "passed": true,
+    "files": 16
+  }
+]

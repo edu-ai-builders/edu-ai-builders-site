@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/github-radar/registry.schema.json",
+  "title": "GitHub Education and Future Capability Radar registry record",
+  "description": "Independent metadata registry. This is not an eduos-substrate node schema.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_key",
+    "verification_status",
+    "entity_kind",
+    "first_seen",
+    "last_seen",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "github-radar.registry.v1"
+    },
+    "record_key": {
+      "type": "string",
+      "pattern": "^(repo:[0-9]+|lead:[a-z0-9-]+)$"
+    },
+    "github_repo_id": {
+      "type": ["integer", "null"],
+      "minimum": 1
+    },
+    "github_node_id": {
+      "type": ["string", "null"]
+    },
+    "owner": {
+      "type": ["object", "null"]
+    },
+    "name": {
+      "type": ["string", "null"]
+    },
+    "full_name": {
+      "type": ["string", "null"]
+    },
+    "verification_status": {
+      "enum": ["unverified", "verified", "missing", "error"]
+    },
+    "lead_match_status": {
+      "enum": ["exact", "probable", "ambiguous", "unresolved", "not_applicable"]
+    },
+    "entity_kind": {
+      "enum": ["repo", "dataset", "benchmark", "awesome_index", "unknown"]
+    },
+    "topics": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "languages": {
+      "type": "object",
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "latest_release": {
+      "type": ["object", "null"]
+    },
+    "first_seen": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_seen": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "fetched_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "provenance": {
+      "type": "array",
+      "items": {"type": "object"}
+    }
+  },
+  "additionalProperties": true
+}

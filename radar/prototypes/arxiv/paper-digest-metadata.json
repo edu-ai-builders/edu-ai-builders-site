@@ -1,0 +1,15 @@
+{
+  "full_name": "X-PG13/paper-digest",
+  "html_url": "https://github.com/X-PG13/paper-digest",
+  "pushed_at": "2026-08-20T03:05:52Z",
+  "updated_at": "2026-09-20T10:50:21Z",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "default_branch": "main"
+}

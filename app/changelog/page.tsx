@@ -79,7 +79,7 @@ export default function ChangelogPage() {
             按时间倒序写在这里。没有发布的就标成没有发布。
           </p>
           <nav aria-label="更新日志分类">
-            <a href="#r-2026-10-10">本轮改动</a>
+            <a href="#r-2026-11-07-release">本轮改动</a>
             <a href="#r-earlier">原站积累</a>
             <a href="#future">未来探索</a>
           </nav>
@@ -87,7 +87,7 @@ export default function ChangelogPage() {
         <dl className="changelog-hero-stats">
           <div>
             <dt>最近一次</dt>
-            <dd>2026 / 10 / 10</dd>
+            <dd>2026 / 11 / 07</dd>
           </div>
           <div>
             <dt>当前状态</dt>
@@ -101,6 +101,41 @@ export default function ChangelogPage() {
       </header>
 
       <ol className="changelog-releases">
+        <li className="changelog-release" id="r-2026-11-07-release">
+          <aside className="changelog-rail"><time dateTime="2026-11-07">2026 / 11 / 07</time><span className="changelog-status">已发布</span><small>统一目录与搜索上线</small></aside>
+          <div className="changelog-release-body"><ul className="changelog-entries">
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">目录</span><h2>用学习和研究任务，找到可复用的开源资源。</h2><p>统一资源目录与共享搜索正式发布。支持较长的中英文需求，显示匹配依据、部分相关线索和未知使用条件；Skills 搜索入口转到目录，场景方案与工作流可继续访问。云端每日采集配置已准备，启用仍待 GitHub 工作流授权；X 使用覆盖有限的公开网页线索，未接入付费 API。</p><div className="changelog-entry-links"><Link href="/directory">查看统一目录 →</Link></div></div></li>
+          </ul></div>
+        </li>
+        <li className="changelog-release" id="r-2026-11-06-directory">
+          <aside className="changelog-rail"><time dateTime="2026-11-06">2026 / 11 / 06</time><span className="changelog-status">本地预览</span><small>统一资源目录</small></aside>
+          <div className="changelog-release-body"><ul className="changelog-entries">
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">搜索</span><h2>用自己的话找资源，并查看匹配依据。</h2><p>目录和资源 API 共用任务词与双语概念检索，显示部分匹配、缺失条件和未知约束。新增公开 X 帖子线索队列；云端每日采集配置待发布和验证。本地预览尚未部署。</p></div></li>
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">目录</span><h2>学习、教学、研究与运维资源，集中在一个目录。</h2><p>采集与审核纳入 Edu AI Builders。补充精确来源，扩展任务关键词，纠正资源类型与标签；待复查线索单独显示，旧教材与数据按实际用途保留。原 Skills 搜索入口转到目录，场景与工作流仍可访问。本轮尚未推送或部署。</p><div className="changelog-entry-links"><Link href="/directory">查看统一目录 →</Link></div></div></li>
+          </ul></div>
+        </li>
+        <li className="changelog-release" id="r-2026-10-21-cleanup">
+          <aside className="changelog-rail"><time dateTime="2026-10-21">2026 / 10 / 21</time><span className="changelog-status">本地预览</span><small>项目清理</small></aside>
+          <div className="changelog-release-body"><ul className="changelog-entries">
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">维护</span><h2>清理未使用的旧组件与依赖。</h2><p>课程、工具、地图与 Skills 入口保持原有功能。本轮清理只在本地完成，尚未发布。</p></div></li>
+          </ul></div>
+        </li>
+        <li className="changelog-release" id="r-2026-10-12-skills">
+          <aside className="changelog-rail"><time dateTime="2026-10-12">2026 / 10 / 12</time><span className="changelog-status">本地预览</span><small>两个 skill 的测试与迭代</small></aside>
+          <div className="changelog-release-body"><ul className="changelog-entries">
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">Skills</span><h2>Repo Adapter 与 Skill Fusion 更新到 v0.2.1。</h2><p>补全模式选择、源码证据、接口适配、要求冲突、委派降级和来源维护。附可执行的证据校验工具、交付模板与独立任务产物，更新可下载包及完整 scope。</p><div className="changelog-entry-links"><Link href="/skills/workflows/edu-repo-adapter">看 Repo Adapter →</Link><Link href="/skills/workflows/edu-skill-fusion">看 Skill Fusion →</Link></div></div></li>
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">验收</span><h2>将来源核对、任务走查与运行检查分别记录。</h2><p>测试覆盖纯 refactor、分层提示、多个 repo 的页码和文本边界、缺工具、来源漂移及互斥要求。记录真实命令、失败与未运行项；当前结果是有限本地验证，不代表跨模型表现、节省比例或学习效果。本轮未发布。</p></div></li>
+          </ul></div>
+        </li>
+
+        <li className="changelog-release" id="r-2026-10-11-builder">
+          <aside className="changelog-rail"><time dateTime="2026-10-11">2026 / 10 / 11</time><span className="changelog-status">本地预览</span><small>Skills 目录与构建助手 MVP</small></aside>
+          <div className="changelog-release-body"><ul className="changelog-entries">
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">构建</span><h2>从问题出发，选资源，拿走开发计划。</h2><p>新增 Skills 与构建资源入口、全站引导小助手，以及家长数学、教师科学与高校研究三个场景。可以比较资源职责、查看课程和开发工具，下载带来源、版本与验收的计划。</p><div className="changelog-entry-links"><Link href="/directory">打开 Skills 与构建助手 →</Link></div></div></li>
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">Skills</span><h2>Repo Adapter 与 Skill Fusion 有了可下载初版。</h2><p>四个原创 MIT skills 提供搜索、设计计划、源码能力适配与工作流融合。附完整 scope、适配证据示例与融合示例；当前检查不等于跨 agent 性能评测。</p><div className="changelog-entry-links"><Link href="/skills/workflows/edu-repo-adapter">看 Repo Adapter →</Link><Link href="/skills/workflows/edu-skill-fusion">看 Skill Fusion →</Link></div></div></li>
+            <li className="changelog-entry lift is-wide"><div className="changelog-entry-copy"><span className="changelog-tag">维护</span><h2>保存方案，复查来源变化，再决定怎么更新。</h2><p>方案保存在当前浏览器，可检查目录中的来源版本与使用条件。投稿与需求说明可以下载草稿后提交 GitHub。提供只读 API 和本地 stdio MCP 适配源码；模型对话、收费、分成、跨设备账号和远端 MCP 服务尚未开通。本轮尚未部署。</p><div className="changelog-entry-links"><Link href="/skills/projects">我的方案 →</Link><Link href="/skills/contribute">准备贡献 →</Link></div></div></li>
+          </ul></div>
+        </li>
         <li className="changelog-release" id="r-2026-10-10">
           <aside className="changelog-rail"><time dateTime="2026-10-10">2026 / 10 / 10</time><span className="changelog-status is-kept">已发布</span><small>首页、搜索与开源构建入口</small></aside>
           <div className="changelog-release-body"><ul className="changelog-entries">

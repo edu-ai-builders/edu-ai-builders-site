@@ -1,0 +1,17 @@
+{
+  "source": "Local Bridge search experiment, 2026-10-29",
+  "copied_at": "2026-11-06",
+  "files": [
+    {
+      "file": "ranker.mjs",
+      "source": "/Users/yismacmini4/Documents/ChatGPT/Skills/evaluation/search/ranker/ranker.mjs",
+      "sha256": "03bd32686f66901d68246a38477b36150ec9692f74c21ff508ef0691c472db5a"
+    },
+    {
+      "file": "lexicon.mjs",
+      "source": "/Users/yismacmini4/Documents/ChatGPT/Skills/evaluation/search/ranker/lexicon.mjs",
+      "sha256": "7381fccf9b00846f688bb80c7fbdbbcb4b61d72d1b0bd095ed272c7c3ef21182"
+    }
+  ],
+  "note": "Frozen experiment files copied unchanged. The site adapter supplies current review filtering and conservative evidence states. Historical ranking metrics do not measure the current catalog."
+}

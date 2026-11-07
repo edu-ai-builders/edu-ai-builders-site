@@ -1,0 +1,483 @@
+{
+  "schema_version": "radar.education-curation.v1",
+  "resources": [
+    {
+      "id": "opentutor",
+      "repository": "zijinz456/OpenTutor",
+      "kind": "repo",
+      "title": "OpenTutor",
+      "purpose_zh": "把本地学习材料转成笔记、测验、闪卡和带引用的辅导对话。",
+      "education_scenarios": [
+        "adaptive-tutoring",
+        "assessment"
+      ],
+      "course_tags": [
+        "rag",
+        "tutoring",
+        "prototype"
+      ],
+      "reuse_steps_zh": [
+        "从固定提交检查部署与模型配置。",
+        "用自有公开材料试验引用准确性。",
+        "记录生成题目的错误，比较提示与直接给答案的体验。"
+      ],
+      "runtime_conditions_zh": "按仓库配置本地服务；模型供应商、费用与学生数据处理条件另行确认。",
+      "evidence_paths": [
+        "README.md",
+        "LICENSE"
+      ],
+      "license_scopes": [
+        {
+          "path": "LICENSE",
+          "label": "MIT",
+          "covers": "repository",
+          "marker": "MIT License"
+        }
+      ],
+      "reuse_conditions_zh": "复制或改编时保留版权与许可证；学习材料和模型服务不由代码许可证授权。"
+    },
+    {
+      "id": "genai-beginners",
+      "repository": "microsoft/generative-ai-for-beginners",
+      "kind": "repo",
+      "title": "Generative AI for Beginners",
+      "purpose_zh": "可改编的生成式 AI 入门课程与练习。",
+      "education_scenarios": [
+        "ai-literacy",
+        "teacher-development"
+      ],
+      "course_tags": [
+        "foundations",
+        "prompting",
+        "rag"
+      ],
+      "reuse_steps_zh": [
+        "选择入门与负责任使用单元。",
+        "用教师自有任务替换示例。",
+        "保留来源并记录课程改动。"
+      ],
+      "runtime_conditions_zh": "部分练习需要外部模型服务及密钥，离线读课件无需调用模型。",
+      "evidence_paths": [
+        "README.md",
+        "LICENSE"
+      ],
+      "license_scopes": [
+        {
+          "path": "LICENSE",
+          "label": "MIT",
+          "covers": "repository",
+          "marker": "MIT License"
+        }
+      ],
+      "reuse_conditions_zh": "保留 MIT 版权和许可证；外部服务和链接资源遵循各自条款。"
+    },
+    {
+      "id": "smol-course",
+      "repository": "huggingface/smol-course",
+      "kind": "repo",
+      "title": "Smol Course",
+      "purpose_zh": "小模型指令微调、评估与偏好对齐的实验课程。",
+      "education_scenarios": [
+        "model-training",
+        "evaluation"
+      ],
+      "course_tags": [
+        "finetuning",
+        "evaluation",
+        "advanced"
+      ],
+      "reuse_steps_zh": [
+        "先完成评估单元，定义课堂任务指标。",
+        "选择独立获许可的数据与模型。",
+        "用小规模实验比较微调前后的错误。"
+      ],
+      "runtime_conditions_zh": "需要 Python、训练环境和合适算力；课程许可不覆盖模型权重和训练数据。",
+      "evidence_paths": [
+        "README.md",
+        "LICENSE"
+      ],
+      "license_scopes": [
+        {
+          "path": "LICENSE",
+          "label": "Apache-2.0",
+          "covers": "repository",
+          "marker": "Apache License"
+        }
+      ],
+      "reuse_conditions_zh": "按 Apache-2.0 保留许可与适用 NOTICE，标明改动；模型与数据许可单独核实。"
+    },
+    {
+      "id": "dspy",
+      "repository": "stanfordnlp/dspy",
+      "kind": "repo",
+      "title": "DSPy",
+      "purpose_zh": "构建并优化可评估的语言模型程序，适合检索问答和反馈生成实验。",
+      "education_scenarios": [
+        "feedback",
+        "evaluation"
+      ],
+      "course_tags": [
+        "rag",
+        "evaluation",
+        "advanced"
+      ],
+      "reuse_steps_zh": [
+        "定义反馈质量评价规则。",
+        "在训练集优化提示，在独立保留集评价。",
+        "记录编译参数、模型和测试集版本。"
+      ],
+      "runtime_conditions_zh": "Python 和模型推理端点；该工具通用，教育适配是本目录的策展建议。",
+      "evidence_paths": [
+        "README.md",
+        "LICENSE"
+      ],
+      "license_scopes": [
+        {
+          "path": "LICENSE",
+          "label": "MIT",
+          "covers": "code",
+          "marker": "MIT License"
+        }
+      ],
+      "reuse_conditions_zh": "保留 MIT 版权和许可；自有评估数据与模型服务条件另行确认。"
+    },
+    {
+      "id": "gsm8k",
+      "repository": "openai/grade-school-math",
+      "kind": "dataset",
+      "title": "GSM8K",
+      "purpose_zh": "小学数学文字题与答案，可用于推理错误分析和评估练习。",
+      "education_scenarios": [
+        "math",
+        "assessment"
+      ],
+      "course_tags": [
+        "evaluation",
+        "datasets",
+        "math"
+      ],
+      "reuse_steps_zh": [
+        "从固定提交读取 gsm8k 的训练与测试 JSONL。",
+        "保持训练和测试分离。",
+        "比较最终答案正确率与步骤解释质量。"
+      ],
+      "runtime_conditions_zh": "读取 JSONL 即可；公开基准可能存在模型训练污染，不代表真实学生学习效果。",
+      "evidence_paths": [
+        "README.md",
+        "LICENSE"
+      ],
+      "license_scopes": [
+        {
+          "path": "LICENSE",
+          "label": "MIT",
+          "covers": "repository",
+          "marker": "MIT License"
+        }
+      ],
+      "reuse_conditions_zh": "仓库 LICENSE 为 MIT；保留版权与许可，下载时仍核实具体文件是否有额外条款。"
+    },
+    {
+      "id": "scienceqa",
+      "repository": "lupantech/ScienceQA",
+      "kind": "dataset",
+      "title": "ScienceQA",
+      "purpose_zh": "含图文上下文的科学问答数据，适合多模态题目与解释评估。",
+      "education_scenarios": [
+        "science",
+        "multimodal-assessment"
+      ],
+      "course_tags": [
+        "datasets",
+        "multimodal",
+        "evaluation"
+      ],
+      "reuse_steps_zh": [
+        "先核实非商业用途限制。",
+        "在公开题目上分开评价答案与解释。",
+        "发布派生数据时保留归属并采用相同许可。"
+      ],
+      "runtime_conditions_zh": "含外部数据下载；本次仅保存目录元数据，不下载题目或图片。",
+      "evidence_paths": [
+        "README.md",
+        "LICENSE",
+        "LICENSE-DATA"
+      ],
+      "license_scopes": [
+        {
+          "path": "LICENSE",
+          "label": "MIT",
+          "covers": "code",
+          "marker": "MIT License"
+        },
+        {
+          "path": "LICENSE-DATA",
+          "label": "CC-BY-NC-SA-4.0",
+          "covers": "data",
+          "marker": "Attribution-NonCommercial-ShareAlike 4.0 International"
+        }
+      ],
+      "restricted": true,
+      "reuse_conditions_zh": "代码 MIT；数据 CC-BY-NC-SA-4.0，须归属、非商业、相同方式共享；商业课程或产品先获取授权。"
+    },
+    {
+      "id": "scifact",
+      "repository": "allenai/scifact",
+      "kind": "dataset",
+      "title": "SciFact",
+      "purpose_zh": "科学主张与支持/反驳证据数据，可用于信息素养与有依据回答的课程。",
+      "education_scenarios": [
+        "science-literacy",
+        "evidence-checking"
+      ],
+      "course_tags": [
+        "datasets",
+        "citations",
+        "evaluation"
+      ],
+      "reuse_steps_zh": [
+        "把主张标签和论文摘要作为两个许可范围记录。",
+        "让模型引用证据并判断支持或反驳。",
+        "检查引文能否实际支持结论。"
+      ],
+      "runtime_conditions_zh": "历史研究基准；维护活跃度和数据价值分开记录。",
+      "evidence_paths": [
+        "README.md",
+        "LICENSE.md"
+      ],
+      "license_scopes": [
+        {
+          "path": "LICENSE.md",
+          "label": "CC-BY-4.0",
+          "covers": "claims-and-evidence-annotations",
+          "marker": "CC BY 4.0"
+        },
+        {
+          "path": "LICENSE.md",
+          "label": "ODC-By-1.0",
+          "covers": "abstracts",
+          "marker": "ODC-By 1.0"
+        },
+        {
+          "path": "LICENSE.md",
+          "label": "Apache-2.0",
+          "covers": "code",
+          "marker": "Apache 2.0"
+        }
+      ],
+      "reuse_conditions_zh": "主张及标注 CC BY 4.0，摘要 ODC-By 1.0，代码 Apache-2.0；按组件保留来源与许可。"
+    },
+    {
+      "id": "notebook-skill",
+      "repository": "openai/skills",
+      "kind": "skill",
+      "skill_path": "skills/.curated/jupyter-notebook/SKILL.md",
+      "title": "Jupyter Notebook Skill",
+      "purpose_zh": "为实验、探索和教学生成可检查的 Notebook。",
+      "education_scenarios": [
+        "data-literacy",
+        "reproducible-experiments"
+      ],
+      "course_tags": [
+        "skills",
+        "notebooks",
+        "datasets"
+      ],
+      "reuse_steps_zh": [
+        "按固定提交检查 Skill 与配套脚本。",
+        "选择自有数据生成小型 Notebook。",
+        "逐格运行并记录依赖。"
+      ],
+      "runtime_conditions_zh": "兼容代理与 Python/Jupyter 环境需自行试验；本目录不安装或执行 Skill。",
+      "evidence_paths": [
+        "skills/.curated/jupyter-notebook/SKILL.md",
+        "skills/.curated/jupyter-notebook/LICENSE.txt"
+      ],
+      "license_scopes": [
+        {
+          "path": "skills/.curated/jupyter-notebook/LICENSE.txt",
+          "label": "Apache-2.0",
+          "covers": "skill",
+          "marker": "Apache License"
+        }
+      ],
+      "reuse_conditions_zh": "使用该目录的 Apache-2.0 许可，不从仓库顶层推断；保留许可、归属与改动说明。"
+    },
+    {
+      "id": "openai-pdf-skill",
+      "repository": "openai/skills",
+      "kind": "skill",
+      "skill_path": "skills/.curated/pdf/SKILL.md",
+      "title": "PDF Skill (OpenAI)",
+      "purpose_zh": "读取、生成并检查 PDF，适合学习资料提取和讲义验证。",
+      "education_scenarios": [
+        "materials",
+        "teacher-development"
+      ],
+      "course_tags": [
+        "skills",
+        "documents",
+        "rag"
+      ],
+      "reuse_steps_zh": [
+        "核对 Skill 配套依赖。",
+        "只用已获授权的学习资料。",
+        "检查导出 PDF 的布局与引用。"
+      ],
+      "runtime_conditions_zh": "需兼容代理、PDF 工具链；目录仅记录来源，不执行外部指令。",
+      "evidence_paths": [
+        "skills/.curated/pdf/SKILL.md",
+        "skills/.curated/pdf/LICENSE.txt"
+      ],
+      "license_scopes": [
+        {
+          "path": "skills/.curated/pdf/LICENSE.txt",
+          "label": "Apache-2.0",
+          "covers": "skill",
+          "marker": "Apache License"
+        }
+      ],
+      "reuse_conditions_zh": "以该 Skill 的单独许可为准，保留 Apache-2.0 条款；输入 PDF 的权利单独核实。"
+    },
+    {
+      "id": "skill-creator",
+      "repository": "anthropics/skills",
+      "kind": "skill",
+      "skill_path": "skills/skill-creator/SKILL.md",
+      "title": "Skill Creator",
+      "purpose_zh": "把可重复的教师工作流整理为 Skill，并设计试验案例。",
+      "education_scenarios": [
+        "teacher-development",
+        "workflow-authoring"
+      ],
+      "course_tags": [
+        "skills",
+        "workflow",
+        "evaluation"
+      ],
+      "reuse_steps_zh": [
+        "选择一个窄工作流，如反馈措辞检查。",
+        "写清输入输出与引用边界。",
+        "用反例试验 Skill 再决定复用。"
+      ],
+      "runtime_conditions_zh": "依赖具体代理工具与评估环境，不保证跨运行时兼容。",
+      "evidence_paths": [
+        "skills/skill-creator/SKILL.md",
+        "skills/skill-creator/LICENSE.txt"
+      ],
+      "license_scopes": [
+        {
+          "path": "skills/skill-creator/LICENSE.txt",
+          "label": "Apache-2.0",
+          "covers": "skill",
+          "marker": "Apache License"
+        }
+      ],
+      "reuse_conditions_zh": "该 Skill 单独声明 Apache-2.0，保留许可和改动说明；不推广为整个 Skills 仓库的统一许可。"
+    },
+    {
+      "id": "anthropic-pdf-reference",
+      "repository": "anthropics/skills",
+      "kind": "skill",
+      "skill_path": "skills/pdf/SKILL.md",
+      "title": "PDF Skill (Anthropic, reference only)",
+      "purpose_zh": "用于认识同名 Skill 的许可差异，不能作为自由复制的工具包。",
+      "education_scenarios": [
+        "ai-literacy",
+        "license-literacy"
+      ],
+      "course_tags": [
+        "skills",
+        "licensing"
+      ],
+      "reuse_steps_zh": [
+        "打开官方来源了解用途。",
+        "比较目录级许可，避免仅凭公开可见就复制。",
+        "需要可改编方案时查看许可已核实的其他 Skill。"
+      ],
+      "runtime_conditions_zh": "使用受 Anthropic 协议和额外限制约束。",
+      "evidence_paths": [
+        "skills/pdf/LICENSE.txt"
+      ],
+      "license_scopes": [
+        {
+          "path": "skills/pdf/LICENSE.txt",
+          "label": "LicenseRef-Anthropic-Services",
+          "covers": "skill",
+          "marker": "ADDITIONAL RESTRICTIONS"
+        }
+      ],
+      "link_only": true,
+      "reuse_conditions_zh": "仅保留来源、许可摘要与哈希；不保存 Skill 内容、安装包或脚本。不将其列为可自由复制或改编。"
+    },
+    {
+      "id": "openmaic",
+      "repository": "THU-MAIC/OpenMAIC",
+      "kind": "repo",
+      "title": "OpenMAIC",
+      "purpose_zh": "输入主题或材料，生成幻灯片、互动场景与多 Agent 课堂；可先打开公开课程了解效果。",
+      "education_scenarios": [
+        "interactive-classroom",
+        "teacher-development"
+      ],
+      "course_tags": [
+        "tutoring",
+        "multimodal",
+        "prototype"
+      ],
+      "reuse_steps_zh": [
+        "先打开公开课程页，体验课程内容与互动场景。",
+        "需要二次开发时按固定提交的 README 配置模型和持久化。",
+        "区分云端 demo 的部署版本与当前源码，检查生成内容和引用。"
+      ],
+      "runtime_conditions_zh": "公开发现页可浏览；新建课堂可能需要登录、额度或模型配置。当前源码需要长期运行的服务和 PostgreSQL，云端 demo 仍显示较早版本。",
+      "evidence_paths": [
+        "README.md",
+        "LICENSE"
+      ],
+      "license_scopes": [
+        {
+          "path": "LICENSE",
+          "label": "MIT",
+          "covers": "repository",
+          "marker": "MIT License"
+        }
+      ],
+      "reuse_conditions_zh": "保留 MIT 归属和许可；第三方模型、媒体和官方托管服务条款单独适用。"
+    },
+    {
+      "id": "ragflow",
+      "repository": "infiniflow/ragflow",
+      "kind": "repo",
+      "title": "RAGFlow",
+      "purpose_zh": "面向复杂文档的检索问答和 Agent 工作流；builder 可用公开教材比较检索与引用体验。",
+      "education_scenarios": [
+        "materials",
+        "evidence-checking"
+      ],
+      "course_tags": [
+        "rag",
+        "citations",
+        "prototype"
+      ],
+      "reuse_steps_zh": [
+        "进入官方 demo，按网站要求登录。",
+        "用已获授权的示例文档检查分块、检索和引用。",
+        "需要 API 或完整控制时按固定源码的部署文档自托管。"
+      ],
+      "runtime_conditions_zh": "在线 demo 需要账号；自托管当前建议至少 4 核、16 GB RAM、50 GB磁盘以及 Docker/模型端点。未登录执行生成或验证 API 能力。",
+      "evidence_paths": [
+        "README.md",
+        "LICENSE"
+      ],
+      "license_scopes": [
+        {
+          "path": "LICENSE",
+          "label": "Apache-2.0",
+          "covers": "repository",
+          "marker": "Apache License"
+        }
+      ],
+      "reuse_conditions_zh": "按 Apache-2.0 保留许可和适用归属、标明改动；托管 demo 与上传材料不由源码许可授权。"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "authenticated": true,
+  "builder_discovery": {
+    "api_requests": 80,
+    "coverage_bounds": {
+      "configured_queries": {
+        "repo": 30,
+        "skill": 60
+      },
+      "configured_sources": 8,
+      "max_pages_per_query": 3,
+      "note": "Bounded samples, not exhaustive coverage. Budgets, failures and authentication can extend these cycles.",
+      "planned_query_visits_per_run": {
+        "repo": 4,
+        "skill": 4
+      },
+      "query_cycle_runs_without_failures": {
+        "repo": 8,
+        "skill": 15
+      },
+      "results_per_page": 8,
+      "sampled_results_per_query_visit": 2,
+      "source_manifest_samples_per_visit": 2,
+      "source_revisit_runs_without_failures": 4,
+      "sources_per_run": 2
+    },
+    "errors": [
+      {
+        "error": "truncated tree requires review: alice51849/ios-app-guide",
+        "http_status": null,
+        "stage": "rejected-item:alice51849/ios-app-guide"
+      }
+    ],
+    "finished_at": "2026-11-07T03:29:37Z",
+    "manifest_attempts": 15,
+    "manifest_limit": 24,
+    "new_skills": 10,
+    "next_query_cursor": 8,
+    "queries": [
+      {
+        "kind": "skill",
+        "page": 1,
+        "query": "filename:SKILL.md \"home learning\"",
+        "query_id": "builder-parents-english",
+        "result_count": 8,
+        "sample_count": 2,
+        "sample_offset": 0,
+        "status": "complete"
+      },
+      {
+        "kind": "repo",
+        "page": 1,
+        "query": "\"homeschool\" \"learning\" in:name,description,readme archived:false fork:false",
+        "query_id": "builder-parents-repos",
+        "result_count": 8,
+        "sample_count": 2,
+        "sample_offset": 0,
+        "status": "complete"
+      },
+      {
+        "kind": "skill",
+        "page": 1,
+        "query": "filename:SKILL.md \"家庭辅导\"",
+        "query_id": "builder-parents-alternate",
+        "result_count": 4,
+        "sample_count": 2,
+        "sample_offset": 0,
+        "status": "complete"
+      },
+      {
+        "kind": "repo",
+        "page": 1,
+        "query": "\"lesson planning\" education in:name,description,readme archived:false fork:false",
+        "query_id": "builder-teachers-repos",
+        "result_count": 8,
+        "sample_count": 2,
+        "sample_offset": 0,
+        "status": "complete"
+      },
+      {
+        "kind": "skill",
+        "page": 1,
+        "query": "filename:SKILL.md \"lesson planning\"",
+        "query_id": "builder-teachers-english",
+        "result_count": 8,
+        "sample_count": 2,
+        "sample_offset": 0,
+        "status": "complete"
+      },
+      {
+        "kind": "repo",
+        "page": 1,
+        "query": "\"course authoring\" university in:name,description,readme archived:false fork:false",
+        "query_id": "builder-higher-education-repos",
+        "result_count": 8,
+        "sample_count": 2,
+        "sample_offset": 0,
+        "status": "complete"
+      },
+      {
+        "kind": "skill",
+        "page": 1,
+        "query": "filename:SKILL.md \"教案设计\"",
+        "query_id": "builder-teachers-alternate",
+        "result_count": 8,
+        "sample_count": 2,
+        "sample_offset": 0,
+        "status": "complete"
+      },
+      {
+        "kind": "repo",
+        "page": 1,
+        "query": "\"research assistant\" citations in:name,description,readme archived:false fork:false",
+        "query_id": "builder-research-repos",
+        "result_count": 8,
+        "sample_count": 2,
+        "sample_offset": 0,
+        "status": "complete"
+      }
+    ],
+    "query_cursors": {
+      "repo": 4,
+      "skill": 4
+    },
+    "query_limit": 8,
+    "refreshed": 15,
+    "repository_observations": 18,
+    "request_limit": 100,
+    "skills_count": 194,
+    "sources": [
+      {
+        "available_manifests": 5,
+        "source_id": "builder-rea"
+      },
+      {
+        "available_manifests": 1,
+        "source_id": "builder-vercel-finder"
+      }
+    ],
+    "started_at": "2026-11-07T03:28:43Z",
+    "status": "partial",
+    "successful_requests": 80
+  },
+  "changed_resources": 9,
+  "collector_runs": [
+    {
+      "api_requests": 88,
+      "api_version": "2026-03-10",
+      "authenticated": true,
+      "command": "refresh",
+      "errors": [
+        {
+          "error": "GitHub API 404 for https://api.github.com/repos/Mental-Wealth-Academy/platform: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/repos#get-a-repository\",\"status\":\"404\"}",
+          "full_name": "Mental-Wealth-Academy/platform"
+        }
+      ],
+      "finished_at": "2026-11-07T03:30:11Z",
+      "not_modified": 0,
+      "not_modified_responses": 0,
+      "registry_records": 3655,
+      "selected": 30,
+      "snapshot": "data/snapshots/run-2026-11-07T033011Z",
+      "started_at": "2026-11-07T03:29:38Z",
+      "updated": 29
+    },
+    {
+      "api_requests": 1,
+      "api_version": "2026-03-10",
+      "authenticated": true,
+      "command": "discover",
+      "errors": [],
+      "finished_at": "2026-11-07T03:30:12Z",
+      "hydrated": 0,
+      "not_modified_responses": 0,
+      "queries": 1,
+      "registry_records": 3675,
+      "snapshot": "data/snapshots/run-2026-11-07T033012Z",
+      "started_at": "2026-11-07T03:30:11Z",
+      "unique_repositories_seen": 20
+    }
+  ],
+  "discovery_leads": {
+    "attempted": 0,
+    "errors": [],
+    "limit": 2,
+    "pending_github": 0,
+    "pending_manual_review": 0,
+    "verified": 0
+  },
+  "errors": [
+    {
+      "error": "License evidence changed or is unrecognized; curator review required.",
+      "id": "anthropic-pdf-reference"
+    },
+    {
+      "error": [
+        {
+          "error": "truncated tree requires review: alice51849/ios-app-guide",
+          "http_status": null,
+          "stage": "rejected-item:alice51849/ios-app-guide"
+        }
+      ],
+      "step": "builder-discovery"
+    },
+    {
+      "error": "{\n  \"command\": \"refresh\",\n  \"selected\": 30,\n  \"updated\": 29,\n  \"not_modified\": 0,\n  \"errors\": [\n    {\n      \"full_name\": \"Mental-Wealth-Academy/platform\",\n      \"error\": \"GitHub API 404 for https://api.github.com/repos/Mental-Wealth-Academy/platform: {\\\"message\\\":\\\"Not Found\\\",\\\"documentation_url\\\":\\\"https://docs.github.com/rest/repos/repos#get-a-repository\\\",\\\"status\\\":\\\"404\\\"}\"\n    }\n  ],\n  \"started_at\": \"2026-11-07T03:29:38Z\",\n  \"finished_at\": \"2026-11-07T03:30:11Z\",\n  \"registry_records\": 3655,\n  \"api_requests\": 88,\n  \"not_modified_responses\": 0,\n  \"authenticated\": true,\n  \"api_version\": \"2026-03-10\",\n  \"snapshot\": \"data/snapshots/run-2026-11-07T033011Z\"\n}\n",
+      "step": "crawl.py"
+    }
+  ],
+  "exportable": true,
+  "fatal": false,
+  "finished_at": "2026-11-07T03:30:15Z",
+  "new_observations": 41,
+  "observed_successes": 89,
+  "public_snapshots_updated": true,
+  "registry_count": 3675,
+  "requests": 48,
+  "resource_count": 13,
+  "run_id": "2026-11-07T032826Z-a5a8acee",
+  "skills_count": 194,
+  "snapshot_path": "data/snapshots/directory-2026-11-07T032826Z-a5a8acee",
+  "started_at": "2026-11-07T03:28:26Z",
+  "status": "partial",
+  "successful_requests": 48,
+  "total_api_requests": 217
+}

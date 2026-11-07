@@ -1,0 +1,356 @@
+{
+  "schema_version": "edu.fusion-record.v1",
+  "readiness": "usable",
+  "workload": {
+    "purpose": "New bilingual mobile-friendly family math product-planning method",
+    "trigger": "Plan or redesign a family math product from owned problems or supplied source evidence",
+    "exclusions": [
+      "Routine tutoring",
+      "PDF extraction alone",
+      "Unrelated research model training",
+      "School-wide systems"
+    ],
+    "inputs": [
+      "User goal and platform",
+      "Owned/authored math examples or supplied PDF",
+      "Permitted local resource evidence"
+    ],
+    "outputs": [
+      "Editable bilingual product brief",
+      "Candidate decision with <=3 compared resources",
+      "Attempt-gated learner flow, staged tasks and acceptance"
+    ],
+    "constraints": [
+      {
+        "id": "FAMILY",
+        "level": "hard",
+        "requirement": "A new family math product-planning skill; exclude unrelated education/research requests."
+      },
+      {
+        "id": "BILINGUAL",
+        "level": "hard",
+        "requirement": "Plans and learner UI copy usable in Chinese and English."
+      },
+      {
+        "id": "MOBILE",
+        "level": "hard",
+        "requirement": "Mobile-friendly first product flow."
+      },
+      {
+        "id": "FREE",
+        "level": "hard",
+        "requirement": "Initial prototype works without paid models."
+      },
+      {
+        "id": "CAP",
+        "level": "hard",
+        "requirement": "Compare at most three resource candidates, including alternatives."
+      },
+      {
+        "id": "ATTEMPT",
+        "level": "hard",
+        "requirement": "A submitted attempt precedes any hint, including Help fallback."
+      },
+      {
+        "id": "BOUNDED",
+        "level": "hard",
+        "requirement": "Handle unavailable extraction/catalog; do not mandate backend, grade, curriculum, session duration or fixed problem count."
+      },
+      {
+        "id": "EVIDENCE",
+        "level": "hard",
+        "requirement": "Preserve provenance, source scope, mathematics and honest verification labels."
+      }
+    ],
+    "precedence": [
+      "Explicit user requirements",
+      "Platform/tool constraints",
+      "User preferences",
+      "Source defaults"
+    ],
+    "artifact_choice": "new skill",
+    "why_new": "Stable narrowed workload requires transformed broad triggers, candidate cap, bilingual mobile contract and all-branch hint gating; not simply sequential delegation."
+  },
+  "sources": [
+    {
+      "id": "search",
+      "name": "edu-resource-search",
+      "version": "0.1.0",
+      "state": "full-method",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "9dbaf597a2fea2f7016fe5e705fc6932bcf14e1e913392d015329af643182441"
+        },
+        {
+          "path": "references/catalog-contract.md",
+          "sha256": "a1a80738b6b82c63e5a23bc5b7a493bab2333fe41fe322d45c6ed6a4e12f74f9"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3"
+        }
+      ],
+      "reuse": {
+        "permission": "redistributable",
+        "scope": "This first-party skill instruction package and its referenced method only, under observed MIT LICENSE.",
+        "observation": "MIT license permits modification/distribution conditioned on retaining copyright and permission notice; packaged LICENSE retained. Does not cover catalog resources or third-party PDFs."
+      }
+    },
+    {
+      "id": "plan",
+      "name": "edu-design-plan",
+      "version": "0.1.0",
+      "state": "full-method",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "62cc4fd3d4e56d3b102acbe01bb00e3f1a928f03156c41c5eabfad7450cbb575"
+        },
+        {
+          "path": "references/brief-template.md",
+          "sha256": "4878d20520f8ffdfaede80beb0bc9336d9743ce6a72b4a8c455fe36c835131e2"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3"
+        }
+      ],
+      "reuse": {
+        "permission": "redistributable",
+        "scope": "This first-party skill instruction package and its referenced method only, under observed MIT LICENSE.",
+        "observation": "MIT license permits modification/distribution conditioned on retaining copyright and permission notice; packaged LICENSE retained. Does not cover catalog resources or third-party PDFs."
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D1",
+      "source_id": "search",
+      "method": "Identify builder/end-user goal and constraints",
+      "decision": "transform",
+      "requirement_ids": [
+        "FAMILY",
+        "BOUNDED"
+      ],
+      "reason": "Narrow broad education search to a family math planning workload; keep supplied details and optional assumptions.",
+      "targets": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "D2",
+      "source_id": "search",
+      "method": "Capability-based bilingual discovery and explicit search boundary",
+      "decision": "transform",
+      "requirement_ids": [
+        "CAP",
+        "BILINGUAL",
+        "EVIDENCE"
+      ],
+      "reason": "Bound the total comparison to three and prefer supplied evidence when catalogs are unavailable.",
+      "targets": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "D3",
+      "source_id": "search",
+      "method": "Assign candidate roles, substitutes and interface gaps",
+      "decision": "keep",
+      "requirement_ids": [
+        "EVIDENCE",
+        "CAP"
+      ],
+      "reason": "Small evidence-based selection directly informs a buildable product brief.",
+      "targets": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "D4",
+      "source_id": "search",
+      "method": "Mandatory dependence on catalog/API adapter",
+      "decision": "remove",
+      "requirement_ids": [
+        "FREE",
+        "BOUNDED"
+      ],
+      "reason": "Source presents catalog as optional; do not import deployment or adapter details into core method.",
+      "targets": []
+    },
+    {
+      "id": "D5",
+      "source_id": "plan",
+      "method": "Attempt, feedback and next-action flow",
+      "decision": "transform",
+      "requirement_ids": [
+        "ATTEMPT",
+        "BILINGUAL",
+        "MOBILE"
+      ],
+      "reason": "Make attempt gate explicit on every hint and help branch, with mobile bilingual controls.",
+      "targets": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "D6",
+      "source_id": "plan",
+      "method": "Inputs, outputs, architecture and staged implementation brief",
+      "decision": "transform",
+      "requirement_ids": [
+        "FREE",
+        "BOUNDED",
+        "EVIDENCE"
+      ],
+      "reason": "Prototype with owned material and local deterministic logic; only add integrations if needed, without fixing education details.",
+      "targets": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "D7",
+      "source_id": "plan",
+      "method": "Distinguish preservation/redesign and executed/planned checks",
+      "decision": "keep",
+      "requirement_ids": [
+        "EVIDENCE"
+      ],
+      "reason": "Prevents plan or walkthrough being represented as runtime or learning proof.",
+      "targets": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "D8",
+      "source_id": null,
+      "method": "PDF/tool-missing and non-trigger routing",
+      "decision": "independent",
+      "requirement_ids": [
+        "BOUNDED",
+        "FAMILY",
+        "EVIDENCE"
+      ],
+      "reason": "Author explicit fallback and exclusions from this workload; source broad triggers are unsuitable.",
+      "targets": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "D9",
+      "source_id": null,
+      "method": "Bilingual output and mobile acceptance checklist",
+      "decision": "independent",
+      "requirement_ids": [
+        "BILINGUAL",
+        "MOBILE",
+        "ATTEMPT"
+      ],
+      "reason": "Author measurable product checks independent of unobserved pedagogy or source defaults.",
+      "targets": [
+        "SKILL.md"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "C1",
+      "status": "resolved",
+      "defaults": "Source search covers many education audiences and broad candidate discovery",
+      "requirement": "FAMILY and CAP",
+      "resolution": "Narrow trigger to family math planning and cap all comparisons at three; no research route."
+    },
+    {
+      "id": "C2",
+      "status": "resolved",
+      "defaults": "Source plan leaves hint timing adjustable and gives an illustrative three-problem/two-hint example",
+      "requirement": "ATTEMPT and BOUNDED",
+      "resolution": "Require submitted attempt across Help as well as normal hints; keep problem and hint count task-specific."
+    },
+    {
+      "id": "C3",
+      "status": "resolved",
+      "defaults": "Catalog and integration interfaces are optional source methods",
+      "requirement": "FREE and BOUNDED",
+      "resolution": "Owned local deterministic first prototype and bounded PDF fallback; no mandatory server/catalog/model."
+    }
+  ],
+  "acceptance_cases": [
+    {
+      "id": "A1",
+      "kind": "normal",
+      "prompt": "帮我规划一个中英双语、适合手机的家庭乘法练习小工具。第一版不要付费模型，最多比较三个方案，先尝试再给提示。我们自己写的题：有6袋苹果，每袋7个，共多少个？不要指定年级。",
+      "expected_behaviors": [
+        "Bilingual mobile product brief",
+        "Owned 6×7 math preserved",
+        "No paid models, <=3 compared candidates",
+        "Attempts before all hints/Help",
+        "No imposed grade, backend or fixed problem count"
+      ],
+      "status": "passed",
+      "method": "walkthrough",
+      "observed_result": "Actual authored brief follows generated method; one independently authored candidate, exact 42-apples answer, gated Help/blank/valid attempts/repeated hint/reset/locale sequence manually exercised. No product/browser execution.",
+      "result_path": "results/owned-multiplication.md"
+    },
+    {
+      "id": "A2",
+      "kind": "boundary",
+      "prompt": "用提供的 family-worksheet.pdf 规划一个适合家庭的中英双语手机数学练习产品。没有 PDF 提取器，也不能查看 PDF 内容；先交一份有用的计划，第一版不要付费模型，最多三个候选，先尝试后提示。",
+      "expected_behaviors": [
+        "Do not fabricate PDF content/page references",
+        "Extraction blocked explicitly",
+        "Finish independent plan with owned/authored fallback",
+        "All family hard constraints retained"
+      ],
+      "status": "passed",
+      "method": "walkthrough",
+      "observed_result": "Re-exercised with an actual independently authored local PDF fixture present but unextracted/unviewed and no extractor/page viewer. Useful bilingual plan preserves input-content gap, one independent candidate and separate authored 3×4 demo; all hints/Help guarded. Initial no-bytes walkthrough is preserved separately. Extraction remains blocked, not passed.",
+      "result_path": "results/pdf-no-extractor.md"
+    },
+    {
+      "id": "A3",
+      "kind": "non-trigger",
+      "prompt": "Plan a research workflow for training a large language model from scientific papers and compare distributed training approaches.",
+      "expected_behaviors": [
+        "Do not hijack research request with family planning",
+        "Return to appropriate training workflow"
+      ],
+      "status": "passed",
+      "method": "walkthrough",
+      "observed_result": "Generated trigger rejected the unrelated family-skill application; output provides bounded routing handoff without claiming a researched training plan.",
+      "result_path": "results/unrelated-training.md"
+    }
+  ],
+  "upstream_map": [
+    {
+      "source_id": "search",
+      "decision_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "review_when": "Any inspected source hash, version, scope or license changes; review candidate limits, discovery boundary and role contracts; rerun normal/PDF/non-trigger walkthroughs."
+    },
+    {
+      "source_id": "plan",
+      "decision_ids": [
+        "D5",
+        "D6",
+        "D7"
+      ],
+      "review_when": "Any inspected source hash, version, scope or license changes; review math/state/acceptance and first prototype dependency decisions; rerun normal/PDF walkthroughs."
+    }
+  ],
+  "verification_limits": "No orchestration comparison, measured token/time savings, independent generated-skill execution, browser UI or learning study collected.",
+  "validation": {
+    "execution_class": "same-agent actual manual task walkthroughs, not independent-agent evaluation",
+    "application_runtime": "not-run",
+    "pdf_extraction": "blocked: actual binary PDF fixture supplied, no extractor/viewer and no extracted page text",
+    "bilingual_mobile_ui_rendering": "not-run",
+    "learning_study": "not-run",
+    "benchmark_comparison": "not-collected",
+    "provenance_helper": "passed: explicit source/package roots; valid true, no errors or source drift; consistency only"
+  }
+}

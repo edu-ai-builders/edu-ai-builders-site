@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "user_id": "local-demo-builder",
+  "status": "local-preview",
+  "generated_at": "2026-10-10T18:11:08.423746+00:00",
+  "frequency": "daily",
+  "delivery_channel": "local-file",
+  "sent": false,
+  "recommendations": [
+    {
+      "resource_id": "arxiv:2609.24083",
+      "version": "2609.24083v1",
+      "kind": "paper",
+      "title": "From Content Generation to Learning Support: Pedagogy-Guided Generative Video Tutors for STEM Learning",
+      "source_url": "https://arxiv.org/abs/2609.24083v1",
+      "score": 12,
+      "recommendation_reason": "strong: tutoring, pedagogical, education",
+      "matched_interests": [
+        "tutoring",
+        "pedagogical",
+        "education"
+      ],
+      "builder_use": {
+        "status": "editorial-inference-from-metadata",
+        "suggestion": "Prototype hint/scaffolding strategies, then measure learner progress separately from answer accuracy. Inspect benchmark tasks and rubrics as candidates for a tutor regression suite; compare population and task fit before using its scores.",
+        "next_step": "Read the arXiv abstract and methods; author-linked resources require separate license and setup verification."
+      },
+      "related_resources": [],
+      "evidence_limits": [
+        "Metadata-only review; reported results are author claims, not independently validated.",
+        "Benchmark scores do not establish classroom learning gains or suitability for minors.",
+        "arXiv presence alone does not establish peer review."
+      ],
+      "is_preprint": true,
+      "published_at": "2026-09-21T04:10:48Z"
+    },
+    {
+      "resource_id": "arxiv:2609.23958",
+      "version": "2609.23958v1",
+      "kind": "paper",
+      "title": "When AI Tutors Speak: Evidence from a Randomized Field Experiment",
+      "source_url": "https://arxiv.org/abs/2609.23958v1",
+      "score": 12,
+      "recommendation_reason": "strong: tutoring, pedagogical, education",
+      "matched_interests": [
+        "tutoring",
+        "pedagogical",
+        "education"
+      ],
+      "builder_use": {
+        "status": "editorial-inference-from-metadata",
+        "suggestion": "Prototype hint/scaffolding strategies, then measure learner progress separately from answer accuracy.",
+        "next_step": "Read the arXiv abstract and methods; author-linked resources require separate license and setup verification."
+      },
+      "related_resources": [],
+      "evidence_limits": [
+        "Metadata-only review; reported results are author claims, not independently validated.",
+        "Benchmark scores do not establish classroom learning gains or suitability for minors.",
+        "arXiv presence alone does not establish peer review."
+      ],
+      "is_preprint": true,
+      "published_at": "2026-09-21T00:09:22Z"
+    },
+    {
+      "resource_id": "arxiv:2610.00095",
+      "version": "2610.00095v1",
+      "kind": "paper",
+      "title": "One Mastery Threshold Does Not Fit All Knowledge Tracing Models",
+      "source_url": "https://arxiv.org/abs/2610.00095v1",
+      "score": 12,
+      "recommendation_reason": "strong: knowledge tracing, tutoring, education",
+      "matched_interests": [
+        "knowledge tracing",
+        "tutoring",
+        "education"
+      ],
+      "builder_use": {
+        "status": "editorial-inference-from-metadata",
+        "suggestion": "Prototype hint/scaffolding strategies, then measure learner progress separately from answer accuracy. Explore mastery/knowledge-state tracking; inspect student-data provenance, privacy requirements and leakage before training.",
+        "next_step": "Read the arXiv abstract and methods; author-linked resources require separate license and setup verification."
+      },
+      "related_resources": [],
+      "evidence_limits": [
+        "Metadata-only review; reported results are author claims, not independently validated.",
+        "Benchmark scores do not establish classroom learning gains or suitability for minors.",
+        "arXiv presence alone does not establish peer review."
+      ],
+      "is_preprint": true,
+      "published_at": "2026-09-08T14:18:39Z"
+    },
+    {
+      "resource_id": "arxiv:2608.10492",
+      "version": "2608.10492v2",
+      "kind": "paper",
+      "title": "INSIDE the Student's Mind: Jointly Modeling Latent Reasoning and Action in LLM Student Simulators",
+      "source_url": "https://arxiv.org/abs/2608.10492v2",
+      "score": 12,
+      "recommendation_reason": "strong: tutoring, student simulation, education",
+      "matched_interests": [
+        "tutoring",
+        "student simulation",
+        "education"
+      ],
+      "builder_use": {
+        "status": "editorial-inference-from-metadata",
+        "suggestion": "Prototype hint/scaffolding strategies, then measure learner progress separately from answer accuracy. Inspect benchmark tasks and rubrics as candidates for a tutor regression suite; compare population and task fit before using its scores. Use simulated learners only for prototype stress tests; validate behavior against real learner evidence.",
+        "next_step": "Read the arXiv abstract and methods; author-linked resources require separate license and setup verification."
+      },
+      "related_resources": [],
+      "evidence_limits": [
+        "Metadata-only review; reported results are author claims, not independently validated.",
+        "Benchmark scores do not establish classroom learning gains or suitability for minors.",
+        "arXiv presence alone does not establish peer review."
+      ],
+      "is_preprint": true,
+      "published_at": "2026-08-11T05:07:49Z"
+    },
+    {
+      "resource_id": "arxiv:2610.08703",
+      "version": "2610.08703v1",
+      "kind": "paper",
+      "title": "Agreement Is Not Validity: Cross-Model LLM Consensus in Diagnosing Student Failure Modes in K-12 Math Tutoring Dialogue",
+      "source_url": "https://arxiv.org/abs/2610.08703v1",
+      "score": 8,
+      "recommendation_reason": "strong: tutoring, knowledge tracing",
+      "matched_interests": [
+        "tutoring",
+        "knowledge tracing"
+      ],
+      "builder_use": {
+        "status": "editorial-inference-from-metadata",
+        "suggestion": "Prototype hint/scaffolding strategies, then measure learner progress separately from answer accuracy. Explore mastery/knowledge-state tracking; inspect student-data provenance, privacy requirements and leakage before training.",
+        "next_step": "Read the arXiv abstract and methods; author-linked resources require separate license and setup verification."
+      },
+      "related_resources": [],
+      "evidence_limits": [
+        "Metadata-only review; reported results are author claims, not independently validated.",
+        "Benchmark scores do not establish classroom learning gains or suitability for minors.",
+        "arXiv presence alone does not establish peer review."
+      ],
+      "is_preprint": true,
+      "published_at": "2026-10-06T17:16:03Z"
+    }
+  ]
+}

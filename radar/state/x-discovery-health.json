@@ -1,0 +1,10 @@
+{
+  "source": "x-web-index",
+  "status": "limited",
+  "last_attempt": "2026-11-07T16:19:42Z",
+  "last_success": null,
+  "queries_attempted": 6,
+  "new_leads": 0,
+  "coverage": "web-index-partial",
+  "note": "No native X API coverage. Leads require canonical source verification before collection."
+}

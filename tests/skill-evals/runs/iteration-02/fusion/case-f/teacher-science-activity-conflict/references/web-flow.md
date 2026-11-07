@@ -1,0 +1,2 @@
+# F Web preparation / Web 准备
+No learner-facing first-display answer policy is implemented or approved. Prepare static fields `activity_id`, bilingual question/evidence/answer, learner judgment/reason/revision, and role/state fields. The answer timing remains unresolved; do not ship a state transition that claims to satisfy both hard requirements. Paid models are not required. Actual Web execution is not run.

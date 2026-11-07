@@ -1,0 +1,356 @@
+{
+  "schema_version": "edu.repo-handoff.v1",
+  "mode": "refactor",
+  "goal": "仅分析 practice 重构；保持所有当前对外行为与 render 即时返回时机；运行现有测试，交付基线与后续计划。",
+  "sources": [
+    {
+      "repository": "practice",
+      "root": "/private/tmp/edu-skill-evals-20261012/fixtures/repos/practice",
+      "revision": null,
+      "release_identity": "unverified fixture archive",
+      "local_state": {
+        "revision": null,
+        "state": "no-git-metadata"
+      },
+      "analyzed_scope": {
+        "paths": [
+          "."
+        ],
+        "literal_queries": [
+          "render",
+          "compare",
+          "explanation"
+        ],
+        "max_files": 300,
+        "max_bytes": 2000000,
+        "max_file_bytes": 256000,
+        "max_matches": 60
+      },
+      "coverage": {
+        "enumeration_complete": true,
+        "stop_reason": null,
+        "matches_complete": true,
+        "read_bytes": 2452,
+        "visited_files": 4
+      },
+      "skipped": [],
+      "file_identity": [
+        {
+          "path": "LICENSE",
+          "sha256": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3",
+          "bytes": 1085,
+          "lines": 21,
+          "matches": []
+        },
+        {
+          "path": "README.md",
+          "sha256": "8e91ae953747a7f12096d8fa0c43f142722ed3c052686df176d329b99be879ca",
+          "bytes": 233,
+          "lines": 2,
+          "matches": [
+            {
+              "line": 2,
+              "queries": [
+                "render",
+                "compare",
+                "explanation"
+              ],
+              "text": "Python 3, no third-party dependencies. `render(problem)` currently shows verdict and explanation immediately. `compare(left, right)` receives two (numerator, denominator) tuples. Run `python3 test_fractions.py`.",
+              "excerpt_truncated": false
+            }
+          ]
+        },
+        {
+          "path": "fractions_logic.py",
+          "sha256": "1661597211236e8e4295e7b68b6a008d728adb6d95dd9d023c330dc1f36a23d8",
+          "bytes": 552,
+          "lines": 15,
+          "matches": [
+            {
+              "line": 4,
+              "queries": [
+                "compare"
+              ],
+              "text": "def compare(left, right):",
+              "excerpt_truncated": false
+            },
+            {
+              "line": 8,
+              "queries": [
+                "explanation"
+              ],
+              "text": "def explanation(left, right):",
+              "excerpt_truncated": false
+            },
+            {
+              "line": 12,
+              "queries": [
+                "compare"
+              ],
+              "text": "    return f'The comparison is {compare(left, right)}.'",
+              "excerpt_truncated": false
+            },
+            {
+              "line": 14,
+              "queries": [
+                "render"
+              ],
+              "text": "def render(problem):",
+              "excerpt_truncated": false
+            },
+            {
+              "line": 15,
+              "queries": [
+                "compare",
+                "explanation"
+              ],
+              "text": "    return {'verdict': compare(*problem), 'explanation': explanation(*problem)}",
+              "excerpt_truncated": false
+            }
+          ]
+        },
+        {
+          "path": "test_fractions.py",
+          "sha256": "293befe1965746a6cd4ede27e49c8a7d126efd9bbbfecdb90cace5059a1818c4",
+          "bytes": 582,
+          "lines": 11,
+          "matches": [
+            {
+              "line": 8,
+              "queries": [
+                "compare"
+              ],
+              "text": "        for a,b,want in [((1,2),(2,4),'equal'),((1,2),(3,4),'less'),((3,4),(1,2),'greater')]:self.assertEqual(m.compare(a,b),want)",
+              "excerpt_truncated": false
+            },
+            {
+              "line": 9,
+              "queries": [
+                "explanation"
+              ],
+              "text": "    def test_equal_explanation(self):",
+              "excerpt_truncated": false
+            },
+            {
+              "line": 10,
+              "queries": [
+                "explanation"
+              ],
+              "text": "        self.assertNotIn('has more',m.explanation((1,4),(1,4)))",
+              "excerpt_truncated": false
+            }
+          ]
+        }
+      ],
+      "terms": {
+        "status": "MIT code license inspected; retain notice on copying"
+      }
+    }
+  ],
+  "capabilities": [
+    {
+      "requirement": "保留 compare(left,right)、explanation(left,right)、render(problem) 的同步接口与返回/异常行为。",
+      "decision": "reuse",
+      "reason": "现有小模块已具备功能；目前无明确结构收益，不需要新增依赖或合并其他候选。后续如确需提取内部 helper，继续复用公开接口并通过快照差分。",
+      "evidence": [
+        {
+          "type": "source-observation",
+          "repository": "practice",
+          "path": "fractions_logic.py",
+          "sha256": "1661597211236e8e4295e7b68b6a008d728adb6d95dd9d023c330dc1f36a23d8",
+          "line_start": 4,
+          "line_end": 6,
+          "quote": "def compare(left, right):\n    a, b = Fraction(*left), Fraction(*right)\n    return 'greater' if a > b else 'less' if a < b else 'equal'"
+        },
+        {
+          "type": "source-observation",
+          "repository": "practice",
+          "path": "fractions_logic.py",
+          "sha256": "1661597211236e8e4295e7b68b6a008d728adb6d95dd9d023c330dc1f36a23d8",
+          "line_start": 8,
+          "line_end": 15,
+          "quote": "def explanation(left, right):\n    if left[1] == right[1]:\n        larger = 'A' if left[0] > right[0] else 'B'\n        return f'{larger} has more equal-sized parts.'\n    return f'The comparison is {compare(left, right)}.'\n\ndef render(problem):\n    return {'verdict': compare(*problem), 'explanation': explanation(*problem)}"
+        },
+        {
+          "type": "source-observation",
+          "repository": "practice",
+          "path": "README.md",
+          "sha256": "8e91ae953747a7f12096d8fa0c43f142722ed3c052686df176d329b99be879ca",
+          "line_start": 2,
+          "line_end": 2,
+          "quote": "Python 3, no third-party dependencies. `render(problem)` currently shows verdict and explanation immediately. `compare(left, right)` receives two (numerator, denominator) tuples. Run `python3 test_fractions.py`."
+        },
+        {
+          "type": "source-observation",
+          "repository": "practice",
+          "path": "test_fractions.py",
+          "sha256": "293befe1965746a6cd4ede27e49c8a7d126efd9bbbfecdb90cace5059a1818c4",
+          "line_start": 7,
+          "line_end": 10,
+          "quote": "    def test_comparison(self):\n        for a,b,want in [((1,2),(2,4),'equal'),((1,2),(3,4),'less'),((3,4),(1,2),'greater')]:self.assertEqual(m.compare(a,b),want)\n    def test_equal_explanation(self):\n        self.assertNotIn('has more',m.explanation((1,4),(1,4)))"
+        }
+      ],
+      "inputs": {
+        "compare": "left/right: (numerator, denominator) tuple passed directly to fractions.Fraction",
+        "explanation": "left/right indexable inputs; denominator equality determined from original [1], numerator compared from original [0]",
+        "render": "problem iterable expanded into two arguments"
+      },
+      "outputs": {
+        "compare": [
+          "greater",
+          "less",
+          "equal"
+        ],
+        "explanation": "exact current strings including equal-denominator equal-numerator B result",
+        "render": "dict ordered verdict then explanation, both populated before synchronous return",
+        "errors": "propagate Fraction and Python argument/index errors, no new validation/coercion"
+      },
+      "dependencies": [
+        "Python 3 standard-library fractions.Fraction; no third-party dependency observed"
+      ],
+      "retained": [
+        "render 一次调用内立即计算并返回 verdict 与 explanation；无先做题、提示分层、点击后显示等流程变化。",
+        "按现有顺序先 compare 再 explanation；不把反馈延迟到后续动作。",
+        "同分母逻辑直接比较原始分子；相等仍返回 B has more equal-sized parts.",
+        "compare 使用 Fraction 归一化比较；same-denominator explanation 不统一改成 compare 的归一化判断。",
+        "公开函数签名、原始字符串、字典键/顺序及异常行为保持；不新建缓存、状态或输入清洗。"
+      ],
+      "changed": [],
+      "unknowns": [
+        "没有页面调用方，浏览器展示时刻和 UI 状态无法实测；仅确认函数调用时机与 README 描述。",
+        "旧测试与当前等值解释冲突；修正该 bug 是独立行为变更，未授权。",
+        "当前快照覆盖代表值和四种错误，不是对任意 Python 对象的穷尽行为证明；任何内部提取须检查异常求值顺序。"
+      ],
+      "acceptance": [
+        {
+          "method": "existing suite",
+          "status": "failed-baseline",
+          "command": "cd /private/tmp/edu-skill-evals-20261012/fixtures/repos/practice && python3 -B test_fractions.py",
+          "expectation": "目前保持 2 项测试、1 项既有失败；后续重构不得出现新增失败，不能把旧失败假称通过。"
+        },
+        {
+          "method": "public-output characterization",
+          "status": "passed-baseline",
+          "command": "python3 -B /private/tmp/edu-skill-evals-20261012/candidate-repo/case-c/characterize.py",
+          "expectation": "8 组公开调用输出、4 组异常以及 render 同步值和键顺序作为当前基线。"
+        },
+        {
+          "method": "future differential comparison",
+          "status": "not-run",
+          "command": "python3 -B /private/tmp/edu-skill-evals-20261012/candidate-repo/case-c/characterize.py /path/to/refactor/fractions_logic.py > /path/to/refactor-result.json; diff -u /private/tmp/edu-skill-evals-20261012/candidate-repo/case-c/characterization-result.json /path/to/refactor-result.json",
+          "expectation": "替换占位路径后执行；所有快照一致，旧测试失败集合不变。此检查尚未执行。"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "provider": "practice compare/explanation",
+      "consumer": "practice render",
+      "provider_shape": "compare(left,right) => literal relation; explanation(left,right) => string",
+      "consumer_shape": "render((left,right)) => {verdict, explanation}",
+      "transform": "两次 *problem 展开；compare 先于 explanation；不同分母 explanation 当前再调用 compare",
+      "source_identity": "practice/fractions_logic.py SHA256 1661597211236e8e4295e7b68b6a008d728adb6d95dd9d023c330dc1f36a23d8",
+      "errors_reset": "异常直接传播；所读模块无持久 learner state 或 reset API。",
+      "integration_acceptance": "保持返回值、键顺序、求值顺序与立即反馈；未观测到 UI consumer，UI 状态检查未运行。",
+      "check_status": "passed-local-baseline; UI not-run"
+    }
+  ],
+  "verification": [
+    {
+      "phase": "baseline",
+      "method": "source inventory",
+      "status": "passed",
+      "command": [
+        "python3",
+        "/private/tmp/edu-skill-evals-20261012/candidate/edu-repo-adapter/scripts/repo_evidence.py",
+        "inventory",
+        "/private/tmp/edu-skill-evals-20261012/fixtures/repos/practice",
+        "--query",
+        "render",
+        "--query",
+        "compare",
+        "--query",
+        "explanation",
+        "--output",
+        "/private/tmp/edu-skill-evals-20261012/candidate-repo/case-c/practice-snapshot.json"
+      ],
+      "working_directory": null,
+      "observed_result": "exit 0; snapshot JSON written",
+      "exit_code": 0
+    },
+    {
+      "phase": "baseline",
+      "method": "existing test suite",
+      "status": "failed",
+      "command": [
+        "python3",
+        "-B",
+        "test_fractions.py"
+      ],
+      "working_directory": "/private/tmp/edu-skill-evals-20261012/fixtures/repos/practice",
+      "observed_result": ".F\n======================================================================\nFAIL: test_equal_explanation (__main__.Practice.test_equal_explanation)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/edu-skill-evals-20261012/fixtures/repos/practice/test_fractions.py\", line 10, in test_equal_explanation\n    self.assertNotIn('has more',m.explanation((1,4),(1,4)))\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'has more' unexpectedly found in 'B has more equal-sized parts.'\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (failures=1)\n",
+      "exit_code": 1
+    },
+    {
+      "phase": "baseline",
+      "method": "public-interface characterization",
+      "status": "passed",
+      "command": [
+        "python3",
+        "-B",
+        "/private/tmp/edu-skill-evals-20261012/candidate-repo/case-c/characterize.py"
+      ],
+      "working_directory": null,
+      "observed_result": "{\n  \"observations\": [\n    {\n      \"problem\": [\n        [\n          1,\n          2\n        ],\n        [\n          3,\n          4\n        ]\n      ],\n      \"compare\": \"less\",\n      \"explanation\": \"The comparison is less.\",\n      \"render\": {\n        \"verdict\": \"less\",\n        \"explanation\": \"The comparison is less.\"\n      }\n    },\n    {\n      \"problem\": [\n        [\n          3,\n          4\n        ],\n        [\n          1,\n          2\n        ]\n      ],\n      \"compare\": \"greater\",\n      \"explanation\": \"The comparison is greater.\",\n      \"render\": {\n        \"verdict\": \"greater\",\n        \"explanation\": \"The comparison is greater.\"\n      }\n    },\n    {\n      \"problem\": [\n        [\n          1,\n          2\n        ],\n        [\n          2,\n          4\n        ]\n      ],\n      \"compare\": \"equal\",\n      \"explanation\": \"The comparison is equal.\",\n      \"render\": {\n        \"verdict\": \"equal\",\n        \"explanation\": \"The comparison is equal.\"\n      }\n    },\n    {\n      \"problem\": [\n        [\n          1,\n          4\n        ],\n        [\n          1,\n          4\n        ]\n      ],\n      \"compare\": \"equal\",\n      \"explanation\": \"B has more equal-sized parts.\",\n      \"render\": {\n        \"verdict\": \"equal\",\n        \"explanation\": \"B has more equal-sized parts.\"\n      }\n    },\n    {\n      \"problem\": [\n        [\n          2,\n          4\n        ],\n        [\n          1,\n          4\n        ]\n      ],\n      \"compare\": \"greater\",\n      \"explanation\": \"A has more equal-sized parts.\",\n      \"render\": {\n        \"verdict\": \"greater\",\n        \"explanation\": \"A has more equal-sized parts.\"\n      }\n    },\n    {\n      \"problem\": [\n        [\n          1,\n          4\n        ],\n        [\n          2,\n          4\n        ]\n      ],\n      \"compare\": \"less\",\n      \"explanation\": \"B has more equal-sized parts.\",\n      \"render\": {\n        \"verdict\": \"less\",\n        \"explanation\": \"B has more equal-sized parts.\"\n      }\n    },\n    {\n      \"problem\": [\n        [\n          -1,\n          2\n        ],\n        [\n          0,\n          1\n        ]\n      ],\n      \"compare\": \"less\",\n      \"explanation\": \"The comparison is less.\",\n      \"render\": {\n        \"verdict\": \"less\",\n        \"explanation\": \"The comparison is less.\"\n      }\n    },\n    {\n      \"problem\": [\n        [\n          1,\n          -2\n        ],\n        [\n          -1,\n          2\n        ]\n      ],\n      \"compare\": \"equal\",\n      \"explanation\": \"The comparison is equal.\",\n      \"render\": {\n        \"verdict\": \"equal\",\n        \"explanation\": \"The comparison is equal.\"\n      }\n    }\n  ],\n  \"errors\": [\n    {\n      \"case\": \"zero-denominator\",\n      \"type\": \"ZeroDivisionError\",\n      \"message\": \"Fraction(1, 0)\"\n    },\n    {\n      \"case\": \"missing-problem\",\n      \"type\": \"TypeError\",\n      \"message\": \"baseline_practice.compare() argument after * must be an iterable, not NoneType\"\n    },\n    {\n      \"case\": \"wrong-arity\",\n      \"type\": \"TypeError\",\n      \"message\": \"compare() missing 1 required positional argument: 'right'\"\n    },\n    {\n      \"case\": \"malformed-tuple\",\n      \"type\": \"TypeError\",\n      \"message\": \"Fraction.__new__() takes from 1 to 3 positional arguments but 4 were given\"\n    }\n  ],\n  \"immediate_render_return\": \"verdict and explanation populated in same synchronous call\",\n  \"state_observation\": \"repeated calls return same values; no delayed learner actions in inspected source\"\n}\n",
+      "exit_code": 0
+    },
+    {
+      "phase": "after-refactor",
+      "method": "preservation regression suite and output differential",
+      "status": "not-run",
+      "reason": "analysis only; no refactor implementation exists"
+    },
+    {
+      "phase": "handoff",
+      "method": "source evidence grounding and structure helper",
+      "status": "passed",
+      "command": [
+        "python3",
+        "/private/tmp/edu-skill-evals-20261012/candidate/edu-repo-adapter/scripts/repo_evidence.py",
+        "verify",
+        "/private/tmp/edu-skill-evals-20261012/candidate-repo/case-c/handoff.json",
+        "--repo",
+        "practice=/private/tmp/edu-skill-evals-20261012/fixtures/repos/practice"
+      ],
+      "observed_result": "{\"valid\": true, \"errors\": [], \"claim\": \"source grounding and record structure only; no runtime or integration proof\"}\n",
+      "limitation": "不证明运行通过、语义完整、许可完整、集成或学习效果。"
+    }
+  ],
+  "runtime_tested": true,
+  "runtime_scope": "practice public comparison/explanation/render functions only; no UI, integration, or learning outcome execution",
+  "status": "analysis-complete-baseline-failure",
+  "authorized_scope": "只读源码分析与测试；未实现重构、修改学习流程或修改输入源码。",
+  "plan": [
+    {
+      "stage": 1,
+      "action": "冻结完整公开契约与现有失败，使用本次哈希和快照标识基线。",
+      "status": "complete"
+    },
+    {
+      "stage": 2,
+      "action": "只有出现明确可维护性需求再提取内部 helper，保留公开 facade、原始同分母判断、求值顺序、字符串和异常；模块仅 15 行，避免无目的清理。",
+      "status": "proposed-not-implemented"
+    },
+    {
+      "stage": 3,
+      "action": "在用户指定的后续工作副本执行旧测试与 characterize.py 对新源码的快照差分；旧失败单独标记，零新增差异才算保持。",
+      "status": "not-run"
+    },
+    {
+      "stage": 4,
+      "action": "审查修改范围，提供源码 diff；若未来要修相等解释，独立列出行为变更与测试，不能并入本次保行为重构。",
+      "status": "not-run"
+    }
+  ]
+}

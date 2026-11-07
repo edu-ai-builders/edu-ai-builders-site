@@ -12,6 +12,7 @@ The original website is published from `main`; development was integrated from `
 - `/atlas`: Learning Sciences map, typed relations, courses, resources, and browser-local learning records.
 - `/learning-sciences`: the original full research library and deep links.
 - `/directory`: the native searchable Radar catalog, with a dated GitHub metadata snapshot.
+- `/skills`: education resource search, three scenario build briefs, four downloadable agent skills, local saved plans and contribution drafts. The supporting scenario and workflow pages are included in the November 7 directory release; see [implementation](docs/builder-mvp/implementation-2026-10-11.md).
 - `/changelog`: dated releases and development changes, plus clearly separated future exploration. `/updates` redirects here.
 - `/updates/research`: preserved EduOS, Loom and system research direction, not a callable-service claim.
 
@@ -31,11 +32,13 @@ npm run build
 ## Directory refresh
 
 ```bash
-python3 scripts/radar-refresh.py --limit 4000 --workers 6 --skills
+python3 scripts/refresh-directory.py
+# To review and export retained evidence without GitHub requests:
+python3 scripts/refresh-directory.py --offline
 python3 -m unittest discover -s tests -p 'test_*.py'
 ```
 
-The refresh reads the sibling Radar registries, checks public GitHub metadata and Skill name/description declarations, and atomically replaces the website snapshot. Failed checks preserve the last successful observation. Review the diff and run validation before publishing; this command does not commit or deploy. See [September 22 refresh](docs/radar-refresh-2026-09-22.md).
+The collector and canonical registries live in `radar/` in this repository. `/directory` is the single discovery display for Skills, reusable code, datasets, benchmarks, open learning materials and knowledge graphs. The refresh collects bounded public metadata, applies reversible review decisions, rebuilds the shared index and exports the website snapshot. Fatal collection or validation failures stop website export and retain the last successful website data. Isolated source failures remain visible as partial runs. Export dates never replace source-verification dates. Review the diff and run validation before publishing. This command does not commit, push or deploy. See [November 6 scope](docs/directory-2026-11-06/brief.md).
 
 ## Data ownership
 
@@ -43,7 +46,7 @@ Research stays in `public/learning-sciences/0.2.0/rack.json`, with stable IDs an
 
 Selected tool copies are recorded in `docs/tool-source-manifest.json`; do not copy the entire local research library into public assets. The language asset license accompanies its redistributed templates. Update public copies through an explicit source review.
 
-Learning/practice records stay in this browser. Opening a node is not evidence of mastery. EduOS and Working Graph remain exploratory; no backend, accounts, or model service has been added.
+Learning/practice records stay in this browser. Opening a node is not evidence of mastery. EduOS and Working Graph remain exploratory; no accounts or model service has been added. The Skills MVP adds stateless catalog and build-brief API endpoints.
 
 ## Hosting boundary
 
@@ -78,3 +81,28 @@ npm run build
 The existing public site at the start of this change was based on
 `2d6c6d5`, with an iframe for `/directory`. The current revamp replaces that iframe with a first-party directory and reviewed data snapshot;
 the later `codex/eduos-system-refresh` rewrite remains separate.
+
+## Builder catalog and skill packages
+
+```bash
+python3 scripts/sync-directory.py
+python3 scripts/package-builder-skills.py
+npm run dev -- --port 3101
+node packages/builder-tools/cli.mjs search --base-url http://127.0.0.1:3101 --args '{"query":"science","limit":5}'
+```
+
+The in-repository `radar/` module owns discovery and review. The weekly task uses `scripts/refresh-directory.py` to update the shared website snapshot. `/skills` redirects search to `/directory`; scenario, workflow, contribution and saved-plan pages remain available. Deployment remains a separate authorized publication step. New agent skill sources and local CLI/MCP adapter live in `packages/`. They are not globally installed or published to npm. Third-party bodies are not bundled. Review the two detailed scopes and examples under `docs/builder-mvp/` before behavioral evaluation or release.
+
+## Repo Adapter and Skill Fusion iteration — October 12
+
+The two downloadable skills are v0.2.1, with targeted references, structured handoff/fusion templates, optional Python-standard-library evidence helpers and normal automatic discovery metadata. Independent local forward-test artifacts and raw fixtures are in `tests/skill-evals/`. See [iteration evidence](docs/builder-mvp/skill-iterations-2026-10-12.md).
+
+```sh
+python3 tests/test_skill_workflows.py
+```
+
+These checks distinguish source identity and structure from reasoning walkthroughs and actual application execution. Distribution is prepared locally; nothing was globally installed or published.
+
+## November 7 production release
+
+The user authorized production publication of the unified directory and shared search. The release includes its Skills scenario/workflow dependencies and its required Skills pages. The daily cloud workflow remains prepared locally because the current GitHub credentials cannot publish workflow files. Local component/dependency cleanup from another task is excluded. The existing Vercel project remains the production host; pushing source alone does not deploy. See [release evidence](docs/directory-2026-11-06/production-release-2026-11-07.md).

@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-11-06T23:32:58.051845+00:00",
+  "files": [
+    {
+      "path": "apps/radar/data/registry.jsonl",
+      "bytes": 7344688,
+      "sha256": "7e78940c494e0cdcb49ff0c755055483be2455125d0c4b5aad1cac3cf22f2f86"
+    },
+    {
+      "path": "apps/radar/data/skills.jsonl",
+      "bytes": 339267,
+      "sha256": "5b07957da6f2463741795843c1de77523b6dd41292483e9ddc2c221b409f4af0"
+    },
+    {
+      "path": "apps/radar/data/builder-index.json",
+      "bytes": 1458841,
+      "sha256": "efb0ae803043a3f993ed710172d8cb9ebde36b35420fd03f9e77bd78ff48adb8"
+    },
+    {
+      "path": "apps/site-original/public/data/radar/catalog.json",
+      "bytes": 2822743,
+      "sha256": "9f2a0728e9f6f59fe87ce5beecef3934d286704d1ee506df27951722b41b56bd"
+    }
+  ]
+}

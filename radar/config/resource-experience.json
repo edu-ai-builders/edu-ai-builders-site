@@ -1,0 +1,59 @@
+{
+  "schema_version": "radar.resource-experience.v1",
+  "resources": {
+    "openmaic": {
+      "featured_rank": 1,
+      "purpose_en": "Generate a classroom with slides, quizzes and interactive scenes; browse public courses first.",
+      "demo": {"url": "https://open.maic.chat/", "access": "public-preview", "declaration_source": "https://github.com/THU-MAIC/OpenMAIC", "declaration_path": "README.md", "browser_observed_at": "2026-10-10", "browser_observation": "Public Discover cards, classroom topic input, and Login button visible. No generation or authenticated flow tested."},
+      "quick_start": {"mode": "online", "steps_zh": ["打开官方页面，在 Discover 中选择一堂公开课程。", "需要生成新课时，查看登录、额度和模型设置。"], "steps_en": ["Open the official site and choose a public course in Discover.", "For new generation, check account, credits and model settings."], "requirements_zh": ["浏览器和网络", "新建课程的登录/额度条件以服务为准"], "requirements_en": ["Browser and internet", "Account/credit conditions for generation apply"], "commands": [], "runtime_tested": false}
+    },
+    "ragflow": {
+      "featured_rank": 2,
+      "purpose_en": "Inspect document ingestion and source-grounded RAG before adapting it to learning materials.",
+      "demo": {"url": "https://demo.ragflow.io/", "access": "account-required", "declaration_source": "https://github.com/orgs/infiniflow/discussions/5629", "browser_observed_at": "2026-10-10", "browser_observation": "Redirected to official Sign in / Sign up page. No account created or upload performed."},
+      "quick_start": {"mode": "online", "steps_zh": ["打开官方 demo，按要求登录或注册。", "使用获授权示例资料，检查检索结果与引用。"], "steps_en": ["Open the official demo and sign in as required.", "Try authorized sample materials and inspect citations."], "requirements_zh": ["账号", "托管服务额度与模型条件需查看"], "requirements_en": ["Account", "Check hosted quotas and model conditions"], "commands": [], "runtime_tested": false}
+    },
+    "opentutor": {
+      "featured_rank": 3,
+      "purpose_en": "Self-host an adaptive workspace with notes, quizzes, flashcards and cited tutoring.",
+      "quick_start": {"mode": "self-host", "steps_zh": ["准备 Docker，获取固定提交的源码。", "复制配置并启动服务，检查或配置本地模型/云模型。", "打开 localhost:3001，上传获授权学习材料。"], "steps_en": ["Prepare Docker and retrieve the pinned source.", "Copy configuration, start services, and check your local or cloud model.", "Open localhost:3001 with authorized learning materials."], "requirements_zh": ["Docker 和磁盘空间", "可用本地模型或云模型端点", "安装与推理时间"], "requirements_en": ["Docker and disk space", "Local model or cloud endpoint", "Install and inference time"], "commands": ["git clone https://github.com/zijinz456/OpenTutor.git", "cd OpenTutor", "git checkout {commit}", "cp .env.example .env", "docker compose up -d --build"], "local_url": "http://localhost:3001", "runtime_tested": false}
+    },
+    "genai-beginners": {
+      "featured_rank": 4,
+      "purpose_en": "Adapt an open introductory GenAI course and practical exercises.",
+      "primary_url": "https://microsoft.github.io/generative-ai-for-beginners/", "action_kind": "view-course", "action_label_zh": "打开课程", "action_label_en": "Open course",
+      "quick_start": {"mode": "course", "steps_zh": ["打开在线课程，选择入门单元。", "做练习前查看对应模型服务和密钥要求。"], "steps_en": ["Open the course and select an introductory lesson.", "Check model service and key requirements before exercises."], "requirements_zh": ["阅读无需安装", "部分练习需要模型服务"], "requirements_en": ["No install for reading", "Some exercises need model services"], "commands": [], "runtime_tested": false}
+    },
+    "smol-course": {
+      "featured_rank": 5,
+      "purpose_en": "Use small-model alignment lessons and notebooks for reproducible experiments.",
+      "action_kind": "view-course", "action_label_zh": "打开课程材料", "action_label_en": "Open course materials",
+      "quick_start": {"mode": "course", "steps_zh": ["打开固定版本的课程和 Notebook 材料。", "选择一项评估练习，再按练习配置 Python 和算力。"], "steps_en": ["Open the pinned lessons and notebooks.", "Choose an evaluation exercise and prepare its Python/compute environment."], "requirements_zh": ["Python/PyTorch 知识", "训练时需要合适算力"], "requirements_en": ["Python/PyTorch familiarity", "Compute for training"], "commands": [], "runtime_tested": false}
+    },
+    "dspy": {
+      "featured_rank": 6,
+      "purpose_en": "Build and evaluate model programs for feedback, retrieval and question answering.",
+      "action_kind": "read-setup", "action_label_zh": "查看最短上手", "action_label_en": "View setup",
+      "quick_start": {"mode": "library", "steps_zh": ["查看固定 README 的安装与最小程序。", "安装到独立 Python 环境，配置可用模型，再运行示例。"], "steps_en": ["Read installation and the minimal program in the pinned README.", "Use an isolated Python environment and configure a model before running it."], "requirements_zh": ["Python 环境", "模型端点和可能的费用"], "requirements_en": ["Python environment", "Model endpoint; costs may apply"], "commands": ["pip install dspy"], "runtime_tested": false}
+    },
+    "gsm8k": {
+      "purpose_en": "Inspect grade-school math problems for reasoning error analysis.",
+      "source_path": "gsm8k/README.md", "action_kind": "view-data", "action_label_zh": "查看题目与数据说明", "action_label_en": "Inspect data",
+      "quick_start": {"mode": "data", "steps_zh": ["查看官方数据格式和训练/测试文件。", "保持测试集独立，检查题目与答案格式。"], "steps_en": ["Inspect the official format and train/test files.", "Keep tests held out and inspect answers."], "requirements_zh": ["JSONL 阅读或 Python", "评估模型时另需端点"], "requirements_en": ["JSONL reader or Python", "Model endpoint for evaluations"], "commands": [], "runtime_tested": false}
+    },
+    "scienceqa": {
+      "purpose_en": "Inspect multimodal science questions; data has noncommercial restrictions.",
+      "action_kind": "view-data", "action_label_zh": "查看数据与限制", "action_label_en": "Inspect data terms",
+      "quick_start": {"mode": "data", "steps_zh": ["先查看 LICENSE-DATA 的非商业限制。", "按官方 README 获取数据并核实图片/题目使用范围。"], "steps_en": ["Review noncommercial data terms first.", "Follow official data instructions and check content rights."], "requirements_zh": ["非商业用途条件", "数据下载与存储"], "requirements_en": ["Noncommercial use conditions", "Download and storage"], "commands": [], "runtime_tested": false}
+    },
+    "scifact": {
+      "purpose_en": "Study scientific claims and evidence with separate annotation and abstract licenses.",
+      "action_kind": "view-data", "action_label_zh": "查看数据说明", "action_label_en": "Inspect data guide",
+      "quick_start": {"mode": "data", "steps_zh": ["查看 README 中的数据获取说明。", "分别记录主张标注与摘要的许可。"], "steps_en": ["Read official data acquisition instructions.", "Track annotation and abstract licenses separately."], "requirements_zh": ["组件许可归属", "Python/JSONL"], "requirements_en": ["Component attribution", "Python/JSONL"], "commands": [], "runtime_tested": false}
+    },
+    "notebook-skill": {"purpose_en": "Inspect a reusable workflow for creating and checking teaching notebooks.", "action_kind": "view-skill", "action_label_zh": "查看 Skill 与上手", "action_label_en": "Inspect skill", "quick_start": {"mode": "skill", "steps_zh": ["检查固定版本的 Skill、许可和依赖。", "在兼容代理中安装后，用自有公开数据测试。"], "steps_en": ["Inspect pinned skill, license and dependencies.", "Install in a compatible agent and test with your public data."], "requirements_zh": ["兼容代理", "Python/Jupyter"], "requirements_en": ["Compatible agent", "Python/Jupyter"], "commands": [], "runtime_tested": false}},
+    "openai-pdf-skill": {"purpose_en": "Inspect a PDF processing workflow for extracting and verifying learning materials.", "action_kind": "view-skill", "action_label_zh": "查看 Skill 与上手", "action_label_en": "Inspect skill", "quick_start": {"mode": "skill", "steps_zh": ["检查目录级许可和 PDF 工具依赖。", "在兼容代理中用获授权 PDF 测试提取和布局。"], "steps_en": ["Inspect folder license and PDF tool dependencies.", "Test authorized PDFs in a compatible agent."], "requirements_zh": ["兼容代理", "PDF 工具链"], "requirements_en": ["Compatible agent", "PDF toolchain"], "commands": [], "runtime_tested": false}},
+    "skill-creator": {"purpose_en": "Turn a narrow teaching workflow into an inspectable, testable skill.", "action_kind": "view-skill", "action_label_zh": "查看 Skill 与上手", "action_label_en": "Inspect skill", "quick_start": {"mode": "skill", "steps_zh": ["阅读 Skill 的适用流程与依赖。", "选一个教师工作流，设计包含反例的测试。"], "steps_en": ["Inspect the workflow and dependencies.", "Pick a teaching workflow and test counterexamples."], "requirements_zh": ["兼容代理及工具", "人工核实输出"], "requirements_en": ["Compatible agent/tools", "Human output review"], "commands": [], "runtime_tested": false}},
+    "anthropic-pdf-reference": {"purpose_en": "A reference for license comparison; no freely reusable package is offered.", "action_kind": "reference", "action_label_zh": "查看许可参考", "action_label_en": "View license reference", "quick_start": {"mode": "reference", "steps_zh": ["仅打开官方许可参考。", "不要从本目录复制或安装此受限制的包。"], "steps_en": ["Open the official license reference.", "This directory does not offer copying or installation of this restricted package."], "requirements_zh": ["适用的服务协议"], "requirements_en": ["Applicable service agreement"], "commands": [], "runtime_tested": false}}
+  }
+}

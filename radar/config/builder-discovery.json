@@ -1,0 +1,939 @@
+{
+  "schema_version": "radar.builder-discovery.v1",
+  "facets": [
+    "audiences",
+    "subjects",
+    "platforms",
+    "scenarios",
+    "capabilities"
+  ],
+  "families": [
+    {
+      "id": "parents",
+      "keywords": [
+        "home learning",
+        "homeschooling",
+        "parent tutoring",
+        "家庭辅导",
+        "家庭教育"
+      ]
+    },
+    {
+      "id": "teachers",
+      "keywords": [
+        "lesson planning",
+        "lesson plan",
+        "rubric design",
+        "teacher feedback",
+        "备课",
+        "教案设计"
+      ]
+    },
+    {
+      "id": "higher-education",
+      "keywords": [
+        "university teaching",
+        "course design",
+        "higher education",
+        "大学课程",
+        "高校教学"
+      ]
+    },
+    {
+      "id": "research",
+      "keywords": [
+        "literature review",
+        "research assistant",
+        "citation management",
+        "文献综述",
+        "文献检索"
+      ]
+    },
+    {
+      "id": "mathematics",
+      "keywords": [
+        "math",
+        "mathematics",
+        "math tutor",
+        "mathematical reasoning",
+        "algebra",
+        "geometry",
+        "calculus",
+        "数学",
+        "数学辅导"
+      ]
+    },
+    {
+      "id": "science",
+      "keywords": [
+        "science",
+        "科学",
+        "science education",
+        "physics simulation",
+        "scientific inquiry",
+        "科学教育",
+        "物理实验"
+      ]
+    },
+    {
+      "id": "languages",
+      "keywords": [
+        "language learning",
+        "ESL",
+        "reading comprehension",
+        "writing feedback",
+        "语言学习",
+        "阅读理解",
+        "写作反馈"
+      ]
+    },
+    {
+      "id": "humanities",
+      "keywords": [
+        "history education",
+        "historical sources",
+        "geography education",
+        "civics education",
+        "历史教学",
+        "史料分析",
+        "地理教学"
+      ]
+    },
+    {
+      "id": "arts",
+      "keywords": [
+        "music education",
+        "art education",
+        "design education",
+        "音乐教学",
+        "艺术教育"
+      ]
+    },
+    {
+      "id": "computing",
+      "keywords": [
+        "programming education",
+        "coding tutor",
+        "computer science education",
+        "编程教学",
+        "计算机教育"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "keywords": [
+        "accessible learning",
+        "screen reader",
+        "special education",
+        "universal design for learning",
+        "无障碍学习",
+        "特殊教育"
+      ]
+    },
+    {
+      "id": "web",
+      "keywords": [
+        "web application",
+        "frontend development",
+        "React",
+        "Next.js",
+        "web accessibility",
+        "网页开发"
+      ]
+    },
+    {
+      "id": "mobile",
+      "keywords": [
+        "mobile application",
+        "iOS",
+        "Android",
+        "SwiftUI",
+        "Flutter",
+        "React Native",
+        "移动应用"
+      ]
+    },
+    {
+      "id": "desktop",
+      "keywords": [
+        "desktop application",
+        "macOS",
+        "Windows",
+        "Electron",
+        "Tauri",
+        "桌面应用"
+      ]
+    },
+    {
+      "id": "design",
+      "keywords": [
+        "instructional design",
+        "interaction design",
+        "design system",
+        "data visualization",
+        "教学设计",
+        "交互设计",
+        "数据可视化"
+      ]
+    },
+    {
+      "id": "data",
+      "keywords": [
+        "data analysis",
+        "dataset preparation",
+        "retrieval augmented generation",
+        "assessment data",
+        "数据分析",
+        "数据导入"
+      ]
+    },
+    {
+      "id": "skill-authoring",
+      "keywords": [
+        "skill creation",
+        "agent skills",
+        "skill composition",
+        "技能编写",
+        "技能融合"
+      ]
+    },
+    {
+      "id": "repo-adaptation",
+      "keywords": [
+        "repository analysis",
+        "code adaptation",
+        "refactoring",
+        "code migration",
+        "仓库分析",
+        "代码重构"
+      ]
+    },
+    {
+      "id": "self-learning",
+      "keywords": [
+        "self directed learning",
+        "spaced repetition",
+        "flashcards",
+        "study planning",
+        "自主学习",
+        "间隔重复",
+        "学习计划"
+      ]
+    },
+    {
+      "id": "educational-research",
+      "keywords": [
+        "learning sciences",
+        "educational research",
+        "experiment design",
+        "教育研究",
+        "学习科学",
+        "实验设计"
+      ]
+    },
+    {
+      "id": "tutor-evaluation",
+      "keywords": [
+        "tutor evaluation",
+        "tutoring benchmark",
+        "pedagogical evaluation",
+        "教学评测",
+        "辅导评测"
+      ]
+    },
+    {
+      "id": "training-data",
+      "keywords": [
+        "educational dataset",
+        "instruction tuning",
+        "dataset curation",
+        "训练数据",
+        "指令微调",
+        "数据集整理"
+      ]
+    },
+    {
+      "id": "open-textbooks",
+      "keywords": [
+        "open textbook",
+        "open educational resources",
+        "course materials",
+        "开放教材",
+        "开放课程",
+        "课程材料"
+      ]
+    },
+    {
+      "id": "knowledge-graphs",
+      "keywords": [
+        "educational knowledge graph",
+        "knowledge graph construction",
+        "curriculum ontology",
+        "教育知识图谱",
+        "知识图谱"
+      ]
+    },
+    {
+      "id": "system-admin",
+      "keywords": [
+        "learning platform administration",
+        "JupyterHub",
+        "LTI integration",
+        "roster synchronization",
+        "backup restore",
+        "系统运维",
+        "权限管理",
+        "课程管理"
+      ]
+    },
+    {
+      "id": "assessment",
+      "keywords": [
+        "formative assessment",
+        "assessment rubric",
+        "automatic grading",
+        "question generation",
+        "形成性评价",
+        "自动评分",
+        "题目生成"
+      ]
+    },
+    {
+      "id": "learning-analytics",
+      "keywords": [
+        "learning analytics",
+        "knowledge tracing",
+        "student modeling",
+        "learning traces",
+        "学习分析",
+        "知识追踪",
+        "学习行为"
+      ]
+    },
+    {
+      "id": "biology",
+      "keywords": [
+        "biology education",
+        "biology literature",
+        "life science research",
+        "生物教学",
+        "生命科学研究"
+      ]
+    },
+    {
+      "id": "chemistry",
+      "keywords": [
+        "chemistry education",
+        "molecular visualization",
+        "chemistry simulation",
+        "化学教学",
+        "分子可视化"
+      ]
+    },
+    {
+      "id": "statistics",
+      "keywords": [
+        "statistics education",
+        "statistical analysis",
+        "data science education",
+        "统计教学",
+        "统计分析"
+      ]
+    }
+  ],
+  "budgets": {
+    "queries_per_run": 8,
+    "results_per_query": 8,
+    "sample_per_query": 2,
+    "max_query_pages": 3,
+    "manifest_attempts": 24,
+    "api_requests": 100
+  },
+  "sources": [
+    {
+      "source_id": "builder-rea",
+      "repository": "morluto/rea",
+      "skill_root": ".agents/skills"
+    },
+    {
+      "source_id": "builder-vercel-finder",
+      "repository": "vercel-labs/skills",
+      "skill_root": "skills"
+    },
+    {
+      "source_id": "builder-vercel-design",
+      "repository": "vercel-labs/agent-skills",
+      "skill_root": "skills"
+    },
+    {
+      "source_id": "builder-openai",
+      "repository": "openai/plugins",
+      "skill_root": "plugins/data-analytics/skills",
+      "notes": "Current examples. openai/skills README marks its catalog deprecated and points to openai/plugins. Individual plugin dependencies and licenses remain independent."
+    },
+    {
+      "source_id": "builder-anthropic",
+      "repository": "anthropics/skills",
+      "skill_root": "skills"
+    },
+    {
+      "source_id": "builder-skill-fuse",
+      "repository": "gaia-research/skill-fuse",
+      "skill_root": ""
+    },
+    {
+      "source_id": "builder-openai-zotero",
+      "repository": "openai/plugins",
+      "skill_root": "plugins/zotero/skills"
+    },
+    {
+      "source_id": "builder-openai-life-science",
+      "repository": "openai/plugins",
+      "skill_root": "plugins/life-science-research/skills"
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "builder-parents-english",
+      "family": "parents",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"home learning\""
+    },
+    {
+      "query_id": "builder-parents-alternate",
+      "family": "parents",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"家庭辅导\""
+    },
+    {
+      "query_id": "builder-parents-repos",
+      "family": "parents",
+      "kind": "repo",
+      "query": "\"homeschool\" \"learning\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-teachers-english",
+      "family": "teachers",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"lesson planning\""
+    },
+    {
+      "query_id": "builder-teachers-alternate",
+      "family": "teachers",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"教案设计\""
+    },
+    {
+      "query_id": "builder-teachers-repos",
+      "family": "teachers",
+      "kind": "repo",
+      "query": "\"lesson planning\" education in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-higher-education-english",
+      "family": "higher-education",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"course design\""
+    },
+    {
+      "query_id": "builder-higher-education-alternate",
+      "family": "higher-education",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"大学课程\""
+    },
+    {
+      "query_id": "builder-higher-education-repos",
+      "family": "higher-education",
+      "kind": "repo",
+      "query": "\"course authoring\" university in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-research-english",
+      "family": "research",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"literature review\""
+    },
+    {
+      "query_id": "builder-research-alternate",
+      "family": "research",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"文献综述\""
+    },
+    {
+      "query_id": "builder-research-repos",
+      "family": "research",
+      "kind": "repo",
+      "query": "\"research assistant\" citations in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-mathematics-english",
+      "family": "mathematics",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"mathematical reasoning\""
+    },
+    {
+      "query_id": "builder-mathematics-alternate",
+      "family": "mathematics",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"数学辅导\""
+    },
+    {
+      "query_id": "builder-mathematics-repos",
+      "family": "mathematics",
+      "kind": "repo",
+      "query": "\"math tutor\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-science-english",
+      "family": "science",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"science lesson\""
+    },
+    {
+      "query_id": "builder-science-alternate",
+      "family": "science",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"物理实验\""
+    },
+    {
+      "query_id": "builder-science-repos",
+      "family": "science",
+      "kind": "repo",
+      "query": "\"science education\" simulation in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-languages-english",
+      "family": "languages",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"language learning\""
+    },
+    {
+      "query_id": "builder-languages-alternate",
+      "family": "languages",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"写作反馈\""
+    },
+    {
+      "query_id": "builder-languages-repos",
+      "family": "languages",
+      "kind": "repo",
+      "query": "\"language learning\" practice in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-humanities-english",
+      "family": "humanities",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"historical sources\""
+    },
+    {
+      "query_id": "builder-humanities-alternate",
+      "family": "humanities",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"史料分析\""
+    },
+    {
+      "query_id": "builder-humanities-repos",
+      "family": "humanities",
+      "kind": "repo",
+      "query": "\"history education\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-arts-english",
+      "family": "arts",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"music education\""
+    },
+    {
+      "query_id": "builder-arts-alternate",
+      "family": "arts",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"艺术教育\""
+    },
+    {
+      "query_id": "builder-arts-repos",
+      "family": "arts",
+      "kind": "repo",
+      "query": "\"music education\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-computing-english",
+      "family": "computing",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"programming education\""
+    },
+    {
+      "query_id": "builder-computing-alternate",
+      "family": "computing",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"编程教学\""
+    },
+    {
+      "query_id": "builder-computing-repos",
+      "family": "computing",
+      "kind": "repo",
+      "query": "\"programming tutor\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-accessibility-english",
+      "family": "accessibility",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"screen reader\""
+    },
+    {
+      "query_id": "builder-accessibility-alternate",
+      "family": "accessibility",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"无障碍学习\""
+    },
+    {
+      "query_id": "builder-accessibility-repos",
+      "family": "accessibility",
+      "kind": "repo",
+      "query": "\"accessible learning\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-web-english",
+      "family": "web",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"web application\" accessibility"
+    },
+    {
+      "query_id": "builder-web-alternate",
+      "family": "web",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"前端开发\""
+    },
+    {
+      "query_id": "builder-web-repos",
+      "family": "web",
+      "kind": "repo",
+      "query": "\"learning application\" web in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-mobile-english",
+      "family": "mobile",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"mobile application\" accessibility"
+    },
+    {
+      "query_id": "builder-mobile-alternate",
+      "family": "mobile",
+      "kind": "skill",
+      "query": "filename:SKILL.md SwiftUI interface"
+    },
+    {
+      "query_id": "builder-mobile-repos",
+      "family": "mobile",
+      "kind": "repo",
+      "query": "\"learning application\" mobile in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-desktop-english",
+      "family": "desktop",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"desktop application\""
+    },
+    {
+      "query_id": "builder-desktop-alternate",
+      "family": "desktop",
+      "kind": "skill",
+      "query": "filename:SKILL.md Tauri application"
+    },
+    {
+      "query_id": "builder-desktop-repos",
+      "family": "desktop",
+      "kind": "repo",
+      "query": "\"learning application\" desktop in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-design-english",
+      "family": "design",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"instructional design\""
+    },
+    {
+      "query_id": "builder-design-alternate",
+      "family": "design",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"data visualization\""
+    },
+    {
+      "query_id": "builder-design-repos",
+      "family": "design",
+      "kind": "repo",
+      "query": "\"education visualization\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-data-english",
+      "family": "data",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"retrieval augmented generation\""
+    },
+    {
+      "query_id": "builder-data-alternate",
+      "family": "data",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"数据分析\""
+    },
+    {
+      "query_id": "builder-data-repos",
+      "family": "data",
+      "kind": "repo",
+      "query": "\"education assessment\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-skill-authoring-1",
+      "family": "skill-authoring",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"skill creation\""
+    },
+    {
+      "query_id": "builder-skill-authoring-2",
+      "family": "skill-authoring",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"技能编写\""
+    },
+    {
+      "query_id": "builder-skill-authoring-3",
+      "family": "skill-authoring",
+      "kind": "repo",
+      "query": "\"agent skills\" composition in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-repo-adaptation-1",
+      "family": "repo-adaptation",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"repository analysis\""
+    },
+    {
+      "query_id": "builder-repo-adaptation-2",
+      "family": "repo-adaptation",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"代码重构\""
+    },
+    {
+      "query_id": "builder-repo-adaptation-3",
+      "family": "repo-adaptation",
+      "kind": "repo",
+      "query": "\"code adaptation\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-self-learning-english",
+      "family": "self-learning",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"spaced repetition\""
+    },
+    {
+      "query_id": "builder-self-learning-alternate",
+      "family": "self-learning",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"自主学习\""
+    },
+    {
+      "query_id": "builder-self-learning-repos",
+      "family": "self-learning",
+      "kind": "repo",
+      "query": "\"spaced repetition\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-educational-research-english",
+      "family": "educational-research",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"learning sciences\""
+    },
+    {
+      "query_id": "builder-educational-research-alternate",
+      "family": "educational-research",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"教育研究\""
+    },
+    {
+      "query_id": "builder-educational-research-repos",
+      "family": "educational-research",
+      "kind": "repo",
+      "query": "\"educational research\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-tutor-evaluation-english",
+      "family": "tutor-evaluation",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"tutor evaluation\""
+    },
+    {
+      "query_id": "builder-tutor-evaluation-alternate",
+      "family": "tutor-evaluation",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"教学评测\""
+    },
+    {
+      "query_id": "builder-tutor-evaluation-repos",
+      "family": "tutor-evaluation",
+      "kind": "repo",
+      "query": "\"tutor benchmark\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-training-data-english",
+      "family": "training-data",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"dataset curation\""
+    },
+    {
+      "query_id": "builder-training-data-alternate",
+      "family": "training-data",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"训练数据\""
+    },
+    {
+      "query_id": "builder-training-data-repos",
+      "family": "training-data",
+      "kind": "repo",
+      "query": "\"educational dataset\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-open-textbooks-english",
+      "family": "open-textbooks",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"open textbook\""
+    },
+    {
+      "query_id": "builder-open-textbooks-alternate",
+      "family": "open-textbooks",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"开放教材\""
+    },
+    {
+      "query_id": "builder-open-textbooks-repos",
+      "family": "open-textbooks",
+      "kind": "repo",
+      "query": "\"open textbook\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-knowledge-graphs-english",
+      "family": "knowledge-graphs",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"knowledge graph\""
+    },
+    {
+      "query_id": "builder-knowledge-graphs-alternate",
+      "family": "knowledge-graphs",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"知识图谱\""
+    },
+    {
+      "query_id": "builder-knowledge-graphs-repos",
+      "family": "knowledge-graphs",
+      "kind": "repo",
+      "query": "\"educational knowledge graph\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-system-admin-english",
+      "family": "system-admin",
+      "kind": "skill",
+      "query": "filename:SKILL.md backup restore"
+    },
+    {
+      "query_id": "builder-system-admin-alternate",
+      "family": "system-admin",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"权限管理\""
+    },
+    {
+      "query_id": "builder-system-admin-repos",
+      "family": "system-admin",
+      "kind": "repo",
+      "query": "\"learning platform\" deployment in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-assessment-english",
+      "family": "assessment",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"assessment rubric\""
+    },
+    {
+      "query_id": "builder-assessment-alternate",
+      "family": "assessment",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"形成性评价\""
+    },
+    {
+      "query_id": "builder-assessment-repos",
+      "family": "assessment",
+      "kind": "repo",
+      "query": "\"automatic grading\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-learning-analytics-english",
+      "family": "learning-analytics",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"learning analytics\""
+    },
+    {
+      "query_id": "builder-learning-analytics-alternate",
+      "family": "learning-analytics",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"知识追踪\""
+    },
+    {
+      "query_id": "builder-learning-analytics-repos",
+      "family": "learning-analytics",
+      "kind": "repo",
+      "query": "\"knowledge tracing\" dataset in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-biology-english",
+      "family": "biology",
+      "kind": "skill",
+      "query": "filename:SKILL.md biology \"literature review\""
+    },
+    {
+      "query_id": "builder-biology-alternate",
+      "family": "biology",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"生物教学\""
+    },
+    {
+      "query_id": "builder-biology-repos",
+      "family": "biology",
+      "kind": "repo",
+      "query": "\"biology education\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-chemistry-english",
+      "family": "chemistry",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"molecular visualization\""
+    },
+    {
+      "query_id": "builder-chemistry-alternate",
+      "family": "chemistry",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"化学教学\""
+    },
+    {
+      "query_id": "builder-chemistry-repos",
+      "family": "chemistry",
+      "kind": "repo",
+      "query": "\"chemistry education\" in:name,description,readme archived:false fork:false"
+    },
+    {
+      "query_id": "builder-statistics-english",
+      "family": "statistics",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"statistical analysis\""
+    },
+    {
+      "query_id": "builder-statistics-alternate",
+      "family": "statistics",
+      "kind": "skill",
+      "query": "filename:SKILL.md \"统计教学\""
+    },
+    {
+      "query_id": "builder-statistics-repos",
+      "family": "statistics",
+      "kind": "repo",
+      "query": "\"statistics education\" in:name,description,readme archived:false fork:false"
+    }
+  ],
+  "note": "Discovery families and query phrases guide collection. Internal retrieval uses the shared app/lib/search engine. Query and source matches are provenance, not confirmed artifact types, subjects, audiences, platforms, capabilities or reuse rights. Reset search pages and sample offsets when query_revision changes. Generic build and administration resources need a concrete reusable role.",
+  "query_revision": "2026-11-06"
+}

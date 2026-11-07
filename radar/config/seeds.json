@@ -1,0 +1,362 @@
+[
+  {
+    "lead_id": "penecho",
+    "label": "PenEcho",
+    "full_name": "penecho/penecho",
+    "kind_hint": "repo",
+    "gold_seed": true,
+    "source": "local-gold-seed",
+    "source_ref": "local-gold-seed:penecho",
+    "notes": "Exact origin URL read from the local checkout; do not clone."
+  },
+  {
+    "lead_id": "teachany",
+    "label": "TeachAny",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "openmaic",
+    "label": "OpenMAIC",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Exact repository identity checked on 2026-11-06; source metadata is not a runtime assessment.",
+    "full_name": "THU-MAIC/OpenMAIC",
+    "source_ref": "https://github.com/THU-MAIC/OpenMAIC"
+  },
+  {
+    "lead_id": "h5-dooring",
+    "label": "H5-Dooring",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "educhat",
+    "label": "EduChat",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "edukg",
+    "label": "EDUKG",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Exact educational knowledge graph source checked on 2026-11-06. Stable knowledge materials need separate freshness and reuse review.",
+    "full_name": "THU-KEG/EDUKG",
+    "source_ref": "https://github.com/THU-KEG/EDUKG"
+  },
+  {
+    "lead_id": "mdk12-bench",
+    "label": "MDK12-Bench",
+    "kind_hint": "benchmark",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "minilab",
+    "label": "minilab",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Name is ambiguous; API-selected match remains probable, not curator-confirmed."
+  },
+  {
+    "lead_id": "math-teaching-primary",
+    "label": "math-teaching-for-primary-grades",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "studio-classroom",
+    "label": "StudioClassroom",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "awesome-k12-cs",
+    "label": "awesome-k12-cs",
+    "kind_hint": "awesome_index",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "awesome-k12",
+    "label": "awesome-k12",
+    "kind_hint": "awesome_index",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "china-textbook",
+    "label": "ChinaTextbook",
+    "kind_hint": "dataset",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "smart-edu-downloader",
+    "label": "SmartEduDownloader",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "opensis-classic",
+    "label": "openSIS-Classic",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "openedu",
+    "label": "OpenEDU",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Name is ambiguous; API-selected match remains probable, not curator-confirmed."
+  },
+  {
+    "lead_id": "xzs",
+    "label": "xzs",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Name is ambiguous; API-selected match remains probable, not curator-confirmed."
+  },
+  {
+    "lead_id": "xex",
+    "label": "xex",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Name is ambiguous; API-selected match remains probable, not curator-confirmed."
+  },
+  {
+    "lead_id": "k12-teacher-skills",
+    "label": "k12-teacher-skills",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "teacher-gpt",
+    "label": "TeacherGPT",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "smart-kbs",
+    "label": "SmartKBS",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "learnhouse",
+    "label": "learnhouse",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Unverified until GitHub API resolution."
+  },
+  {
+    "lead_id": "question-bank",
+    "label": "question-bank",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "user-image-lead",
+    "notes": "Name is ambiguous; API-selected match remains probable, not curator-confirmed."
+  },
+  {
+    "lead_id": "edubench-arxiv-2505-16160",
+    "label": "EduBench",
+    "full_name": "ybai-nlp/EduBench",
+    "kind_hint": "benchmark",
+    "gold_seed": false,
+    "source": "arxiv-paper-lead",
+    "source_ref": "https://arxiv.org/abs/2505.16160",
+    "notes": "Exact public repository named by the paper; GitHub metadata verification required."
+  },
+  {
+    "lead_id": "edu-values-arxiv-2409-12739",
+    "label": "Edu-Values",
+    "full_name": "zhangpeii/Edu-Values",
+    "kind_hint": "benchmark",
+    "gold_seed": false,
+    "source": "arxiv-paper-lead",
+    "source_ref": "https://arxiv.org/abs/2409.12739",
+    "notes": "Exact public repository named by the paper; GitHub metadata verification required."
+  },
+  {
+    "lead_id": "m3ke-paper-lead",
+    "label": "M3KE",
+    "full_name": "tjunlp-lab/M3KE",
+    "kind_hint": "benchmark",
+    "gold_seed": false,
+    "source": "paper-repository-lead",
+    "source_ref": "https://github.com/tjunlp-lab/M3KE",
+    "notes": "Education-level Chinese subject benchmark lead; GitHub metadata verification required."
+  },
+  {
+    "lead_id": "gaokao-mm-paper-lead",
+    "label": "GAOKAO-MM",
+    "full_name": "OpenMOSS/GAOKAO-MM",
+    "kind_hint": "benchmark",
+    "gold_seed": false,
+    "source": "paper-repository-lead",
+    "source_ref": "https://github.com/OpenMOSS/GAOKAO-MM",
+    "notes": "Chinese examination multimodal benchmark lead; GitHub metadata verification required."
+  },
+  {
+    "lead_id": "gaokao-bench-paper-lead",
+    "label": "GAOKAO-Bench",
+    "full_name": "OpenLMLab/GAOKAO-Bench",
+    "kind_hint": "benchmark",
+    "gold_seed": false,
+    "source": "paper-repository-lead",
+    "source_ref": "https://github.com/OpenLMLab/GAOKAO-Bench",
+    "notes": "Chinese examination language-model benchmark lead; GitHub metadata verification required."
+  },
+  {
+    "lead_id": "scratchmath-paper-lead",
+    "label": "ScratchMath",
+    "full_name": "ai-for-edu/ScratchMath",
+    "kind_hint": "benchmark",
+    "gold_seed": false,
+    "source": "paper-repository-lead",
+    "source_ref": "https://github.com/ai-for-edu/ScratchMath",
+    "notes": "Student handwritten mathematics error-analysis benchmark lead; GitHub metadata verification required."
+  },
+  {
+    "lead_id": "education-dialogue-dataset-arxiv-2405-14655",
+    "label": "Education Dialogue Dataset",
+    "full_name": "google-research-datasets/Education-Dialogue-Dataset",
+    "kind_hint": "dataset",
+    "gold_seed": false,
+    "source": "arxiv-paper-lead",
+    "source_ref": "https://arxiv.org/abs/2405.14655",
+    "notes": "Exact public repository named by the paper; GitHub metadata verification required."
+  },
+  {
+    "lead_id": "edudata-paper-lead",
+    "label": "EduData",
+    "full_name": "bigdata-ustc/EduData",
+    "kind_hint": "dataset",
+    "gold_seed": false,
+    "source": "paper-repository-lead",
+    "source_ref": "https://github.com/bigdata-ustc/EduData",
+    "notes": "Educational data-mining / knowledge-tracing collection lead; GitHub metadata verification required."
+  },
+  {
+    "lead_id": "mathtutorbench-arxiv-2502-18940",
+    "label": "MathTutorBench",
+    "full_name": "eth-lre/mathtutorbench",
+    "kind_hint": "benchmark",
+    "gold_seed": false,
+    "source": "arxiv-paper-lead",
+    "source_ref": "https://arxiv.org/abs/2502.18940",
+    "notes": "Exact public repository named by the paper; GitHub metadata verification required."
+  },
+  {
+    "lead_id": "deeptutor-hkuds",
+    "label": "DeepTutor",
+    "full_name": "HKUDS/DeepTutor",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "directory-review-2026-11-06",
+    "source_ref": "https://github.com/HKUDS/DeepTutor",
+    "notes": "Personalized tutoring application and reference architecture. Exact public source checked on 2026-11-06; not installed or executed."
+  },
+  {
+    "lead_id": "openai-plugins",
+    "label": "OpenAI plugin and Skill examples",
+    "full_name": "openai/plugins",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "directory-review-2026-11-06",
+    "source_ref": "https://github.com/openai/plugins",
+    "notes": "Current Skill examples linked by the deprecated openai/skills README; inspect per-plugin dependencies and licenses. Exact public source checked on 2026-11-06; not installed or executed."
+  },
+  {
+    "lead_id": "openai-agents-python",
+    "label": "OpenAI Agents SDK for Python",
+    "full_name": "openai/openai-agents-python",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "directory-review-2026-11-06",
+    "source_ref": "https://github.com/openai/openai-agents-python",
+    "notes": "Reusable agent orchestration library; generic infrastructure, not itself an education tutor. Exact public source checked on 2026-11-06; not installed or executed."
+  },
+  {
+    "lead_id": "openai-agents-js",
+    "label": "OpenAI Agents SDK for TypeScript",
+    "full_name": "openai/openai-agents-js",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "directory-review-2026-11-06",
+    "source_ref": "https://github.com/openai/openai-agents-js",
+    "notes": "Reusable agent and voice-agent library; educational role must be explicit. Exact public source checked on 2026-11-06; not installed or executed."
+  },
+  {
+    "lead_id": "openai-evals",
+    "label": "OpenAI Evals",
+    "full_name": "openai/evals",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "directory-review-2026-11-06",
+    "source_ref": "https://github.com/openai/evals",
+    "notes": "Evaluation framework and registry; individual benchmarks and datasets require their own scope review. Exact public source checked on 2026-11-06; not installed or executed."
+  },
+  {
+    "lead_id": "openai-gsm8k",
+    "label": "GSM8K",
+    "full_name": "openai/grade-school-math",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "directory-review-2026-11-06",
+    "source_ref": "https://github.com/openai/grade-school-math",
+    "notes": "Math word-problem data and reference code. Preserve dataset attribution and split purposes. Exact public source checked on 2026-11-06; not installed or executed."
+  },
+  {
+    "lead_id": "d2l-open-textbook",
+    "label": "Dive into Deep Learning",
+    "full_name": "d2l-ai/d2l-en",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "directory-review-2026-11-06",
+    "source_ref": "https://github.com/d2l-ai/d2l-en",
+    "notes": "Open textbook, math and multi-framework code. Book content and code may have different conditions. Exact public source checked on 2026-11-06; not installed or executed."
+  },
+  {
+    "lead_id": "jupyterhub-learning-environments",
+    "label": "JupyterHub",
+    "full_name": "jupyterhub/jupyterhub",
+    "kind_hint": "repo",
+    "gold_seed": false,
+    "source": "directory-review-2026-11-06",
+    "source_ref": "https://github.com/jupyterhub/jupyterhub",
+    "notes": "Multi-user notebook environments for learning, research and administration. Exact public source checked on 2026-11-06; not installed or executed."
+  }
+]

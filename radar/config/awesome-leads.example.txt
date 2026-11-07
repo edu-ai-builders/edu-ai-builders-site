@@ -1,0 +1,6 @@
+# One exact owner/repo or GitHub repository URL per line.
+# Populate this from a curator-approved awesome index. The crawler verifies only
+# repository metadata and does not fetch or store the awesome README.
+#
+# owner/project
+# https://github.com/owner/another-project

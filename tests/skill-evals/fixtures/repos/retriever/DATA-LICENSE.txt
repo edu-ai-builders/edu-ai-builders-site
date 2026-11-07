@@ -1,0 +1,1 @@
+Synthetic fixture terms: noncommercial only. This condition applies to sample_documents.json, separately from the MIT code.

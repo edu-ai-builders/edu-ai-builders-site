@@ -1,0 +1,32 @@
+test_byte_budget_and_large_file_exclusion_are_explicit (__main__.WorkflowHelpers.test_byte_budget_and_large_file_exclusion_are_explicit) ... ok
+test_cli_runs_outside_website_without_dependencies (__main__.WorkflowHelpers.test_cli_runs_outside_website_without_dependencies) ... ok
+test_delegation_requires_availability_and_fallback (__main__.WorkflowHelpers.test_delegation_requires_availability_and_fallback) ... ok
+test_drift_identifies_affected_decisions (__main__.WorkflowHelpers.test_drift_identifies_affected_decisions) ... ok
+test_file_budget_applies_to_skipped_binary_files (__main__.WorkflowHelpers.test_file_budget_applies_to_skipped_binary_files) ... ok
+test_fusion_target_symlinks_cannot_escape_package (__main__.WorkflowHelpers.test_fusion_target_symlinks_cannot_escape_package) ... ok
+test_handoff_requires_matching_hash_quote_and_lines (__main__.WorkflowHelpers.test_handoff_requires_matching_hash_quote_and_lines) ... ok
+test_inventory_binds_utf8_bytes_and_literal_queries (__main__.WorkflowHelpers.test_inventory_binds_utf8_bytes_and_literal_queries) ... ok
+test_literal_search_does_not_interpret_regex (__main__.WorkflowHelpers.test_literal_search_does_not_interpret_regex) ... ok
+test_malformed_nested_source_and_case_records_do_not_crash (__main__.WorkflowHelpers.test_malformed_nested_source_and_case_records_do_not_crash) ... ok
+test_malformed_records_return_diagnostics_not_tracebacks (__main__.WorkflowHelpers.test_malformed_records_return_diagnostics_not_tracebacks) ... ok
+test_match_truncation_does_not_claim_complete_negative_search (__main__.WorkflowHelpers.test_match_truncation_does_not_claim_complete_negative_search) ... ok
+test_missing_source_and_read_reference_drift_are_reported (__main__.WorkflowHelpers.test_missing_source_and_read_reference_drift_are_reported) ... ok
+test_non_utf8_file_is_excluded_without_inventing_text (__main__.WorkflowHelpers.test_non_utf8_file_is_excluded_without_inventing_text) ... ok
+test_requirements_upstream_and_target_links_resolve (__main__.WorkflowHelpers.test_requirements_upstream_and_target_links_resolve) ... ok
+test_runtime_tested_cannot_be_claimed_with_only_planned_checks (__main__.WorkflowHelpers.test_runtime_tested_cannot_be_claimed_with_only_planned_checks) ... ok
+test_source_mutation_invalidates_old_handoff (__main__.WorkflowHelpers.test_source_mutation_invalidates_old_handoff) ... ok
+test_summary_or_unknown_permission_cannot_be_redistributed (__main__.WorkflowHelpers.test_summary_or_unknown_permission_cannot_be_redistributed) ... ok
+test_symlink_dependency_and_parent_path_are_not_read (__main__.WorkflowHelpers.test_symlink_dependency_and_parent_path_are_not_read) ... ok
+test_unresolved_capability_cannot_receive_fake_runtime_success (__main__.WorkflowHelpers.test_unresolved_capability_cannot_receive_fake_runtime_success) ... ok
+test_unresolved_conflicts_and_unobserved_tests_are_not_marked_ready (__main__.WorkflowHelpers.test_unresolved_conflicts_and_unobserved_tests_are_not_marked_ready) ... ok
+test_unversioned_source_can_be_bound_by_hash_without_inventing_release (__main__.WorkflowHelpers.test_unversioned_source_can_be_bound_by_hash_without_inventing_release) ... ok
+test_valid_fusion_record_is_distinct_from_task_performance (__main__.WorkflowHelpers.test_valid_fusion_record_is_distinct_from_task_performance) ... ok
+test_walkthrough_result_requires_actual_artifact (__main__.WorkflowHelpers.test_walkthrough_result_requires_actual_artifact) ... ok
+test_zero_budget_is_rejected (__main__.WorkflowHelpers.test_zero_budget_is_rejected) ... ok
+test_zip_excludes_cache_and_is_reproducible_after_file_touch (__main__.WorkflowHelpers.test_zip_excludes_cache_and_is_reproducible_after_file_touch) ... ok
+test_zip_rejects_external_symlinks (__main__.WorkflowHelpers.test_zip_rejects_external_symlinks) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.160s
+
+OK

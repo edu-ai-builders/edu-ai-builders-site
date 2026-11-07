@@ -1,0 +1,170 @@
+[
+  {
+    "id": "directory-education-dataset",
+    "family": "dataset-benchmark",
+    "query": "\"educational dataset\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-intelligent-tutoring",
+    "family": "learning-apps",
+    "query": "\"intelligent tutoring\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-lesson-authoring",
+    "family": "teaching-workflow",
+    "query": "\"lesson planning\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-tutor-benchmark",
+    "family": "dataset-benchmark",
+    "query": "\"tutor benchmark\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-open-textbook",
+    "family": "open-knowledge",
+    "query": "\"open textbook\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-education-kg",
+    "family": "open-knowledge",
+    "query": "\"educational knowledge graph\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-literature-assistant",
+    "family": "research-workflow",
+    "query": "\"literature review\" assistant in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-learning-platform-admin",
+    "family": "system-administration",
+    "query": "\"learning platform\" deployment in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-learning-traces",
+    "family": "dataset-benchmark",
+    "query": "\"knowledge tracing\" dataset in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-education-dialogue",
+    "family": "dataset-benchmark",
+    "query": "\"teacher student\" dataset in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-model-training",
+    "family": "dataset-benchmark",
+    "query": "\"instruction tuning\" education in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-spaced-repetition",
+    "family": "personal-learning",
+    "query": "\"spaced repetition\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-writing-feedback",
+    "family": "teaching-workflow",
+    "query": "\"writing feedback\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-science-simulation",
+    "family": "learning-apps",
+    "query": "\"physics simulation\" education in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-programming-tutor",
+    "family": "learning-apps",
+    "query": "\"programming tutor\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-chinese-tutor",
+    "family": "learning-apps",
+    "query": "\"智能辅导\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-geography-resources",
+    "family": "open-knowledge",
+    "query": "\"geography education\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-music-learning",
+    "family": "learning-apps",
+    "query": "\"music education\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-accessible-learning",
+    "family": "learning-apps",
+    "query": "\"accessible learning\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-assessment-rubrics",
+    "family": "teaching-workflow",
+    "query": "\"formative assessment\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-openai-agent-sdk",
+    "family": "capability-primitives",
+    "query": "user:openai \"agent\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-biology-teaching",
+    "family": "open-knowledge",
+    "query": "\"biology education\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-chemistry-teaching",
+    "family": "open-knowledge",
+    "query": "\"chemistry education\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  },
+  {
+    "id": "directory-statistics-teaching",
+    "family": "open-knowledge",
+    "query": "\"statistics education\" in:name,description,readme archived:false fork:false",
+    "kind_hint": "repo",
+    "enabled": true
+  }
+]

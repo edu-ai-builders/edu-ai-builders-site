@@ -1,0 +1,1 @@
+{"user_id":"local-demo-builder","enabled":true,"frequency":"daily","interests":["tutoring","pedagogical","knowledge tracing","student simulation","education"],"exclude":["reinforcement learning agent"],"categories":["cs.AI","cs.CL","cs.HC","cs.LG"],"max_age_days":180,"min_score":4,"limit":5,"delivery_channel":"local-file"}

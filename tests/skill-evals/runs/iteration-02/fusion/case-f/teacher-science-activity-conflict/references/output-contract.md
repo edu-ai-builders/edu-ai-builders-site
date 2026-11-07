@@ -1,0 +1,2 @@
+# F output contract
+Deliver teacher-only bilingual question, evidence and reviewed key, a <=2 candidate comparison, PDF/catalog gaps, static data fields, explicit unresolved hard conflict, branch consequences and smallest clarification. Do not deliver a ready learner answer-display flow or assert both conditions passed. Candidate inspection and licensing constraints remain as E. Walkthroughs can verify correct conflict handling; learner runtime and answer-order compliance are blocked.

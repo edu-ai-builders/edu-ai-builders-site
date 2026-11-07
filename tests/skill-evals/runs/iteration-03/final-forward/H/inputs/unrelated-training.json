@@ -1,0 +1,8 @@
+{
+  "prompt": "Plan a research workflow for training a large language model from scientific papers and compare distributed training approaches.",
+  "raw_material": {
+    "audience": "researchers",
+    "goal": "research model training",
+    "family_math_request": false
+  }
+}

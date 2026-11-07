@@ -1,0 +1,474 @@
+{
+  "schema_version": "edu.fusion-record.v1",
+  "readiness": "draft",
+  "workload": {
+    "purpose": "教师中英双语 Web 科学活动设计",
+    "trigger": "Prepare and review teacher science activity when conflicting hard answer-display requirements block learner delivery",
+    "exclusions": [
+      "general tutoring",
+      "other subject planning",
+      "model training",
+      "deployment"
+    ],
+    "inputs": [
+      "grade/time/question",
+      "teacher supplied data or readable texts",
+      "Web constraints"
+    ],
+    "outputs": [
+      "teacher-only bilingual preparation",
+      "explicit hard conflict and branches",
+      "draft skill/record and walkthroughs"
+    ],
+    "constraints": [
+      {
+        "id": "R1",
+        "level": "hard",
+        "requirement": "为教师科学活动设计创建独立 skill，触发范围只限该重复工作。"
+      },
+      {
+        "id": "R2",
+        "level": "hard",
+        "requirement": "交付教师与学生可用的中英双语内容；Web 是目标平台。"
+      },
+      {
+        "id": "R3",
+        "level": "hard",
+        "requirement": "每次最多两个候选；没有可读来源时可交付零候选和缺口，不能凑十个。"
+      },
+      {
+        "id": "R4",
+        "level": "hard",
+        "requirement": "学生先写出判断并提交，再看证据；答案和证据均不得提前泄露。"
+      },
+      {
+        "id": "R5",
+        "level": "hard",
+        "requirement": "初版不得依赖付费模型；使用教师预编写材料和静态规则。"
+      },
+      {
+        "id": "R6",
+        "level": "hard",
+        "requirement": "PDF 工具目前不可用：不能声称提取、页码覆盖或要求该工具作为依赖。"
+      },
+      {
+        "id": "R7",
+        "level": "hard",
+        "requirement": "premium-planner 仅是目录线索；不复制或推断未读实现。"
+      },
+      {
+        "id": "R8",
+        "level": "hard",
+        "requirement": "不得强制数学分层提示，也不得并入所有来源触发词。"
+      },
+      {
+        "id": "R9",
+        "level": "hard",
+        "requirement": "原始来源保持不变，记录身份、许可、方法取舍、目标与维护映射。"
+      },
+      {
+        "id": "R10",
+        "level": "hard",
+        "requirement": "交付新 skill、可维护的 fusion-record.json、至少两个任务走查并运行包内 helper。"
+      },
+      {
+        "id": "F-A",
+        "level": "hard",
+        "requirement": "首次展示必须显示完整正确答案。"
+      },
+      {
+        "id": "F-B",
+        "level": "hard",
+        "requirement": "学生首次作答前完全不显示正确答案。"
+      }
+    ],
+    "precedence": [
+      "both user answer-display constraints hard and equal; neither may be dropped",
+      "other explicit E requirements",
+      "tool constraints",
+      "source defaults"
+    ]
+  },
+  "sources": [
+    {
+      "id": "evidence",
+      "version": "1.0.0",
+      "state": "full-method",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "16b3ee96b0a7e025f7f70ad73bcaa233a7058706d1a6245d1d9cf85f3f49fb4c"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3"
+        }
+      ],
+      "reuse": {
+        "permission": "redistributable",
+        "scope": "SKILL.md instructions; MIT notice retained",
+        "attribution": "Edu AI Builders contributors, 2026"
+      }
+    },
+    {
+      "id": "planner",
+      "version": "2.0.0",
+      "state": "full-method",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "e8d8a5ea2d8b0ee2d132b1ba34cad5e1c758a46b426283aed8a8bdc9e52ab1cf"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3"
+        }
+      ],
+      "reuse": {
+        "permission": "redistributable",
+        "scope": "SKILL.md instructions; MIT notice retained",
+        "attribution": "Edu AI Builders contributors, 2026"
+      }
+    },
+    {
+      "id": "pdf",
+      "version": "1.1.0",
+      "state": "full-method",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "9f978194979718a17c64e58653ef83a8a5c1c86e81b5bda004d7971c2f71082f"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3"
+        }
+      ],
+      "reuse": {
+        "permission": "redistributable",
+        "scope": "Optional fallback instructions only; runtime extractor unavailable; MIT",
+        "attribution": "Edu AI Builders contributors, 2026"
+      }
+    },
+    {
+      "id": "premium",
+      "version": "not stated",
+      "state": "metadata-only",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "0a925ebd6be96ff8c8337594387c59e79268f3beaa91fbfba9ac65aa4c7a92ae"
+        }
+      ],
+      "reuse": {
+        "permission": "unknown",
+        "scope": "Catalog description only, no reusable implementation or permission supplied",
+        "attribution": "catalog identity only"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D1",
+      "source_id": "evidence",
+      "method": "Read selected methods, preserve source identity/version/terms/gaps and compare before planning",
+      "decision": "transform",
+      "requirement_ids": [
+        "R3",
+        "R9"
+      ],
+      "reason": "Replace ten-source minimum with zero to two total candidates; inspection still precedes implementation claims",
+      "targets": [
+        "SKILL.md",
+        "references/output-contract.md"
+      ]
+    },
+    {
+      "id": "D2",
+      "source_id": "planner",
+      "method": "Correct-answer-first flow held pending conflicting user requirements",
+      "decision": "remove",
+      "requirement_ids": [
+        "R4",
+        "F-A",
+        "F-B"
+      ],
+      "reason": "Cannot choose an answer timing policy without weakening a hard requirement",
+      "targets": []
+    },
+    {
+      "id": "D3",
+      "source_id": "planner",
+      "method": "Paid model variable practice",
+      "decision": "remove",
+      "requirement_ids": [
+        "R5"
+      ],
+      "reason": "No paid model in first version",
+      "targets": []
+    },
+    {
+      "id": "D4",
+      "source_id": "planner",
+      "method": "Teacher-only source/evidence draft",
+      "decision": "transform",
+      "requirement_ids": [
+        "R2",
+        "F-A",
+        "F-B"
+      ],
+      "reason": "Teacher preparation continues; learner panel answer timing not authorized",
+      "targets": [
+        "references/web-flow.md"
+      ]
+    },
+    {
+      "id": "D5",
+      "source_id": "planner",
+      "method": "Learner flow, data contract, product acceptance distinct from learning outcomes",
+      "decision": "keep",
+      "requirement_ids": [
+        "R2",
+        "R10"
+      ],
+      "reason": "Concrete Web activity output and measurable product checks serve teachers",
+      "targets": [
+        "references/output-contract.md",
+        "references/web-flow.md"
+      ]
+    },
+    {
+      "id": "D6",
+      "source_id": "planner",
+      "method": "Model-training experiment and broad subject support",
+      "decision": "remove",
+      "requirement_ids": [
+        "R1",
+        "R8"
+      ],
+      "reason": "Science activity scope does not need model training or universal subject triggers",
+      "targets": []
+    },
+    {
+      "id": "D7",
+      "source_id": "pdf",
+      "method": "Missing extractor fallback",
+      "decision": "transform",
+      "requirement_ids": [
+        "R6"
+      ],
+      "reason": "Use author-provided plain text/examples with explicit coverage gap; do not extract PDF",
+      "targets": [
+        "SKILL.md",
+        "references/output-contract.md"
+      ]
+    },
+    {
+      "id": "D8",
+      "source_id": "premium",
+      "method": "Proprietary planner listing",
+      "decision": "reference",
+      "requirement_ids": [
+        "R7"
+      ],
+      "reason": "Preserve discovery clue only; no body was supplied and no method is redistributed",
+      "targets": [
+        "references/sources-and-maintenance.md"
+      ]
+    },
+    {
+      "id": "D9",
+      "source_id": null,
+      "method": "Teacher-only bilingual content and static fields; learner first display blocked",
+      "decision": "independent",
+      "requirement_ids": [
+        "R1",
+        "R2",
+        "R5",
+        "R8",
+        "F-A",
+        "F-B"
+      ],
+      "reason": "Useful independent preparation does not choose between incompatible hard requirements",
+      "targets": [
+        "SKILL.md",
+        "references/web-flow.md",
+        "references/output-contract.md"
+      ]
+    },
+    {
+      "id": "D10",
+      "source_id": null,
+      "method": "Case execution and hash-pinned maintenance",
+      "decision": "independent",
+      "requirement_ids": [
+        "R9",
+        "R10"
+      ],
+      "reason": "Transparent task walkthroughs and provenance checks allow future review",
+      "targets": [
+        "references/sources-and-maintenance.md"
+      ]
+    },
+    {
+      "id": "D11",
+      "source_id": null,
+      "method": "Retain two incompatible hard requirements and deliver branches",
+      "decision": "independent",
+      "requirement_ids": [
+        "F-A",
+        "F-B"
+      ],
+      "reason": "No simultaneous answer visibility state exists for same initial learner view",
+      "targets": [
+        "SKILL.md",
+        "references/conflict-preparation.md"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "C1",
+      "status": "resolved",
+      "requirements": [
+        "R3"
+      ],
+      "conflicting_defaults": [
+        "evidence-search ten-source minimum"
+      ],
+      "resolution": "Use <=2 total candidates; preserve inspected provenance and gaps"
+    },
+    {
+      "id": "C3",
+      "status": "resolved",
+      "requirements": [
+        "R5"
+      ],
+      "conflicting_defaults": [
+        "lesson-planner paid variable problems"
+      ],
+      "resolution": "Remove paid dependency; static teacher-authored first version"
+    },
+    {
+      "id": "F-C1",
+      "status": "unresolved",
+      "requirement_ids": [
+        "R4",
+        "F-A",
+        "F-B"
+      ],
+      "conflicting_requirements": [
+        "Full correct answer visible on first display",
+        "Correct answer completely absent before first student attempt"
+      ],
+      "resolution": "No selection made. Learner delivery blocked; teacher-only preparation completed. Ask whether audiences differ or which requirement changes. No silent weakening."
+    }
+  ],
+  "acceptance_cases": [
+    {
+      "id": "F1",
+      "kind": "boundary",
+      "prompt": "首次展示完整答案且首次作答前不显示；均为硬要求",
+      "expected_behaviors": [
+        "retain both hard constraints",
+        "report unsatisfiable same-view timing",
+        "complete useful preparation",
+        "draft readiness"
+      ],
+      "status": "passed",
+      "method": "walkthrough",
+      "observed_result": "Conflict formally identified; neither weakened; teacher preparation completed; full learner fulfillment blocked.",
+      "result_path": "cases/F1-conflict.md"
+    },
+    {
+      "id": "F2",
+      "kind": "boundary",
+      "prompt": "F with teacher flight text, no PDF tool, premium catalog only; prepare independently",
+      "expected_behaviors": [
+        "bounded preparation",
+        "<=2 candidates",
+        "no silent answer-policy choice",
+        "no missing-tool claims"
+      ],
+      "status": "passed",
+      "method": "walkthrough",
+      "observed_result": "One candidate; bilingual teacher-only materials and static data, no learner first view or dependency.",
+      "result_path": "cases/F2-preparation.md"
+    },
+    {
+      "id": "F3",
+      "kind": "non-trigger",
+      "prompt": "改写求职邮件",
+      "expected_behaviors": [
+        "exclude unrelated work"
+      ],
+      "status": "passed",
+      "method": "walkthrough",
+      "observed_result": "Science conflict skill does not trigger.",
+      "result_path": "cases/F3-non-trigger.md"
+    },
+    {
+      "id": "F4",
+      "kind": "normal",
+      "prompt": "Deliver a ready learner first view satisfying both A and B",
+      "expected_behaviors": [
+        "A and B both enforced"
+      ],
+      "status": "blocked",
+      "observed_result": "Mutually contradictory hard requirements at same initial learner moment; requires user clarification; no implementation run."
+    }
+  ],
+  "upstream_map": [
+    {
+      "source_id": "evidence",
+      "decision_ids": [
+        "D1"
+      ],
+      "review_when": [
+        "SKILL.md or LICENSE hash changes; inspect scope/count/provenance terms",
+        "rerun E1 and E2"
+      ]
+    },
+    {
+      "source_id": "planner",
+      "decision_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6"
+      ],
+      "review_when": [
+        "SKILL.md or LICENSE changes; inspect answer order/paid dependency/output contract/triggers",
+        "rerun E1,E2,E3"
+      ]
+    },
+    {
+      "source_id": "pdf",
+      "decision_ids": [
+        "D7"
+      ],
+      "review_when": [
+        "fallback instructions, terms or tool availability change",
+        "rerun E2 without extractor and review before adding dependency"
+      ]
+    },
+    {
+      "source_id": "premium",
+      "decision_ids": [
+        "D8"
+      ],
+      "review_when": [
+        "implementation/version or permission becomes available; catalog alone never suffices",
+        "inspect new terms and body before any new fusion decision"
+      ]
+    }
+  ],
+  "validation_notes": {
+    "task_category": "walkthrough for conflict/preparation; full learner answer compliance blocked",
+    "provenance": "passed: bundled helper, exit 0; record consistency/source identity only",
+    "application_runtime": "not-run",
+    "benchmark": "not-run",
+    "teaching_outcomes": "not-run"
+  }
+}

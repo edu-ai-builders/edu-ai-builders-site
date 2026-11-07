@@ -1,0 +1,44 @@
+{
+  "source": "public/tools/fraction-bars.html",
+  "sha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+  "method": "actual inline application script execution with minimal DOM/canvas VM adapter",
+  "browser_executed": false,
+  "localization_executed": false,
+  "checks": [
+    {
+      "name": "baseline immediate explicit answer",
+      "status": "passed",
+      "details": "Initialization renders canvas relation and visible DOM verdict without any learner attempt."
+    },
+    {
+      "name": "mathematical relation exhaustive current input domain",
+      "status": "passed",
+      "details": "5929 pairs agree with exact integer cross-products; rounded decimal display never used as expected truth."
+    },
+    {
+      "name": "denominator reduction clamps numerator and redraws",
+      "status": "passed",
+      "details": "A denominator 8→3 clamps numerator 7→3, updates maximum, verdict and draw."
+    },
+    {
+      "name": "equal denominator explanation correctness",
+      "status": "failed",
+      "details": "Baseline 2/4 = 2/4 explanation says B numerator is larger."
+    },
+    {
+      "name": "equivalent fractions verdict and equality statement",
+      "status": "passed",
+      "details": "Equivalent fractions receive equality verdict and final equality explanation."
+    },
+    {
+      "name": "reference and fractional bar lengths share unit",
+      "status": "passed",
+      "details": {
+        "canvasWidth": 400,
+        "unitWidth": 292,
+        "halfWidth": 146,
+        "threeQuartersWidth": 219
+      }
+    }
+  ]
+}

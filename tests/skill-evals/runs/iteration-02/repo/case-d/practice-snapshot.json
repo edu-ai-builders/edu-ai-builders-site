@@ -1,0 +1,51 @@
+{
+  "schema_version": "edu.repo-snapshot.v1",
+  "root": "/private/tmp/edu-skill-evals-20261012/fixtures/repos/practice",
+  "git": {
+    "revision": null,
+    "state": "no-git-metadata"
+  },
+  "scope": {
+    "paths": [
+      "README.md",
+      "fractions_logic.py"
+    ],
+    "literal_queries": [
+      "optical",
+      "光学",
+      "simulation",
+      "ray",
+      "lens",
+      "refraction"
+    ],
+    "max_files": 2,
+    "max_bytes": 1800,
+    "max_file_bytes": 1400,
+    "max_matches": 12
+  },
+  "coverage": {
+    "enumeration_complete": true,
+    "stop_reason": null,
+    "matches_complete": true,
+    "read_bytes": 785,
+    "visited_files": 2
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "8e91ae953747a7f12096d8fa0c43f142722ed3c052686df176d329b99be879ca",
+      "bytes": 233,
+      "lines": 2,
+      "matches": []
+    },
+    {
+      "path": "fractions_logic.py",
+      "sha256": "1661597211236e8e4295e7b68b6a008d728adb6d95dd9d023c330dc1f36a23d8",
+      "bytes": 552,
+      "lines": 15,
+      "matches": []
+    }
+  ],
+  "skipped": [],
+  "runtime_tested": false
+}

@@ -1,0 +1,10 @@
+.env
+.env.local
+.vercel/
+.DS_Store
+state/http-cache.json
+__pycache__/
+*.pyc
+state/directory-update.lock
+.vercel
+.env*

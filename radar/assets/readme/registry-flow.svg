@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">How EduOS Radar turns public metadata into a browsable directory</title>
+  <desc id="desc">A three-stage flow: public source links go through bounded metadata collection and validation, then become a read-only public snapshot for projects, skills, data and benchmarks.</desc>
+  <rect width="1200" height="420" rx="28" fill="#f8f1e5"/>
+  <rect x="1" y="1" width="1198" height="418" rx="27" fill="none" stroke="#d6cab8" stroke-width="2"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" fill="#281c17">
+    <text x="64" y="70" font-size="18" font-weight="700" letter-spacing="3" fill="#776a61">THE RADAR PIPELINE</text>
+    <text x="64" y="120" font-size="42" font-weight="800" letter-spacing="-1.4">Collect signals. Keep the source visible.</text>
+  </g>
+  <g transform="translate(64 166)" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif">
+    <g>
+      <rect width="306" height="172" rx="22" fill="#fffdf8" stroke="#315ac8" stroke-width="2"/>
+      <circle cx="34" cy="36" r="10" fill="#315ac8"/>
+      <text x="58" y="43" font-size="17" font-weight="750" letter-spacing="1.6" fill="#315ac8">1 · PUBLIC LEADS</text>
+      <text x="28" y="86" font-size="25" font-weight="760">GitHub, paper links,</text>
+      <text x="28" y="117" font-size="25" font-weight="760">topics &amp; curated seeds</text>
+      <text x="28" y="150" font-size="18" fill="#665a52">No repository cloning</text>
+    </g>
+    <path d="M334 86H414" fill="none" stroke="#8d8175" stroke-width="3"/>
+    <path d="M404 77l18 9-18 9" fill="#8d8175"/>
+    <g transform="translate(444)">
+      <rect width="306" height="172" rx="22" fill="#fffdf8" stroke="#d34a9c" stroke-width="2"/>
+      <circle cx="34" cy="36" r="10" fill="#d34a9c"/>
+      <text x="58" y="43" font-size="17" font-weight="750" letter-spacing="1.6" fill="#b22d7d">2 · REGISTRY</text>
+      <text x="28" y="86" font-size="25" font-weight="760">Stable IDs, provenance,</text>
+      <text x="28" y="117" font-size="25" font-weight="760">ETags &amp; freshness</text>
+      <text x="28" y="150" font-size="18" fill="#665a52">Compact JSONL snapshots</text>
+    </g>
+    <path d="M778 86H858" fill="none" stroke="#8d8175" stroke-width="3"/>
+    <path d="M848 77l18 9-18 9" fill="#8d8175"/>
+    <g transform="translate(880)">
+      <rect width="230" height="172" rx="22" fill="#fffdf8" stroke="#8dae30" stroke-width="2"/>
+      <circle cx="34" cy="36" r="10" fill="#8dae30"/>
+      <text x="58" y="43" font-size="17" font-weight="750" letter-spacing="1.4" fill="#63810d">3 · DIRECTORY</text>
+      <text x="28" y="86" font-size="25" font-weight="760">Search, filter,</text>
+      <text x="28" y="117" font-size="25" font-weight="760">inspect source</text>
+      <text x="28" y="150" font-size="18" fill="#665a52">Read-only public view</text>
+    </g>
+  </g>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#776a61">
+    <text x="64" y="385">METADATA IS EVIDENCE, NOT A CLAIM OF PEDAGOGICAL QUALITY OR SAFETY.</text>
+  </g>
+</svg>

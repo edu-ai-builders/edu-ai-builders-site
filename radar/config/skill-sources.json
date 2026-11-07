@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1",
+  "sources": [
+    {
+      "source_id": "openai-skills",
+      "owner": "openai",
+      "repo": "plugins",
+      "skill_root": "plugins/data-analytics/skills",
+      "source_type": "first_party_collection",
+      "ecosystems": [
+        "codex",
+        "chatgpt"
+      ],
+      "compatibility_confidence": "source_declared",
+      "notes": "Migrated from deprecated openai/skills to its README-linked current examples. The source_id remains stable for provenance."
+    },
+    {
+      "source_id": "anthropic-skills",
+      "owner": "anthropics",
+      "repo": "skills",
+      "skill_root": "skills",
+      "source_type": "first_party_collection",
+      "ecosystems": [
+        "claude",
+        "agent-skills"
+      ],
+      "compatibility_confidence": "source_declared"
+    },
+    {
+      "source_id": "openai-zotero",
+      "owner": "openai",
+      "repo": "plugins",
+      "skill_root": "plugins/zotero/skills",
+      "source_type": "first_party_collection",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "compatibility_confidence": "source_declared"
+    },
+    {
+      "source_id": "openai-life-science",
+      "owner": "openai",
+      "repo": "plugins",
+      "skill_root": "plugins/life-science-research/skills",
+      "source_type": "first_party_collection",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "compatibility_confidence": "source_declared"
+    }
+  ]
+}

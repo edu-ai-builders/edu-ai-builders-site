@@ -1,0 +1,130 @@
+[
+  {
+    "id": "D1",
+    "source_id": "search",
+    "method": "Identify builder/end-user goal and constraints",
+    "decision": "transform",
+    "requirement_ids": [
+      "FAMILY",
+      "BOUNDED"
+    ],
+    "reason": "Narrow broad education search to a family math planning workload; keep supplied details and optional assumptions.",
+    "targets": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "id": "D2",
+    "source_id": "search",
+    "method": "Capability-based bilingual discovery and explicit search boundary",
+    "decision": "transform",
+    "requirement_ids": [
+      "CAP",
+      "BILINGUAL",
+      "EVIDENCE"
+    ],
+    "reason": "Bound the total comparison to three and prefer supplied evidence when catalogs are unavailable.",
+    "targets": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "id": "D3",
+    "source_id": "search",
+    "method": "Assign candidate roles, substitutes and interface gaps",
+    "decision": "keep",
+    "requirement_ids": [
+      "EVIDENCE",
+      "CAP"
+    ],
+    "reason": "Small evidence-based selection directly informs a buildable product brief.",
+    "targets": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "id": "D4",
+    "source_id": "search",
+    "method": "Mandatory dependence on catalog/API adapter",
+    "decision": "remove",
+    "requirement_ids": [
+      "FREE",
+      "BOUNDED"
+    ],
+    "reason": "Source presents catalog as optional; do not import deployment or adapter details into core method.",
+    "targets": []
+  },
+  {
+    "id": "D5",
+    "source_id": "plan",
+    "method": "Attempt, feedback and next-action flow",
+    "decision": "transform",
+    "requirement_ids": [
+      "ATTEMPT",
+      "BILINGUAL",
+      "MOBILE"
+    ],
+    "reason": "Make attempt gate explicit on every hint and help branch, with mobile bilingual controls.",
+    "targets": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "id": "D6",
+    "source_id": "plan",
+    "method": "Inputs, outputs, architecture and staged implementation brief",
+    "decision": "transform",
+    "requirement_ids": [
+      "FREE",
+      "BOUNDED",
+      "EVIDENCE"
+    ],
+    "reason": "Prototype with owned material and local deterministic logic; only add integrations if needed, without fixing education details.",
+    "targets": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "id": "D7",
+    "source_id": "plan",
+    "method": "Distinguish preservation/redesign and executed/planned checks",
+    "decision": "keep",
+    "requirement_ids": [
+      "EVIDENCE"
+    ],
+    "reason": "Prevents plan or walkthrough being represented as runtime or learning proof.",
+    "targets": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "id": "D8",
+    "source_id": null,
+    "method": "PDF/tool-missing and non-trigger routing",
+    "decision": "independent",
+    "requirement_ids": [
+      "BOUNDED",
+      "FAMILY",
+      "EVIDENCE"
+    ],
+    "reason": "Author explicit fallback and exclusions from this workload; source broad triggers are unsuitable.",
+    "targets": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "id": "D9",
+    "source_id": null,
+    "method": "Bilingual output and mobile acceptance checklist",
+    "decision": "independent",
+    "requirement_ids": [
+      "BILINGUAL",
+      "MOBILE",
+      "ATTEMPT"
+    ],
+    "reason": "Author measurable product checks independent of unobserved pedagogy or source defaults.",
+    "targets": [
+      "SKILL.md"
+    ]
+  }
+]

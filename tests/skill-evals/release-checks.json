@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-12",
+  "release": "0.2.1",
+  "helper_tests": 27,
+  "all_python_tests": 30,
+  "site_tests": 60,
+  "build": "passed",
+  "lint": "passed",
+  "missing_authored_translations": 0,
+  "skill_format_validation": [
+    "edu-repo-adapter",
+    "edu-skill-fusion",
+    "family-math-workflow"
+  ],
+  "cold_zip_helpers": "passed",
+  "runtime_limitations": [
+    "redesigned application not implemented",
+    "browser/localization not executed in skill source probe",
+    "PDF extraction blocked",
+    "generated-skill outputs are same-agent walkthroughs",
+    "cross-model performance and token savings unmeasured"
+  ],
+  "production_preview_http": "passed: v0.2.1 pages, ZIP byte hashes, four report/scope/example routes"
+}

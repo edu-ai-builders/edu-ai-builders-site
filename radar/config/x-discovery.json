@@ -1,0 +1,16 @@
+{
+  "mode": "public-web-index",
+  "coverage": "partial",
+  "max_queries_per_run": 6,
+  "lookback_days": 14,
+  "queries": [
+    "site:x.com/ \"open source\" \"tutor\" \"github\"",
+    "site:x.com/ \"SKILL.md\" \"research\"",
+    "site:x.com/ \"education\" \"dataset\"",
+    "site:x.com/ \"tutor benchmark\"",
+    "site:x.com/ \"open textbook\"",
+    "site:x.com/ \"qualitative analysis\" \"open source\""
+  ],
+  "collection_rule": "Record only actual post URLs. Verify canonical repositories, datasets and benchmarks separately. Blogs and marketing pages returned by a site filter are not post leads.",
+  "native_api_status": "not-authorized-or-configured"
+}

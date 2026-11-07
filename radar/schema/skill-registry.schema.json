@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GitHub Radar Skill Registry v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "skill_key",
+    "verification_status",
+    "source_repository",
+    "skill_path",
+    "first_seen",
+    "last_seen",
+    "fetched_at",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.1" },
+    "skill_key": { "type": "string", "pattern": "^github-skill:[0-9]+:.+$" },
+    "verification_status": { "enum": ["verified", "missing", "error"] },
+    "source_repository": {
+      "type": "object",
+      "required": ["github_repo_id", "full_name", "html_url", "api_url"],
+      "properties": {
+        "github_repo_id": { "type": "integer" },
+        "full_name": { "type": "string" },
+        "html_url": { "type": "string", "format": "uri" },
+        "api_url": { "type": "string", "format": "uri" },
+        "default_branch": { "type": "string" },
+        "license_spdx": { "type": ["string", "null"] },
+        "stars": { "type": ["integer", "null"] },
+        "forks": { "type": ["integer", "null"] },
+        "updated_at": { "type": ["string", "null"] },
+        "pushed_at": { "type": ["string", "null"] }
+      }
+    },
+    "skill_name": { "type": ["string", "null"] },
+    "description": { "type": ["string", "null"] },
+    "skill_path": { "type": "string" },
+    "manifest_url": { "type": "string", "format": "uri" },
+    "raw_manifest_url": { "type": "string", "format": "uri" },
+    "ecosystems": { "type": "array", "items": { "type": "string" } },
+    "compatibility_confidence": { "enum": ["source_declared", "inferred", "unknown"] },
+    "source_type": { "enum": ["first_party_collection", "community_collection", "single_skill"] },
+    "resource_hints": {
+      "type": "object",
+      "properties": {
+        "scripts": { "type": "boolean" },
+        "references": { "type": "boolean" },
+        "assets": { "type": "boolean" }
+      }
+    },
+    "first_seen": { "type": "string", "format": "date-time" },
+    "last_seen": { "type": "string", "format": "date-time" },
+    "fetched_at": { "type": "string", "format": "date-time" },
+    "provenance": { "type": "array", "minItems": 1 }
+  },
+  "additionalProperties": true
+}

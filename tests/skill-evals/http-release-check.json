@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "method": "production preview HTTP",
+  "bind": "127.0.0.1:3101",
+  "pageVersions": "0.2.1",
+  "zipBytes": "match SHA-256 of prepared files",
+  "scopeExampleReportRoutes": 4
+}

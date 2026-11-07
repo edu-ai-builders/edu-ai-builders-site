@@ -1,0 +1,87 @@
+{
+  "verified_at": "2026-11-06T23:54:05+00:00",
+  "status": "local-verified-not-published",
+  "catalog_summary": {
+    "schemaVersion": 2,
+    "generatedAt": "2026-11-06T23:52:09Z",
+    "refreshStartedAt": "2026-11-06T23:52:09Z",
+    "sourceSnapshotAt": "2026-11-06T23:52:08Z",
+    "total": 3798,
+    "repositories": 3614,
+    "skills": 184,
+    "included": 2723,
+    "needsReview": 1075,
+    "excluded": 4,
+    "refreshed": 0,
+    "notRefreshed": 3798,
+    "failed": 0,
+    "excludedUnverified": 26,
+    "repositoryRequests": 0,
+    "repositoryRefreshSuccess": 0,
+    "repositoryRefreshErrors": 0,
+    "sourcePolicy": "Metadata export only. Generation does not reverify a source or establish runtime behavior."
+  },
+  "checks": [
+    {
+      "command": "node --experimental-strip-types --test tests/*.test.mjs app/atlas/atlas.test.mjs",
+      "passed": 62
+    },
+    {
+      "command": "python3 -m unittest discover -s radar/scripts -p 'test_*.py'",
+      "passed": 48
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -p 'test_*.py'",
+      "passed": 33
+    },
+    {
+      "command": "npm run build",
+      "result": "passed TypeScript and production build"
+    },
+    {
+      "command": "npm run lint",
+      "result": "passed"
+    },
+    {
+      "command": "node scripts/check-translations.mjs",
+      "result": "0 untranslated authored strings"
+    }
+  ],
+  "live_local_browser_checks": [
+    "System operations filters to jupyterhub/jupyterhub",
+    "DeepTutor search returns repository and Skill",
+    "/skills?q=DeepTutor redirects to /directory?q=DeepTutor",
+    "Same-page Build Guide navigation updates search to openai/plugins and four results"
+  ],
+  "identity_retention": {
+    "prior_repository_ids_all_retained": true,
+    "prior_skill_ids_all_retained": true,
+    "new_repository_ids": 6,
+    "new_skills": 3
+  },
+  "network": {
+    "exact_repository_checks": 10,
+    "exact_repository_failures": 0,
+    "openai_source_pilot_api_requests": 18,
+    "openai_source_pilot_new_skills": 3
+  },
+  "limits": [
+    "No production push or deployment",
+    "No full dependency or third-party runtime evaluation",
+    "Review is metadata-based except recorded editorial source checks",
+    "Weekly execution still depends on local Mac, desktop app and GitHub network access"
+  ],
+  "automation": {
+    "id": "weekly-github-radar-refresh",
+    "name": "Weekly Edu AI Builders directory refresh",
+    "entrypoint": "apps/site-original/scripts/refresh-directory.py",
+    "schedule": "Monday 09:00 America/Los_Angeles",
+    "notification_policy": "failed_runs_only"
+  },
+  "preview_screenshot": "directory-preview.png",
+  "final_independent_audit": {
+    "result": "PASS",
+    "cross_model_family_independence": false,
+    "publication_limit": "weekly task prepares local data only; no push or deployment"
+  }
+}

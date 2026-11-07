@@ -1,0 +1,14 @@
+[
+  {
+    "command": "python3 /private/tmp/edu-skill-evals-20261012/candidate/edu-skill-fusion/scripts/fusion_provenance.py /private/tmp/edu-skill-evals-20261012/candidate-fusion/case-e/teacher-science-activity/fusion-record.json --package /private/tmp/edu-skill-evals-20261012/candidate-fusion/case-e/teacher-science-activity --source evidence=/private/tmp/edu-skill-evals-20261012/fixtures/skills/evidence-search --source planner=/private/tmp/edu-skill-evals-20261012/fixtures/skills/lesson-planner --source pdf=/private/tmp/edu-skill-evals-20261012/fixtures/skills/pdf-helper --source premium=/private/tmp/edu-skill-evals-20261012/fixtures/skills/link-only",
+    "category": "structural/provenance helper",
+    "exit_code": 0,
+    "artifact": "E-provenance-output.json"
+  },
+  {
+    "command": "python3 /private/tmp/edu-skill-evals-20261012/candidate/edu-skill-fusion/scripts/fusion_provenance.py /private/tmp/edu-skill-evals-20261012/candidate-fusion/case-f/teacher-science-activity-conflict/fusion-record.json --package /private/tmp/edu-skill-evals-20261012/candidate-fusion/case-f/teacher-science-activity-conflict --source evidence=/private/tmp/edu-skill-evals-20261012/fixtures/skills/evidence-search --source planner=/private/tmp/edu-skill-evals-20261012/fixtures/skills/lesson-planner --source pdf=/private/tmp/edu-skill-evals-20261012/fixtures/skills/pdf-helper --source premium=/private/tmp/edu-skill-evals-20261012/fixtures/skills/link-only",
+    "category": "structural/provenance helper",
+    "exit_code": 0,
+    "artifact": "F-provenance-output.json"
+  }
+]

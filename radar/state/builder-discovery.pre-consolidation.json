@@ -1,0 +1,114 @@
+{
+  "last_run": {
+    "api_requests": 7,
+    "errors": [
+      {
+        "error": "GitHub API network error for https://api.github.com/repos/AgentTeam-TaichuAI/ScienceClaw: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+        "stage": "refresh:github-skill:1180557903:Skills/deep-research/SKILL.md"
+      },
+      {
+        "error": "GitHub API network error for https://api.github.com/repos/docsagent/docsagent: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+        "stage": "refresh:github-skill:1200375178:SKILL.md"
+      },
+      {
+        "error": "GitHub API network error for https://api.github.com/repos/morluto/rea: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+        "stage": "refresh:github-skill:1209966933:.agents/skills/reverse-engineer-anything/SKILL.md"
+      },
+      {
+        "error": "GitHub API network error for https://api.github.com/repos/Jia-Ethan/pavedpath-code: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+        "stage": "refresh:github-skill:1266855179:SKILL.md"
+      },
+      {
+        "error": "GitHub API network error for https://api.github.com/repos/anthropics/skills: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+        "stage": "source:anthropics/skills"
+      },
+      {
+        "error": "GitHub API network error for https://api.github.com/repos/gaia-research/skill-fuse: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+        "stage": "source:gaia-research/skill-fuse"
+      },
+      {
+        "error": "GitHub API network error for https://api.github.com/search/code?q=filename%3ASKILL.md%20mobile&per_page=8&page=1: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+        "stage": "builder-mobile-english"
+      },
+      {
+        "error": "GitHub API network error for https://api.github.com/search/code?q=filename%3ASKILL.md%20mobile&per_page=8&page=1: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+        "stage": "collection-stopped"
+      }
+    ],
+    "finished_at": "2026-11-02T17:05:35Z",
+    "manifest_attempts": 0,
+    "manifest_limit": 24,
+    "new_skills": 0,
+    "next_query_cursor": 36,
+    "queries": [
+      {
+        "kind": "skill",
+        "page": 1,
+        "query": "filename:SKILL.md mobile",
+        "query_id": "builder-mobile-english",
+        "status": "failed"
+      }
+    ],
+    "query_limit": 8,
+    "refreshed": 0,
+    "repository_observations": 0,
+    "request_limit": 100,
+    "skills_count": 181,
+    "sources": [],
+    "started_at": "2026-11-02T17:05:33Z",
+    "status": "partial"
+  },
+  "query_cursor": 36,
+  "query_pages": {},
+  "query_sample_offsets": {
+    "builder-accessibility-alternate": 2,
+    "builder-accessibility-english": 2,
+    "builder-accessibility-repos": 2,
+    "builder-arts-alternate": 2,
+    "builder-arts-english": 2,
+    "builder-arts-repos": 2,
+    "builder-computing-alternate": 2,
+    "builder-computing-english": 2,
+    "builder-computing-repos": 2,
+    "builder-higher-education-alternate": 2,
+    "builder-higher-education-english": 2,
+    "builder-higher-education-repos": 2,
+    "builder-humanities-alternate": 2,
+    "builder-humanities-english": 2,
+    "builder-humanities-repos": 2,
+    "builder-languages-alternate": 2,
+    "builder-languages-english": 2,
+    "builder-languages-repos": 2,
+    "builder-mathematics-alternate": 2,
+    "builder-mathematics-english": 2,
+    "builder-mathematics-repos": 2,
+    "builder-parents-alternate": 2,
+    "builder-parents-english": 2,
+    "builder-parents-repos": 2,
+    "builder-research-alternate": 2,
+    "builder-research-english": 2,
+    "builder-research-repos": 2,
+    "builder-science-alternate": 2,
+    "builder-science-english": 2,
+    "builder-science-repos": 2,
+    "builder-teachers-alternate": 2,
+    "builder-teachers-english": 2,
+    "builder-teachers-repos": 2,
+    "builder-web-alternate": 2,
+    "builder-web-english": 2,
+    "builder-web-repos": 2
+  },
+  "source_cursor": 12,
+  "source_offsets": {
+    "builder-openai": 4,
+    "builder-rea": 4,
+    "builder-vercel-design": 4,
+    "builder-vercel-finder": 3
+  },
+  "source_root_correction": {
+    "from": "skill-src",
+    "reason": "Current GitHub tree has moved manifests; retry exact source",
+    "repository": "morluto/rea",
+    "to": ".agents/skills"
+  }
+}

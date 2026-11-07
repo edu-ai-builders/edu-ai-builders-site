@@ -81,6 +81,7 @@ export default function BuildPage() {
           </div>
         </header>
 
+        <section className="builder-build-entry"><div><h2>想做一个自己的教育产品？</h2><p>搜索已有资源，选择一个具体场景，拿走开发计划与可复用 skills。</p></div><Link className="builder-secondary" href="/directory">打开 Skills 与构建助手 →</Link></section>
         <section className="audience-band" aria-labelledby="build-audience">
           <h2 id="build-audience">你卡在哪一句上？</h2>
           <p className="audience-lead">

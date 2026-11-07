@@ -1,0 +1,11 @@
+{
+  "prompt": "用提供的 family-worksheet.pdf 规划一个适合家庭的中英双语手机数学练习产品。没有 PDF 提取器，也不能查看 PDF 内容；先交一份有用的计划，第一版不要付费模型，最多三个候选，先尝试后提示。",
+  "raw_material": {
+    "filename": "family-worksheet.pdf",
+    "path": "/private/tmp/edu-skill-evals-20261012/final-forward/H/inputs/family-worksheet.pdf",
+    "fixture_origin": "independently authored PDF for boundary case; bytes supplied but not extracted or viewed",
+    "file_bytes_available": true,
+    "extractor_available": false,
+    "page_text_available": false
+  }
+}

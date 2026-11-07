@@ -1,0 +1,311 @@
+{
+  "schema_version": "edu-ai-builders.resource-review.v1",
+  "policy_version": "2026-11-06.1",
+  "purpose": "Reusable resources for personal learning, teaching, interdisciplinary research, educational software building and educational system administration.",
+  "inactive_software_days": 1095,
+  "scope_signals": {
+    "learning": "\\beducat\\w*|\\bedtech\\b|\\blearn(?:ing|er|ers)?\\b|\\bteach\\w*|\\bstudent\\w*|\\bclassroom\\b|\\bschool\\w*|\\bcurricul\\w*|\\btutor\\w*|\\blesson\\w*|\\bassessment\\b|\\bquiz\\w*|\\bexam\\w*|\\bhomework\\b|\\bflashcard\\w*|spaced repetition|\\bliteracy\\b|\\bpedagog\\w*|教育|教学|学习|课程|课堂|教师|学生|教材|备课|题库|考试|学校|\\bhomeschool\\w*|\\bexplain\\w*|\\bself[- ]directed\\b|\\btyping practice\\b|\\breading\\b|\\blanguage learning\\b|科普",
+    "research": "\\bresearch\\w*|\\bscientific\\b|\\bscience\\b|\\bbenchmark\\w*|\\bdataset\\w*|\\bcorpus\\b|\\bcorpora\\b|\\bcitation\\w*|\\bliterature\\b|\\bexperiment\\w*|\\bevaluation\\b|\\breproducib\\w*|machine learning|deep learning|neural network|\\bstatistic\\w*|\\balgebra\\b|\\bquantum\\b|\\bphysics\\b|\\bchemistry\\b|\\bbiology\\b|\\bneuroscien\\w*|\\blinguistic\\w*|\\bgeograph\\w*|knowledge tracing|研究|科研|科学|论文|文献|评测|基准|数据集|数学|物理|化学|生物|地理|\\bautoencoder\\w*|\\bmodel[- ]training\\b|\\bllm\\b|\\bmanuscript\\w*|\\blatex\\b|\\b(?:vision|nlp|ml)[- ]conference\\b",
+    "knowledge": "\\btextbook\\w*|\\bcourse\\w*|\\btutorial\\w*|\\bhandbook\\w*|\\bopen[- ]book\\b|\\bopen[- ]textbook\\b|knowledge[- ]graph|knowledge[- ]base|\\bself[- ]study\\b|\\bmentoring\\b|教材|教程|公开课|知识图谱|知识库|自学",
+    "building": "\\bframework\\w*|\\bsdk\\b|\\blibrar(?:y|ies)\\b|\\bcomponent\\w*|\\bagent\\w*|\\bskills?\\b|\\bfrontend\\b|\\bbackend\\b|\\bweb app\\b|\\breact\\b|\\bnext\\.js\\b|\\bflutter\\b|\\bswiftui\\b|\\btauri\\b|\\belectron\\b|\\brag\\b|\\bretrieval\\b|\\bvector database\\b|\\bocr\\b|\\bpdf\\b|\\bspreadsheet\\w*|\\bdocument\\w*|\\bvisuali[sz]\\w*|\\baccessibility\\b|\\bdebugg\\w*|\\bcode review\\b|\\btesting\\b|\\bcompiler\\b|\\bprogramming\\b|\\bsimulation\\b|\\bsimulator\\b|\\b3d\\b|\\bgraphics\\b|开发|组件|检索|文档|可视化|无障碍|调试|编程|仿真|\\bdesign system\\b|\\bui[- /]?ux\\b|\\bhtml\\b|\\bcss\\b|\\btypescript\\b|\\bmcp\\b|\\bcdp\\b|\\bbrowser\\b|\\bcode changes\\b|\\bpull request\\w*|\\bfeature branch\\b|\\bworkflow\\w*|\\bschema\\w*|\\bruntime\\b|\\bslides?\\b|\\bpresentation\\w*|\\bpowerpoint\\b|\\bpptx?\\b|\\banimat\\w*|\\bgif\\w*|generative art|algorithmic art|\\bai music\\b|\\bcompose\\b|幻灯片|演示|界面|图像|视频|工作流|评审|代码|作曲|音乐",
+    "operations": "system administration|\\bsysadmin\\b|configuration management|\\binfrastructure\\b|\\bdeployment\\b|\\bself[- ]host\\w*|\\bbackup\\w*|\\bmonitoring\\b|\\bobservability\\b|\\bauthentication\\b|\\bauthorization\\b|\\boauth\\b|\\bopenid\\b|\\bsso\\b|\\bidentity\\b|\\bsecrets management\\b|\\bworkflow automation\\b|\\btask automation\\b|learning management|student information system|\\blms\\b|\\blti\\b|\\bxapi\\b|\\bqti\\b|\\bweb conferencing\\b|\\bsurvey\\w*|\\blab management\\b|系统管理|运维|部署|备份|监控|身份认证|学习管理|问卷|\\bkubernetes\\b|\\bk8s\\b|\\brunbook\\w*|\\bautomation\\b"
+  },
+  "stable_material_signal": "\\bdataset\\w*|\\bbenchmark\\w*|\\bcorpus\\b|\\bcorpora\\b|\\btextbook\\w*|\\bopen[- ]book\\b|\\bhandbook\\w*|\\bcurricul\\w*|\\btutorial\\w*|\\bcourse\\b|knowledge[- ]graph|\\bawesome[- ]|教材|教程|课件|知识图谱|数据集|基准|题集",
+  "runtime_signal": "\\bapplication\\b|\\bapp\\b|\\bserver\\b|\\bplatform\\b|\\bsystem\\b|\\bframework\\b|\\bsdk\\b|\\blibrary\\b|\\bservice\\b|\\bcli\\b|\\bclient\\b|\\bbot\\b|\\bdriver\\b|\\bplugin\\b|\\bextension\\b|\\btool\\b|应用|平台|系统|服务|工具|插件",
+  "overrides": {
+    "openai/grade-school-math": {
+      "status": "include",
+      "reasons": [
+        "stable-research-dataset"
+      ],
+      "evidence": [
+        "https://github.com/openai/grade-school-math"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "Archived GSM8K source is a stable math dataset, not an abandoned runnable application. Dataset scope conditions remain separate."
+    },
+    "google-research-datasets/education-dialogue-dataset": {
+      "status": "include",
+      "reasons": [
+        "stable-tutoring-dialogue-dataset"
+      ],
+      "evidence": [
+        "https://github.com/google-research-datasets/Education-Dialogue-Dataset"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "Archived teacher-student dialogue data remains relevant for tutor research. Archival status does not establish data obsolescence."
+    },
+    "thu-keg/edukg": {
+      "status": "include",
+      "reasons": [
+        "stable-educational-knowledge-graph"
+      ],
+      "evidence": [
+        "https://github.com/THU-KEG/EDUKG"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "A K-12 educational knowledge graph remains in scope despite the 2022 last push. Availability, data currency and conditions need separate checks.",
+      "artifact_kind": "knowledge",
+      "reviewed_facets": {
+        "scenarios": [
+          "personal-learning",
+          "research"
+        ],
+        "capabilities": [
+          "knowledge-graph"
+        ]
+      }
+    },
+    "allenai/scifact": {
+      "status": "include",
+      "reasons": [
+        "stable-scientific-evidence-task"
+      ],
+      "evidence": [
+        "https://github.com/allenai/scifact"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "Scientific claim-verification data and models are relevant research materials despite the 2023 last push."
+    },
+    "openai/skills": {
+      "status": "review",
+      "reasons": [
+        "deprecated-catalog-use-current-source"
+      ],
+      "evidence": [
+        "https://github.com/openai/skills#readme",
+        "https://github.com/openai/plugins"
+      ],
+      "reviewed_at": "2026-11-06",
+      "replacement_url": "https://github.com/openai/plugins",
+      "note": "The official README marks this catalog deprecated and directs current examples to openai/plugins. Immutable pinned Skill references may remain included as historical source material; floating old catalog entries require migration review."
+    },
+    "hkuds/deeptutor": {
+      "status": "include",
+      "reasons": [
+        "personalized-tutoring-system"
+      ],
+      "evidence": [
+        "https://github.com/HKUDS/DeepTutor"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "Exact primary repository identifies lifelong personalized tutoring and recent activity. No application runtime test was performed.",
+      "artifact_kind": "application",
+      "reviewed_facets": {
+        "scenarios": [
+          "personal-learning",
+          "tutoring"
+        ]
+      }
+    },
+    "judyess/k12": {
+      "status": "exclude",
+      "reasons": [
+        "author-stopped-legacy-workflow"
+      ],
+      "evidence": [
+        "https://github.com/judyess/K12#readme"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "README describes a personal school-contact marketing scraper and explicitly says it was stopped when a dependency became defunct. Preserve history, hide from reusable defaults."
+    },
+    "imdhiru/backlinks": {
+      "status": "exclude",
+      "reasons": [
+        "unrelated-promotional-link-list"
+      ],
+      "evidence": [
+        "https://github.com/imdhiru/backlinks#readme"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "README is a list of auto-approved comment backlinks. It does not supply an educational, research or administration resource."
+    },
+    "harshamv/bangalore-startups-companies-list": {
+      "status": "exclude",
+      "reasons": [
+        "unrelated-company-directory"
+      ],
+      "evidence": [
+        "https://github.com/harshamv/Bangalore-startups-companies-list#readme"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "A commercial company list mentions education companies but supplies no open learning artifact or reusable implementation."
+    },
+    "marauderxtreme/video-game-radiostation-playlists": {
+      "status": "exclude",
+      "reasons": [
+        "unrelated-entertainment-playlists"
+      ],
+      "evidence": [
+        "https://github.com/MarauderXtreme/video-game-radiostation-playlists"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "Metadata describes recreation of game radio playlists on music platforms. No learning or agent-building role is documented."
+    },
+    "radubogdan/node-offliberty": {
+      "status": "review",
+      "reasons": [
+        "inactive-service-adapter-needs-current-use-case"
+      ],
+      "evidence": [
+        "https://github.com/radubogdan/node-offliberty#readme"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "The 2018 service adapter was recalled through k12.example-host text. A media-ingestion use case is possible, but current service compatibility was not checked."
+    },
+    "atharva-k12/typing-test": {
+      "status": "review",
+      "reasons": [
+        "inactive-learning-app-needs-current-instructions"
+      ],
+      "evidence": [
+        "https://github.com/Atharva-K12/Typing-Test"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "Typing practice can be relevant. No description or current reuse instructions are present in the collected metadata, so the 2021 project is not automatically rejected."
+    },
+    "daniel-reynolds-k12/python-random-quote": {
+      "status": "review",
+      "reasons": [
+        "old-course-exercise-needs-reuse-context"
+      ],
+      "evidence": [
+        "https://github.com/daniel-reynolds-k12/python-random-quote"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "Metadata links an introductory Python course exercise. Owner-name K12 is not a confirmed education capability, but the exercise may retain learning value."
+    },
+    "openai/plugins": {
+      "status": "include",
+      "reasons": [
+        "current-agent-skill-and-plugin-source"
+      ],
+      "evidence": [
+        "https://github.com/openai/plugins",
+        "https://github.com/openai/skills#readme"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "Current replacement named by the deprecated OpenAI Skills catalog. Individual component conditions and runtime compatibility remain separate.",
+      "artifact_kind": "index",
+      "reviewed_facets": {
+        "scenarios": []
+      }
+    },
+    "jupyterhub/jupyterhub": {
+      "status": "include",
+      "reasons": [
+        "shared-jupyter-learning-environments"
+      ],
+      "evidence": [
+        "https://github.com/jupyterhub/jupyterhub"
+      ],
+      "reviewed_at": "2026-11-06",
+      "artifact_kind": "application",
+      "reviewed_facets": {
+        "scenarios": [
+          "system-administration",
+          "learning-environments"
+        ]
+      }
+    },
+    "d2l-ai/d2l-en": {
+      "status": "include",
+      "reasons": [
+        "open-deep-learning-textbook"
+      ],
+      "evidence": [
+        "https://github.com/d2l-ai/d2l-en"
+      ],
+      "reviewed_at": "2026-11-06",
+      "artifact_kind": "knowledge",
+      "reviewed_facets": {
+        "scenarios": [
+          "personal-learning",
+          "research"
+        ],
+        "subjects": [
+          "computing"
+        ]
+      }
+    },
+    "openai/openai-agents-python": {
+      "status": "include",
+      "reasons": [
+        "reusable-agent-sdk"
+      ],
+      "evidence": [
+        "https://github.com/openai/openai-agents-python"
+      ],
+      "reviewed_at": "2026-11-06",
+      "artifact_kind": "library",
+      "reviewed_facets": {
+        "scenarios": []
+      }
+    },
+    "openai/openai-agents-js": {
+      "status": "include",
+      "reasons": [
+        "reusable-agent-sdk"
+      ],
+      "evidence": [
+        "https://github.com/openai/openai-agents-js"
+      ],
+      "reviewed_at": "2026-11-06",
+      "artifact_kind": "library",
+      "reviewed_facets": {
+        "scenarios": []
+      }
+    },
+    "openai/evals": {
+      "status": "include",
+      "reasons": [
+        "model-evaluation-framework"
+      ],
+      "evidence": [
+        "https://github.com/openai/evals"
+      ],
+      "reviewed_at": "2026-11-06",
+      "artifact_kind": "library",
+      "reviewed_facets": {
+        "scenarios": [
+          "research",
+          "evaluation"
+        ]
+      }
+    },
+    "github-skill:1158562609:skill.md": {
+      "status": "review",
+      "reasons": [
+        "trading-specific-role-needs-education-or-research-context"
+      ],
+      "evidence": [
+        "https://github.com/Degenapetrader/EVClaw/blob/main/SKILL.md"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "Current metadata describes a domain-specific workflow without an established role in learning, education research or educational operations. This is a contextual review decision, not a domain blacklist."
+    },
+    "repo:943184091": {
+      "status": "review",
+      "reasons": [
+        "crypto-reward-platform-needs-reuse-context"
+      ],
+      "evidence": [
+        "https://github.com/Pulsefy/Lumenpulse"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "Current metadata describes a domain-specific workflow without an established role in learning, education research or educational operations. This is a contextual review decision, not a domain blacklist."
+    },
+    "repo:1189732466": {
+      "status": "review",
+      "reasons": [
+        "sales-specific-workflow-needs-reuse-context"
+      ],
+      "evidence": [
+        "https://github.com/sales-skills/sales"
+      ],
+      "reviewed_at": "2026-11-06",
+      "note": "Current metadata describes a domain-specific workflow without an established role in learning, education research or educational operations. This is a contextual review decision, not a domain blacklist."
+    }
+  },
+  "editorial_review_days": 180
+}

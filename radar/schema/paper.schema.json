@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Education paper metadata",
+  "type": "object",
+  "required": [
+    "resource_id",
+    "arxiv_id",
+    "version",
+    "title",
+    "source_url",
+    "source",
+    "published_at",
+    "updated_at",
+    "verified_at",
+    "abstract",
+    "schema_version",
+    "first_seen_at",
+    "kind",
+    "authors",
+    "categories",
+    "metadata_license",
+    "content_license",
+    "related_resources",
+    "is_preprint",
+    "builder_use",
+    "evidence_limits",
+    "tags",
+    "discovery_queries"
+  ],
+  "properties": {
+    "resource_id": {
+      "type": "string"
+    },
+    "arxiv_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "published_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "verified_at": {
+      "type": "string"
+    },
+    "abstract": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "first_seen_at": {
+      "type": "string"
+    },
+    "kind": {
+      "const": "paper"
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "metadata_license": {
+      "const": "CC0-1.0"
+    },
+    "content_license": {
+      "type": "object",
+      "required": [
+        "status",
+        "reuse_condition"
+      ]
+    },
+    "related_resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "url",
+          "relation",
+          "evidence",
+          "availability",
+          "license"
+        ]
+      }
+    },
+    "is_preprint": {
+      "type": "boolean"
+    },
+    "builder_use": {
+      "type": "object",
+      "required": [
+        "status",
+        "suggestion",
+        "next_step"
+      ]
+    },
+    "evidence_limits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array"
+    },
+    "discovery_queries": {
+      "type": "array"
+    }
+  }
+}

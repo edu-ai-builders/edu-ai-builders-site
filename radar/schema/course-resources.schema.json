@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://edu-ai-builders.local/radar/course-resources.schema.json",
+  "title": "Radar course resource export v1",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "count", "resources"],
+  "properties": {
+    "schema_version": {"const": "radar.course-resources.v1"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "count": {"type": "integer", "minimum": 0},
+    "resources": {"type": "array", "items": {"$ref": "#/$defs/resource"}}
+  },
+  "$defs": {
+    "resource": {
+      "type": "object",
+      "required": ["id", "resource_key", "kind", "title", "repository", "source_url", "pinned_commit", "pinned_source_url", "license_scopes", "reuse_status", "reuse_conditions_zh", "reuse_steps_zh", "education_scenarios", "course_tags", "evidence", "first_seen", "last_verified_at", "last_active_at", "refresh_status"],
+      "properties": {
+        "id": {"type": "string"},
+        "resource_key": {"type": "string", "pattern": "^(repo:[0-9]+|github-skill:[0-9]+:.+)$"},
+        "kind": {"enum": ["repo", "dataset", "skill"]},
+        "title": {"type": "string"},
+        "repository": {"type": "string"},
+        "source_url": {"type": "string", "format": "uri"},
+        "pinned_commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "pinned_source_url": {"type": "string", "format": "uri"},
+        "reuse_status": {"enum": ["license-observed", "restricted", "link-only", "needs-review"]},
+        "refresh_status": {"enum": ["ok", "error"]},
+        "reuse_conditions_zh": {"type": "string"},
+        "reuse_steps_zh": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "education_scenarios": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "course_tags": {"type": "array", "items": {"type": "string"}},
+        "last_active_at": {"type": "string", "format": "date-time"},
+        "last_verified_at": {"type": "string", "format": "date-time"},
+        "first_seen": {"type": "string", "format": "date-time"},
+        "license_scopes": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "required": ["path", "label", "covers", "verified", "sha256", "source_url"],
+            "properties": {
+              "path": {"type": "string"}, "label": {"type": "string"}, "covers": {"type": "string"},
+              "verified": {"type": "boolean"}, "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+              "source_url": {"type": "string", "format": "uri"}
+            }
+          }
+        },
+        "evidence": {"type": "array", "items": {"type": "object", "required": ["path", "source_url", "sha256", "observed_at"]}}
+      }
+    }
+  }
+}

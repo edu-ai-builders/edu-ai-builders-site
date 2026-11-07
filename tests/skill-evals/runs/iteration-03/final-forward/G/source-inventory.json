@@ -1,0 +1,150 @@
+{
+  "schema_version": "edu.repo-snapshot.v1",
+  "root": "/Users/yismacmini4/Documents/ChatGPT/Edu-Ai-Builders/apps/site-original",
+  "git": {
+    "repository_root": "/Users/yismacmini4/Documents/ChatGPT/Edu-Ai-Builders/apps/site-original",
+    "source_prefix": ".",
+    "revision": "1a1367a0ea39f7086651056a66861cb592e583f7",
+    "worktree_status": "M README.md\n M app/build/page.tsx\n M app/changelog/page.tsx\n M app/components/site-footer.tsx\n M app/components/site-header.tsx\n M app/i18n/server.ts\n M app/layout.tsx\n M app/page.tsx\n M app/sitemap.ts\n M scripts/check-translations.mjs\n?? CLAUDE.md\n?? app/api/\n?? app/components/builder-guide.tsx\n?? app/content/builder-scenarios.ts\n?? app/i18n/builder.en.json\n?? app/lib/builder-catalog.ts\n?? app/lib/builder-core.ts\n?? app/lib/builder-download.ts\n?? app/lib/builder-projects.ts\n?? app/skills/\n?? docs/builder-mvp/\n?? packages/\n?? public/data/builder/\n?? public/downloads/\n?? scripts/package-builder-skills.py\n?? scripts/sync-builder-catalog.py\n?? tests/builder-tools.test.mjs\n?? tests/builder.test.mjs\n?? tests/skill-evals/\n?? tests/test_skill_workflows.py",
+    "state": "working-tree-observation"
+  },
+  "scope": {
+    "paths": [
+      "public/tools/fraction-bars.html",
+      "app/use/[slug]/page.tsx",
+      "app/content/resources.ts",
+      "app/components/resource-preview.tsx",
+      "tests/math-tools.test.mjs",
+      "docs/tool-source-manifest.json"
+    ],
+    "literal_queries": [
+      "showFeedback",
+      "fraction-bars"
+    ],
+    "max_files": 300,
+    "max_bytes": 2000000,
+    "max_file_bytes": 256000,
+    "max_matches": 60
+  },
+  "coverage": {
+    "enumeration_complete": true,
+    "stop_reason": null,
+    "matches_complete": true,
+    "read_bytes": 106279,
+    "visited_files": 6
+  },
+  "files": [
+    {
+      "path": "public/tools/fraction-bars.html",
+      "sha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+      "bytes": 71569,
+      "lines": 348,
+      "matches": [
+        {
+          "line": 307,
+          "queries": [
+            "showFeedback"
+          ],
+          "text": "  showFeedback();",
+          "excerpt_truncated": false
+        },
+        {
+          "line": 311,
+          "queries": [
+            "showFeedback"
+          ],
+          "text": "function showFeedback(){",
+          "excerpt_truncated": false
+        },
+        {
+          "line": 345,
+          "queries": [
+            "showFeedback"
+          ],
+          "text": "setup(); draw(); showFeedback();",
+          "excerpt_truncated": false
+        }
+      ]
+    },
+    {
+      "path": "app/use/[slug]/page.tsx",
+      "sha256": "8ea4b26599144d34c9eb59446978aa7e71747e180476a2a51d4c8b7313aafbd0",
+      "bytes": 2509,
+      "lines": 31,
+      "matches": []
+    },
+    {
+      "path": "app/content/resources.ts",
+      "sha256": "d657d94df1178021465af45a5636b33b8f132a82c72de8ce9d8b9792c4442d40",
+      "bytes": 9142,
+      "lines": 206,
+      "matches": [
+        {
+          "line": 21,
+          "queries": [
+            "fraction-bars"
+          ],
+          "text": "    id: \"fraction-bars\",",
+          "excerpt_truncated": false
+        },
+        {
+          "line": 24,
+          "queries": [
+            "fraction-bars"
+          ],
+          "text": "    href: \"/use/fraction-bars\",",
+          "excerpt_truncated": false
+        },
+        {
+          "line": 33,
+          "queries": [
+            "fraction-bars"
+          ],
+          "text": "    artifactPath: \"/tools/fraction-bars.html\",",
+          "excerpt_truncated": false
+        }
+      ]
+    },
+    {
+      "path": "app/components/resource-preview.tsx",
+      "sha256": "821aa799b15ee78f17fe3469e5396a3904ddf83bfd3cd719e353c716637a5f65",
+      "bytes": 9812,
+      "lines": 343,
+      "matches": [
+        {
+          "line": 5,
+          "queries": [
+            "fraction-bars"
+          ],
+          "text": "  const fractions = id === \"fraction-bars\";",
+          "excerpt_truncated": false
+        }
+      ]
+    },
+    {
+      "path": "tests/math-tools.test.mjs",
+      "sha256": "9fc4c96e7e096cf4d87049b36e9befacfb778d446f5ae45a2ffa2b392ec067bd",
+      "bytes": 7273,
+      "lines": 100,
+      "matches": []
+    },
+    {
+      "path": "docs/tool-source-manifest.json",
+      "sha256": "b3a673735a0badda0c2753cd0402ce7de225f0d05afaed30a82a8741d13e8555",
+      "bytes": 5974,
+      "lines": 68,
+      "matches": [
+        {
+          "line": 6,
+          "queries": [
+            "fraction-bars"
+          ],
+          "text": "      \"output\": \"public/tools/fraction-bars.html\",",
+          "excerpt_truncated": false
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "runtime_tested": false
+}

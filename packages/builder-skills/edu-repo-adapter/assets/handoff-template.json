@@ -1,0 +1,11 @@
+{
+  "schema_version": "edu.repo-handoff.v1",
+  "mode": "redesign",
+  "goal": "",
+  "sources": [],
+  "capabilities": [],
+  "connections": [],
+  "verification": [],
+  "runtime_tested": false,
+  "status": "draft"
+}

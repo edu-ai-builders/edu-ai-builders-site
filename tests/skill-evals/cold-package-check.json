@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "method": "extract distributed ZIPs and run their helpers in a temporary working directory",
+  "checks": [
+    {
+      "tool": "repo_evidence.py",
+      "exit_code": 0,
+      "valid": true
+    },
+    {
+      "tool": "fusion_provenance.py",
+      "exit_code": 0,
+      "valid": true
+    }
+  ],
+  "dependencies": "Python standard library; sources are other extracted first-party ZIPs or explicitly supplied website source"
+}

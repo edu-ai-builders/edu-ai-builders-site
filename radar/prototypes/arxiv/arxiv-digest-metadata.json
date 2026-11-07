@@ -1,0 +1,15 @@
+{
+  "full_name": "ibaaj/arxiv-digest",
+  "html_url": "https://github.com/ibaaj/arxiv-digest",
+  "pushed_at": "2026-05-21T22:46:20Z",
+  "updated_at": "2026-08-25T12:48:01Z",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "default_branch": "main"
+}

@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-11-06T23:41:34Z",
+  "queries": [],
+  "sources": [
+    {
+      "source_id": "builder-openai-zotero",
+      "available_manifests": 1
+    },
+    {
+      "source_id": "builder-openai-life-science",
+      "available_manifests": 50
+    }
+  ],
+  "errors": [],
+  "manifest_attempts": 6,
+  "refreshed": 6,
+  "new_skills": 3,
+  "repository_observations": 4,
+  "request_limit": 35,
+  "manifest_limit": 12,
+  "query_limit": 0,
+  "finished_at": "2026-11-06T23:41:42Z",
+  "api_requests": 18,
+  "skills_count": 184,
+  "next_query_cursor": 0,
+  "status": "complete"
+}

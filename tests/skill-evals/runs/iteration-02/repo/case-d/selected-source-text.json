@@ -1,0 +1,32 @@
+[
+  {
+    "repository": "practice",
+    "path": "README.md",
+    "contents": "# Practice component\nPython 3, no third-party dependencies. `render(problem)` currently shows verdict and explanation immediately. `compare(left, right)` receives two (numerator, denominator) tuples. Run `python3 test_fractions.py`.\n"
+  },
+  {
+    "repository": "practice",
+    "path": "fractions_logic.py",
+    "contents": "\"\"\"Fraction comparison used by the current practice page.\"\"\"\nfrom fractions import Fraction\n\ndef compare(left, right):\n    a, b = Fraction(*left), Fraction(*right)\n    return 'greater' if a > b else 'less' if a < b else 'equal'\n\ndef explanation(left, right):\n    if left[1] == right[1]:\n        larger = 'A' if left[0] > right[0] else 'B'\n        return f'{larger} has more equal-sized parts.'\n    return f'The comparison is {compare(left, right)}.'\n\ndef render(problem):\n    return {'verdict': compare(*problem), 'explanation': explanation(*problem)}\n"
+  },
+  {
+    "repository": "retriever",
+    "path": "README.md",
+    "contents": "# Retriever\nPython, callable library. Returns text, source.document_id, source.page and score. License: code MIT. `sample_documents.json` is separately licensed for noncommercial use. No OAuth, UI or HTML renderer is provided.\n"
+  },
+  {
+    "repository": "retriever",
+    "path": "query.py",
+    "contents": "\"\"\"A small retrieval candidate; no server execution is necessary for inspection.\"\"\"\ndef retrieve(query, documents):\n    return [{'text': d['text'], 'source': {'document_id': d['id'], 'page': d['page']}, 'score': 0.8}\n            for d in documents if query.lower() in d['text'].lower()]\n"
+  },
+  {
+    "repository": "viewer",
+    "path": "README.md",
+    "contents": "# Answer viewer\nJavaScript, no dependencies. Expects {answer: string, citations: [{url, label}]} and returns HTML. Callers decide whether supplied values are trusted. This is a display component, not a retriever.\n"
+  },
+  {
+    "repository": "viewer",
+    "path": "answer.mjs",
+    "contents": "export function renderAnswer(answer) {\n  const citations = answer.citations.map(c => `<a href=\"${c.url}\">${c.label}</a>`).join('');\n  return `<article>${answer.answer}${citations}</article>`;\n}\n"
+  }
+]

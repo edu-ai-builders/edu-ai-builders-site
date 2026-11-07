@@ -1,0 +1,23 @@
+# Education Skills Radar data quality report
+
+- Generated: `2026-11-02T17:04:53Z`
+- Total metadata records: **181**
+- Structural validation problems: **0**
+
+## Source distribution
+
+- Source repositories: `{'1carusalwayswa/apply': 1, 'AIScientists-Dev/academic-humanizer': 1, 'AgentTeam-TaichuAI/ScienceClaw': 1, 'AlphaLab-USTC/ResearchClaw': 1, 'BayramAnnakov/claude-reflect': 1, 'BiFangKNT/mtga': 1, 'Degenapetrader/EVClaw': 1, 'DenisSergeevitch/repo-task-proof-loop': 1, 'Dicklesworthstone/cass_memory_system': 1, 'GetStream/Vision-Agents': 1, 'HBAI-Ltd/Toonflow-app': 1, 'HKUDS/DeepTutor': 1, 'Haojae/scipilot-figure-skill': 1, 'Jane-xiaoer/claude-skill-web-clone': 1, 'Jia-Ethan/pavedpath-code': 1, 'Kaushik2003/stacy-v2': 1, 'LearnPrompt/luban-skill': 1, 'LeoYeAI/openclaw-master-skills': 2, 'LoopyLuci/Skills': 1, 'MADEVAL/Pre-Mortem-Skill': 1, 'MatrixAges/polywise': 1, 'Norman-bury/research-writing-skill': 1, 'NousResearch/hermes-agent': 1, 'SenseTime-Copilot/raccoon-ppt-skill': 1, 'ShawnPana/phone-harness': 1, 'SimonsTang/feifei-companion': 1, 'SiriusFzh/NovaForge': 1, 'Spark-To-Paper-Skills/paperjury': 1, 'Synta-ai/n8n-mcp-rules': 1, 'Taimoor-Ahmad3555/SunFlowerAndRose_Detector': 1, 'TuYv/ccpm': 1, 'Unclecheng-li/AI_Animation': 2, 'XBuilderLAB/cheat-on-money': 1, 'Yonkoo11/hermes-dojo': 1, 'ZeKaiNie/universal-examprep-skill': 2, 'adamlyttleapps/claude-skill-app-onboarding-questionnaire': 1, 'aiwithremy/claude-skills-llm-council': 1, 'akseolabs-seo/AK-Threads-booster': 1, 'alchaincyf/huashu-skills': 2, 'alirezarezvani/claude-skills': 1, 'andyhuo520/aetherviz-master': 1, 'anthropics/skills': 19, 'architkhatri98/job-search-automation_ind': 1, 'beita6969/ScienceClaw': 1, 'bevibing/socrates-skill': 1, 'bioinf-jku/SNNs': 1, 'browser-use/browser-harness': 1, 'butterbase-ai/butterbase': 1, 'chituai/prd-writer': 1, 'compound-life-ai/Turri': 1, 'digoal/blog': 4, 'docsagent/docsagent': 1, 'easysoft/zui': 2, 'eclipse-rdf4j/rdf4j': 1, 'foryourhealth111-pixel/Vibe-Skills': 1, 'geekjourneyx/interactive-learning': 1, 'glebis/claude-skills': 1, 'guillermobustamante/BOMComparevX': 1, 'hardhackerlabs/podwise-cli': 1, 'hashintel/hash': 1, 'hyz1992/agent-app-factory': 1, 'jackwener/boss-cli': 1, 'jkitchin/litdb': 1, 'karanb192/algo-sensei': 1, 'katanemo/plano': 1, 'kerim/zotero-code-execution': 1, 'kevintsai1202/teaching-site-skills': 1, 'leandronsp/aspirina': 1, 'liveloveapp/hashbrown': 1, 'liza-mas/liza': 1, 'majiayu000/claude-skill-registry': 1, 'markdown-viewer/skills': 1, 'marswaveai/skills': 1, 'morluto/rea': 3, 'muxuuu/serenity-skill': 1, 'mvilrokx/runegard': 1, 'nevalang/neva': 1, 'om-scogo/skillsh-scraper': 1, 'openai/skills': 44, 'paveld033-del/diplom': 1, 'quran/quran.com-frontend-next': 1, 'runningZ1/union-search-skill': 1, 'salmandev/arabic-skills-library': 1, 'sanyuan0704/sanyuan-skills': 1, 'showdownagain/wangluoxiaoshuozhushou': 1, 'sssssswh/sssssswh.github.io': 1, 'stas00/ml-engineering': 1, 'stas00/the-art-of-debugging': 1, 'swarm-ai-research/swarm': 1, 'talmolab/sleap': 1, 'tgkprog/AI-snippets': 1, 'tools-only/X-Skills': 1, 'vercel-labs/agent-skills': 4, 'vercel-labs/skills': 1, 'voidful/hung-yi-lee-skill': 1, 'wanyichen06/LLMInternSkill': 1, 'weponusa/teachany': 1, 'woocommerce/woocommerce-ios': 1, 'wwwzhouhui/skills_collection': 1, 'xdevplatform/xurl': 1, 'xiaotianfotos/OPC': 1, 'xiaotianfotos/skills': 1, 'xjtulyc/MedgeClaw': 1, 'xr843/Master-skill': 1, 'yutkat/my-neovim-pluginlist': 1, 'zarazhangrui/codebase-to-course': 1, 'zhiliscope/baiyueguang-learning-skill': 1}`
+- Ecosystem labels: `{'agent-skills': 141, 'chatgpt': 38, 'claude': 25, 'codex': 52}`
+- Compatibility confidence: `{'inferred': 122, 'source_declared': 59}`
+- Resource hints: `{'scripts': 49, 'references': 57, 'assets': 44}`
+
+## Collection boundary
+
+Records contain only public SKILL.md frontmatter, source-repository metadata,
+and directory-structure hints. They do not store a skill body, scripts, assets,
+or references. `inferred` compatibility comes from public path/query context and
+is not a guarantee that a skill works in an agent runtime.
+
+## Structural problems
+
+- None.

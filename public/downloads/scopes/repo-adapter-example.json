@@ -1,0 +1,75 @@
+{
+  "schema_version": "edu.capability-map.v1",
+  "status": "source-inspected-plan-not-implemented",
+  "mode": "redesign",
+  "target": "Adapt fraction comparison to staged hints",
+  "source": {
+    "repository": "edu-ai-builders-site (local checkout)",
+    "revision": "1a1367a0ea39f7086651056a66861cb592e583f7",
+    "path": "public/tools/fraction-bars.html",
+    "sha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b"
+  },
+  "capabilities": [
+    {
+      "name": "fraction-comparison",
+      "evidence": [
+        {
+          "symbol": "showFeedback",
+          "line": 311,
+          "type": "source-observation"
+        },
+        {
+          "symbol": "updateDisplay",
+          "line": 295,
+          "type": "source-observation"
+        }
+      ],
+      "inputs": [
+        "nA/dA",
+        "nB/dB"
+      ],
+      "outputs": [
+        "verdict text",
+        "concept feedback"
+      ],
+      "decision": "adapter",
+      "retain": [
+        "fraction comparison",
+        "slider numerator bounds"
+      ],
+      "change": [
+        "separate attempt/hint state from rendering",
+        "gate verdict until an attempt",
+        "reset hint state on problem changes"
+      ],
+      "unknowns": [
+        "integration with new hint state is untested"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "evidence": "updateDisplay calls showFeedback; initialization calls showFeedback",
+      "implication": "feedback is immediately visible; staged reveal requires a behavior change"
+    },
+    {
+      "evidence": "showFeedback same-denominator branch picks B as larger even when numerators are equal",
+      "implication": "verify equal-fraction feedback before reuse; do not preserve an incorrect explanation"
+    }
+  ],
+  "interfaces": [
+    {
+      "from": "problem change",
+      "to": "hint state",
+      "contract": "reset hint level and attempt; render comparison only after an attempt"
+    }
+  ],
+  "acceptance": [
+    "1/2 vs 2/4: equal; no larger-fraction explanation",
+    "1/2 vs 3/4: less",
+    "3/4 vs 1/2: greater",
+    "a new problem clears prior hints",
+    "keyboard operation and narrow viewport"
+  ],
+  "runtime_tested": false
+}

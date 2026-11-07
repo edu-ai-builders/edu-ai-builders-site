@@ -17,6 +17,8 @@ export default function SiteFooter() {
         <p>让教育想法成为可以学习、使用、构建和检验的作品。</p>
       </div>
       <nav aria-label="页脚导航">
+        <Link href="/directory">Skills 与构建资源</Link>
+        <Link href="/skills/projects">我的方案</Link>
         <Link href="/atlas">学习科学 Atlas</Link>
         <Link href="/learning-sciences">完整知识库</Link>
         <Link href="/changelog">更新日志</Link>

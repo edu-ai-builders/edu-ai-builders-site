@@ -1,0 +1,18 @@
+{
+  "schema_version": "edu.fusion-record.v1",
+  "readiness": "draft",
+  "workload": {
+    "purpose": "",
+    "trigger": "",
+    "exclusions": [],
+    "inputs": [],
+    "outputs": [],
+    "constraints": [],
+    "precedence": []
+  },
+  "sources": [],
+  "decisions": [],
+  "conflicts": [],
+  "acceptance_cases": [],
+  "upstream_map": []
+}

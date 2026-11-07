@@ -1,0 +1,13 @@
+{
+  "adapter_helper": "passed source grounding and record structure",
+  "fusion_helper": "passed provenance and record consistency",
+  "source_integrity": "passed",
+  "G_baseline": "5 passed, 1 pre-existing explanation failure",
+  "G_redesign_application": "not-run (plan-only)",
+  "G_browser_and_localization": "not-run",
+  "H_actual_task_outputs": "3 same-agent manual walkthroughs passed",
+  "H_pdf_extraction": "blocked (actual binary PDF fixture; no extractor/viewer/page text)",
+  "H_bilingual_mobile_product_runtime": "not-run",
+  "H_independent_agent_execution": "not-run",
+  "H_benchmark_learning_or_efficiency": "not-collected"
+}

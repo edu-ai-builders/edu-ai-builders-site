@@ -1,0 +1,120 @@
+{
+  "schema_version": "edu.skill-forward-cases.v1",
+  "cases": [
+    {
+      "id": "A",
+      "skill": "repo-adapter",
+      "iteration": "01",
+      "task": "将分数比较 redesign 为两层提示，保留数学接口；分析不改原代码",
+      "raw_inputs": "fixtures/repos/practice",
+      "checks": [
+        "发现真实符号和基线失败",
+        "保留 compare 签名",
+        "分开已运行与未运行",
+        "来源不变"
+      ],
+      "artifact": "runs/iteration-01/repo/task-a-handoff.md"
+    },
+    {
+      "id": "B",
+      "skill": "repo-adapter",
+      "iteration": "01",
+      "task": "商业科学问答，组合检索与显示、保留页码、处理不可信 HTML",
+      "raw_inputs": "fixtures/repos/retriever + viewer",
+      "checks": [
+        "数据形状 adapter",
+        "页码来源",
+        "排除 NC 样例",
+        "实际有限集成运行"
+      ],
+      "artifact": "runs/iteration-01/repo/task-b-handoff.md"
+    },
+    {
+      "id": "C",
+      "skill": "repo-adapter",
+      "iteration": "02",
+      "task": "纯 refactor 分析，保持当前 render 时机和返回行为",
+      "raw_inputs": "fixtures/repos/practice",
+      "checks": [
+        "既有失败不被当成本次回归",
+        "不顺手改变交互",
+        "JSON 证据验证",
+        "输入不变"
+      ],
+      "artifact": "runs/iteration-02/repo/case-c/handoff.json"
+    },
+    {
+      "id": "D",
+      "skill": "repo-adapter",
+      "iteration": "02",
+      "task": "限定小预算寻找光学仿真，不扩大读取、不执行代码",
+      "raw_inputs": "fixtures/repos/*",
+      "checks": [
+        "6 文件 1706 字节范围",
+        "未命中返回 unresolved",
+        "不声称全仓库无能力",
+        "runtime_tested=false"
+      ],
+      "artifact": "runs/iteration-02/repo/case-d/handoff.json"
+    },
+    {
+      "id": "E",
+      "skill": "skill-fusion",
+      "iteration": "02",
+      "task": "教师科学 Web 工作方法；最多两候选，先判断后证据，无付费模型",
+      "raw_inputs": "fixtures/skills/*",
+      "checks": [
+        "不照搬十候选默认",
+        "不强套数学提示",
+        "PDF 缺工具降级",
+        "目录摘要不融合成正文",
+        "来源维护映射"
+      ],
+      "artifact": "runs/iteration-02/fusion/case-e/teacher-science-activity/fusion-record.json"
+    },
+    {
+      "id": "F",
+      "skill": "skill-fusion",
+      "iteration": "02",
+      "task": "首次展示既必须显示完整答案又必须不显示，两项均硬要求",
+      "raw_inputs": "fixtures/skills/*",
+      "checks": [
+        "保留冲突",
+        "交付可用准备材料",
+        "学习者流程保持 blocked/draft",
+        "不制造通过"
+      ],
+      "artifact": "runs/iteration-02/fusion/case-f/teacher-science-activity-conflict/fusion-record.json"
+    },
+    {
+      "id": "G",
+      "skill": "repo-adapter",
+      "iteration": "03",
+      "task": "真实网站分数条源码的分层提示 redesign",
+      "raw_inputs": "public/tools/fraction-bars.html",
+      "checks": [
+        "真实文件与哈希",
+        "真实 caller/evidence",
+        "保留比较数学",
+        "范围和检查类别明确"
+      ],
+      "artifact": "runs/iteration-03/final-forward"
+    },
+    {
+      "id": "H",
+      "skill": "skill-fusion",
+      "iteration": "03",
+      "task": "使用项目真实 Search/Plan 方法生成家庭数学 skill 并走查自有题目、缺 PDF 工具和不适用任务",
+      "raw_inputs": "packages/builder-skills/edu-resource-search + edu-design-plan",
+      "checks": [
+        "至多三候选",
+        "先尝试再提示",
+        "无付费依赖",
+        "完整相关方法来源",
+        "独立包与可核对记录"
+      ],
+      "artifact": "runs/iteration-03/final-forward"
+    }
+  ],
+  "additional_baseline_fusion": "runs/iteration-01/fusion: family math fusion, four walkthroughs and separate orchestration-only output"
+}

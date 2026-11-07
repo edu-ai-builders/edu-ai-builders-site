@@ -1,0 +1,10 @@
+{
+  "name": "@edu-ai-builders/catalog-tools",
+  "version": "0.1.0",
+  "description": "Read-only CLI and stdio MCP adapter for the Edu AI Builders catalog API",
+  "type": "module",
+  "license": "MIT",
+  "engines": {"node": ">=22.13.0"},
+  "bin": {"edu-builder-catalog": "cli.mjs", "edu-builder-mcp": "mcp.mjs"},
+  "files": ["client.mjs", "cli.mjs", "mcp.mjs", "README.md", "LICENSE"]
+}

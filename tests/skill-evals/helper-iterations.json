@@ -1,0 +1,30 @@
+{
+  "iteration_01": {
+    "command": "python3 tests/test_skill_workflows.py",
+    "tests": 17,
+    "errors": 2,
+    "observed_failures": [
+      "requirement_ids containing dict raised TypeError",
+      "source_id containing dict raised TypeError"
+    ]
+  },
+  "iteration_02": {
+    "corrections": [
+      "typed IDs and requirements",
+      "malformed-record diagnostics",
+      "explicit read/reference drift and missing source checks"
+    ],
+    "tests": 23,
+    "errors": 0
+  },
+  "iteration_03": {
+    "added": [
+      "runtime claim gate",
+      "reproducible distribution excluding caches",
+      "symlink package exclusion",
+      "unversioned source remains explicit null with hash identity"
+    ],
+    "tests": 27,
+    "result": "27 tests passed, 0 errors"
+  }
+}

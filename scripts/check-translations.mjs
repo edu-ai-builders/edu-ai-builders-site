@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import ts from "typescript";
-const catalogs = ["common", "learning", "atlas", "directory", "courses"].map(
+const catalogs = ["common", "learning", "atlas", "directory", "courses", "builder"].map(
   (name) => JSON.parse(fs.readFileSync(`app/i18n/${name}.en.json`, "utf8")),
 );
 const messages = Object.assign({}, ...catalogs);
@@ -41,7 +41,9 @@ function scan(file) {
           key,
         );
     }
-    if (!ts.isTemplateExpression(node)) ts.forEachChild(node, visit);
+    if (ts.isTemplateExpression(node)) {
+      for (const span of node.templateSpans) visit(span.expression);
+    } else ts.forEachChild(node, visit);
   }
   visit(source);
 }

@@ -1,0 +1,1320 @@
+{
+  "collection_note": "Curated metadata and original reuse recipes; no code, dataset, Skill packages or instruction bodies. Educational scenarios are curator suggestions, not efficacy claims. license-observed means observed terms, not unconditional permission.",
+  "count": 13,
+  "generated_at": "2026-11-07T03:29:37Z",
+  "resources": [
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": true,
+      "course_tags": [
+        "evaluation",
+        "datasets",
+        "math"
+      ],
+      "demo_status": "not-declared",
+      "demo_url": null,
+      "education_scenarios": [
+        "math",
+        "assessment"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "README.md",
+          "sha256": "27e1676d572f2289210170ff6dbb8c2ef7d9f6950c0f08c978ea8ee6b39dca29",
+          "source_url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/README.md"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "LICENSE",
+          "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b",
+          "source_url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/LICENSE"
+        }
+      ],
+      "featured_rank": null,
+      "first_seen": "2026-10-10T14:46:23Z",
+      "github_repo_id": 419462905,
+      "id": "gsm8k",
+      "kind": "dataset",
+      "last_active_at": "2024-01-21T10:54:11Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "repository",
+          "label": "MIT",
+          "path": "LICENSE",
+          "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b",
+          "source_url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/LICENSE",
+          "verified": true
+        }
+      ],
+      "license_spdx_reported_by_github": null,
+      "pinned_commit": "3101c7d5072418e28b9008a6636bde82a006892c",
+      "pinned_source_url": "https://github.com/openai/grade-school-math/tree/3101c7d5072418e28b9008a6636bde82a006892c",
+      "primary_action": {
+        "kind": "view-data",
+        "label_en": "Inspect data",
+        "label_zh": "查看题目与数据说明",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/README.md"
+      },
+      "purpose_en": "Inspect grade-school math problems for reasoning error analysis.",
+      "purpose_zh": "小学数学文字题与答案，可用于推理错误分析和评估练习。",
+      "quick_start": {
+        "commands": [],
+        "mode": "data",
+        "requirements_en": [
+          "JSONL reader or Python",
+          "Model endpoint for evaluations"
+        ],
+        "requirements_zh": [
+          "JSONL 阅读或 Python",
+          "评估模型时另需端点"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Inspect the official format and train/test files.",
+          "Keep tests held out and inspect answers."
+        ],
+        "steps_zh": [
+          "查看官方数据格式和训练/测试文件。",
+          "保持测试集独立，检查题目与答案格式。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "openai/grade-school-math",
+      "resource_key": "repo:419462905",
+      "reuse_conditions_zh": "仓库 LICENSE 为 MIT；保留版权与许可，下载时仍核实具体文件是否有额外条款。",
+      "reuse_status": "license-observed",
+      "reuse_steps_zh": [
+        "从固定提交读取 gsm8k 的训练与测试 JSONL。",
+        "保持训练和测试分离。",
+        "比较最终答案正确率与步骤解释质量。"
+      ],
+      "runtime_conditions_zh": "读取 JSONL 即可；公开基准可能存在模型训练污染，不代表真实学生学习效果。",
+      "setup_url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/README.md",
+      "source_code_url": "https://github.com/openai/grade-school-math",
+      "source_url": "https://github.com/openai/grade-school-math",
+      "stars": 1462,
+      "title": "GSM8K",
+      "verification_status": "verified"
+    },
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": false,
+      "course_tags": [
+        "datasets",
+        "multimodal",
+        "evaluation"
+      ],
+      "demo_status": "not-declared",
+      "demo_url": null,
+      "education_scenarios": [
+        "science",
+        "multimodal-assessment"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "README.md",
+          "sha256": "281397769efd1a3aad6ad12a065e4344025525acd4e973f9d8a72a2994649580",
+          "source_url": "https://github.com/lupantech/ScienceQA/blob/2cbf8318e07b9ece895bb2ae605e71e38d623264/README.md"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "LICENSE",
+          "sha256": "a9771b7b4c18faef027f12bbf0ded1b675b8cffc12d92227c9b1136007ad7b0f",
+          "source_url": "https://github.com/lupantech/ScienceQA/blob/2cbf8318e07b9ece895bb2ae605e71e38d623264/LICENSE"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "LICENSE-DATA",
+          "sha256": "fae845447443179ecda7a2cdaf6f305e92fe8fc1b7e0c5a8f39a2e4d5de9bfce",
+          "source_url": "https://github.com/lupantech/ScienceQA/blob/2cbf8318e07b9ece895bb2ae605e71e38d623264/LICENSE-DATA"
+        }
+      ],
+      "featured_rank": null,
+      "first_seen": "2026-10-10T14:46:23Z",
+      "github_repo_id": 552715974,
+      "id": "scienceqa",
+      "kind": "dataset",
+      "last_active_at": "2024-09-19T03:47:50Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "code",
+          "label": "MIT",
+          "path": "LICENSE",
+          "sha256": "a9771b7b4c18faef027f12bbf0ded1b675b8cffc12d92227c9b1136007ad7b0f",
+          "source_url": "https://github.com/lupantech/ScienceQA/blob/2cbf8318e07b9ece895bb2ae605e71e38d623264/LICENSE",
+          "verified": true
+        },
+        {
+          "covers": "data",
+          "label": "CC-BY-NC-SA-4.0",
+          "path": "LICENSE-DATA",
+          "sha256": "fae845447443179ecda7a2cdaf6f305e92fe8fc1b7e0c5a8f39a2e4d5de9bfce",
+          "source_url": "https://github.com/lupantech/ScienceQA/blob/2cbf8318e07b9ece895bb2ae605e71e38d623264/LICENSE-DATA",
+          "verified": true
+        }
+      ],
+      "license_spdx_reported_by_github": "MIT",
+      "pinned_commit": "2cbf8318e07b9ece895bb2ae605e71e38d623264",
+      "pinned_source_url": "https://github.com/lupantech/ScienceQA/tree/2cbf8318e07b9ece895bb2ae605e71e38d623264",
+      "primary_action": {
+        "kind": "view-data",
+        "label_en": "Inspect data terms",
+        "label_zh": "查看数据与限制",
+        "url": "https://github.com/lupantech/ScienceQA/blob/2cbf8318e07b9ece895bb2ae605e71e38d623264/README.md"
+      },
+      "purpose_en": "Inspect multimodal science questions; data has noncommercial restrictions.",
+      "purpose_zh": "含图文上下文的科学问答数据，适合多模态题目与解释评估。",
+      "quick_start": {
+        "commands": [],
+        "mode": "data",
+        "requirements_en": [
+          "Noncommercial use conditions",
+          "Download and storage"
+        ],
+        "requirements_zh": [
+          "非商业用途条件",
+          "数据下载与存储"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Review noncommercial data terms first.",
+          "Follow official data instructions and check content rights."
+        ],
+        "steps_zh": [
+          "先查看 LICENSE-DATA 的非商业限制。",
+          "按官方 README 获取数据并核实图片/题目使用范围。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "lupantech/ScienceQA",
+      "resource_key": "repo:552715974",
+      "restricted": true,
+      "reuse_conditions_zh": "代码 MIT；数据 CC-BY-NC-SA-4.0，须归属、非商业、相同方式共享；商业课程或产品先获取授权。",
+      "reuse_status": "restricted",
+      "reuse_steps_zh": [
+        "先核实非商业用途限制。",
+        "在公开题目上分开评价答案与解释。",
+        "发布派生数据时保留归属并采用相同许可。"
+      ],
+      "runtime_conditions_zh": "含外部数据下载；本次仅保存目录元数据，不下载题目或图片。",
+      "setup_url": "https://github.com/lupantech/ScienceQA/blob/2cbf8318e07b9ece895bb2ae605e71e38d623264/README.md",
+      "source_code_url": "https://github.com/lupantech/ScienceQA",
+      "source_url": "https://github.com/lupantech/ScienceQA",
+      "stars": 739,
+      "title": "ScienceQA",
+      "verification_status": "verified"
+    },
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": false,
+      "course_tags": [
+        "datasets",
+        "citations",
+        "evaluation"
+      ],
+      "demo_status": "not-declared",
+      "demo_url": null,
+      "education_scenarios": [
+        "science-literacy",
+        "evidence-checking"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "README.md",
+          "sha256": "3f0eb7f6d009b3785fede6592918b8b583e7193d26f14173fdf0c79aba1dcc79",
+          "source_url": "https://github.com/allenai/scifact/blob/68b98a56d93e0f9da0d2aab4e6c3294699a0f72e/README.md"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "LICENSE.md",
+          "sha256": "56ee69bc639cbab8f0b2e4b67091ec5e9390aa99a1d65f0a35e4274686c9a806",
+          "source_url": "https://github.com/allenai/scifact/blob/68b98a56d93e0f9da0d2aab4e6c3294699a0f72e/LICENSE.md"
+        }
+      ],
+      "featured_rank": null,
+      "first_seen": "2026-10-10T14:46:23Z",
+      "github_repo_id": 259442120,
+      "id": "scifact",
+      "kind": "dataset",
+      "last_active_at": "2023-10-15T18:32:12Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "claims-and-evidence-annotations",
+          "label": "CC-BY-4.0",
+          "path": "LICENSE.md",
+          "sha256": "56ee69bc639cbab8f0b2e4b67091ec5e9390aa99a1d65f0a35e4274686c9a806",
+          "source_url": "https://github.com/allenai/scifact/blob/68b98a56d93e0f9da0d2aab4e6c3294699a0f72e/LICENSE.md",
+          "verified": true
+        },
+        {
+          "covers": "abstracts",
+          "label": "ODC-By-1.0",
+          "path": "LICENSE.md",
+          "sha256": "56ee69bc639cbab8f0b2e4b67091ec5e9390aa99a1d65f0a35e4274686c9a806",
+          "source_url": "https://github.com/allenai/scifact/blob/68b98a56d93e0f9da0d2aab4e6c3294699a0f72e/LICENSE.md",
+          "verified": true
+        },
+        {
+          "covers": "code",
+          "label": "Apache-2.0",
+          "path": "LICENSE.md",
+          "sha256": "56ee69bc639cbab8f0b2e4b67091ec5e9390aa99a1d65f0a35e4274686c9a806",
+          "source_url": "https://github.com/allenai/scifact/blob/68b98a56d93e0f9da0d2aab4e6c3294699a0f72e/LICENSE.md",
+          "verified": true
+        }
+      ],
+      "license_spdx_reported_by_github": "NOASSERTION",
+      "pinned_commit": "68b98a56d93e0f9da0d2aab4e6c3294699a0f72e",
+      "pinned_source_url": "https://github.com/allenai/scifact/tree/68b98a56d93e0f9da0d2aab4e6c3294699a0f72e",
+      "primary_action": {
+        "kind": "view-data",
+        "label_en": "Inspect data guide",
+        "label_zh": "查看数据说明",
+        "url": "https://github.com/allenai/scifact/blob/68b98a56d93e0f9da0d2aab4e6c3294699a0f72e/README.md"
+      },
+      "purpose_en": "Study scientific claims and evidence with separate annotation and abstract licenses.",
+      "purpose_zh": "科学主张与支持/反驳证据数据，可用于信息素养与有依据回答的课程。",
+      "quick_start": {
+        "commands": [],
+        "mode": "data",
+        "requirements_en": [
+          "Component attribution",
+          "Python/JSONL"
+        ],
+        "requirements_zh": [
+          "组件许可归属",
+          "Python/JSONL"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Read official data acquisition instructions.",
+          "Track annotation and abstract licenses separately."
+        ],
+        "steps_zh": [
+          "查看 README 中的数据获取说明。",
+          "分别记录主张标注与摘要的许可。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "allenai/scifact",
+      "resource_key": "repo:259442120",
+      "reuse_conditions_zh": "主张及标注 CC BY 4.0，摘要 ODC-By 1.0，代码 Apache-2.0；按组件保留来源与许可。",
+      "reuse_status": "license-observed",
+      "reuse_steps_zh": [
+        "把主张标签和论文摘要作为两个许可范围记录。",
+        "让模型引用证据并判断支持或反驳。",
+        "检查引文能否实际支持结论。"
+      ],
+      "runtime_conditions_zh": "历史研究基准；维护活跃度和数据价值分开记录。",
+      "setup_url": "https://github.com/allenai/scifact/blob/68b98a56d93e0f9da0d2aab4e6c3294699a0f72e/README.md",
+      "source_code_url": "https://github.com/allenai/scifact",
+      "source_url": "https://github.com/allenai/scifact",
+      "stars": 281,
+      "title": "SciFact",
+      "verification_status": "verified"
+    },
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": false,
+      "course_tags": [
+        "rag",
+        "evaluation",
+        "advanced"
+      ],
+      "demo_status": "not-declared",
+      "demo_url": null,
+      "education_scenarios": [
+        "feedback",
+        "evaluation"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "README.md",
+          "sha256": "4bee0c96a98daa5521ef4dc9ead9640fdaafd75fe8d5c8896db383838d5fd76f",
+          "source_url": "https://github.com/stanfordnlp/dspy/blob/c4005960089acaf5b3b0c358fd5cf19b2152d68c/README.md"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "LICENSE",
+          "sha256": "fc84421fcf968a696680dacf66ad53db769f699f557690127c5ccb3f6358cfdb",
+          "source_url": "https://github.com/stanfordnlp/dspy/blob/c4005960089acaf5b3b0c358fd5cf19b2152d68c/LICENSE"
+        }
+      ],
+      "featured_rank": 6,
+      "first_seen": "2026-10-10T14:46:23Z",
+      "github_repo_id": 587050620,
+      "id": "dspy",
+      "kind": "repo",
+      "last_active_at": "2026-11-06T14:40:07Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "code",
+          "label": "MIT",
+          "path": "LICENSE",
+          "sha256": "fc84421fcf968a696680dacf66ad53db769f699f557690127c5ccb3f6358cfdb",
+          "source_url": "https://github.com/stanfordnlp/dspy/blob/c4005960089acaf5b3b0c358fd5cf19b2152d68c/LICENSE",
+          "verified": true
+        }
+      ],
+      "license_spdx_reported_by_github": "MIT",
+      "pinned_commit": "c4005960089acaf5b3b0c358fd5cf19b2152d68c",
+      "pinned_source_url": "https://github.com/stanfordnlp/dspy/tree/c4005960089acaf5b3b0c358fd5cf19b2152d68c",
+      "primary_action": {
+        "kind": "read-setup",
+        "label_en": "View setup",
+        "label_zh": "查看最短上手",
+        "url": "https://github.com/stanfordnlp/dspy/blob/c4005960089acaf5b3b0c358fd5cf19b2152d68c/README.md"
+      },
+      "purpose_en": "Build and evaluate model programs for feedback, retrieval and question answering.",
+      "purpose_zh": "构建并优化可评估的语言模型程序，适合检索问答和反馈生成实验。",
+      "quick_start": {
+        "commands": [
+          "pip install dspy"
+        ],
+        "mode": "library",
+        "requirements_en": [
+          "Python environment",
+          "Model endpoint; costs may apply"
+        ],
+        "requirements_zh": [
+          "Python 环境",
+          "模型端点和可能的费用"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Read installation and the minimal program in the pinned README.",
+          "Use an isolated Python environment and configure a model before running it."
+        ],
+        "steps_zh": [
+          "查看固定 README 的安装与最小程序。",
+          "安装到独立 Python 环境，配置可用模型，再运行示例。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "stanfordnlp/dspy",
+      "resource_key": "repo:587050620",
+      "reuse_conditions_zh": "保留 MIT 版权和许可；自有评估数据与模型服务条件另行确认。",
+      "reuse_status": "license-observed",
+      "reuse_steps_zh": [
+        "定义反馈质量评价规则。",
+        "在训练集优化提示，在独立保留集评价。",
+        "记录编译参数、模型和测试集版本。"
+      ],
+      "runtime_conditions_zh": "Python 和模型推理端点；该工具通用，教育适配是本目录的策展建议。",
+      "setup_url": "https://github.com/stanfordnlp/dspy/blob/c4005960089acaf5b3b0c358fd5cf19b2152d68c/README.md",
+      "source_code_url": "https://github.com/stanfordnlp/dspy",
+      "source_url": "https://github.com/stanfordnlp/dspy",
+      "stars": 38964,
+      "title": "DSPy",
+      "verification_status": "verified"
+    },
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": false,
+      "course_tags": [
+        "foundations",
+        "prompting",
+        "rag"
+      ],
+      "demo_status": "not-declared",
+      "demo_url": null,
+      "education_scenarios": [
+        "ai-literacy",
+        "teacher-development"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "README.md",
+          "sha256": "a57045087a78daa833312fe2f4f404427985d89457d86eabeb69722df010d109",
+          "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/README.md"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/LICENSE"
+        }
+      ],
+      "featured_rank": 4,
+      "first_seen": "2026-10-10T14:46:23Z",
+      "github_repo_id": 655806940,
+      "id": "genai-beginners",
+      "kind": "repo",
+      "last_active_at": "2026-11-05T03:43:23Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "repository",
+          "label": "MIT",
+          "path": "LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/LICENSE",
+          "verified": true
+        }
+      ],
+      "license_spdx_reported_by_github": "MIT",
+      "pinned_commit": "79a4334e158147d4f36c27d805e0cb163c1e445b",
+      "pinned_source_url": "https://github.com/microsoft/generative-ai-for-beginners/tree/79a4334e158147d4f36c27d805e0cb163c1e445b",
+      "primary_action": {
+        "kind": "view-course",
+        "label_en": "Open course",
+        "label_zh": "打开课程",
+        "url": "https://microsoft.github.io/generative-ai-for-beginners/"
+      },
+      "purpose_en": "Adapt an open introductory GenAI course and practical exercises.",
+      "purpose_zh": "可改编的生成式 AI 入门课程与练习。",
+      "quick_start": {
+        "commands": [],
+        "mode": "course",
+        "requirements_en": [
+          "No install for reading",
+          "Some exercises need model services"
+        ],
+        "requirements_zh": [
+          "阅读无需安装",
+          "部分练习需要模型服务"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Open the course and select an introductory lesson.",
+          "Check model service and key requirements before exercises."
+        ],
+        "steps_zh": [
+          "打开在线课程，选择入门单元。",
+          "做练习前查看对应模型服务和密钥要求。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "microsoft/generative-ai-for-beginners",
+      "resource_key": "repo:655806940",
+      "reuse_conditions_zh": "保留 MIT 版权和许可证；外部服务和链接资源遵循各自条款。",
+      "reuse_status": "license-observed",
+      "reuse_steps_zh": [
+        "选择入门与负责任使用单元。",
+        "用教师自有任务替换示例。",
+        "保留来源并记录课程改动。"
+      ],
+      "runtime_conditions_zh": "部分练习需要外部模型服务及密钥，离线读课件无需调用模型。",
+      "setup_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/README.md",
+      "source_code_url": "https://github.com/microsoft/generative-ai-for-beginners",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners",
+      "stars": 123076,
+      "title": "Generative AI for Beginners",
+      "verification_status": "verified"
+    },
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": false,
+      "course_tags": [
+        "tutoring",
+        "multimodal",
+        "prototype"
+      ],
+      "demo_access": "public-preview",
+      "demo_status": "page-reachable",
+      "demo_url": "https://open.maic.chat/",
+      "demo_verification": {
+        "browser_observation": "Public Discover cards, classroom topic input, and Login button visible. No generation or authenticated flow tested.",
+        "browser_observed_at": "2026-10-10",
+        "checked_at": "2026-11-07T03:28:40Z",
+        "declaration_observed": true,
+        "declaration_source": "https://github.com/THU-MAIC/OpenMAIC",
+        "generation_tested": false,
+        "http_status": 200,
+        "resolved_url": "https://open.maic.chat/",
+        "verification_level": "http-page-only"
+      },
+      "education_scenarios": [
+        "interactive-classroom",
+        "teacher-development"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "README.md",
+          "sha256": "30f1d08ccfa4338a1f1af065bff822b5e677f56214e4fe19218e8076fa0cfa69",
+          "source_url": "https://github.com/THU-MAIC/OpenMAIC/blob/5bd8cc840ee6397d063e1fe6aba974b9f0401593/README.md"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "LICENSE",
+          "sha256": "ba252563743227138231604c9138dd400faca5a10c3cf206b466e5466c565a19",
+          "source_url": "https://github.com/THU-MAIC/OpenMAIC/blob/5bd8cc840ee6397d063e1fe6aba974b9f0401593/LICENSE"
+        }
+      ],
+      "featured_rank": 1,
+      "first_seen": "2026-10-10T18:07:06Z",
+      "github_repo_id": 1178737655,
+      "id": "openmaic",
+      "kind": "repo",
+      "last_active_at": "2026-11-06T15:39:11Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "repository",
+          "label": "MIT",
+          "path": "LICENSE",
+          "sha256": "ba252563743227138231604c9138dd400faca5a10c3cf206b466e5466c565a19",
+          "source_url": "https://github.com/THU-MAIC/OpenMAIC/blob/5bd8cc840ee6397d063e1fe6aba974b9f0401593/LICENSE",
+          "verified": true
+        }
+      ],
+      "license_spdx_reported_by_github": "MIT",
+      "pinned_commit": "5bd8cc840ee6397d063e1fe6aba974b9f0401593",
+      "pinned_source_url": "https://github.com/THU-MAIC/OpenMAIC/tree/5bd8cc840ee6397d063e1fe6aba974b9f0401593",
+      "primary_action": {
+        "kind": "demo",
+        "label_en": "Try online",
+        "label_zh": "在线体验",
+        "url": "https://open.maic.chat/"
+      },
+      "purpose_en": "Generate a classroom with slides, quizzes and interactive scenes; browse public courses first.",
+      "purpose_zh": "输入主题或材料，生成幻灯片、互动场景与多 Agent 课堂；可先打开公开课程了解效果。",
+      "quick_start": {
+        "commands": [],
+        "mode": "online",
+        "requirements_en": [
+          "Browser and internet",
+          "Account/credit conditions for generation apply"
+        ],
+        "requirements_zh": [
+          "浏览器和网络",
+          "新建课程的登录/额度条件以服务为准"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Open the official site and choose a public course in Discover.",
+          "For new generation, check account, credits and model settings."
+        ],
+        "steps_zh": [
+          "打开官方页面，在 Discover 中选择一堂公开课程。",
+          "需要生成新课时，查看登录、额度和模型设置。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "THU-MAIC/OpenMAIC",
+      "resource_key": "repo:1178737655",
+      "reuse_conditions_zh": "保留 MIT 归属和许可；第三方模型、媒体和官方托管服务条款单独适用。",
+      "reuse_status": "license-observed",
+      "reuse_steps_zh": [
+        "先打开公开课程页，体验课程内容与互动场景。",
+        "需要二次开发时按固定提交的 README 配置模型和持久化。",
+        "区分云端 demo 的部署版本与当前源码，检查生成内容和引用。"
+      ],
+      "runtime_conditions_zh": "公开发现页可浏览；新建课堂可能需要登录、额度或模型配置。当前源码需要长期运行的服务和 PostgreSQL，云端 demo 仍显示较早版本。",
+      "setup_url": "https://github.com/THU-MAIC/OpenMAIC/blob/5bd8cc840ee6397d063e1fe6aba974b9f0401593/README.md",
+      "source_code_url": "https://github.com/THU-MAIC/OpenMAIC",
+      "source_url": "https://github.com/THU-MAIC/OpenMAIC",
+      "stars": 42837,
+      "title": "OpenMAIC",
+      "verification_status": "verified"
+    },
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": false,
+      "course_tags": [
+        "rag",
+        "tutoring",
+        "prototype"
+      ],
+      "demo_status": "not-declared",
+      "demo_url": null,
+      "education_scenarios": [
+        "adaptive-tutoring",
+        "assessment"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "README.md",
+          "sha256": "8e4c43d019e2f7ef6a9e6311dce3b424e63acc9e25771ec4b4f8d1a371168903",
+          "source_url": "https://github.com/zijinz456/OpenTutor/blob/153bac7d419b801d94fa3aef57d0f4e43fe286a5/README.md"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "LICENSE",
+          "sha256": "5352b49679829689da4fa2db47ad7c32d58cb6442859eafe2bc5ce8599c83e44",
+          "source_url": "https://github.com/zijinz456/OpenTutor/blob/153bac7d419b801d94fa3aef57d0f4e43fe286a5/LICENSE"
+        }
+      ],
+      "featured_rank": 3,
+      "first_seen": "2026-10-10T14:46:23Z",
+      "github_repo_id": 1167667024,
+      "id": "opentutor",
+      "kind": "repo",
+      "last_active_at": "2026-11-06T22:05:13Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "repository",
+          "label": "MIT",
+          "path": "LICENSE",
+          "sha256": "5352b49679829689da4fa2db47ad7c32d58cb6442859eafe2bc5ce8599c83e44",
+          "source_url": "https://github.com/zijinz456/OpenTutor/blob/153bac7d419b801d94fa3aef57d0f4e43fe286a5/LICENSE",
+          "verified": true
+        }
+      ],
+      "license_spdx_reported_by_github": "MIT",
+      "pinned_commit": "153bac7d419b801d94fa3aef57d0f4e43fe286a5",
+      "pinned_source_url": "https://github.com/zijinz456/OpenTutor/tree/153bac7d419b801d94fa3aef57d0f4e43fe286a5",
+      "primary_action": {
+        "kind": "read-setup",
+        "label_en": "View setup",
+        "label_zh": "查看最短上手",
+        "url": "https://github.com/zijinz456/OpenTutor/blob/153bac7d419b801d94fa3aef57d0f4e43fe286a5/README.md"
+      },
+      "purpose_en": "Self-host an adaptive workspace with notes, quizzes, flashcards and cited tutoring.",
+      "purpose_zh": "把本地学习材料转成笔记、测验、闪卡和带引用的辅导对话。",
+      "quick_start": {
+        "commands": [
+          "git clone https://github.com/zijinz456/OpenTutor.git",
+          "cd OpenTutor",
+          "git checkout 153bac7d419b801d94fa3aef57d0f4e43fe286a5",
+          "cp .env.example .env",
+          "docker compose up -d --build"
+        ],
+        "local_url": "http://localhost:3001",
+        "mode": "self-host",
+        "requirements_en": [
+          "Docker and disk space",
+          "Local model or cloud endpoint",
+          "Install and inference time"
+        ],
+        "requirements_zh": [
+          "Docker 和磁盘空间",
+          "可用本地模型或云模型端点",
+          "安装与推理时间"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Prepare Docker and retrieve the pinned source.",
+          "Copy configuration, start services, and check your local or cloud model.",
+          "Open localhost:3001 with authorized learning materials."
+        ],
+        "steps_zh": [
+          "准备 Docker，获取固定提交的源码。",
+          "复制配置并启动服务，检查或配置本地模型/云模型。",
+          "打开 localhost:3001，上传获授权学习材料。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "zijinz456/OpenTutor",
+      "resource_key": "repo:1167667024",
+      "reuse_conditions_zh": "复制或改编时保留版权与许可证；学习材料和模型服务不由代码许可证授权。",
+      "reuse_status": "license-observed",
+      "reuse_steps_zh": [
+        "从固定提交检查部署与模型配置。",
+        "用自有公开材料试验引用准确性。",
+        "记录生成题目的错误，比较提示与直接给答案的体验。"
+      ],
+      "runtime_conditions_zh": "按仓库配置本地服务；模型供应商、费用与学生数据处理条件另行确认。",
+      "setup_url": "https://github.com/zijinz456/OpenTutor/blob/153bac7d419b801d94fa3aef57d0f4e43fe286a5/README.md",
+      "source_code_url": "https://github.com/zijinz456/OpenTutor",
+      "source_url": "https://github.com/zijinz456/OpenTutor",
+      "stars": 168,
+      "title": "OpenTutor",
+      "verification_status": "verified"
+    },
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": false,
+      "course_tags": [
+        "rag",
+        "citations",
+        "prototype"
+      ],
+      "demo_access": "account-required",
+      "demo_status": "page-reachable",
+      "demo_url": "https://demo.ragflow.io/",
+      "demo_verification": {
+        "browser_observation": "Redirected to official Sign in / Sign up page. No account created or upload performed.",
+        "browser_observed_at": "2026-10-10",
+        "checked_at": "2026-11-07T03:28:42Z",
+        "declaration_observed": true,
+        "declaration_source": "https://github.com/orgs/infiniflow/discussions/5629",
+        "generation_tested": false,
+        "http_status": 200,
+        "resolved_url": "https://demo.ragflow.io/",
+        "verification_level": "http-page-only"
+      },
+      "education_scenarios": [
+        "materials",
+        "evidence-checking"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "README.md",
+          "sha256": "6b6564c3ff2ea27e1e0184bb591099b59d15ff6c1f0ac2d31fd178b13f228026",
+          "source_url": "https://github.com/infiniflow/ragflow/blob/3c6d2255af06164f0818d0959af10de0afd8b8fa/README.md"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "source_url": "https://github.com/infiniflow/ragflow/blob/3c6d2255af06164f0818d0959af10de0afd8b8fa/LICENSE"
+        }
+      ],
+      "featured_rank": 2,
+      "first_seen": "2026-10-10T18:07:06Z",
+      "github_repo_id": 730534580,
+      "id": "ragflow",
+      "kind": "repo",
+      "last_active_at": "2026-11-06T13:09:08Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "repository",
+          "label": "Apache-2.0",
+          "path": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "source_url": "https://github.com/infiniflow/ragflow/blob/3c6d2255af06164f0818d0959af10de0afd8b8fa/LICENSE",
+          "verified": true
+        }
+      ],
+      "license_spdx_reported_by_github": "Apache-2.0",
+      "pinned_commit": "3c6d2255af06164f0818d0959af10de0afd8b8fa",
+      "pinned_source_url": "https://github.com/infiniflow/ragflow/tree/3c6d2255af06164f0818d0959af10de0afd8b8fa",
+      "primary_action": {
+        "kind": "demo",
+        "label_en": "Try online · account required",
+        "label_zh": "在线试用 · 需账号",
+        "url": "https://demo.ragflow.io/"
+      },
+      "purpose_en": "Inspect document ingestion and source-grounded RAG before adapting it to learning materials.",
+      "purpose_zh": "面向复杂文档的检索问答和 Agent 工作流；builder 可用公开教材比较检索与引用体验。",
+      "quick_start": {
+        "commands": [],
+        "mode": "online",
+        "requirements_en": [
+          "Account",
+          "Check hosted quotas and model conditions"
+        ],
+        "requirements_zh": [
+          "账号",
+          "托管服务额度与模型条件需查看"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Open the official demo and sign in as required.",
+          "Try authorized sample materials and inspect citations."
+        ],
+        "steps_zh": [
+          "打开官方 demo，按要求登录或注册。",
+          "使用获授权示例资料，检查检索结果与引用。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "infiniflow/ragflow",
+      "resource_key": "repo:730534580",
+      "reuse_conditions_zh": "按 Apache-2.0 保留许可和适用归属、标明改动；托管 demo 与上传材料不由源码许可授权。",
+      "reuse_status": "license-observed",
+      "reuse_steps_zh": [
+        "进入官方 demo，按网站要求登录。",
+        "用已获授权的示例文档检查分块、检索和引用。",
+        "需要 API 或完整控制时按固定源码的部署文档自托管。"
+      ],
+      "runtime_conditions_zh": "在线 demo 需要账号；自托管当前建议至少 4 核、16 GB RAM、50 GB磁盘以及 Docker/模型端点。未登录执行生成或验证 API 能力。",
+      "setup_url": "https://github.com/infiniflow/ragflow/blob/3c6d2255af06164f0818d0959af10de0afd8b8fa/README.md",
+      "source_code_url": "https://github.com/infiniflow/ragflow",
+      "source_url": "https://github.com/infiniflow/ragflow",
+      "stars": 93701,
+      "title": "RAGFlow",
+      "verification_status": "verified"
+    },
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": false,
+      "course_tags": [
+        "finetuning",
+        "evaluation",
+        "advanced"
+      ],
+      "demo_status": "not-declared",
+      "demo_url": null,
+      "education_scenarios": [
+        "model-training",
+        "evaluation"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "README.md",
+          "sha256": "0ae73fe873e850c3efdb7652be908143c46e30aa298540d2d1a5e799d78a01e7",
+          "source_url": "https://github.com/huggingface/smol-course/blob/b712705327d1204353a1209e991334d441b4de7e/README.md"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "source_url": "https://github.com/huggingface/smol-course/blob/b712705327d1204353a1209e991334d441b4de7e/LICENSE"
+        }
+      ],
+      "featured_rank": 5,
+      "first_seen": "2026-10-10T14:46:23Z",
+      "github_repo_id": 894113337,
+      "id": "smol-course",
+      "kind": "repo",
+      "last_active_at": "2026-10-06T20:44:16Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "repository",
+          "label": "Apache-2.0",
+          "path": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "source_url": "https://github.com/huggingface/smol-course/blob/b712705327d1204353a1209e991334d441b4de7e/LICENSE",
+          "verified": true
+        }
+      ],
+      "license_spdx_reported_by_github": "Apache-2.0",
+      "pinned_commit": "b712705327d1204353a1209e991334d441b4de7e",
+      "pinned_source_url": "https://github.com/huggingface/smol-course/tree/b712705327d1204353a1209e991334d441b4de7e",
+      "primary_action": {
+        "kind": "view-course",
+        "label_en": "Open course materials",
+        "label_zh": "打开课程材料",
+        "url": "https://github.com/huggingface/smol-course/blob/b712705327d1204353a1209e991334d441b4de7e/README.md"
+      },
+      "purpose_en": "Use small-model alignment lessons and notebooks for reproducible experiments.",
+      "purpose_zh": "小模型指令微调、评估与偏好对齐的实验课程。",
+      "quick_start": {
+        "commands": [],
+        "mode": "course",
+        "requirements_en": [
+          "Python/PyTorch familiarity",
+          "Compute for training"
+        ],
+        "requirements_zh": [
+          "Python/PyTorch 知识",
+          "训练时需要合适算力"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Open the pinned lessons and notebooks.",
+          "Choose an evaluation exercise and prepare its Python/compute environment."
+        ],
+        "steps_zh": [
+          "打开固定版本的课程和 Notebook 材料。",
+          "选择一项评估练习，再按练习配置 Python 和算力。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "huggingface/smol-course",
+      "resource_key": "repo:894113337",
+      "reuse_conditions_zh": "按 Apache-2.0 保留许可与适用 NOTICE，标明改动；模型与数据许可单独核实。",
+      "reuse_status": "license-observed",
+      "reuse_steps_zh": [
+        "先完成评估单元，定义课堂任务指标。",
+        "选择独立获许可的数据与模型。",
+        "用小规模实验比较微调前后的错误。"
+      ],
+      "runtime_conditions_zh": "需要 Python、训练环境和合适算力；课程许可不覆盖模型权重和训练数据。",
+      "setup_url": "https://github.com/huggingface/smol-course/blob/b712705327d1204353a1209e991334d441b4de7e/README.md",
+      "source_code_url": "https://github.com/huggingface/smol-course",
+      "source_url": "https://github.com/huggingface/smol-course",
+      "stars": 6788,
+      "title": "Smol Course",
+      "verification_status": "verified"
+    },
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": false,
+      "course_tags": [
+        "skills",
+        "licensing"
+      ],
+      "demo_status": "not-declared",
+      "demo_url": null,
+      "education_scenarios": [
+        "ai-literacy",
+        "license-literacy"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "skills/pdf/LICENSE.txt",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "source_url": "https://github.com/anthropics/skills/blob/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/pdf/LICENSE.txt"
+        }
+      ],
+      "featured_rank": null,
+      "first_seen": "2026-10-10T14:46:23Z",
+      "github_repo_id": 1061953414,
+      "id": "anthropic-pdf-reference",
+      "kind": "skill",
+      "last_active_at": "2026-11-06T22:32:32Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "skill",
+          "label": "LicenseRef-Anthropic-Services",
+          "path": "skills/pdf/LICENSE.txt",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "source_url": "https://github.com/anthropics/skills/blob/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/pdf/LICENSE.txt",
+          "verified": false
+        }
+      ],
+      "license_spdx_reported_by_github": null,
+      "link_only": true,
+      "pinned_commit": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "pinned_source_url": "https://github.com/anthropics/skills/tree/2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "primary_action": {
+        "kind": "reference",
+        "label_en": "View license reference",
+        "label_zh": "查看许可参考",
+        "url": "https://github.com/anthropics/skills/blob/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/pdf/LICENSE.txt"
+      },
+      "purpose_en": "A reference for license comparison; no freely reusable package is offered.",
+      "purpose_zh": "用于认识同名 Skill 的许可差异，不能作为自由复制的工具包。",
+      "quick_start": {
+        "commands": [],
+        "mode": "reference",
+        "requirements_en": [
+          "Applicable service agreement"
+        ],
+        "requirements_zh": [
+          "适用的服务协议"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Open the official license reference.",
+          "This directory does not offer copying or installation of this restricted package."
+        ],
+        "steps_zh": [
+          "仅打开官方许可参考。",
+          "不要从本目录复制或安装此受限制的包。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "anthropics/skills",
+      "resource_key": "github-skill:1061953414:skills/pdf/SKILL.md",
+      "reuse_conditions_zh": "仅保留来源、许可摘要与哈希；不保存 Skill 内容、安装包或脚本。不将其列为可自由复制或改编。",
+      "reuse_status": "needs-review",
+      "reuse_steps_zh": [
+        "打开官方来源了解用途。",
+        "比较目录级许可，避免仅凭公开可见就复制。",
+        "需要可改编方案时查看许可已核实的其他 Skill。"
+      ],
+      "runtime_conditions_zh": "使用受 Anthropic 协议和额外限制约束。",
+      "setup_url": "https://github.com/anthropics/skills/blob/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/pdf/LICENSE.txt",
+      "skill_path": "skills/pdf/SKILL.md",
+      "source_code_url": "https://github.com/anthropics/skills",
+      "source_url": "https://github.com/anthropics/skills",
+      "stars": 188213,
+      "title": "PDF Skill (Anthropic, reference only)",
+      "verification_status": "verified"
+    },
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": false,
+      "course_tags": [
+        "skills",
+        "notebooks",
+        "datasets"
+      ],
+      "demo_status": "not-declared",
+      "demo_url": null,
+      "education_scenarios": [
+        "data-literacy",
+        "reproducible-experiments"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "skills/.curated/jupyter-notebook/SKILL.md",
+          "sha256": "62f102e8554b25716dccef0ffab4572d4e3eaf05ccc76562d33a065bc9c521fb",
+          "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/jupyter-notebook/SKILL.md"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "skills/.curated/jupyter-notebook/LICENSE.txt",
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/jupyter-notebook/LICENSE.txt"
+        }
+      ],
+      "featured_rank": null,
+      "first_seen": "2026-10-10T14:46:23Z",
+      "github_repo_id": 1103643573,
+      "id": "notebook-skill",
+      "kind": "skill",
+      "last_active_at": "2026-10-28T17:31:41Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "skill",
+          "label": "Apache-2.0",
+          "path": "skills/.curated/jupyter-notebook/LICENSE.txt",
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/jupyter-notebook/LICENSE.txt",
+          "verified": true
+        }
+      ],
+      "license_spdx_reported_by_github": null,
+      "pinned_commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "pinned_source_url": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431",
+      "primary_action": {
+        "kind": "view-skill",
+        "label_en": "Inspect skill",
+        "label_zh": "查看 Skill 与上手",
+        "url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/jupyter-notebook/SKILL.md"
+      },
+      "purpose_en": "Inspect a reusable workflow for creating and checking teaching notebooks.",
+      "purpose_zh": "为实验、探索和教学生成可检查的 Notebook。",
+      "quick_start": {
+        "commands": [],
+        "mode": "skill",
+        "requirements_en": [
+          "Compatible agent",
+          "Python/Jupyter"
+        ],
+        "requirements_zh": [
+          "兼容代理",
+          "Python/Jupyter"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Inspect pinned skill, license and dependencies.",
+          "Install in a compatible agent and test with your public data."
+        ],
+        "steps_zh": [
+          "检查固定版本的 Skill、许可和依赖。",
+          "在兼容代理中安装后，用自有公开数据测试。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "openai/skills",
+      "resource_key": "github-skill:1103643573:skills/.curated/jupyter-notebook/SKILL.md",
+      "reuse_conditions_zh": "使用该目录的 Apache-2.0 许可，不从仓库顶层推断；保留许可、归属与改动说明。",
+      "reuse_status": "license-observed",
+      "reuse_steps_zh": [
+        "按固定提交检查 Skill 与配套脚本。",
+        "选择自有数据生成小型 Notebook。",
+        "逐格运行并记录依赖。"
+      ],
+      "runtime_conditions_zh": "兼容代理与 Python/Jupyter 环境需自行试验；本目录不安装或执行 Skill。",
+      "setup_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/jupyter-notebook/SKILL.md",
+      "skill_path": "skills/.curated/jupyter-notebook/SKILL.md",
+      "source_code_url": "https://github.com/openai/skills",
+      "source_url": "https://github.com/openai/skills",
+      "stars": 28558,
+      "title": "Jupyter Notebook Skill",
+      "verification_status": "verified"
+    },
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": false,
+      "course_tags": [
+        "skills",
+        "documents",
+        "rag"
+      ],
+      "demo_status": "not-declared",
+      "demo_url": null,
+      "education_scenarios": [
+        "materials",
+        "teacher-development"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "skills/.curated/pdf/SKILL.md",
+          "sha256": "d108cf2b36355ab37eb5962933f4d09785ec002f3105c506129320209306b9d2",
+          "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/pdf/SKILL.md"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "skills/.curated/pdf/LICENSE.txt",
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/pdf/LICENSE.txt"
+        }
+      ],
+      "featured_rank": null,
+      "first_seen": "2026-10-10T14:46:23Z",
+      "github_repo_id": 1103643573,
+      "id": "openai-pdf-skill",
+      "kind": "skill",
+      "last_active_at": "2026-10-28T17:31:41Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "skill",
+          "label": "Apache-2.0",
+          "path": "skills/.curated/pdf/LICENSE.txt",
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/pdf/LICENSE.txt",
+          "verified": true
+        }
+      ],
+      "license_spdx_reported_by_github": null,
+      "pinned_commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "pinned_source_url": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431",
+      "primary_action": {
+        "kind": "view-skill",
+        "label_en": "Inspect skill",
+        "label_zh": "查看 Skill 与上手",
+        "url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/pdf/SKILL.md"
+      },
+      "purpose_en": "Inspect a PDF processing workflow for extracting and verifying learning materials.",
+      "purpose_zh": "读取、生成并检查 PDF，适合学习资料提取和讲义验证。",
+      "quick_start": {
+        "commands": [],
+        "mode": "skill",
+        "requirements_en": [
+          "Compatible agent",
+          "PDF toolchain"
+        ],
+        "requirements_zh": [
+          "兼容代理",
+          "PDF 工具链"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Inspect folder license and PDF tool dependencies.",
+          "Test authorized PDFs in a compatible agent."
+        ],
+        "steps_zh": [
+          "检查目录级许可和 PDF 工具依赖。",
+          "在兼容代理中用获授权 PDF 测试提取和布局。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "openai/skills",
+      "resource_key": "github-skill:1103643573:skills/.curated/pdf/SKILL.md",
+      "reuse_conditions_zh": "以该 Skill 的单独许可为准，保留 Apache-2.0 条款；输入 PDF 的权利单独核实。",
+      "reuse_status": "license-observed",
+      "reuse_steps_zh": [
+        "核对 Skill 配套依赖。",
+        "只用已获授权的学习资料。",
+        "检查导出 PDF 的布局与引用。"
+      ],
+      "runtime_conditions_zh": "需兼容代理、PDF 工具链；目录仅记录来源，不执行外部指令。",
+      "setup_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/pdf/SKILL.md",
+      "skill_path": "skills/.curated/pdf/SKILL.md",
+      "source_code_url": "https://github.com/openai/skills",
+      "source_url": "https://github.com/openai/skills",
+      "stars": 28558,
+      "title": "PDF Skill (OpenAI)",
+      "verification_status": "verified"
+    },
+    {
+      "activity_basis": "repository-pushed_at",
+      "archived": false,
+      "course_tags": [
+        "skills",
+        "workflow",
+        "evaluation"
+      ],
+      "demo_status": "not-declared",
+      "demo_url": null,
+      "education_scenarios": [
+        "teacher-development",
+        "workflow-authoring"
+      ],
+      "evidence": [
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "skills/skill-creator/SKILL.md",
+          "sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+          "source_url": "https://github.com/anthropics/skills/blob/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/skill-creator/SKILL.md"
+        },
+        {
+          "observed_at": "2026-11-07T03:28:26Z",
+          "path": "skills/skill-creator/LICENSE.txt",
+          "sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+          "source_url": "https://github.com/anthropics/skills/blob/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/skill-creator/LICENSE.txt"
+        }
+      ],
+      "featured_rank": null,
+      "first_seen": "2026-10-10T14:46:23Z",
+      "github_repo_id": 1061953414,
+      "id": "skill-creator",
+      "kind": "skill",
+      "last_active_at": "2026-11-06T22:32:32Z",
+      "last_checked_at": "2026-11-07T03:28:26Z",
+      "last_verified_at": "2026-11-07T03:28:26Z",
+      "license_scopes": [
+        {
+          "covers": "skill",
+          "label": "Apache-2.0",
+          "path": "skills/skill-creator/LICENSE.txt",
+          "sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+          "source_url": "https://github.com/anthropics/skills/blob/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/skill-creator/LICENSE.txt",
+          "verified": true
+        }
+      ],
+      "license_spdx_reported_by_github": null,
+      "pinned_commit": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "pinned_source_url": "https://github.com/anthropics/skills/tree/2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "primary_action": {
+        "kind": "view-skill",
+        "label_en": "Inspect skill",
+        "label_zh": "查看 Skill 与上手",
+        "url": "https://github.com/anthropics/skills/blob/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/skill-creator/SKILL.md"
+      },
+      "purpose_en": "Turn a narrow teaching workflow into an inspectable, testable skill.",
+      "purpose_zh": "把可重复的教师工作流整理为 Skill，并设计试验案例。",
+      "quick_start": {
+        "commands": [],
+        "mode": "skill",
+        "requirements_en": [
+          "Compatible agent/tools",
+          "Human output review"
+        ],
+        "requirements_zh": [
+          "兼容代理及工具",
+          "人工核实输出"
+        ],
+        "runtime_tested": false,
+        "steps_en": [
+          "Inspect the workflow and dependencies.",
+          "Pick a teaching workflow and test counterexamples."
+        ],
+        "steps_zh": [
+          "阅读 Skill 的适用流程与依赖。",
+          "选一个教师工作流，设计包含反例的测试。"
+        ]
+      },
+      "refresh_status": "ok",
+      "repository": "anthropics/skills",
+      "resource_key": "github-skill:1061953414:skills/skill-creator/SKILL.md",
+      "reuse_conditions_zh": "该 Skill 单独声明 Apache-2.0，保留许可和改动说明；不推广为整个 Skills 仓库的统一许可。",
+      "reuse_status": "license-observed",
+      "reuse_steps_zh": [
+        "选择一个窄工作流，如反馈措辞检查。",
+        "写清输入输出与引用边界。",
+        "用反例试验 Skill 再决定复用。"
+      ],
+      "runtime_conditions_zh": "依赖具体代理工具与评估环境，不保证跨运行时兼容。",
+      "setup_url": "https://github.com/anthropics/skills/blob/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/skill-creator/SKILL.md",
+      "skill_path": "skills/skill-creator/SKILL.md",
+      "source_code_url": "https://github.com/anthropics/skills",
+      "source_url": "https://github.com/anthropics/skills",
+      "stars": 188213,
+      "title": "Skill Creator",
+      "verification_status": "verified"
+    }
+  ],
+  "schema_version": "radar.course-resources.v1"
+}

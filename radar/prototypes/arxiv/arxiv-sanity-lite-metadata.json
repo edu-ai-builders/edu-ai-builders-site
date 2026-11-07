@@ -1,0 +1,15 @@
+{
+  "full_name": "karpathy/arxiv-sanity-lite",
+  "html_url": "https://github.com/karpathy/arxiv-sanity-lite",
+  "pushed_at": "2023-06-19T16:23:02Z",
+  "updated_at": "2026-10-09T18:43:08Z",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "default_branch": "master"
+}

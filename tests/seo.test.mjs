@@ -29,6 +29,7 @@ test("sitemap includes every current course and runnable resource, excludes redi
   for (const course of courses.courses) assert.ok(urls.includes(`${seo.SITE_URL}/learn/${course.slug}`), JSON.stringify({slug:course.slug,urls}));
   for (const resource of resources.resources.filter(r => r.artifactPath)) assert.ok(urls.includes(`${seo.SITE_URL}/use/${resource.id}`));
   assert.ok(!urls.includes(`${seo.SITE_URL}/updates`));
+  assert.ok(!urls.includes(`${seo.SITE_URL}/skills`));
   assert.ok(!urls.includes(`${seo.SITE_URL}/learn/git-first-checkpoint`));
   assert.ok(sitemap.every(entry => !entry.lastModified && !entry.url.includes("?")));
 });

@@ -1,0 +1,15 @@
+{
+  "cases": {
+    "C": "case-c/handoff.json",
+    "D": "case-d/handoff.json"
+  },
+  "human_reports": [
+    "case-c/report.md",
+    "case-d/report.md"
+  ],
+  "command_log": "commands.json",
+  "helper_failures": [],
+  "inputs_inspected_unchanged": true,
+  "scope_isolation": "Case C execution applies only to practice refactor analysis. Case D performed only static bounded reads and metadata helpers; did not execute any candidate source.",
+  "no_implementation": true
+}

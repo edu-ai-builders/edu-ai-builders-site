@@ -1,0 +1,426 @@
+{
+  "schema_version": "0.1",
+  "queries": [
+    {
+      "query_id": "builder-parents-english",
+      "query": "filename:SKILL.md \"home learning\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-parents-alternate",
+      "query": "filename:SKILL.md \"家庭辅导\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-teachers-english",
+      "query": "filename:SKILL.md \"lesson planning\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-teachers-alternate",
+      "query": "filename:SKILL.md \"教案设计\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-higher-education-english",
+      "query": "filename:SKILL.md \"course design\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-higher-education-alternate",
+      "query": "filename:SKILL.md \"大学课程\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-research-english",
+      "query": "filename:SKILL.md \"literature review\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-research-alternate",
+      "query": "filename:SKILL.md \"文献综述\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-mathematics-english",
+      "query": "filename:SKILL.md \"mathematical reasoning\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-mathematics-alternate",
+      "query": "filename:SKILL.md \"数学辅导\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-science-english",
+      "query": "filename:SKILL.md \"science lesson\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-science-alternate",
+      "query": "filename:SKILL.md \"物理实验\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-languages-english",
+      "query": "filename:SKILL.md \"language learning\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-languages-alternate",
+      "query": "filename:SKILL.md \"写作反馈\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-humanities-english",
+      "query": "filename:SKILL.md \"historical sources\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-humanities-alternate",
+      "query": "filename:SKILL.md \"史料分析\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-arts-english",
+      "query": "filename:SKILL.md \"music education\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-arts-alternate",
+      "query": "filename:SKILL.md \"艺术教育\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-computing-english",
+      "query": "filename:SKILL.md \"programming education\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-computing-alternate",
+      "query": "filename:SKILL.md \"编程教学\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-accessibility-english",
+      "query": "filename:SKILL.md \"screen reader\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-accessibility-alternate",
+      "query": "filename:SKILL.md \"无障碍学习\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-web-english",
+      "query": "filename:SKILL.md \"web application\" accessibility",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-web-alternate",
+      "query": "filename:SKILL.md \"前端开发\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-mobile-english",
+      "query": "filename:SKILL.md \"mobile application\" accessibility",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-mobile-alternate",
+      "query": "filename:SKILL.md SwiftUI interface",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-desktop-english",
+      "query": "filename:SKILL.md \"desktop application\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-desktop-alternate",
+      "query": "filename:SKILL.md Tauri application",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-design-english",
+      "query": "filename:SKILL.md \"instructional design\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-design-alternate",
+      "query": "filename:SKILL.md \"data visualization\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-data-english",
+      "query": "filename:SKILL.md \"retrieval augmented generation\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-data-alternate",
+      "query": "filename:SKILL.md \"数据分析\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-skill-authoring-1",
+      "query": "filename:SKILL.md \"skill creation\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-skill-authoring-2",
+      "query": "filename:SKILL.md \"技能编写\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-repo-adaptation-1",
+      "query": "filename:SKILL.md \"repository analysis\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-repo-adaptation-2",
+      "query": "filename:SKILL.md \"代码重构\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-self-learning-english",
+      "query": "filename:SKILL.md \"spaced repetition\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-self-learning-alternate",
+      "query": "filename:SKILL.md \"自主学习\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-educational-research-english",
+      "query": "filename:SKILL.md \"learning sciences\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-educational-research-alternate",
+      "query": "filename:SKILL.md \"教育研究\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-tutor-evaluation-english",
+      "query": "filename:SKILL.md \"tutor evaluation\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-tutor-evaluation-alternate",
+      "query": "filename:SKILL.md \"教学评测\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-training-data-english",
+      "query": "filename:SKILL.md \"dataset curation\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-training-data-alternate",
+      "query": "filename:SKILL.md \"训练数据\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-open-textbooks-english",
+      "query": "filename:SKILL.md \"open textbook\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-open-textbooks-alternate",
+      "query": "filename:SKILL.md \"开放教材\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-knowledge-graphs-english",
+      "query": "filename:SKILL.md \"knowledge graph\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-knowledge-graphs-alternate",
+      "query": "filename:SKILL.md \"知识图谱\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-system-admin-english",
+      "query": "filename:SKILL.md backup restore",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-system-admin-alternate",
+      "query": "filename:SKILL.md \"权限管理\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-assessment-english",
+      "query": "filename:SKILL.md \"assessment rubric\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-assessment-alternate",
+      "query": "filename:SKILL.md \"形成性评价\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-learning-analytics-english",
+      "query": "filename:SKILL.md \"learning analytics\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-learning-analytics-alternate",
+      "query": "filename:SKILL.md \"知识追踪\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-biology-english",
+      "query": "filename:SKILL.md biology \"literature review\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-biology-alternate",
+      "query": "filename:SKILL.md \"生物教学\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-chemistry-english",
+      "query": "filename:SKILL.md \"molecular visualization\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-chemistry-alternate",
+      "query": "filename:SKILL.md \"化学教学\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-statistics-english",
+      "query": "filename:SKILL.md \"statistical analysis\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "query_id": "builder-statistics-alternate",
+      "query": "filename:SKILL.md \"统计教学\"",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    }
+  ],
+  "note": "Optional legacy collector matrix. The scheduled collector uses builder-discovery.json and its bounded cursor."
+}

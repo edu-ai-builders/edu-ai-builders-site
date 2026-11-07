@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+  <title id="title">EduOS Radar — open-source education intelligence</title>
+  <desc id="desc">A warm editorial title board for EduOS Radar. It introduces three browsable shelves: open-source projects, skills, and data with benchmarks.</desc>
+  <rect width="1200" height="390" rx="28" fill="#fbf5e9"/>
+  <rect x="1" y="1" width="1198" height="388" rx="27" fill="none" stroke="#d6cab8" stroke-width="2"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" fill="#281c17">
+    <text x="64" y="72" font-size="18" font-weight="700" letter-spacing="3" fill="#776a61">OPEN-SOURCE EDUCATION INTELLIGENCE</text>
+    <text x="64" y="148" font-size="72" font-weight="800" letter-spacing="-3">EDUOS</text>
+    <text x="350" y="148" font-size="72" font-weight="800" letter-spacing="-3" fill="#315ac8">RADAR</text>
+    <text x="64" y="205" font-size="28" font-weight="650">Read the signal before you open, save, adapt, or build.</text>
+    <text x="64" y="244" font-size="21" fill="#5f554e">A bilingual, metadata-only map of public education projects,</text>
+    <text x="64" y="274" font-size="21" fill="#5f554e">skill manifests, and data with benchmarks.</text>
+  </g>
+
+  <g transform="translate(760 58)" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif">
+    <path d="M26 42V255" fill="none" stroke="#b5a99b" stroke-width="2"/>
+    <circle cx="26" cy="42" r="11" fill="#315ac8"/>
+    <circle cx="26" cy="148" r="11" fill="#d34a9c"/>
+    <circle cx="26" cy="255" r="11" fill="#8dae30"/>
+
+    <g transform="translate(58 0)">
+      <rect width="334" height="84" rx="18" fill="#eef2ff" stroke="#315ac8" stroke-width="2"/>
+      <text x="24" y="32" font-size="16" font-weight="750" letter-spacing="1.4" fill="#315ac8">OPEN-SOURCE PROJECTS</text>
+      <text x="24" y="61" font-size="20" font-weight="700" fill="#281c17">apps, systems &amp; repositories</text>
+    </g>
+    <g transform="translate(58 106)">
+      <rect width="334" height="84" rx="18" fill="#fff0f8" stroke="#d34a9c" stroke-width="2"/>
+      <text x="24" y="32" font-size="16" font-weight="750" letter-spacing="1.4" fill="#b22d7d">SKILLS</text>
+      <text x="24" y="61" font-size="20" font-weight="700" fill="#281c17">public workflows, made readable</text>
+    </g>
+    <g transform="translate(58 212)">
+      <rect width="334" height="84" rx="18" fill="#f1f7e4" stroke="#8dae30" stroke-width="2"/>
+      <text x="24" y="32" font-size="16" font-weight="750" letter-spacing="1.4" fill="#63810d">DATA &amp; BENCHMARKS</text>
+      <text x="24" y="61" font-size="20" font-weight="700" fill="#281c17">datasets, exam sets &amp; evaluation</text>
+    </g>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#776a61">
+    <text x="64" y="344">PUBLIC SOURCES</text>
+    <text x="290" y="344">→</text>
+    <text x="326" y="344">VERIFIED METADATA</text>
+    <text x="598" y="344">→</text>
+    <text x="634" y="344">HUMAN-READABLE DIRECTORY</text>
+  </g>
+</svg>

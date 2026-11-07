@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "files": [
+    {
+      "path": "public/tools/fraction-bars.html",
+      "sha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+      "unchanged": true
+    },
+    {
+      "path": "app/use/[slug]/page.tsx",
+      "sha256": "8ea4b26599144d34c9eb59446978aa7e71747e180476a2a51d4c8b7313aafbd0",
+      "unchanged": true
+    },
+    {
+      "path": "app/content/resources.ts",
+      "sha256": "d657d94df1178021465af45a5636b33b8f132a82c72de8ce9d8b9792c4442d40",
+      "unchanged": true
+    },
+    {
+      "path": "app/components/resource-preview.tsx",
+      "sha256": "821aa799b15ee78f17fe3469e5396a3904ddf83bfd3cd719e353c716637a5f65",
+      "unchanged": true
+    },
+    {
+      "path": "tests/math-tools.test.mjs",
+      "sha256": "9fc4c96e7e096cf4d87049b36e9befacfb778d446f5ae45a2ffa2b392ec067bd",
+      "unchanged": true
+    },
+    {
+      "path": "docs/tool-source-manifest.json",
+      "sha256": "b3a673735a0badda0c2753cd0402ce7de225f0d05afaed30a82a8741d13e8555",
+      "unchanged": true
+    },
+    {
+      "path": "packages/builder-skills/edu-resource-search/SKILL.md",
+      "sha256": "9dbaf597a2fea2f7016fe5e705fc6932bcf14e1e913392d015329af643182441",
+      "unchanged": true
+    },
+    {
+      "path": "packages/builder-skills/edu-resource-search/references/catalog-contract.md",
+      "sha256": "a1a80738b6b82c63e5a23bc5b7a493bab2333fe41fe322d45c6ed6a4e12f74f9",
+      "unchanged": true
+    },
+    {
+      "path": "packages/builder-skills/edu-resource-search/LICENSE",
+      "sha256": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3",
+      "unchanged": true
+    },
+    {
+      "path": "packages/builder-skills/edu-design-plan/SKILL.md",
+      "sha256": "62cc4fd3d4e56d3b102acbe01bb00e3f1a928f03156c41c5eabfad7450cbb575",
+      "unchanged": true
+    },
+    {
+      "path": "packages/builder-skills/edu-design-plan/references/brief-template.md",
+      "sha256": "4878d20520f8ffdfaede80beb0bc9336d9743ce6a72b4a8c455fe36c835131e2",
+      "unchanged": true
+    },
+    {
+      "path": "packages/builder-skills/edu-design-plan/LICENSE",
+      "sha256": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3",
+      "unchanged": true
+    }
+  ]
+}

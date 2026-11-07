@@ -1,0 +1,18 @@
+{
+  "root": "/private/tmp/edu-skill-evals-20261012/fixtures/repos",
+  "revision": "Unpinned fixture snapshot; no .git in component directories",
+  "sha256": {
+    "practice/LICENSE": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3",
+    "practice/README.md": "8e91ae953747a7f12096d8fa0c43f142722ed3c052686df176d329b99be879ca",
+    "practice/fractions_logic.py": "1661597211236e8e4295e7b68b6a008d728adb6d95dd9d023c330dc1f36a23d8",
+    "practice/test_fractions.py": "293befe1965746a6cd4ede27e49c8a7d126efd9bbbfecdb90cace5059a1818c4",
+    "retriever/DATA-LICENSE.txt": "b80a7696d8be5999d20748ee2c7a02a5b9db011482069bd35d412ef1babe193a",
+    "retriever/LICENSE": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3",
+    "retriever/README.md": "404ea97fdd850abc093f7795d3f0fa287f265f628b28744a9ac01b6a7d230a0a",
+    "retriever/query.py": "f741effb3dcf27465944636d2336d20a8c19dd002cfd852ce780d00723ae4a51",
+    "retriever/sample_documents.json": "562c365becbc83e3c321f9407cae91ca150ddad6806d7d69a0a2a310f4da9dfe",
+    "viewer/LICENSE": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3",
+    "viewer/README.md": "10faaa8950f0a06a465f815157e0f903b7522b9b664b91fdf9b2bc16a2ddb2e4",
+    "viewer/answer.mjs": "3a00de82ea3b9cc46ba5aee888aa4fe20f4d7419ed86550be97c6719d9671bc4"
+  }
+}

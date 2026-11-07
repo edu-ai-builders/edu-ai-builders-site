@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "last_export_at": "2026-11-07T03:30:17.719097Z",
+  "last_export_mode": "after-collection",
+  "last_export_status": "complete",
+  "last_attempt_at": "2026-11-07T03:28:26Z",
+  "last_run_id": "2026-11-07T032826Z-a5a8acee",
+  "status": "partial",
+  "fatal": false,
+  "errors": [
+    {
+      "id": "anthropic-pdf-reference",
+      "error": "License evidence changed or is unrecognized; curator review required."
+    },
+    {
+      "step": "builder-discovery",
+      "error": [
+        {
+          "stage": "rejected-item:alice51849/ios-app-guide",
+          "error": "truncated tree requires review: alice51849/ios-app-guide",
+          "http_status": null
+        }
+      ]
+    },
+    {
+      "step": "crawl.py",
+      "error": "{\n  \"command\": \"refresh\",\n  \"selected\": 30,\n  \"updated\": 29,\n  \"not_modified\": 0,\n  \"errors\": [\n    {\n      \"full_name\": \"Mental-Wealth-Academy/platform\",\n      \"error\": \"GitHub API 404 for https://api.github.com/repos/Mental-Wealth-Academy/platform: {\\\"message\\\":\\\"Not Found\\\",\\\"documentation_url\\\":\\\"https://docs.github.com/rest/repos/repos#get-a-repository\\\",\\\"status\\\":\\\"404\\\"}\"\n    }\n  ],\n  \"started_at\": \"2026-11-07T03:29:38Z\",\n  \"finished_at\": \"2026-11-07T03:30:11Z\",\n  \"registry_records\": 3655,\n  \"api_requests\": 88,\n  \"not_modified_responses\": 0,\n  \"authenticated\": true,\n  \"api_version\": \"2026-03-10\",\n  \"snapshot\": \"data/snapshots/run-2026-11-07T033011Z\"\n}\n"
+    }
+  ],
+  "last_finished_at": "2026-11-07T03:30:15Z",
+  "observed_successes": 89,
+  "new_observations": 41,
+  "expected_interval_hours": 24,
+  "max_age_hours": 48,
+  "last_success_at": "2026-11-07T03:30:15Z",
+  "last_new_observation_at": "2026-11-07T03:30:15Z",
+  "coverage_bounds": {
+    "configured_queries": {
+      "skill": 60,
+      "repo": 30
+    },
+    "planned_query_visits_per_run": {
+      "skill": 4,
+      "repo": 4
+    },
+    "query_cycle_runs_without_failures": {
+      "skill": 15,
+      "repo": 8
+    },
+    "sampled_results_per_query_visit": 2,
+    "results_per_page": 8,
+    "max_pages_per_query": 3,
+    "configured_sources": 8,
+    "sources_per_run": 2,
+    "source_revisit_runs_without_failures": 4,
+    "source_manifest_samples_per_visit": 2,
+    "note": "Bounded samples, not exhaustive coverage. Budgets, failures and authentication can extend these cycles."
+  },
+  "sources": {
+    "github": {
+      "status": "partial",
+      "authenticated": true,
+      "search_capabilities": {
+        "skill": "complete",
+        "repo": "complete"
+      }
+    },
+    "x": {
+      "source": "x-web-index",
+      "status": "limited",
+      "last_attempt": "2026-11-07T03:18:14Z",
+      "last_success": null,
+      "queries_attempted": 5,
+      "new_leads": 0,
+      "coverage": "web-index-partial",
+      "note": "No native X API coverage. Leads require canonical source verification before collection."
+    }
+  }
+}

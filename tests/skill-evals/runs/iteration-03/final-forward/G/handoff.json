@@ -1,0 +1,409 @@
+{
+  "schema_version": "edu.repo-handoff.v1",
+  "mode": "redesign",
+  "goal": "Add attempts and staged hints while preserving bounded fraction-comparison mathematics and standalone offline use.",
+  "sources": [
+    {
+      "id": "original",
+      "root": "/Users/yismacmini4/Documents/ChatGPT/Edu-Ai-Builders/apps/site-original",
+      "revision": "1a1367a0ea39f7086651056a66861cb592e583f7",
+      "local_state": {
+        "repository_root": "/Users/yismacmini4/Documents/ChatGPT/Edu-Ai-Builders/apps/site-original",
+        "source_prefix": ".",
+        "revision": "1a1367a0ea39f7086651056a66861cb592e583f7",
+        "worktree_status": "M README.md\n M app/build/page.tsx\n M app/changelog/page.tsx\n M app/components/site-footer.tsx\n M app/components/site-header.tsx\n M app/i18n/server.ts\n M app/layout.tsx\n M app/page.tsx\n M app/sitemap.ts\n M scripts/check-translations.mjs\n?? CLAUDE.md\n?? app/api/\n?? app/components/builder-guide.tsx\n?? app/content/builder-scenarios.ts\n?? app/i18n/builder.en.json\n?? app/lib/builder-catalog.ts\n?? app/lib/builder-core.ts\n?? app/lib/builder-download.ts\n?? app/lib/builder-projects.ts\n?? app/skills/\n?? docs/builder-mvp/\n?? packages/\n?? public/data/builder/\n?? public/downloads/\n?? scripts/package-builder-skills.py\n?? scripts/sync-builder-catalog.py\n?? tests/builder-tools.test.mjs\n?? tests/builder.test.mjs\n?? tests/skill-evals/\n?? tests/test_skill_workflows.py",
+        "state": "working-tree-observation"
+      },
+      "analyzed_scope": [
+        "public/tools/fraction-bars.html",
+        "app/use/[slug]/page.tsx",
+        "app/content/resources.ts",
+        "app/components/resource-preview.tsx",
+        "tests/math-tools.test.mjs",
+        "docs/tool-source-manifest.json"
+      ],
+      "terms": "Manifest records Math Viz Kit origin and license retained; exact upstream component terms not inspected or established. Local planning only; do not infer redistribution permission.",
+      "coverage": {
+        "enumeration_complete": true,
+        "stop_reason": null,
+        "matches_complete": true,
+        "read_bytes": 106279,
+        "visited_files": 6
+      }
+    }
+  ],
+  "capabilities": [
+    {
+      "requirement": "Preserve fraction domain, common whole and exact relation",
+      "decision": "reuse",
+      "reason": "Actual bar drawing and state handlers support proper fractions up to one. All 5929 bounded pairs agree with integer cross-products in executed baseline.",
+      "evidence": [
+        {
+          "type": "source-observation",
+          "repository": "original",
+          "path": "public/tools/fraction-bars.html",
+          "sha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+          "line_start": 249,
+          "line_end": 270,
+          "quote": "const margin=24, barW=W-margin*2-60, barH=44;"
+        },
+        {
+          "type": "source-observation",
+          "repository": "original",
+          "path": "public/tools/fraction-bars.html",
+          "sha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+          "line_start": 282,
+          "line_end": 285,
+          "quote": "const sign=va>vb?'>':va<vb?'<':'=';"
+        },
+        {
+          "type": "source-observation",
+          "repository": "original",
+          "path": "public/tools/fraction-bars.html",
+          "sha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+          "line_start": 334,
+          "line_end": 342,
+          "quote": "nA=Math.min(v,dA)"
+        }
+      ],
+      "inputs": {
+        "A": {
+          "n": "integer 1..d",
+          "d": "integer 2..12"
+        },
+        "B": {
+          "n": "integer 1..d",
+          "d": "integer 2..12"
+        }
+      },
+      "outputs": {
+        "relation": "< | = | >",
+        "bars": "common whole W, filled lengths W*n/d"
+      },
+      "dependencies": [
+        "canvas 2D",
+        "DOM range events"
+      ],
+      "retained": [
+        "d in 2..12, 1<=n<=d",
+        "Equal total bar length and same unit reference",
+        "A blue/B amber and symbolic fractions",
+        "Denominator reductions clamp numerator",
+        "Use real n/d or integer cross-products, never rounded strings, for comparison"
+      ],
+      "changed": [],
+      "unknowns": [
+        "Native browser layout and screen reader behavior untested",
+        "Exact upstream reuse terms"
+      ],
+      "acceptance": [
+        "Exhaustive 5929 current-domain pairs agree with cross-products",
+        "1/2=2/4 and 2/4=2/4, 2/3>3/5, 1/12<1/11, 12/12=2/2",
+        "Same whole widths before/after resize; n clamps when d decreases"
+      ]
+    },
+    {
+      "requirement": "Attempt before hints; explicit answer only on requested reveal",
+      "decision": "change",
+      "reason": "Initialization, updateDisplay and canvas draw all reveal the result; gating only the feedback DOM would leave a canvas leak.",
+      "evidence": [
+        {
+          "type": "source-observation",
+          "repository": "original",
+          "path": "public/tools/fraction-bars.html",
+          "sha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+          "line_start": 295,
+          "line_end": 308,
+          "quote": "showFeedback();"
+        },
+        {
+          "type": "source-observation",
+          "repository": "original",
+          "path": "public/tools/fraction-bars.html",
+          "sha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+          "line_start": 280,
+          "line_end": 285,
+          "quote": "ctx.fillText(`${nA}/${dA} ${sign} ${nB}/${dB}`,W/2,rowB+barH+20);"
+        },
+        {
+          "type": "source-observation",
+          "repository": "original",
+          "path": "public/tools/fraction-bars.html",
+          "sha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+          "line_start": 333,
+          "line_end": 345,
+          "quote": "setup(); draw(); showFeedback();"
+        },
+        {
+          "type": "source-observation",
+          "repository": "original",
+          "path": "public/tools/fraction-bars.html",
+          "sha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+          "line_start": 264,
+          "line_end": 270,
+          "quote": "`${nA}/${dA} ≈ ${(nA/dA).toFixed(2)}`"
+        }
+      ],
+      "inputs": {
+        "problemId": "canonical tuple plus revision",
+        "attempt": "submitted <, = or >",
+        "hintRequest": "only when attempts.length>0",
+        "reveal": "after staged hints; explicit user action"
+      },
+      "outputs": {
+        "state": [
+          "problemId",
+          "attempts[]",
+          "draftRelation",
+          "hintLevel",
+          "answerVisible"
+        ],
+        "view": "fractions, bars, hint or full feedback according to state"
+      },
+      "dependencies": [
+        "Preserved math kernel and controls",
+        "Localization key additions for all new text"
+      ],
+      "retained": [
+        "Live bars remain the reasoning representation",
+        "Editable fraction controls",
+        "Independent offline HTML"
+      ],
+      "changed": [
+        "Remove initialization auto-showFeedback",
+        "Replace slider auto-feedback with canonical problem change/reset",
+        "Hide explicit relation in canvas and DOM before reveal",
+        "Move approximate decimal labels to reveal stage to avoid providing an alternate numerical answer cue",
+        "Start hints locked; empty draft and slider movement are not attempts",
+        "Two conceptual hints followed by explicit reveal, with level configurable later",
+        "Use hidden/conditional rendering, not opacity alone, for unavailable content"
+      ],
+      "unknowns": [
+        "Teaching value of two stages requires learner evaluation"
+      ],
+      "acceptance": [
+        "Fresh load: no explicit relation, decimals or feedback in canvas/DOM/accessibility tree",
+        "Help before submitted attempt returns bilingual attempt prompt and no hint",
+        "Submit relation then request hints twice; repeated requests cap level at 2",
+        "Reveal checks latest tuple and submitted attempt",
+        "Tuple edit resets attempts/hint/answer; resize does not reset; unchanged canonical tuple does not reset",
+        "Invalid or empty submission does not unlock help"
+      ]
+    },
+    {
+      "requirement": "Correct pre-existing equal-input explanation",
+      "decision": "change",
+      "reason": "Same denominator equality chooses B-larger branch because nA>nB is false even when equal. Mathematical verdict is correct; explanation is contradictory.",
+      "evidence": [
+        {
+          "type": "source-observation",
+          "repository": "original",
+          "path": "public/tools/fraction-bars.html",
+          "sha256": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+          "line_start": 319,
+          "line_end": 329,
+          "quote": "nA>nB?'A更大':'B更大'"
+        }
+      ],
+      "inputs": {
+        "A": "2/4",
+        "B": "2/4"
+      },
+      "outputs": {
+        "explanation": "same denominator and same numerator, hence equal"
+      },
+      "dependencies": [
+        "Full explanation renderer"
+      ],
+      "retained": [
+        "Equal relation and equivalent-fraction final statement"
+      ],
+      "changed": [
+        "Handle equality before same-denominator larger/smaller explanation",
+        "Keep decimals labelled approximate; use exact relation as truth"
+      ],
+      "unknowns": [],
+      "acceptance": [
+        "2/4=2/4 text never says either numerator is larger",
+        "1/2=2/4 explains same portion of equal whole"
+      ]
+    },
+    {
+      "requirement": "Preserve website entry and download integration",
+      "decision": "reuse",
+      "reason": "The resource record feeds a localized standalone/download/iframe route; static resource preview is illustrative and not running learner state.",
+      "evidence": [
+        {
+          "type": "source-observation",
+          "repository": "original",
+          "path": "app/content/resources.ts",
+          "sha256": "d657d94df1178021465af45a5636b33b8f132a82c72de8ce9d8b9792c4442d40",
+          "line_start": 21,
+          "line_end": 33,
+          "quote": "artifactPath: \"/tools/fraction-bars.html\","
+        },
+        {
+          "type": "source-observation",
+          "repository": "original",
+          "path": "app/use/[slug]/page.tsx",
+          "sha256": "8ea4b26599144d34c9eb59446978aa7e71747e180476a2a51d4c8b7313aafbd0",
+          "line_start": 18,
+          "line_end": 27,
+          "quote": "const artifactPath=`${r.artifactPath}?lang=${locale}`;"
+        },
+        {
+          "type": "source-observation",
+          "repository": "original",
+          "path": "app/components/resource-preview.tsx",
+          "sha256": "821aa799b15ee78f17fe3469e5396a3904ddf83bfd3cd719e353c716637a5f65",
+          "line_start": 3,
+          "line_end": 5,
+          "quote": "Small authored diagrams show the interaction pattern, not screenshots or evidence of learning gains."
+        }
+      ],
+      "inputs": {
+        "slug": "fraction-bars",
+        "locale": "zh | en"
+      },
+      "outputs": {
+        "src": "/tools/fraction-bars.html?lang=<locale>",
+        "download": "same standalone HTML"
+      },
+      "dependencies": [
+        "resources.ts",
+        "ToolPage route",
+        "Embedded localization"
+      ],
+      "retained": [
+        "URL/id/resource metadata relationships",
+        "sandbox allow-scripts allow-downloads",
+        "No parent frame persistence required",
+        "No backend or model dependency"
+      ],
+      "changed": [
+        "When implemented, update visitor description to predict→attempt→hint→reveal and changelog plus English translations per AGENTS.md"
+      ],
+      "unknowns": [
+        "Route browser execution not performed"
+      ],
+      "acceptance": [
+        "Embed, direct open and downloaded HTML each run same staged behavior in zh/en",
+        "Refresh starts clean; resize and locale display do not disclose hidden answer"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "provider": "fraction tuple/controls",
+      "consumer": "new staged state renderer",
+      "provider_shape": {
+        "nA": "int",
+        "dA": "int",
+        "nB": "int",
+        "dB": "int"
+      },
+      "consumer_shape": {
+        "problemId": "tuple+revision",
+        "attempts": "list",
+        "hintLevel": "0..2",
+        "answerVisible": "boolean"
+      },
+      "transform": "Clamp with existing handlers; compare canonical tuple. On actual tuple change create fresh problem revision and clear all learner state; repeated input events on unchanged tuple retain state.",
+      "source_identity": "af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b",
+      "errors_reset": "Empty or invalid submission returns validation message with locked hints. No network requests. Resize redraws current stage without reset.",
+      "integration_acceptance": [
+        "Changing problem after reveal returns hidden answer state",
+        "All canvas and DOM outputs take the same stage"
+      ],
+      "status": "not-run"
+    },
+    {
+      "provider": "resources.ts artifactPath and locale",
+      "consumer": "ToolPage iframe/direct/download",
+      "provider_shape": {
+        "artifactPath": "string",
+        "locale": "zh/en"
+      },
+      "consumer_shape": {
+        "src": "path?lang=locale"
+      },
+      "transform": "Existing URL append retained; new strings added to standalone localization.",
+      "source_identity": "8ea4b26599144d34c9eb59446978aa7e71747e180476a2a51d4c8b7313aafbd0",
+      "errors_reset": "Existing notFound for missing resource; independent page-load resets. No parent message/API contract introduced.",
+      "integration_acceptance": [
+        "Both locales in standalone, embed and downloaded use"
+      ],
+      "status": "not-run"
+    }
+  ],
+  "verification": [
+    {
+      "method": "actual original application script in Node VM; minimal DOM/canvas adapter",
+      "status": "passed",
+      "phase": "baseline",
+      "command": "node /private/tmp/edu-skill-evals-20261012/final-forward/G/probe.mjs",
+      "observed_result": "Initialization renders canvas relation and visible DOM verdict without any learner attempt."
+    },
+    {
+      "method": "actual original application script in Node VM; minimal DOM/canvas adapter",
+      "status": "passed",
+      "phase": "baseline",
+      "command": "node /private/tmp/edu-skill-evals-20261012/final-forward/G/probe.mjs",
+      "observed_result": "5929 pairs agree with exact integer cross-products; rounded decimal display never used as expected truth."
+    },
+    {
+      "method": "actual original application script in Node VM; minimal DOM/canvas adapter",
+      "status": "passed",
+      "phase": "baseline",
+      "command": "node /private/tmp/edu-skill-evals-20261012/final-forward/G/probe.mjs",
+      "observed_result": "A denominator 8→3 clamps numerator 7→3, updates maximum, verdict and draw."
+    },
+    {
+      "method": "actual original application script in Node VM; minimal DOM/canvas adapter",
+      "status": "failed",
+      "phase": "baseline",
+      "command": "node /private/tmp/edu-skill-evals-20261012/final-forward/G/probe.mjs",
+      "observed_result": "Baseline 2/4 = 2/4 explanation says B numerator is larger."
+    },
+    {
+      "method": "actual original application script in Node VM; minimal DOM/canvas adapter",
+      "status": "passed",
+      "phase": "baseline",
+      "command": "node /private/tmp/edu-skill-evals-20261012/final-forward/G/probe.mjs",
+      "observed_result": "Equivalent fractions receive equality verdict and final equality explanation."
+    },
+    {
+      "method": "actual original application script in Node VM; minimal DOM/canvas adapter",
+      "status": "passed",
+      "phase": "baseline",
+      "command": "node /private/tmp/edu-skill-evals-20261012/final-forward/G/probe.mjs",
+      "observed_result": {
+        "canvasWidth": 400,
+        "unitWidth": 292,
+        "halfWidth": 146,
+        "threeQuartersWidth": 219
+      }
+    },
+    {
+      "method": "staged-state behavior after implementation",
+      "status": "not-run",
+      "phase": "after",
+      "reason": "Plan-only scope; application source unchanged"
+    },
+    {
+      "method": "browser integration, responsive rendering and localization",
+      "status": "not-run",
+      "phase": "after",
+      "reason": "No browser run, no redesign implementation"
+    },
+    {
+      "method": "learning effect",
+      "status": "not-run",
+      "phase": "after",
+      "reason": "No learner study"
+    }
+  ],
+  "runtime_tested": true,
+  "runtime_scope": "Existing mathematical inline script only in VM; no browser/localization or redesigned application execution.",
+  "status": "usable-plan-with-baseline-failure"
+}

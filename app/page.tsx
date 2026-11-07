@@ -38,6 +38,7 @@ export default function Home() {
     <main className="home-v2">
       <HomeOpening courseCount={courses.length} />
       <HomeOpenSource />
+      <section className="home-shelf"><div className="builder-build-entry"><div><h2>带着一个教育想法，找到第一步。</h2><p>选资源、看场景、拿走开发计划；把可复用的方法放进自己的 coding agent。</p></div><Link className="builder-secondary" href="/directory">打开 Skills 与构建助手 →</Link></div></section>
       <HomeReveal>
         <HomeExperience map={<AtlasMini />} />
       </HomeReveal>

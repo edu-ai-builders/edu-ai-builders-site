@@ -1,0 +1,172 @@
+{
+  "observations": [
+    {
+      "problem": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "compare": "less",
+      "explanation": "The comparison is less.",
+      "render": {
+        "verdict": "less",
+        "explanation": "The comparison is less."
+      }
+    },
+    {
+      "problem": [
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "compare": "greater",
+      "explanation": "The comparison is greater.",
+      "render": {
+        "verdict": "greater",
+        "explanation": "The comparison is greater."
+      }
+    },
+    {
+      "problem": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "compare": "equal",
+      "explanation": "The comparison is equal.",
+      "render": {
+        "verdict": "equal",
+        "explanation": "The comparison is equal."
+      }
+    },
+    {
+      "problem": [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "compare": "equal",
+      "explanation": "B has more equal-sized parts.",
+      "render": {
+        "verdict": "equal",
+        "explanation": "B has more equal-sized parts."
+      }
+    },
+    {
+      "problem": [
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "compare": "greater",
+      "explanation": "A has more equal-sized parts.",
+      "render": {
+        "verdict": "greater",
+        "explanation": "A has more equal-sized parts."
+      }
+    },
+    {
+      "problem": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "compare": "less",
+      "explanation": "B has more equal-sized parts.",
+      "render": {
+        "verdict": "less",
+        "explanation": "B has more equal-sized parts."
+      }
+    },
+    {
+      "problem": [
+        [
+          -1,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "compare": "less",
+      "explanation": "The comparison is less.",
+      "render": {
+        "verdict": "less",
+        "explanation": "The comparison is less."
+      }
+    },
+    {
+      "problem": [
+        [
+          1,
+          -2
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "compare": "equal",
+      "explanation": "The comparison is equal.",
+      "render": {
+        "verdict": "equal",
+        "explanation": "The comparison is equal."
+      }
+    }
+  ],
+  "errors": [
+    {
+      "case": "zero-denominator",
+      "type": "ZeroDivisionError",
+      "message": "Fraction(1, 0)"
+    },
+    {
+      "case": "missing-problem",
+      "type": "TypeError",
+      "message": "baseline_practice.compare() argument after * must be an iterable, not NoneType"
+    },
+    {
+      "case": "wrong-arity",
+      "type": "TypeError",
+      "message": "compare() missing 1 required positional argument: 'right'"
+    },
+    {
+      "case": "malformed-tuple",
+      "type": "TypeError",
+      "message": "Fraction.__new__() takes from 1 to 3 positional arguments but 4 were given"
+    }
+  ],
+  "immediate_render_return": "verdict and explanation populated in same synchronous call",
+  "state_observation": "repeated calls return same values; no delayed learner actions in inspected source"
+}

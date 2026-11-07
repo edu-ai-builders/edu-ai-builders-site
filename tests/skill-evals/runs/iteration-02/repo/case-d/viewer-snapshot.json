@@ -1,0 +1,51 @@
+{
+  "schema_version": "edu.repo-snapshot.v1",
+  "root": "/private/tmp/edu-skill-evals-20261012/fixtures/repos/viewer",
+  "git": {
+    "revision": null,
+    "state": "no-git-metadata"
+  },
+  "scope": {
+    "paths": [
+      "README.md",
+      "answer.mjs"
+    ],
+    "literal_queries": [
+      "optical",
+      "光学",
+      "simulation",
+      "ray",
+      "lens",
+      "refraction"
+    ],
+    "max_files": 2,
+    "max_bytes": 1800,
+    "max_file_bytes": 1400,
+    "max_matches": 12
+  },
+  "coverage": {
+    "enumeration_complete": true,
+    "stop_reason": null,
+    "matches_complete": true,
+    "read_bytes": 407,
+    "visited_files": 2
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "10faaa8950f0a06a465f815157e0f903b7522b9b664b91fdf9b2bc16a2ddb2e4",
+      "bytes": 213,
+      "lines": 2,
+      "matches": []
+    },
+    {
+      "path": "answer.mjs",
+      "sha256": "3a00de82ea3b9cc46ba5aee888aa4fe20f4d7419ed86550be97c6719d9671bc4",
+      "bytes": 194,
+      "lines": 4,
+      "matches": []
+    }
+  ],
+  "skipped": [],
+  "runtime_tested": false
+}

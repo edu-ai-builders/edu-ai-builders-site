@@ -45,3 +45,11 @@ next-env.d.ts
 # Python script caches
 __pycache__/
 *.py[cod]
+
+# Retained local history and retired standalone readers are not site source.
+/radar/data/snapshots/
+/radar/web/
+/radar/site/
+/radar/state/*.lock
+/radar/data/paper-fetch.lock
+/radar/.hallmark/

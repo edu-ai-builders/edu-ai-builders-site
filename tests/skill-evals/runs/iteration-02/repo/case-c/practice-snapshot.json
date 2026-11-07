@@ -1,0 +1,139 @@
+{
+  "schema_version": "edu.repo-snapshot.v1",
+  "root": "/private/tmp/edu-skill-evals-20261012/fixtures/repos/practice",
+  "git": {
+    "revision": null,
+    "state": "no-git-metadata"
+  },
+  "scope": {
+    "paths": [
+      "."
+    ],
+    "literal_queries": [
+      "render",
+      "compare",
+      "explanation"
+    ],
+    "max_files": 300,
+    "max_bytes": 2000000,
+    "max_file_bytes": 256000,
+    "max_matches": 60
+  },
+  "coverage": {
+    "enumeration_complete": true,
+    "stop_reason": null,
+    "matches_complete": true,
+    "read_bytes": 2452,
+    "visited_files": 4
+  },
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3",
+      "bytes": 1085,
+      "lines": 21,
+      "matches": []
+    },
+    {
+      "path": "README.md",
+      "sha256": "8e91ae953747a7f12096d8fa0c43f142722ed3c052686df176d329b99be879ca",
+      "bytes": 233,
+      "lines": 2,
+      "matches": [
+        {
+          "line": 2,
+          "queries": [
+            "render",
+            "compare",
+            "explanation"
+          ],
+          "text": "Python 3, no third-party dependencies. `render(problem)` currently shows verdict and explanation immediately. `compare(left, right)` receives two (numerator, denominator) tuples. Run `python3 test_fractions.py`.",
+          "excerpt_truncated": false
+        }
+      ]
+    },
+    {
+      "path": "fractions_logic.py",
+      "sha256": "1661597211236e8e4295e7b68b6a008d728adb6d95dd9d023c330dc1f36a23d8",
+      "bytes": 552,
+      "lines": 15,
+      "matches": [
+        {
+          "line": 4,
+          "queries": [
+            "compare"
+          ],
+          "text": "def compare(left, right):",
+          "excerpt_truncated": false
+        },
+        {
+          "line": 8,
+          "queries": [
+            "explanation"
+          ],
+          "text": "def explanation(left, right):",
+          "excerpt_truncated": false
+        },
+        {
+          "line": 12,
+          "queries": [
+            "compare"
+          ],
+          "text": "    return f'The comparison is {compare(left, right)}.'",
+          "excerpt_truncated": false
+        },
+        {
+          "line": 14,
+          "queries": [
+            "render"
+          ],
+          "text": "def render(problem):",
+          "excerpt_truncated": false
+        },
+        {
+          "line": 15,
+          "queries": [
+            "compare",
+            "explanation"
+          ],
+          "text": "    return {'verdict': compare(*problem), 'explanation': explanation(*problem)}",
+          "excerpt_truncated": false
+        }
+      ]
+    },
+    {
+      "path": "test_fractions.py",
+      "sha256": "293befe1965746a6cd4ede27e49c8a7d126efd9bbbfecdb90cace5059a1818c4",
+      "bytes": 582,
+      "lines": 11,
+      "matches": [
+        {
+          "line": 8,
+          "queries": [
+            "compare"
+          ],
+          "text": "        for a,b,want in [((1,2),(2,4),'equal'),((1,2),(3,4),'less'),((3,4),(1,2),'greater')]:self.assertEqual(m.compare(a,b),want)",
+          "excerpt_truncated": false
+        },
+        {
+          "line": 9,
+          "queries": [
+            "explanation"
+          ],
+          "text": "    def test_equal_explanation(self):",
+          "excerpt_truncated": false
+        },
+        {
+          "line": 10,
+          "queries": [
+            "explanation"
+          ],
+          "text": "        self.assertNotIn('has more',m.explanation((1,4),(1,4)))",
+          "excerpt_truncated": false
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "runtime_tested": false
+}

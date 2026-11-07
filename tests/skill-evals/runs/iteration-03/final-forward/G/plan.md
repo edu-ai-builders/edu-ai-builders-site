@@ -1,0 +1,26 @@
+# Fraction comparison: staged-hints redesign handoff
+
+Plan only; no application files changed. Source HEAD 1a1367a0ea39f7086651056a66861cb592e583f7 has existing dirty/untracked website changes (full state in source-inventory.json). Bind claims to inspected bytes rather than HEAD. Main file SHA-256: `af31af7e85e919438d6bbc0080b73cf65cb5b948d6e79786e115e65fc7ff3f3b`.
+
+Preserve the mathematical scope: denominators 2–12, numerators 1–d including one; equal unit bars, A/B labels/colors, clamping and true fraction relation. No zero or improper-fraction expansion. Existing exact division comparisons are correct for all 5,929 bounded pairs in the local VM probe. Rounded decimals remain approximate display only; an integer cross-product helper may centralize the same truth without changing the domain.
+
+Change feedback timing across every rendering path. `draw()` writes the relation at lines 282–285 and decimal cues at 264/270; `showFeedback()` exposes verdict/reason at 313–330; both initialization (345) and slider changes (295–308) show the answer. Keep bars visible as the intended representation, but hide explicit relation, decimal cues and explanation until the appropriate stage. Use conditional drawing and hidden/conditional DOM, so the answer is also absent from the accessibility tree.
+
+State contract: `problemId = canonical (nA,dA,nB,dB)+revision`, `draftRelation`, `attempts[]`, `hintLevel=0`, `answerVisible=false`. A slider edit that changes the canonical tuple creates a fresh revision and clears draft, attempts, hints and answer. An unchanged tuple, resize or repeated draw keeps learner state. Each accepted submission snapshots tuple/relation. Empty submission and slider movement are not attempts. Help before an attempt gives only “先提交你的判断 / Submit your comparison first.”
+
+Flow: compare bars → choose `<`, `=` or `>` and submit → neutral “判断已记录 / Comparison recorded” → request Hint 1 (“先确认两个整体一样长 / Check that both wholes have the same length”) → Hint 2 (same denominator: count selected pieces; same numerator: compare piece sizes; mixed: show the uncomputed common-denominator/cross-product method) → explicitly request answer and full reasoning. Default two hint stages is this plan's configurable choice, not a universal learning requirement. No auto-reveal after submission or hint; cap repeated hint clicks. Reveal uses current tuple and records whether the latest attempt agrees. Hint text may help infer the answer; explicit solved relation appears only on reveal.
+
+Pre-existing failure: equal inputs `2/4` and `2/4` have a correct equality verdict but the same-denominator branch says B's numerator is larger (321). Put equality first in full reasoning. This is a separately recorded explanation correction, not a regression introduced by this plan. Baseline VM probe captured it as failed.
+
+Implementation order:
+
+1. Save mathematical baseline and extract/reuse small compare and bar helpers with no UI timing change. Retest bounded pairs and clamping.
+2. Add learner state and one submission/hint/reveal flow; route canvas, verdict and explanations through the same stage. Avoid renaming stable control/resource IDs.
+3. Reset state on actual tuple changes, correct equality explanation, add both language strings, keyboard controls, visible focus and polite status announcements. Add mobile wrapping without changing unit lengths.
+4. Check the route `/use/fraction-bars`: it derives `/tools/fraction-bars.html?lang=zh|en`, and uses that URL for direct open, download and sandboxed iframe (`allow-scripts allow-downloads`). Keep offline operation. Update resource copy and the required changelog/English release notes only as part of an implemented change.
+
+Acceptance to execute after implementation: fresh load and pre-attempt Help show no answer/hint; blank submission stays locked; valid `<`, `=` and `>` attempts unlock Hint 1; repeated hints cap at 2; reveal handles correct, incorrect and equal; changing fractions after reveal clears old attempts/hints/answer; unchanged tuple and resize do not; denominator reduction keeps `n≤d`; check `1/2=2/4`, `2/4=2/4`, `2/3>3/5`, `1/12<1/11`, and unit fractions equalling one. Check keyboard and narrow 320/375px pages in zh/en, embedded/direct/downloaded modes, including hidden content with a screen reader. These are acceptance steps, not passed checks.
+
+Executed scope: actual original mathematical script in a Node VM with minimal DOM/canvas adapter. It checked 5,929 relations, denominator clamping, common whole geometry, immediate answer exposure and equality text. No browser, localization, new UI or learner study was executed. No existing fraction test case was found in the inspected math-tools suite; other tools' tests do not establish this redesign. Component redistribution terms remain unresolved: the local manifest notes Math Viz Kit origin and retained license but is not the upstream license text. A future distributing adaptation should inspect the exact component terms or use an independently authored math implementation.
+
+Machine evidence and verification: [handoff.json](handoff.json), [source-inventory.json](source-inventory.json), [baseline-probe.json](baseline-probe.json), [probe.mjs](probe.mjs).

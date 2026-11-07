@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workload Skill Fusion"
+  short_description: "Create a focused skill from your workload and source methods"
+  default_prompt: "Use $edu-skill-fusion to create a skill for my recurring workload, preserving requirements, source decisions and acceptance results."

@@ -6,8 +6,10 @@ import { translateData } from "./i18n/core";
 import type { Metadata } from "next";
 import SiteHeader from "./components/site-header";
 import SiteFooter from "./components/site-footer";
+import BuilderGuide from "./components/builder-guide";
 import "./globals.css";
 import "./site-shell.css";
+import "./skills/styles.css";
 
 const metadata: Metadata = {
   title: { default: "Edu AI Builders — 用 AI 做出自己的学习工具", template: "%s · Edu AI Builders" },
@@ -16,7 +18,7 @@ const metadata: Metadata = {
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const {locale,messages}=await getI18n();
-  return <html data-scroll-behavior="smooth" lang={locale === "en" ? "en" : "zh-CN"}><body><SiteStructuredData /><LocaleProvider locale={locale} messages={messages}><SiteHeader /><div id="site-content" tabIndex={-1}>{children}</div><SiteFooter /></LocaleProvider></body></html>;
+  return <html data-scroll-behavior="smooth" lang={locale === "en" ? "en" : "zh-CN"}><body><SiteStructuredData /><LocaleProvider locale={locale} messages={messages}><SiteHeader /><div id="site-content" tabIndex={-1}>{children}</div><SiteFooter /><BuilderGuide /></LocaleProvider></body></html>;
 }
 
 export async function generateMetadata():Promise<Metadata> { const {t,locale}=await getI18n(); return withSeo(translateData(metadata,t), "/", locale); }

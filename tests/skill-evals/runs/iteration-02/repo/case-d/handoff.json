@@ -1,0 +1,512 @@
+{
+  "schema_version": "edu.repo-handoff.v1",
+  "mode": "compare",
+  "goal": "在给定 practice/retriever/viewer 中以小额有界预算判断 optical simulation；不扩大读取、不找新仓库、不执行源码。",
+  "sources": [
+    {
+      "repository": "practice",
+      "root": "/private/tmp/edu-skill-evals-20261012/fixtures/repos/practice",
+      "revision": null,
+      "release_identity": "unverified fixture archive",
+      "local_state": {
+        "revision": null,
+        "state": "no-git-metadata"
+      },
+      "analyzed_scope": {
+        "paths": [
+          "README.md",
+          "fractions_logic.py"
+        ],
+        "literal_queries": [
+          "optical",
+          "光学",
+          "simulation",
+          "ray",
+          "lens",
+          "refraction"
+        ],
+        "max_files": 2,
+        "max_bytes": 1800,
+        "max_file_bytes": 1400,
+        "max_matches": 12
+      },
+      "coverage": {
+        "enumeration_complete": true,
+        "stop_reason": null,
+        "matches_complete": true,
+        "read_bytes": 785,
+        "visited_files": 2
+      },
+      "skipped": [],
+      "file_identity": [
+        {
+          "path": "README.md",
+          "sha256": "8e91ae953747a7f12096d8fa0c43f142722ed3c052686df176d329b99be879ca",
+          "bytes": 233,
+          "lines": 2,
+          "matches": []
+        },
+        {
+          "path": "fractions_logic.py",
+          "sha256": "1661597211236e8e4295e7b68b6a008d728adb6d95dd9d023c330dc1f36a23d8",
+          "bytes": 552,
+          "lines": 15,
+          "matches": []
+        }
+      ],
+      "terms": {
+        "status": "not independently verified within bounded search; no reuse authorized"
+      }
+    },
+    {
+      "repository": "retriever",
+      "root": "/private/tmp/edu-skill-evals-20261012/fixtures/repos/retriever",
+      "revision": null,
+      "release_identity": "unverified fixture archive",
+      "local_state": {
+        "revision": null,
+        "state": "no-git-metadata"
+      },
+      "analyzed_scope": {
+        "paths": [
+          "README.md",
+          "query.py"
+        ],
+        "literal_queries": [
+          "optical",
+          "光学",
+          "simulation",
+          "ray",
+          "lens",
+          "refraction"
+        ],
+        "max_files": 2,
+        "max_bytes": 1800,
+        "max_file_bytes": 1400,
+        "max_matches": 12
+      },
+      "coverage": {
+        "enumeration_complete": true,
+        "stop_reason": null,
+        "matches_complete": true,
+        "read_bytes": 514,
+        "visited_files": 2
+      },
+      "skipped": [],
+      "file_identity": [
+        {
+          "path": "README.md",
+          "sha256": "404ea97fdd850abc093f7795d3f0fa287f265f628b28744a9ac01b6a7d230a0a",
+          "bytes": 227,
+          "lines": 2,
+          "matches": []
+        },
+        {
+          "path": "query.py",
+          "sha256": "f741effb3dcf27465944636d2336d20a8c19dd002cfd852ce780d00723ae4a51",
+          "bytes": 287,
+          "lines": 4,
+          "matches": []
+        }
+      ],
+      "terms": {
+        "status": "not independently verified within bounded search; no reuse authorized"
+      }
+    },
+    {
+      "repository": "viewer",
+      "root": "/private/tmp/edu-skill-evals-20261012/fixtures/repos/viewer",
+      "revision": null,
+      "release_identity": "unverified fixture archive",
+      "local_state": {
+        "revision": null,
+        "state": "no-git-metadata"
+      },
+      "analyzed_scope": {
+        "paths": [
+          "README.md",
+          "answer.mjs"
+        ],
+        "literal_queries": [
+          "optical",
+          "光学",
+          "simulation",
+          "ray",
+          "lens",
+          "refraction"
+        ],
+        "max_files": 2,
+        "max_bytes": 1800,
+        "max_file_bytes": 1400,
+        "max_matches": 12
+      },
+      "coverage": {
+        "enumeration_complete": true,
+        "stop_reason": null,
+        "matches_complete": true,
+        "read_bytes": 407,
+        "visited_files": 2
+      },
+      "skipped": [],
+      "file_identity": [
+        {
+          "path": "README.md",
+          "sha256": "10faaa8950f0a06a465f815157e0f903b7522b9b664b91fdf9b2bc16a2ddb2e4",
+          "bytes": 213,
+          "lines": 2,
+          "matches": []
+        },
+        {
+          "path": "answer.mjs",
+          "sha256": "3a00de82ea3b9cc46ba5aee888aa4fe20f4d7419ed86550be97c6719d9671bc4",
+          "bytes": 194,
+          "lines": 4,
+          "matches": []
+        }
+      ],
+      "terms": {
+        "status": "not independently verified within bounded search; no reuse authorized"
+      }
+    }
+  ],
+  "capabilities": [
+    {
+      "requirement": "practice 是否提供 optical simulation（光学仿真）",
+      "decision": "unresolved",
+      "reason": "所选源码确认 分数比较并返回 verdict/explanation；六个检索关键词在该 README 与入口文件均无命中。这些证据未确认光学仿真，不能推出未读取区域无此能力。",
+      "evidence": [
+        {
+          "type": "source-observation",
+          "repository": "practice",
+          "path": "README.md",
+          "sha256": "8e91ae953747a7f12096d8fa0c43f142722ed3c052686df176d329b99be879ca",
+          "line_start": 1,
+          "line_end": 2,
+          "quote": "# Practice component\nPython 3, no third-party dependencies. `render(problem)` currently shows verdict and explanation immediately. `compare(left, right)` receives two (numerator, denominator) tuples. Run `python3 test_fractions.py`."
+        },
+        {
+          "type": "source-observation",
+          "repository": "practice",
+          "path": "fractions_logic.py",
+          "sha256": "1661597211236e8e4295e7b68b6a008d728adb6d95dd9d023c330dc1f36a23d8",
+          "line_start": 4,
+          "line_end": 15,
+          "quote": "def compare(left, right):\n    a, b = Fraction(*left), Fraction(*right)\n    return 'greater' if a > b else 'less' if a < b else 'equal'\n\ndef explanation(left, right):\n    if left[1] == right[1]:\n        larger = 'A' if left[0] > right[0] else 'B'\n        return f'{larger} has more equal-sized parts.'\n    return f'The comparison is {compare(left, right)}.'\n\ndef render(problem):\n    return {'verdict': compare(*problem), 'explanation': explanation(*problem)}"
+        }
+      ],
+      "inputs": {
+        "required_optical_contract": "unknown: 未给定 ray tracing/波动/几何光学具体输入；本次只识别能力",
+        "observed_candidate": "分数比较并返回 verdict/explanation"
+      },
+      "outputs": {
+        "confirmed": "分数比较并返回 verdict/explanation",
+        "optical_simulation": "not confirmed in inspected scope"
+      },
+      "dependencies": [],
+      "retained": [
+        "限定候选与读取预算；只静态阅读，不 import 或执行候选。"
+      ],
+      "changed": [],
+      "unknowns": [
+        "未读文件或其他命名是否藏有光学模型。",
+        "没有光路、折射率、透镜、波场等已确认接口；无物理精度/单位/性能证据。",
+        "运行结果、集成适用性与许可未验证。"
+      ],
+      "acceptance": [
+        {
+          "method": "bounded static search and semantic read",
+          "status": "completed",
+          "expectation": "所选路径覆盖完整、无跳过、关键词无命中；保留哈希与短源码证据。"
+        },
+        {
+          "method": "optical capability acceptance",
+          "status": "not-run",
+          "expectation": "若未来获得预算，先确定具体模型和测试输入，再追踪相关实现，核对单位/边界与已知解；当前不执行。"
+        }
+      ]
+    },
+    {
+      "requirement": "retriever 是否提供 optical simulation（光学仿真）",
+      "decision": "unresolved",
+      "reason": "所选源码确认 按子串筛选 documents，返回 text/source/score；六个检索关键词在该 README 与入口文件均无命中。这些证据未确认光学仿真，不能推出未读取区域无此能力。",
+      "evidence": [
+        {
+          "type": "source-observation",
+          "repository": "retriever",
+          "path": "README.md",
+          "sha256": "404ea97fdd850abc093f7795d3f0fa287f265f628b28744a9ac01b6a7d230a0a",
+          "line_start": 1,
+          "line_end": 2,
+          "quote": "# Retriever\nPython, callable library. Returns text, source.document_id, source.page and score. License: code MIT. `sample_documents.json` is separately licensed for noncommercial use. No OAuth, UI or HTML renderer is provided."
+        },
+        {
+          "type": "source-observation",
+          "repository": "retriever",
+          "path": "query.py",
+          "sha256": "f741effb3dcf27465944636d2336d20a8c19dd002cfd852ce780d00723ae4a51",
+          "line_start": 2,
+          "line_end": 4,
+          "quote": "def retrieve(query, documents):\n    return [{'text': d['text'], 'source': {'document_id': d['id'], 'page': d['page']}, 'score': 0.8}\n            for d in documents if query.lower() in d['text'].lower()]"
+        }
+      ],
+      "inputs": {
+        "required_optical_contract": "unknown: 未给定 ray tracing/波动/几何光学具体输入；本次只识别能力",
+        "observed_candidate": "按子串筛选 documents，返回 text/source/score"
+      },
+      "outputs": {
+        "confirmed": "按子串筛选 documents，返回 text/source/score",
+        "optical_simulation": "not confirmed in inspected scope"
+      },
+      "dependencies": [],
+      "retained": [
+        "限定候选与读取预算；只静态阅读，不 import 或执行候选。"
+      ],
+      "changed": [],
+      "unknowns": [
+        "未读文件或其他命名是否藏有光学模型。",
+        "没有光路、折射率、透镜、波场等已确认接口；无物理精度/单位/性能证据。",
+        "运行结果、集成适用性与许可未验证。"
+      ],
+      "acceptance": [
+        {
+          "method": "bounded static search and semantic read",
+          "status": "completed",
+          "expectation": "所选路径覆盖完整、无跳过、关键词无命中；保留哈希与短源码证据。"
+        },
+        {
+          "method": "optical capability acceptance",
+          "status": "not-run",
+          "expectation": "若未来获得预算，先确定具体模型和测试输入，再追踪相关实现，核对单位/边界与已知解；当前不执行。"
+        }
+      ]
+    },
+    {
+      "requirement": "viewer 是否提供 optical simulation（光学仿真）",
+      "decision": "unresolved",
+      "reason": "所选源码确认 将 answer 与 citations 拼接为 HTML；六个检索关键词在该 README 与入口文件均无命中。这些证据未确认光学仿真，不能推出未读取区域无此能力。",
+      "evidence": [
+        {
+          "type": "source-observation",
+          "repository": "viewer",
+          "path": "README.md",
+          "sha256": "10faaa8950f0a06a465f815157e0f903b7522b9b664b91fdf9b2bc16a2ddb2e4",
+          "line_start": 1,
+          "line_end": 2,
+          "quote": "# Answer viewer\nJavaScript, no dependencies. Expects {answer: string, citations: [{url, label}]} and returns HTML. Callers decide whether supplied values are trusted. This is a display component, not a retriever."
+        },
+        {
+          "type": "source-observation",
+          "repository": "viewer",
+          "path": "answer.mjs",
+          "sha256": "3a00de82ea3b9cc46ba5aee888aa4fe20f4d7419ed86550be97c6719d9671bc4",
+          "line_start": 1,
+          "line_end": 4,
+          "quote": "export function renderAnswer(answer) {\n  const citations = answer.citations.map(c => `<a href=\"${c.url}\">${c.label}</a>`).join('');\n  return `<article>${answer.answer}${citations}</article>`;\n}"
+        }
+      ],
+      "inputs": {
+        "required_optical_contract": "unknown: 未给定 ray tracing/波动/几何光学具体输入；本次只识别能力",
+        "observed_candidate": "将 answer 与 citations 拼接为 HTML"
+      },
+      "outputs": {
+        "confirmed": "将 answer 与 citations 拼接为 HTML",
+        "optical_simulation": "not confirmed in inspected scope"
+      },
+      "dependencies": [],
+      "retained": [
+        "限定候选与读取预算；只静态阅读，不 import 或执行候选。"
+      ],
+      "changed": [],
+      "unknowns": [
+        "未读文件或其他命名是否藏有光学模型。",
+        "没有光路、折射率、透镜、波场等已确认接口；无物理精度/单位/性能证据。",
+        "运行结果、集成适用性与许可未验证。"
+      ],
+      "acceptance": [
+        {
+          "method": "bounded static search and semantic read",
+          "status": "completed",
+          "expectation": "所选路径覆盖完整、无跳过、关键词无命中；保留哈希与短源码证据。"
+        },
+        {
+          "method": "optical capability acceptance",
+          "status": "not-run",
+          "expectation": "若未来获得预算，先确定具体模型和测试输入，再追踪相关实现，核对单位/边界与已知解；当前不执行。"
+        }
+      ]
+    }
+  ],
+  "connections": [],
+  "verification": [
+    {
+      "phase": "bounded-inspection",
+      "method": "literal scan and hashes",
+      "status": "passed",
+      "command": [
+        "python3",
+        "/private/tmp/edu-skill-evals-20261012/candidate/edu-repo-adapter/scripts/repo_evidence.py",
+        "inventory",
+        "/private/tmp/edu-skill-evals-20261012/fixtures/repos/practice",
+        "--path",
+        "README.md",
+        "--path",
+        "fractions_logic.py",
+        "--query",
+        "optical",
+        "--query",
+        "光学",
+        "--query",
+        "simulation",
+        "--query",
+        "ray",
+        "--query",
+        "lens",
+        "--query",
+        "refraction",
+        "--max-files",
+        "2",
+        "--max-bytes",
+        "1800",
+        "--max-file-bytes",
+        "1400",
+        "--max-matches",
+        "12",
+        "--output",
+        "/private/tmp/edu-skill-evals-20261012/candidate-repo/case-d/practice-snapshot.json"
+      ],
+      "observed_result": "exit 0; 2 selected files, no matches, no skipped selected paths; source snapshot written",
+      "exit_code": 0
+    },
+    {
+      "phase": "bounded-inspection",
+      "method": "literal scan and hashes",
+      "status": "passed",
+      "command": [
+        "python3",
+        "/private/tmp/edu-skill-evals-20261012/candidate/edu-repo-adapter/scripts/repo_evidence.py",
+        "inventory",
+        "/private/tmp/edu-skill-evals-20261012/fixtures/repos/retriever",
+        "--path",
+        "README.md",
+        "--path",
+        "query.py",
+        "--query",
+        "optical",
+        "--query",
+        "光学",
+        "--query",
+        "simulation",
+        "--query",
+        "ray",
+        "--query",
+        "lens",
+        "--query",
+        "refraction",
+        "--max-files",
+        "2",
+        "--max-bytes",
+        "1800",
+        "--max-file-bytes",
+        "1400",
+        "--max-matches",
+        "12",
+        "--output",
+        "/private/tmp/edu-skill-evals-20261012/candidate-repo/case-d/retriever-snapshot.json"
+      ],
+      "observed_result": "exit 0; 2 selected files, no matches, no skipped selected paths; source snapshot written",
+      "exit_code": 0
+    },
+    {
+      "phase": "bounded-inspection",
+      "method": "literal scan and hashes",
+      "status": "passed",
+      "command": [
+        "python3",
+        "/private/tmp/edu-skill-evals-20261012/candidate/edu-repo-adapter/scripts/repo_evidence.py",
+        "inventory",
+        "/private/tmp/edu-skill-evals-20261012/fixtures/repos/viewer",
+        "--path",
+        "README.md",
+        "--path",
+        "answer.mjs",
+        "--query",
+        "optical",
+        "--query",
+        "光学",
+        "--query",
+        "simulation",
+        "--query",
+        "ray",
+        "--query",
+        "lens",
+        "--query",
+        "refraction",
+        "--max-files",
+        "2",
+        "--max-bytes",
+        "1800",
+        "--max-file-bytes",
+        "1400",
+        "--max-matches",
+        "12",
+        "--output",
+        "/private/tmp/edu-skill-evals-20261012/candidate-repo/case-d/viewer-snapshot.json"
+      ],
+      "observed_result": "exit 0; 2 selected files, no matches, no skipped selected paths; source snapshot written",
+      "exit_code": 0
+    },
+    {
+      "phase": "runtime",
+      "method": "execute candidate optical code or tests",
+      "status": "not-run",
+      "reason": "user prohibits source execution; no optical path confirmed"
+    },
+    {
+      "phase": "handoff",
+      "method": "source evidence grounding and structure helper",
+      "status": "passed",
+      "command": [
+        "python3",
+        "/private/tmp/edu-skill-evals-20261012/candidate/edu-repo-adapter/scripts/repo_evidence.py",
+        "verify",
+        "/private/tmp/edu-skill-evals-20261012/candidate-repo/case-d/handoff.json",
+        "--repo",
+        "practice=/private/tmp/edu-skill-evals-20261012/fixtures/repos/practice",
+        "--repo",
+        "retriever=/private/tmp/edu-skill-evals-20261012/fixtures/repos/retriever",
+        "--repo",
+        "viewer=/private/tmp/edu-skill-evals-20261012/fixtures/repos/viewer"
+      ],
+      "observed_result": "{\"valid\": true, \"errors\": [], \"claim\": \"source grounding and record structure only; no runtime or integration proof\"}\n",
+      "limitation": "不证明运行通过、语义完整、许可完整、集成或学习效果。"
+    }
+  ],
+  "runtime_tested": false,
+  "status": "bounded-search-complete-capability-unresolved",
+  "budget": {
+    "per_candidate": {
+      "selected_files": 2,
+      "max_bytes": 1800,
+      "max_file_bytes": 1400,
+      "max_matches": 12
+    },
+    "aggregate_unique_files": 6,
+    "aggregate_unique_bytes": 1706,
+    "keywords": [
+      "optical",
+      "光学",
+      "simulation",
+      "ray",
+      "lens",
+      "refraction"
+    ],
+    "semantics_review": "只复读相同六个已扫描文件，未追加新路径；helper 验证复查同一证据字节。",
+    "stop_rule": "完成限定 README 与一个入口文件即停止，不读未选的文件，不搜索新仓库。",
+    "scope_limits": "enumeration_complete=true 仅针对所选路径，不代表全仓库已检索；未检索 LICENSE、tests 或 sample_documents 等其余路径。"
+  },
+  "next_steps": [
+    "当前停止并保留 unresolved；不选择这三个之一作为已验证光学仿真来源。",
+    "若后来有新预算：由用户指定更具体光学模型/入口，优先读取已定位代码；若仍无定位，可扩大同三个 repo 的静态搜索。",
+    "只有另行获得寻找新 repo 的范围，才搜索专用光学项目；本次未进行。"
+  ]
+}

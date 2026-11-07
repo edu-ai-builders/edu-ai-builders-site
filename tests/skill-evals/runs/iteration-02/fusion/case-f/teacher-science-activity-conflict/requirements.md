@@ -1,0 +1,2 @@
+# F WorkloadSpec
+All E conditions apply, plus hard A: full correct answer on first display, and hard B: no correct answer before first student attempt. For the same initial student view these conflict. Neither takes precedence because the user calls both hard. No teacher/learner separation is presumed without clarification. Useful teacher preparation can continue; learner delivery and complete satisfaction are blocked. Artifact is a draft conflict package, not a resolved operational skill.

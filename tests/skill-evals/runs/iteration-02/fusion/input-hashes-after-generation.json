@@ -1,0 +1,18 @@
+{
+  "fixtures/skills/evidence-search/LICENSE": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3",
+  "fixtures/skills/evidence-search/SKILL.md": "16b3ee96b0a7e025f7f70ad73bcaa233a7058706d1a6245d1d9cf85f3f49fb4c",
+  "fixtures/skills/link-only/SKILL.md": "0a925ebd6be96ff8c8337594387c59e79268f3beaa91fbfba9ac65aa4c7a92ae",
+  "fixtures/skills/lesson-planner/LICENSE": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3",
+  "fixtures/skills/lesson-planner/SKILL.md": "e8d8a5ea2d8b0ee2d132b1ba34cad5e1c758a46b426283aed8a8bdc9e52ab1cf",
+  "fixtures/skills/pdf-helper/LICENSE": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3",
+  "fixtures/skills/pdf-helper/SKILL.md": "9f978194979718a17c64e58653ef83a8a5c1c86e81b5bda004d7971c2f71082f",
+  "candidate/edu-skill-fusion/LICENSE": "b275022555f41756f5f30ceb04ff63184531a9264a9fc4ac08bbcec4a0cdebc3",
+  "candidate/edu-skill-fusion/SKILL.md": "abec9eed2f5a796af0fcdd30c51ecf331da5711252f87bcaccf3c39ba464a63a",
+  "candidate/edu-skill-fusion/references/fusion-contract.md": "3d5304e10c721ae4d0b66ada67072d10a916a59a2eaf24fcb78512f76ae062a9",
+  "candidate/edu-skill-fusion/references/requirements-and-routing.md": "98f278ef47edb53b9e6dc9f1ee91457f7bbfcf9981892e4853efb6df5393563b",
+  "candidate/edu-skill-fusion/references/source-and-maintenance.md": "bb4c226bad0a5bbb72ced20e97c9e9208836890af13a20daf0c2f5c1eb0474ad",
+  "candidate/edu-skill-fusion/references/acceptance.md": "0829466357bd00bcdea20134e505ff260109e34aaf34bcedb7fb98ddbe343d19",
+  "candidate/edu-skill-fusion/agents/openai.yaml": "1006d86a3cd3b23c73ac509ce8f14c999bfb6dbe890724e107209a1644daa50f",
+  "candidate/edu-skill-fusion/scripts/fusion_provenance.py": "ae19481f01f0c2d2f3f546e0765643c598c4b1b30e8b00ea88755cf94ddadf34",
+  "candidate/edu-skill-fusion/assets/fusion-record-template.json": "42c5687547ed98be3f6b378ad7bd89b1a63116e9052094068ca1d6d7f8625158"
+}
